@@ -111,8 +111,8 @@ models:
       belongsTo: Room
 ################################CertificationEmployees################################
   CertificationEmployee:
-    EmployeeID: id foreign:Employees.id
-    CertificationID: id foreign:Certifications.id
+    EmployeeID: id unique foreign:Employees.id
+    CertificationID: id unique foreign:Certifications.id
     timestamps
     softDeletes
     relationships:
@@ -134,9 +134,9 @@ models:
 ################################Diagnoseds################################
   Diagnosed:
     id
-    DoctoriD: id foreign:Employees.id
-    PatientID: id foreign:Patients.id
-    DiseaseID: id foreign:Diseases.id
+    DoctoriD: id unique foreign:Employees.id
+    PatientID: id unique foreign:Patients.id
+    DiseaseID: id unique foreign:Diseases.id
     Details: string
     PatientAppointmentID: id foreign:PatientAppointments.id
     timestamps
@@ -145,7 +145,7 @@ models:
       belongsTo: Employee , Patient , Disease , PatientMedicine
 ################################Equipments################################
   Equipment:
-    EquipmentTypeID: id foreign:EquipmentTypes.id
+    EquipmentTypeID: id unique foreign:EquipmentTypes.id
     Details: string
     CompanyName: string
     timestamps
@@ -155,8 +155,8 @@ models:
       HasMany: EquipmentBill , RoomContent
 ################################EquipmentBills################################
   EquipmentBill:
-    EmployeeID: id foreign:Employees.id
-    EquipmentID: id foreign:Equipments.id
+    EmployeeID: id unique foreign:Employees.id
+    EquipmentID: id unique foreign:Equipments.id
     BillDate: date
     Quantity: integer
     Price: integer
@@ -166,8 +166,8 @@ models:
       belongsTo: Employee , Equipment
 ################################MedicineBills################################
   MedicineBill:
-    MedicineID: id foreign:Medicines.id
-    EmployeeID: id foreign:Employees.id
+    MedicineID: id unique foreign:Medicines.id
+    EmployeeID: id unique foreign:Employees.id
     BillDate: date
     Quantity: integer
     BuyPrice: integer
@@ -178,8 +178,8 @@ models:
       belongsTo: Medicine , Employee
 ################################PatientAnalysis################################
   PatientAnalysi:
-    PatientID: id foreign:Patients.id
-    AnalysisID: id foreign:Analysis.id
+    PatientID: id unique foreign:Patients.id
+    AnalysisID: id unique foreign:Analysis.id
     AnalysisDate: date
     AnalysisRatio: string
     AnalysisResult: string
@@ -189,8 +189,8 @@ models:
       belongsTo: Patient , Analysi
 ################################PatientAppointments################################
   PatientAppointment:
-    PatientID: id foreign:Patients.id
-    ClinicID: id foreign:Clinics.id
+    PatientID: id unique foreign:Patients.id
+    ClinicID: id unique foreign:Clinics.id
     AppointmentDate: date
     timestamps
     softDeletes
@@ -199,8 +199,8 @@ models:
       HasMany: PatientAppointment
 ################################PatientMedicines################################
   PatientMedicine:
-    MedicineID: id foreign:Medicines.id
-    DiagnosedID: id foreign:Diagnoseds.id
+    MedicineID: id unique foreign:Medicines.id
+    DiagnosedID: id unique foreign:Diagnoseds.id
     MedicineCaliber: integer
     DosagePerDay: integer
     DaysCount: integer
@@ -210,10 +210,10 @@ models:
       belongsTo: Medicine , Diagnosed
 ################################PatientsOperations################################
   PatientsOperation:
-    PatientID: id foreign:Patients.id
-    DoctorID: id foreign:Employees.id
-    AnesthesiologistID: id foreign:Employees.id
-    OperationID: id foreign:Operations.id
+    PatientID: id unique foreign:Patients.id
+    DoctorID: id unique foreign:Employees.id
+    AnesthesiologistID: id unique foreign:Employees.id
+    OperationID: id unique foreign:Operations.id
     OperationDate: date
     DoctorCommission: integer
     timestamps
@@ -222,8 +222,8 @@ models:
       belongsTo: Patient , Employee , Operation
 ################################PatientSymptoms################################
   PatientSymptom:
-    PatientID: id foreign:Patients.id
-    SymptomID: id foreign:Symptoms.id
+    PatientID: id unique foreign:Patients.id
+    SymptomID: id unique foreign:Symptoms.id
     SymptomDate: date
     Description: string
     timestamps
@@ -232,7 +232,7 @@ models:
       belongsTo: Patient , Symptom
 ################################RoomContents################################
   RoomContent:
-    EquipmentID: id foreign:Equipments.id
+    EquipmentID: id unique foreign:Equipments.id
     RoomID: id foreign:Rooms.id
     timestamps
     softDeletes
@@ -240,8 +240,7 @@ models:
       belongsTo: Equipment , Room
 ################################WorkSchedules################################
   WorkSchedule:
-    id: id
-    EmployeeID: id foreign:Employees.id
+    EmployeeID: id unique foreign:Employees.id
     RoomID: id foreign:Rooms.id
     FromHour: date
     ToHour: date
