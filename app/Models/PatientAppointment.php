@@ -35,28 +35,19 @@ class PatientAppointment extends Model
         'AppointmentDate' => 'date',
     ];
 
-    public function patients(): BelongsTo
-    {
-        return $this->belongsTo(Patients::class);
-    }
-
-    public function clinics(): BelongsTo
-    {
-        return $this->belongsTo(Clinics::class);
-    }
-
-    public function patientID(): BelongsTo
+    public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class);
     }
 
-    public function clinicID(): BelongsTo
+    public function clinic(): BelongsTo
     {
         return $this->belongsTo(Clinic::class);
     }
 
-    public function patientAppointments(): HasMany
+    public function patientAppointment(): HasMany
     {
-        return $this->hasMany(PatientAppointments::class);
+        return $this->hasMany(PatientAppointment::class);
     }
+    
 }

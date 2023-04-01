@@ -31,23 +31,18 @@ class Room extends Model
         'id' => 'integer',
     ];
 
-    public function user(): HasOne
+    public function bloodBank(): HasOne
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(BloodBank::class);
     }
 
-    public function bloodBanks(): HasOne
+    public function roomContent(): HasMany
     {
-        return $this->hasOne(BloodBanks::class);
+        return $this->hasMany(RoomContent::class);
     }
 
-    public function roomContents(): HasMany
+    public function workSchedule(): HasMany
     {
-        return $this->hasMany(RoomContents::class);
-    }
-
-    public function workSchedules(): HasMany
-    {
-        return $this->hasMany(WorkSchedules::class);
+        return $this->hasMany(WorkSchedule::class);
     }
 }

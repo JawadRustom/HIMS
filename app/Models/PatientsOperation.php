@@ -39,38 +39,19 @@ class PatientsOperation extends Model
         'OperationDate' => 'date',
     ];
 
-    public function patients(): BelongsTo
-    {
-        return $this->belongsTo(Patients::class);
-    }
-
-    public function employees(): BelongsTo
-    {
-        return $this->belongsTo(Employees::class);
-    }
-
-    public function operations(): BelongsTo
-    {
-        return $this->belongsTo(Operations::class);
-    }
-
-    public function patientID(): BelongsTo
+    public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class);
     }
 
-    public function doctorID(): BelongsTo
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
     }
 
-    public function anesthesiologistID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function operationID(): BelongsTo
+    public function operation(): BelongsTo
     {
         return $this->belongsTo(Operation::class);
     }
+
 }

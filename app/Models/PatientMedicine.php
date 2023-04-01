@@ -35,23 +35,14 @@ class PatientMedicine extends Model
         'DiagnosedID' => 'integer',
     ];
 
-    public function medicines(): BelongsTo
-    {
-        return $this->belongsTo(Medicines::class);
-    }
-
-    public function diagnoseds(): BelongsTo
-    {
-        return $this->belongsTo(Diagnoseds::class);
-    }
-
-    public function medicineID(): BelongsTo
+    public function medicine(): BelongsTo
     {
         return $this->belongsTo(Medicine::class);
     }
 
-    public function diagnosedID(): BelongsTo
+    public function diagnosed(): BelongsTo
     {
         return $this->belongsTo(Diagnosed::class);
     }
+
 }

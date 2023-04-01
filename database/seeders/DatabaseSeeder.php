@@ -21,12 +21,30 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call([
-            UserTypeSeeder::class,
-            AdminSeeder::class,
 
-            //Make Admin Last Seeder In Last
-            DoctorSeeder::class,
+            UserTypeSeeder::class,
             UserSeeder::class,
+            PatientSeeder::class,
+            DepartmentSeeder::class,
+            AnalysiSeeder::class,
+            CertificationSeeder::class,
+            DiseaseSeeder::class,
+            EquipmentTypeSeeder::class,
+            MedicineSeeder::class,
+            RoomSeeder::class,
+            SymptomSeeder::class,
+            OperationSeeder::class,
+            EmployeeSeeder::class,
+            BloodBankSeeder::class,
+            CertificationEmployeeSeeder::class,
+            ClinicSeeder::class,
+            DeathSeeder::class,
+            DiagnosedSeeder::class,
+            EquipmentSeeder::class,
+            EquipmentBillSeeder::class,
+            MedicineBillSeeder::class,
+            AdminSeeder::class,
+            DoctorSeeder::class,
         ]);
     }
 }

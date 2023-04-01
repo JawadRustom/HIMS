@@ -40,48 +40,34 @@ class Employee extends Model
         'BirthDate' => 'date',
     ];
 
-    public function users(): BelongsTo
-    {
-        return $this->belongsTo(Users::class);
-    }
-
-    public function departments(): BelongsTo
-    {
-        return $this->belongsTo(Departments::class);
-    }
-
-    public function id(): BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function departmentID(): BelongsTo
+    public function department(): BelongsTo
     {
         return $this->belongsTo(Department::class);
     }
 
-    public function certificationEmployees(): HasMany
+    public function certificationEmployee(): HasMany
     {
-        return $this->hasMany(CertificationEmployees::class);
+        return $this->hasMany(CertificationEmployee::class);
     }
 
-    public function diagnoseds(): HasMany
+    public function diagnosed(): HasMany
     {
-        return $this->hasMany(Diagnoseds::class);
+        return $this->hasMany(Diagnosed::class);
     }
 
-    public function workSchedules(): HasMany
+    public function workSchedule(): HasMany
     {
-        return $this->hasMany(WorkSchedules::class);
+        return $this->hasMany(WorkSchedule::class);
     }
 
-    public function patientsOperations(): HasMany
+    public function patientsOperation(): HasMany
     {
-        return $this->hasMany(PatientsOperations::class);
+        return $this->hasMany(PatientsOperation::class);
     }
-
-    public function (): HasMany
-    {
-        return $this->hasMany(::class);
-    }
+    
 }

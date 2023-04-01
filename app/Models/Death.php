@@ -29,13 +29,9 @@ class Death extends Model
         'DeathDate' => 'date',
     ];
 
-    public function patients(): BelongsTo
-    {
-        return $this->belongsTo(Patients::class);
-    }
-
-    public function id(): BelongsTo
+    public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class);
     }
+    
 }

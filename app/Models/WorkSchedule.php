@@ -38,23 +38,14 @@ class WorkSchedule extends Model
         'WorkDayName' => 'date',
     ];
 
-    public function employees(): BelongsTo
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employees::class);
     }
 
-    public function rooms(): BelongsTo
-    {
-        return $this->belongsTo(Rooms::class);
-    }
-
-    public function employeeID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function roomID(): BelongsTo
+    public function room(): BelongsTo
     {
         return $this->belongsTo(Room::class);
     }
+
 }
