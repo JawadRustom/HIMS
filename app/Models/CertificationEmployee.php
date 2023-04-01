@@ -41,5 +41,14 @@ class CertificationEmployee extends Model
     {
         return $this->belongsTo(Certification::class);
     }
-    
+
+    public function employeeID(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function certificationID(): BelongsTo
+    {
+        return $this->belongsTo(Certification::class);
+    }
 }

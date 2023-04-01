@@ -29,9 +29,8 @@ class EquipmentType extends Model
         'id' => 'integer',
     ];
 
-    public function equipments(): HasMany
+    public function equipment(): HasMany
     {
-        return $this->hasMany(Equipments::class);
+        return $this->hasMany(Equipment::class);
     }
-    
 }

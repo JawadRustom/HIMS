@@ -50,24 +50,33 @@ class Employee extends Model
         return $this->belongsTo(Department::class);
     }
 
-    public function certificationEmployee(): HasMany
+    public function id(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function departmentID(): BelongsTo
+    {
+        return $this->belongsTo(Department::class);
+    }
+
+    public function certificationEmployees(): HasMany
     {
         return $this->hasMany(CertificationEmployee::class);
     }
 
-    public function diagnosed(): HasMany
+    public function diagnoseds(): HasMany
     {
         return $this->hasMany(Diagnosed::class);
     }
 
-    public function workSchedule(): HasMany
+    public function workSchedules(): HasMany
     {
         return $this->hasMany(WorkSchedule::class);
     }
 
-    public function patientsOperation(): HasMany
+    public function patientsOperations(): HasMany
     {
         return $this->hasMany(PatientsOperation::class);
     }
-    
 }

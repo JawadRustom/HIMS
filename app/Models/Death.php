@@ -33,5 +33,9 @@ class Death extends Model
     {
         return $this->belongsTo(Patient::class);
     }
-    
+
+    public function id(): BelongsTo
+    {
+        return $this->belongsTo(Patient::class);
+    }
 }

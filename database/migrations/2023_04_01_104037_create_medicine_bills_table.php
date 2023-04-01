@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('equipment', function (Blueprint $table) {
+        Schema::create('medicine_bills', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('EquipmentTypeID')->constrained('equipment_types')->unique();
-            $table->string('Details');
-            $table->string('CompanyName');
+            $table->foreignId('MedicineID')->constrained('medicines');
+            $table->foreignId('EmployeeID')->constrained('employees');
+            $table->date('BillDate');
+            $table->integer('Quantity');
+            $table->integer('BuyPrice');
+            $table->integer('SalePrice');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('equipment');
+        Schema::dropIfExists('medicine_bills');
     }
 };

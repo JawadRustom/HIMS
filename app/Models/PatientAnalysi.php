@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PatientAnalysi extends Model
@@ -47,4 +46,13 @@ class PatientAnalysi extends Model
         return $this->belongsTo(Analysi::class);
     }
 
+    public function patientID(): BelongsTo
+    {
+        return $this->belongsTo(Patient::class);
+    }
+
+    public function analysisID(): BelongsTo
+    {
+        return $this->belongsTo(Analysi::class);
+    }
 }

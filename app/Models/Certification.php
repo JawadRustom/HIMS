@@ -30,9 +30,8 @@ class Certification extends Model
         'id' => 'integer',
     ];
 
-    public function certificationEmployee(): HasMany
+    public function certificationEmployees(): HasMany
     {
         return $this->hasMany(CertificationEmployee::class);
     }
-
 }

@@ -40,7 +40,7 @@ class WorkSchedule extends Model
 
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employees::class);
+        return $this->belongsTo(Employee::class);
     }
 
     public function room(): BelongsTo
@@ -48,4 +48,13 @@ class WorkSchedule extends Model
         return $this->belongsTo(Room::class);
     }
 
+    public function employeeID(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function roomID(): BelongsTo
+    {
+        return $this->belongsTo(Room::class);
+    }
 }

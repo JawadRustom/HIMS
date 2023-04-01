@@ -42,4 +42,13 @@ class RoomContent extends Model
         return $this->belongsTo(Room::class);
     }
 
+    public function equipmentID(): BelongsTo
+    {
+        return $this->belongsTo(Equipment::class);
+    }
+
+    public function roomID(): BelongsTo
+    {
+        return $this->belongsTo(Room::class);
+    }
 }

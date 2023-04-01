@@ -47,4 +47,13 @@ class MedicineBill extends Model
         return $this->belongsTo(Employee::class);
     }
 
+    public function medicineID(): BelongsTo
+    {
+        return $this->belongsTo(Medicine::class);
+    }
+
+    public function employeeID(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }
