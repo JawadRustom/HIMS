@@ -37,43 +37,24 @@ class Diagnosed extends Model
         'PatientAppointmentID' => 'integer',
     ];
 
-    public function employees(): BelongsTo
-    {
-        return $this->belongsTo(Employees::class);
-    }
-
-    public function patients(): BelongsTo
-    {
-        return $this->belongsTo(Patients::class);
-    }
-
-    public function diseases(): BelongsTo
-    {
-        return $this->belongsTo(Diseases::class);
-    }
-
-    public function patientMedicines(): BelongsTo
-    {
-        return $this->belongsTo(PatientMedicines::class);
-    }
-
-    public function doctoriD(): BelongsTo
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
     }
 
-    public function patientID(): BelongsTo
+    public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class);
     }
 
-    public function diseaseID(): BelongsTo
+    public function disease(): BelongsTo
     {
         return $this->belongsTo(Disease::class);
     }
 
-    public function patientAppointmentID(): BelongsTo
+    public function patientAppointment(): BelongsTo
     {
         return $this->belongsTo(PatientAppointment::class);
     }
+
 }

@@ -35,23 +35,14 @@ class PatientSymptom extends Model
         'SymptomDate' => 'date',
     ];
 
-    public function patients(): BelongsTo
-    {
-        return $this->belongsTo(Patients::class);
-    }
-
-    public function symptoms(): BelongsTo
-    {
-        return $this->belongsTo(Symptoms::class);
-    }
-
-    public function patientID(): BelongsTo
+    public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class);
     }
 
-    public function symptomID(): BelongsTo
+    public function symptom(): BelongsTo
     {
         return $this->belongsTo(Symptom::class);
     }
+
 }

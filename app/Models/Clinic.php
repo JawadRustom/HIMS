@@ -31,13 +31,9 @@ class Clinic extends Model
         'DepartmentID' => 'integer',
     ];
 
-    public function departments(): BelongsTo
-    {
-        return $this->belongsTo(Departments::class);
-    }
-
-    public function departmentID(): BelongsTo
+    public function department(): BelongsTo
     {
         return $this->belongsTo(Department::class);
     }
+    
 }

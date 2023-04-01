@@ -42,43 +42,33 @@ class Patient extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function id(): BelongsTo
+    public function death(): HasOne
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(Death::class);
     }
 
-    public function deaths(): HasOne
+    public function diagnosed(): HasMany
     {
-        return $this->hasOne(Deaths::class);
+        return $this->hasMany(Diagnosed::class);
     }
 
-    public function (): HasOne
+    public function PatientAnalysi(): HasMany
     {
-        return $this->hasOne(::class);
+        return $this->hasMany(PatientAnalysi::class);
     }
 
-    public function diagnoseds(): HasMany
+    public function patientAppointment(): HasMany
     {
-        return $this->hasMany(Diagnoseds::class);
+        return $this->hasMany(PatientAppointment::class);
     }
 
-    public function patientAnalyses(): HasMany
+    public function patientsOperation(): HasMany
     {
-        return $this->hasMany(PatientAnalysis::class);
+        return $this->hasMany(PatientsOperation::class);
     }
 
-    public function patientAppointments(): HasMany
+    public function patientSymptom(): HasMany
     {
-        return $this->hasMany(PatientAppointments::class);
-    }
-
-    public function patientsOperations(): HasMany
-    {
-        return $this->hasMany(PatientsOperations::class);
-    }
-
-    public function patientSymptoms(): HasMany
-    {
-        return $this->hasMany(PatientSymptoms::class);
+        return $this->hasMany(PatientSymptom::class);
     }
 }

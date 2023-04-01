@@ -30,8 +30,9 @@ class Operation extends Model
         'id' => 'integer',
     ];
 
-    public function patientsOperations(): HasMany
+    public function patientsOperation(): HasMany
     {
-        return $this->hasMany(PatientsOperations::class);
+        return $this->hasMany(PatientsOperation::class);
     }
+    
 }

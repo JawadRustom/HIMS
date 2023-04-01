@@ -12,8 +12,8 @@ models:
     softDeletes
     relationships:
       belongsTo: User
-      HasOne: Deaths,
-      HasMany: Diagnoseds , PatientAnalysis , PatientAppointments , PatientsOperations , PatientSymptoms
+      HasOne: Death
+      HasMany: Diagnosed , PatientAnalysi , PatientAppointment , PatientsOperation , PatientSymptom
 ################################Departments################################
   Department:
     id
@@ -22,8 +22,8 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasOne: Employees
-      HasMany: Clinics
+      HasOne: Employee
+      HasMany: Clinic
 ################################Analysis################################
   Analysi:
     id
@@ -38,7 +38,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasMany: CertificationEmployees
+      HasMany: CertificationEmployee
 ################################Diseases################################
   Disease:
     id
@@ -46,7 +46,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasMany: Diagnoseds
+      HasMany: Diagnosed
 ################################EquipmentTypes################################
   EquipmentType:
     id
@@ -54,7 +54,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasMany: Equipments
+      HasMany: Equipment
 ################################Medicines################################
   Medicine:
     id
@@ -64,7 +64,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasMany: MedicineBills , PatientMedicines
+      HasMany: MedicineBill , PatientMedicine
 ################################Rooms################################
   Room:
     id
@@ -73,8 +73,8 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasOne: User , BloodBanks
-      HasMany: RoomContents , WorkSchedules
+      HasOne: BloodBank
+      HasMany: RoomContent , WorkSchedule
 ################################Symptoms################################
   Symptom:
     id
@@ -82,7 +82,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasMany: PatientSymptoms
+      HasMany: PatientSymptom
 ################################Operations################################
   Operation:
     id
@@ -91,7 +91,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      HasMany: PatientsOperations
+      HasMany: PatientsOperation
 ################################Employees################################
   Employee:
     id: id foreign:users.id
@@ -106,8 +106,8 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: users , Departments
-      HasMany: CertificationEmployees , Diagnoseds , WorkSchedules , PatientsOperations ,
+      belongsTo: User , Department
+      HasMany: CertificationEmployee , Diagnosed , WorkSchedule , PatientsOperation
 ################################BloodBanks################################
   BloodBank:
     id
@@ -127,7 +127,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Employees , Certifications
+      belongsTo: Employee , Certification
 ################################Clinics################################
   Clinic:
     id
@@ -136,13 +136,13 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Departments
+      belongsTo: Department
 ################################Deaths################################
   Death:
     id: id foreign:patients.id
     DeathDate: date
     relationships:
-      belongsTo: patients
+      belongsTo: patient
 ################################Diagnoseds################################
   Diagnosed:
     id
@@ -154,7 +154,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Employees , Patients , Diseases , PatientMedicines
+      belongsTo: Employee , Patient , Disease , PatientMedicine
 ################################Equipments################################
   Equipment:
     id
@@ -165,7 +165,7 @@ models:
     softDeletes
     relationships:
       belongsTo: EquipmentTypes
-      HasMany: EquipmentBills , RoomContents ,
+      HasMany: EquipmentBill , RoomContent
 ################################EquipmentBills################################
   EquipmentBill:
     id
@@ -177,7 +177,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Employees , Equipments
+      belongsTo: Employee , Equipment
 ################################MedicineBills################################
   MedicineBill:
     id
@@ -190,7 +190,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Medicines , Employees
+      belongsTo: Medicine , Employee
 ################################PatientAnalysis################################
   PatientAnalysi:
     id
@@ -202,8 +202,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Patients , Analysis
-      HasMany: PatientAnalysis
+      belongsTo: Patient , Analysi
 ################################PatientAppointments################################
   PatientAppointment:
     id
@@ -213,8 +212,8 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Patients , Clinics
-      HasMany: PatientAppointments
+      belongsTo: Patient , Clinic
+      HasMany: PatientAppointment
 ################################PatientMedicines################################
   PatientMedicine:
     id
@@ -226,7 +225,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Medicines , Diagnoseds
+      belongsTo: Medicine , Diagnosed
 ################################PatientsOperations################################
   PatientsOperation:
     id
@@ -239,7 +238,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Patients , Employees , Operations
+      belongsTo: Patient , Employee , Operation
 ################################PatientSymptoms################################
   PatientSymptom:
     id
@@ -250,7 +249,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Patients , Symptoms
+      belongsTo: Patient , Symptom
 ################################RoomContents################################
   RoomContent:
     id
@@ -259,7 +258,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Equipments , Rooms
+      belongsTo: Equipment , Room
 ################################WorkSchedules################################
   WorkSchedule:
     id: id
@@ -271,7 +270,7 @@ models:
     timestamps
     softDeletes
     relationships:
-      belongsTo: Employees , Rooms
+      belongsTo: Employee , Room
 ############################################################################
 
 controllers:

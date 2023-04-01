@@ -37,28 +37,14 @@ class PatientAnalysi extends Model
         'AnalysisDate' => 'date',
     ];
 
-    public function patients(): BelongsTo
-    {
-        return $this->belongsTo(Patients::class);
-    }
-
-    public function analysis(): BelongsTo
-    {
-        return $this->belongsTo(Analysis::class);
-    }
-
-    public function patientID(): BelongsTo
+    public function patient(): BelongsTo
     {
         return $this->belongsTo(Patient::class);
     }
 
-    public function analysisID(): BelongsTo
+    public function analysi(): BelongsTo
     {
         return $this->belongsTo(Analysi::class);
     }
 
-    public function patientAnalyses(): HasMany
-    {
-        return $this->hasMany(PatientAnalysis::class);
-    }
 }

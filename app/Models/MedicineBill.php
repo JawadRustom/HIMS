@@ -37,23 +37,14 @@ class MedicineBill extends Model
         'BillDate' => 'date',
     ];
 
-    public function medicines(): BelongsTo
-    {
-        return $this->belongsTo(Medicines::class);
-    }
-
-    public function employees(): BelongsTo
-    {
-        return $this->belongsTo(Employees::class);
-    }
-
-    public function medicineID(): BelongsTo
+    public function medicine(): BelongsTo
     {
         return $this->belongsTo(Medicine::class);
     }
 
-    public function employeeID(): BelongsTo
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
     }
+
 }

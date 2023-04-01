@@ -50,12 +50,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function UserType()
     {
         return $this->belongsTo(UserType::class,'id','UserTypeId');
     }
-    public function Patients(): HasMany
+
+    public function Patient(): HasOne
     {
-        return $this->hasMany(User::class);
+        return $this->HasOne(Patient::class);
     }
+
+    public function Employee(): HasOne
+    {
+        return $this->HasOne(Employee::class);
+    }
+
 }

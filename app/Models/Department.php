@@ -31,13 +31,14 @@ class Department extends Model
         'id' => 'integer',
     ];
 
-    public function employees(): HasOne
+    public function employee(): HasOne
     {
-        return $this->hasOne(Employees::class);
+        return $this->hasOne(Employee::class);
     }
 
-    public function clinics(): HasMany
+    public function clinic(): HasMany
     {
-        return $this->hasMany(Clinics::class);
+        return $this->hasMany(Clinic::class);
     }
+    
 }
