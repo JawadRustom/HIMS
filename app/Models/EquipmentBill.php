@@ -36,7 +36,7 @@ class EquipmentBill extends Model
         'BillDate' => 'date',
     ];
 
-    public function employees(): BelongsTo
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
     }
