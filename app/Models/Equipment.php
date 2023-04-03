@@ -33,19 +33,23 @@ class Equipment extends Model
         'EquipmentTypeID' => 'integer',
     ];
 
-    public function equipmentType(): BelongsTo
+    public function equipmentTypes(): BelongsTo
+    {
+        return $this->belongsTo(EquipmentTypes::class);
+    }
+
+    public function equipmentTypeID(): BelongsTo
     {
         return $this->belongsTo(EquipmentType::class);
     }
 
-    public function equipmentBill(): HasMany
+    public function equipmentBills(): HasMany
     {
         return $this->hasMany(EquipmentBill::class);
     }
 
-    public function roomContent(): HasMany
+    public function roomContents(): HasMany
     {
         return $this->hasMany(RoomContent::class);
     }
-    
 }

@@ -45,9 +45,18 @@ class PatientAppointment extends Model
         return $this->belongsTo(Clinic::class);
     }
 
-    public function patientAppointment(): HasMany
+    public function patientID(): BelongsTo
+    {
+        return $this->belongsTo(Patient::class);
+    }
+
+    public function clinicID(): BelongsTo
+    {
+        return $this->belongsTo(Clinic::class);
+    }
+
+    public function patientAppointments(): HasMany
     {
         return $this->hasMany(PatientAppointment::class);
     }
-    
 }

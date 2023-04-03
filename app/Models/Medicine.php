@@ -31,14 +31,13 @@ class Medicine extends Model
         'id' => 'integer',
     ];
 
-    public function medicineBill(): HasMany
+    public function medicineBills(): HasMany
     {
         return $this->hasMany(MedicineBill::class);
     }
 
-    public function patientMedicine(): HasMany
+    public function patientMedicines(): HasMany
     {
         return $this->hasMany(PatientMedicine::class);
     }
-    
 }

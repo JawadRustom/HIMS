@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('patient_appointments', function (Blueprint $table) {
+        Schema::create('room_contents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->constrained('patients')->unique();
-            $table->foreignId('ClinicID')->constrained('clinics')->unique();
-            $table->date('AppointmentDate');
+            $table->foreignId('EquipmentID')->constrained('equipments');
+            $table->foreignId('RoomID')->constrained('rooms');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('patient_appointments');
+        Schema::dropIfExists('room_contents');
     }
 };

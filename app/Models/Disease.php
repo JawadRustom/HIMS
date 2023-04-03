@@ -29,9 +29,8 @@ class Disease extends Model
         'id' => 'integer',
     ];
 
-    public function diagnosed(): HasMany
+    public function diagnoseds(): HasMany
     {
         return $this->hasMany(Diagnosed::class);
     }
-    
 }

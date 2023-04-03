@@ -26,8 +26,8 @@ class EquipmentBillFactory extends Factory
             'EmployeeID' => Employee::factory(),
             'EquipmentID' => Equipment::factory(),
             'BillDate' => $this->faker->date(),
-            'Quantity' => $this->faker->numberBetween(0, 10000),
-            'Price' => $this->faker->numberBetween(0, 10000),
+            'Quantity' => $this->faker->numberBetween(-10000, 10000),
+            'Price' => $this->faker->numberBetween(-10000, 10000),
         ];
     }
 }

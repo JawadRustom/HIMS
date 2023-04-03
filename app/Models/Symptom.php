@@ -29,7 +29,7 @@ class Symptom extends Model
         'id' => 'integer',
     ];
 
-    public function patientSymptom(): HasMany
+    public function patientSymptoms(): HasMany
     {
         return $this->hasMany(PatientSymptom::class);
     }

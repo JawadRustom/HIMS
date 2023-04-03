@@ -13,13 +13,10 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('equipment_bills', function (Blueprint $table) {
+        Schema::create('certification_employees', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('EmployeeID')->constrained('employees')->unique();
-            $table->foreignId('EquipmentID')->constrained('equipments')->unique();
-            $table->date('BillDate');
-            $table->integer('Quantity');
-            $table->integer('Price');
+            $table->foreignId('EmployeeID')->constrained('employees');
+            $table->foreignId('CertificationID')->constrained('certifications');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('equipment_bills');
+        Schema::dropIfExists('certification_employees');
     }
 };
