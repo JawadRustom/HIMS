@@ -25,9 +25,9 @@ class PatientMedicineFactory extends Factory
         return [
             'MedicineID' => Medicine::factory(),
             'DiagnosedID' => Diagnosed::factory(),
-            'MedicineCaliber' => $this->faker->numberBetween(-10000, 10000),
-            'DosagePerDay' => $this->faker->numberBetween(-10000, 10000),
-            'DaysCount' => $this->faker->numberBetween(-10000, 10000),
+            'MedicineCaliber' => $this->faker->numberBetween(1, 10000),
+            'DosagePerDay' => $this->faker->numberBetween(1, 10000),
+            'DaysCount' => $this->faker->numberBetween(1, 10000),
         ];
     }
 }

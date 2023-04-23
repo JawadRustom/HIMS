@@ -46,13 +46,4 @@ class PatientAnalysi extends Model
         return $this->belongsTo(Analysi::class);
     }
 
-    public function patientID(): BelongsTo
-    {
-        return $this->belongsTo(Patient::class);
-    }
-
-    public function analysisID(): BelongsTo
-    {
-        return $this->belongsTo(Analysi::class);
-    }
 }

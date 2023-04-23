@@ -20,6 +20,9 @@ class UserTypeSeeder extends Seeder
             'UserType'=>'Doctor'
         ]);
         $UserType=UserType::create([
+            'UserType'=>'Patient'
+        ]);
+        $UserType=UserType::create([
             'UserType'=>'User'
         ]);
     }

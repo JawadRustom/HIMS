@@ -36,8 +36,9 @@ class Clinic extends Model
         return $this->belongsTo(Department::class);
     }
 
-    public function departmentID(): BelongsTo
+    public function Room(): BelongsTo
     {
-        return $this->belongsTo(Department::class);
+        return $this->belongsTo(Room::class);
     }
+
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('PatientID')->constrained('patients');
             $table->foreignId('AnalysisID')->constrained('analysis');
-            $table->date('AnalysisDate');
+            $table->timestamp('AnalysisDate');
             $table->string('AnalysisRatio');
             $table->string('AnalysisResult');
             $table->timestamps();

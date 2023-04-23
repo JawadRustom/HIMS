@@ -29,7 +29,7 @@ class PatientsOperationFactory extends Factory
             'AnesthesiologistID' => Employee::factory(),
             'OperationID' => Operation::factory(),
             'OperationDate' => $this->faker->date(),
-            'DoctorCommission' => $this->faker->numberBetween(-10000, 10000),
+            'DoctorCommission' => $this->faker->numberBetween(1, 10000),
         ];
     }
 }

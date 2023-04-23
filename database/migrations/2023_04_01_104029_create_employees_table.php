@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id()->foreign('users.id');
             $table->string('NationalNumber');
-            $table->foreignId('DepartmentID')->constrained('departments');
-            $table->string('Address');
-            $table->date('HairDate');
-            $table->date('BirthDate');
+            $table->foreignId('DepartmentID')->constrained('departments')->uniqid();
+            $table->string('Address')->nullable();
+            $table->timestamp('HairDate');
             $table->string('Gender');
+            $table->dateTime('BirthDate');
             $table->integer('Salary');
-            $table->integer('ManagerID');
+            $table->foreignId('ManagerID')->Reference('id')->on('employees')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

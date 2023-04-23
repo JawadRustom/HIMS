@@ -1,256 +1,256 @@
-models:
-################################Patients################################
-  Patient:
-    id: id foreign:users.id
-    NationalNumber: string
-    PatientStatus: string
-    Gender: string
-    BirthDate: date
-    PatientLength: string
-    PatientWeight: string
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: User
-      HasOne: Death
-      HasMany: Diagnosed , PatientAnalysi , PatientAppointment , PatientsOperation , PatientSymptom
-################################Departments################################
-  Department:
-    DepartmentName: string
-    ManagerID: integer
-    timestamps
-    softDeletes
-    relationships:
-      HasOne: Employee
-      HasMany: Clinic
-################################Analysis################################
-  Analysi:
-    softDeletes
-    AnalysisName: string
-    timestamps
-################################Certifications################################
-  Certification:
-    CertificationName: string
-    CertificationDonor:  string
-    timestamps
-    softDeletes
-    relationships:
-      HasMany: CertificationEmployee
-################################Diseases################################
-  Disease:
-    DiseasesName: string
-    timestamps
-    softDeletes
-    relationships:
-      HasMany: Diagnosed
-################################EquipmentTypes################################
-  EquipmentType:
-    Equipment_Type_Name: string
-    timestamps
-    softDeletes
-    relationships:
-      HasMany: Equipment
-################################Medicines################################
-  Medicine:
-    MedicineName: string
-    MedicineQuantity: integer
-    MedicinePrice: integer
-    timestamps
-    softDeletes
-    relationships:
-      HasMany: MedicineBill , PatientMedicine
-################################Rooms################################
-  Room:
-    RoomType: string
-    FloorNumber: integer
-    timestamps
-    softDeletes
-    relationships:
-      HasOne: BloodBank
-      HasMany: RoomContent , WorkSchedule
-################################Symptoms################################
-  Symptom:
-    SymptomsName: string
-    timestamps
-    softDeletes
-    relationships:
-      HasMany: PatientSymptom
-################################Operations################################
-  Operation:
-    OperationName: string
-    OperationPrice: integer
-    timestamps
-    softDeletes
-    relationships:
-      HasMany: PatientsOperation
-################################Employees################################
-  Employee:
-    id: id foreign:users.id
-    NationalNumber: string
-    DepartmentID: id foreign:Departments.id
-    Address: string
-    HairDate: date
-    BirthDate: date
-    Gender: string
-    Salary: integer
-    ManagerID: integer
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: User , Department
-      HasMany: CertificationEmployee , Diagnosed , WorkSchedule , PatientsOperation
-################################BloodBanks################################
-  BloodBank:
-    Name: string
-    Type: string
-    Quantity: integer
-    RoomID: id foreign:Rooms.id
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Room
-################################CertificationEmployees################################
-  CertificationEmployee:
-    EmployeeID: id unique foreign:Employees.id
-    CertificationID: id unique foreign:Certifications.id
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Employee , Certification
-################################Clinics################################
-  Clinic:
-    ClinicsType: string
-    DepartmentID: id foreign:Departments.id
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Department
-################################Deaths################################
-  Death:
-    id: id foreign:patients.id
-    DeathDate: date
-    relationships:
-      belongsTo: patient
-################################Diagnoseds################################
-  Diagnosed:
-    id
-    DoctoriD: id unique foreign:Employees.id
-    PatientID: id unique foreign:Patients.id
-    DiseaseID: id unique foreign:Diseases.id
-    Details: string
-    PatientAppointmentID: id foreign:PatientAppointments.id
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Employee , Patient , Disease , PatientMedicine
-################################Equipments################################
-  Equipment:
-    EquipmentTypeID: id unique foreign:EquipmentTypes.id
-    Details: string
-    CompanyName: string
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: EquipmentTypes
-      HasMany: EquipmentBill , RoomContent
-################################EquipmentBills################################
-  EquipmentBill:
-    EmployeeID: id unique foreign:Employees.id
-    EquipmentID: id unique foreign:Equipments.id
-    BillDate: date
-    Quantity: integer
-    Price: integer
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Employee , Equipment
-################################MedicineBills################################
-  MedicineBill:
-    MedicineID: id unique foreign:Medicines.id
-    EmployeeID: id unique foreign:Employees.id
-    BillDate: date
-    Quantity: integer
-    BuyPrice: integer
-    SalePrice: integer
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Medicine , Employee
-################################PatientAnalysis################################
-  PatientAnalysi:
-    PatientID: id unique foreign:Patients.id
-    AnalysisID: id unique foreign:Analysis.id
-    AnalysisDate: date
-    AnalysisRatio: string
-    AnalysisResult: string
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Patient , Analysi
-################################PatientAppointments################################
-  PatientAppointment:
-    PatientID: id unique foreign:Patients.id
-    ClinicID: id unique foreign:Clinics.id
-    AppointmentDate: date
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Patient , Clinic
-      HasMany: PatientAppointment
-################################PatientMedicines################################
-  PatientMedicine:
-    MedicineID: id unique foreign:Medicines.id
-    DiagnosedID: id unique foreign:Diagnoseds.id
-    MedicineCaliber: integer
-    DosagePerDay: integer
-    DaysCount: integer
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Medicine , Diagnosed
-################################PatientsOperations################################
-  PatientsOperation:
-    PatientID: id unique foreign:Patients.id
-    DoctorID: id unique foreign:Employees.id
-    AnesthesiologistID: id unique foreign:Employees.id
-    OperationID: id unique foreign:Operations.id
-    OperationDate: date
-    DoctorCommission: integer
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Patient , Employee , Operation
-################################PatientSymptoms################################
-  PatientSymptom:
-    PatientID: id unique foreign:Patients.id
-    SymptomID: id unique foreign:Symptoms.id
-    SymptomDate: date
-    Description: string
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Patient , Symptom
-################################RoomContents################################
-  RoomContent:
-    EquipmentID: id unique foreign:Equipments.id
-    RoomID: id foreign:Rooms.id
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Equipment , Room
-################################WorkSchedules################################
-  WorkSchedule:
-    EmployeeID: id unique foreign:Employees.id
-    RoomID: id foreign:Rooms.id
-    FromHour: date
-    ToHour: date
-    WorkDayName: date
-    timestamps
-    softDeletes
-    relationships:
-      belongsTo: Employee , Room
-############################################################################
+# models:
+# ################################Patients################################
+#   Patient:
+#     id: id foreign:users.id
+#     NationalNumber: string
+#     PatientStatus: string
+#     Gender: string
+#     BirthDate: date
+#     PatientLength: string
+#     PatientWeight: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: User
+#       HasOne: Death
+#       HasMany: Diagnosed , PatientAnalysi , PatientAppointment , PatientsOperation , PatientSymptom
+# ################################Departments################################
+#   Department:
+#     DepartmentName: string
+#     ManagerID: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasOne: Employee
+#       HasMany: Clinic
+# ################################Analysis################################
+#   Analysi:
+#     softDeletes
+#     AnalysisName: string
+#     timestamps
+# ################################Certifications################################
+#   Certification:
+#     CertificationName: string
+#     CertificationDonor:  string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasMany: CertificationEmployee
+# ################################Diseases################################
+#   Disease:
+#     DiseasesName: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasMany: Diagnosed
+# ################################EquipmentTypes################################
+#   EquipmentType:
+#     Equipment_Type_Name: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasMany: Equipment
+# ################################Medicines################################
+#   Medicine:
+#     MedicineName: string
+#     MedicineQuantity: integer
+#     MedicinePrice: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasMany: MedicineBill , PatientMedicine
+# ################################Rooms################################
+#   Room:
+#     RoomType: string
+#     FloorNumber: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasOne: BloodBank , Clinic
+#       HasMany: RoomContent , WorkSchedule
+# ################################Symptoms################################
+#   Symptom:
+#     SymptomsName: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasMany: PatientSymptom
+# ################################Operations################################
+#   Operation:
+#     OperationName: string
+#     OperationPrice: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       HasMany: PatientsOperation
+# ################################Employees################################
+#   Employee:
+#     id: id foreign:users.id
+#     NationalNumber: string
+#     DepartmentID: id unique foreign:Departments.id
+#     Address: string
+#     HairDate: date
+#     BirthDate: date
+#     Gender: string
+#     Salary: integer
+#     ManagerID: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: User , Department
+#       HasMany: CertificationEmployee , Diagnosed , WorkSchedule , PatientsOperation
+# ################################BloodBanks################################
+#   BloodBank:
+#     Name: string
+#     Type: string
+#     Quantity: integer
+#     RoomID: id unique foreign:Rooms.id
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Room
+# ################################CertificationEmployees################################
+#   CertificationEmployee:
+#     EmployeeID: id foreign:Employees.id
+#     CertificationID: id foreign:Certifications.id
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Employee , Certification
+# ################################Clinics################################
+#   Clinic:
+#     ClinicsType: string
+#     DepartmentID: id unique foreign:Departments.id
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Department , Room
+# ################################Deaths################################
+#   Death:
+#     id: id foreign:patients.id
+#     DeathDate: date
+#     relationships:
+#       belongsTo: patient
+# ################################Diagnoseds################################
+#   Diagnosed:
+#     id
+#     DoctoriD: id foreign:Employees.id
+#     PatientID: id foreign:Patients.id
+#     DiseaseID: id foreign:Diseases.id
+#     Details: string
+#     PatientAppointmentID: id foreign:PatientAppointments.id
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Employee , Patient , Disease , PatientMedicine
+# ################################Equipments################################
+#   Equipment:
+#     EquipmentTypeID: id foreign:EquipmentTypes.id
+#     Details: string
+#     CompanyName: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: EquipmentTypes
+#       HasMany: EquipmentBill , RoomContent
+# ################################EquipmentBills################################
+#   EquipmentBill:
+#     EmployeeID: id foreign:Employees.id
+#     EquipmentID: id foreign:Equipments.id
+#     BillDate: date
+#     Quantity: integer
+#     Price: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Employee , Equipment
+# ################################MedicineBills################################
+#   MedicineBill:
+#     MedicineID: id foreign:Medicines.id
+#     EmployeeID: id foreign:Employees.id
+#     BillDate: date
+#     Quantity: integer
+#     BuyPrice: integer
+#     SalePrice: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Medicine , Employee
+# ################################PatientAnalysis################################
+#   PatientAnalysi:
+#     PatientID: id foreign:Patients.id
+#     AnalysisID: id foreign:Analysis.id
+#     AnalysisDate: date
+#     AnalysisRatio: string
+#     AnalysisResult: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Patient , Analysi
+# ################################PatientAppointments################################
+#   PatientAppointment:
+#     PatientID: id foreign:Patients.id
+#     ClinicID: id foreign:Clinics.id
+#     AppointmentDate: date
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Patient , Clinic
+#       HasMany: Diagnosed
+# ################################PatientMedicines################################
+#   PatientMedicine:
+#     MedicineID: id foreign:Medicines.id
+#     DiagnosedID: id foreign:Diagnoseds.id
+#     MedicineCaliber: integer
+#     DosagePerDay: integer
+#     DaysCount: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Medicine , Diagnosed
+# ################################PatientsOperations################################
+#   PatientsOperation:
+#     PatientID: id foreign:Patients.id
+#     DoctorID: id foreign:Employees.id
+#     AnesthesiologistID: id foreign:Employees.id
+#     OperationID: id foreign:Operations.id
+#     OperationDate: date
+#     DoctorCommission: integer
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Patient , Employee , Operation
+# ################################PatientSymptoms################################
+#   PatientSymptom:
+#     PatientID: id foreign:Patients.id
+#     SymptomID: id foreign:Symptoms.id
+#     SymptomDate: date
+#     Description: string
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Patient , Symptom
+# ################################RoomContents################################
+#   RoomContent:
+#     EquipmentID: id foreign:Equipments.id
+#     RoomID: id foreign:Rooms.id
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Equipment , Room
+# ################################WorkSchedules################################
+#   WorkSchedule:
+#     EmployeeID: id foreign:Employees.id
+#     RoomID: id foreign:Rooms.id
+#     FromHour: date
+#     ToHour: date
+#     WorkDayName: date
+#     timestamps
+#     softDeletes
+#     relationships:
+#       belongsTo: Employee , Room
+# ############################################################################
 
-controllers:
+# controllers:
 
-seeders: Patient
+# seeders: Patient

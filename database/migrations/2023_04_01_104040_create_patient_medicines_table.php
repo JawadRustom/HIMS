@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('DiagnosedID')->constrained('diagnoseds');
             $table->integer('MedicineCaliber');
             $table->integer('DosagePerDay');
-            $table->integer('DaysCount');
+            $table->integer('DaysCount')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

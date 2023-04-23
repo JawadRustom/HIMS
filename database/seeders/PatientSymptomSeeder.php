@@ -2,18 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Employee;
+use App\Models\PatientSymptom;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Carbon;
 
-class EmployeeSeeder extends Seeder
+class PatientSymptomSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Employee::factory(10)->create();
+        PatientSymptom::factory(10)->create();
     }
 }

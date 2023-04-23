@@ -57,23 +57,4 @@ class Diagnosed extends Model
         return $this->belongsTo(PatientMedicine::class);
     }
 
-    public function doctoriD(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function patientID(): BelongsTo
-    {
-        return $this->belongsTo(Patient::class);
-    }
-
-    public function diseaseID(): BelongsTo
-    {
-        return $this->belongsTo(Disease::class);
-    }
-
-    public function patientAppointmentID(): BelongsTo
-    {
-        return $this->belongsTo(PatientAppointment::class);
-    }
 }

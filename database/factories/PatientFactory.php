@@ -20,13 +20,14 @@ class PatientFactory extends Factory
      */
     public function definition(): array
     {
+        $array=['female','male'];
         return [
-            'NationalNumber' => $this->faker->word,
+            'NationalNumber' => $this->faker->regexify('[A-Z0-9]{10}'),
             'PatientStatus' => $this->faker->word,
-            'Gender' => $this->faker->word,
-            'BirthDate' => $this->faker->date(),
-            'PatientLength' => $this->faker->word,
-            'PatientWeight' => $this->faker->word,
+            'Gender' => $array[rand(0,1)],
+            'BirthDate' => $this->faker->dateTime(),
+            'PatientLength' => fake()->numberBetween(100,210),
+            'PatientWeight' => fake()->numberBetween(50,125),
         ];
     }
 }

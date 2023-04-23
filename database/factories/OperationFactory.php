@@ -22,7 +22,7 @@ class OperationFactory extends Factory
     {
         return [
             'OperationName' => $this->faker->word,
-            'OperationPrice' => $this->faker->numberBetween(-10000, 10000),
+            'OperationPrice' => $this->faker->numberBetween(1, 10000),
         ];
     }
 }

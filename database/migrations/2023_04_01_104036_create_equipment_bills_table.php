@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('EmployeeID')->constrained('employees');
             $table->foreignId('EquipmentID')->constrained('equipment');
-            $table->date('BillDate');
+            $table->timestamp('BillDate');
             $table->integer('Quantity');
             $table->integer('Price');
             $table->timestamps();

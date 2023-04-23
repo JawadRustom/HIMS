@@ -2,18 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Employee;
+use App\Models\PatientAnalysi;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Carbon;
 
-class EmployeeSeeder extends Seeder
+class PatientAnalysiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Employee::factory(10)->create();
+        PatientAnalysi::factory(10)->create();
     }
 }

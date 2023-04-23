@@ -15,7 +15,7 @@ return new class extends Migration
 
         Schema::create('room_contents', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('EquipmentID')->constrained('equipments');
+            $table->foreignId('EquipmentID')->constrained('equipment');
             $table->foreignId('RoomID')->constrained('rooms');
             $table->timestamps();
             $table->softDeletes();

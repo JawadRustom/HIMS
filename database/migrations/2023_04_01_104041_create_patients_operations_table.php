@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('DoctorID')->constrained('employees');
             $table->foreignId('AnesthesiologistID')->constrained('employees');
             $table->foreignId('OperationID')->constrained('operations');
-            $table->date('OperationDate');
+            $table->timestamp('OperationDate');
             $table->integer('DoctorCommission');
             $table->timestamps();
             $table->softDeletes();

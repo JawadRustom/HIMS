@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id()->foreign('users.id');
             $table->string('NationalNumber');
-            $table->string('PatientStatus');
+            $table->string('PatientStatus')->nullable();
             $table->string('Gender');
-            $table->date('BirthDate');
-            $table->string('PatientLength');
-            $table->string('PatientWeight');
+            $table->timestamp('BirthDate');
+            $table->integer('PatientLength')->nullable();
+            $table->integer('PatientWeight')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

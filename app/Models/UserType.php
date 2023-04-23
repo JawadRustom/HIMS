@@ -15,6 +15,10 @@ class UserType extends Model
         'UserType',
     ];
 
+    protected $casts = [
+      'id' => 'integer',
+  ];
+
     public function User()
     {
         return $this->hasMany(User::class,'UserTypeId','id');

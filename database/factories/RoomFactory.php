@@ -22,7 +22,7 @@ class RoomFactory extends Factory
     {
         return [
             'RoomType' => $this->faker->word,
-            'FloorNumber' => $this->faker->numberBetween(-10000, 10000),
+            'FloorNumber' => $this->faker->numberBetween(1, 10000),
         ];
     }
 }

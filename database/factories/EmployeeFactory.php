@@ -28,8 +28,8 @@ class EmployeeFactory extends Factory
             'HairDate' => $this->faker->date(),
             'BirthDate' => $this->faker->date(),
             'Gender' => $this->faker->word,
-            'Salary' => $this->faker->numberBetween(-10000, 10000),
-            'ManagerID' => $this->faker->numberBetween(-10000, 10000),
+            'Salary' => $this->faker->numberBetween(1, 100000),
+            'ManagerID' => rand(1,Employee::count()),
         ];
     }
 }
