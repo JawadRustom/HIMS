@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
             $table->string('DepartmentName');
+            $table->string('Description');
             $table->foreignId('ManagerID')->Reference('id')->on('employees')->uniqid()->nullable();
             $table->timestamps();
             $table->softDeletes();

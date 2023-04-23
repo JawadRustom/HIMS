@@ -23,7 +23,6 @@ class PatientFactory extends Factory
   {
     $array = ['female', 'male'];
     $ids = User::whereHas('UserType', fn ($query) => $query->where('UserType', 'Patient'))->pluck('id');
-    // dd($ids);
     return [
       'user_id' => collect($ids)->random(),
       'NationalNumber' => $this->faker->regexify('[A-Z0-9]{10}'),
