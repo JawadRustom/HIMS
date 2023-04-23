@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('PatientID')->constrained('patients');
             $table->foreignId('ClinicID')->constrained('clinics');
-            $table->date('AppointmentDate');
+            $table->timestamp('AppointmentDate');
             $table->timestamps();
             $table->softDeletes();
         });

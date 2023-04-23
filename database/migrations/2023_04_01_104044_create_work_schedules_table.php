@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('EmployeeID')->constrained('employees');
             $table->foreignId('RoomID')->constrained('rooms');
-            $table->date('FromHour');
-            $table->date('ToHour');
-            $table->date('WorkDayName');
+            $table->time('FromHour');
+            $table->time('ToHour');
+            $table->timestamp('WorkDayName');
             $table->timestamps();
             $table->softDeletes();
         });

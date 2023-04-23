@@ -15,7 +15,7 @@ return new class extends Migration
 
         Schema::create('deaths', function (Blueprint $table) {
             $table->id()->foreign('patients.id');
-            $table->date('DeathDate');
+            $table->timestamp('DeathDate');
             $table->timestamps();
         });
 

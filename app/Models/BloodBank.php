@@ -37,9 +37,4 @@ class BloodBank extends Model
     {
         return $this->belongsTo(Room::class);
     }
-
-    public function roomID(): BelongsTo
-    {
-        return $this->belongsTo(Room::class);
-    }
 }

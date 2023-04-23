@@ -35,6 +35,9 @@ class MedicineBill extends Model
         'MedicineID' => 'integer',
         'EmployeeID' => 'integer',
         'BillDate' => 'date',
+        'Quantity'=>'integer',
+        'BuyPrice'=>'integer',
+        'SalePrice'=>'integer',
     ];
 
     public function medicine(): BelongsTo
@@ -47,13 +50,4 @@ class MedicineBill extends Model
         return $this->belongsTo(Employee::class);
     }
 
-    public function medicineID(): BelongsTo
-    {
-        return $this->belongsTo(Medicine::class);
-    }
-
-    public function employeeID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
 }

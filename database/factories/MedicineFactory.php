@@ -22,8 +22,8 @@ class MedicineFactory extends Factory
     {
         return [
             'MedicineName' => $this->faker->word,
-            'MedicineQuantity' => $this->faker->numberBetween(-10000, 10000),
-            'MedicinePrice' => $this->faker->numberBetween(-10000, 10000),
+            'MedicineQuantity' => $this->faker->numberBetween(1, 10000),
+            'MedicinePrice' => $this->faker->numberBetween(1, 10000),
         ];
     }
 }

@@ -48,13 +48,4 @@ class WorkSchedule extends Model
         return $this->belongsTo(Room::class);
     }
 
-    public function employeeID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function roomID(): BelongsTo
-    {
-        return $this->belongsTo(Room::class);
-    }
 }

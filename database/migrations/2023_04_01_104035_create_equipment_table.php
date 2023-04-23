@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('equipment', function (Blueprint $table) {
             $table->id();
             $table->foreignId('EquipmentTypeID')->constrained('equipment_types');
-            $table->string('Details');
+            $table->string('Details')->nullable();
             $table->string('CompanyName');
             $table->timestamps();
             $table->softDeletes();

@@ -46,13 +46,4 @@ class EquipmentBill extends Model
         return $this->belongsTo(Equipment::class);
     }
 
-    public function employeeID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function equipmentID(): BelongsTo
-    {
-        return $this->belongsTo(Equipment::class);
-    }
 }

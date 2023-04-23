@@ -26,9 +26,9 @@ class MedicineBillFactory extends Factory
             'MedicineID' => Medicine::factory(),
             'EmployeeID' => Employee::factory(),
             'BillDate' => $this->faker->date(),
-            'Quantity' => $this->faker->numberBetween(-10000, 10000),
-            'BuyPrice' => $this->faker->numberBetween(-10000, 10000),
-            'SalePrice' => $this->faker->numberBetween(-10000, 10000),
+            'Quantity' => $this->faker->numberBetween(1, 10000),
+            'BuyPrice' => $this->faker->numberBetween(1, 10000),
+            'SalePrice' => $this->faker->numberBetween(1, 10000),
         ];
     }
 }

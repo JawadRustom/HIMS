@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Department;
+use App\Models\Employee;
 
 class DepartmentFactory extends Factory
 {
@@ -22,7 +23,7 @@ class DepartmentFactory extends Factory
     {
         return [
             'DepartmentName' => $this->faker->word,
-            'ManagerID' => $this->faker->numberBetween(-10000, 10000),
+            'ManagerID' => '1',
         ];
     }
 }

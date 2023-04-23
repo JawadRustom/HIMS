@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('MedicineID')->constrained('medicines');
             $table->foreignId('EmployeeID')->constrained('employees');
-            $table->date('BillDate');
+            $table->timestamp('BillDate');
             $table->integer('Quantity');
             $table->integer('BuyPrice');
             $table->integer('SalePrice');

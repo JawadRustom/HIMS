@@ -54,23 +54,4 @@ class PatientsOperation extends Model
         return $this->belongsTo(Operation::class);
     }
 
-    public function patientID(): BelongsTo
-    {
-        return $this->belongsTo(Patient::class);
-    }
-
-    public function doctorID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function anesthesiologistID(): BelongsTo
-    {
-        return $this->belongsTo(Employee::class);
-    }
-
-    public function operationID(): BelongsTo
-    {
-        return $this->belongsTo(Operation::class);
-    }
 }

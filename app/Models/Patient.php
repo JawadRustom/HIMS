@@ -35,14 +35,11 @@ class Patient extends Model
     protected $casts = [
         'id' => 'integer',
         'BirthDate' => 'date',
+        'PatientLength'=>'integer',
+        'PatientWeight'=>'integer',
     ];
 
     public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function id(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
@@ -52,27 +49,27 @@ class Patient extends Model
         return $this->hasOne(Death::class);
     }
 
-    public function diagnoseds(): HasMany
+    public function diagnosed(): HasMany
     {
         return $this->hasMany(Diagnosed::class);
     }
 
-    public function patientAnalysis(): HasMany
+    public function patientAnalysi(): HasMany
     {
         return $this->hasMany(PatientAnalysi::class);
     }
 
-    public function patientAppointments(): HasMany
+    public function patientAppointment(): HasMany
     {
         return $this->hasMany(PatientAppointment::class);
     }
 
-    public function patientsOperations(): HasMany
+    public function patientsOperation(): HasMany
     {
         return $this->hasMany(PatientsOperation::class);
     }
 
-    public function patientSymptoms(): HasMany
+    public function patientSymptom(): HasMany
     {
         return $this->hasMany(PatientSymptom::class);
     }

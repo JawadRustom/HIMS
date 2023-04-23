@@ -24,7 +24,7 @@ class BloodBankFactory extends Factory
         return [
             'Name' => $this->faker->word,
             'Type' => $this->faker->word,
-            'Quantity' => $this->faker->numberBetween(-10000, 10000),
+            'Quantity' => $this->faker->numberBetween(1, 10000),
             'RoomID' => Room::factory(),
         ];
     }
