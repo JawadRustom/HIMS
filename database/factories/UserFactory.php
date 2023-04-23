@@ -18,7 +18,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'UserTypeId'=> '4',
+            'UserTypeId'=> rand(3,4),
             'NickName' => fake()->userName(),
             'FirstName' => fake()->firstName(),
             'LastName' => fake()->lastName(),
@@ -26,6 +26,8 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'PhoneNumber'=>fake()->phoneNumber(),
+            'Country'=>fake()->country(),
+            'City'=>fake()->city(),
             'ProfileImage'=>fake()->url(),
             'remember_token' => Str::random(10),
         ];

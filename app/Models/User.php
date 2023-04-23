@@ -28,6 +28,8 @@ class User extends Authenticatable
         'email',
         'password',
         'PhoneNumber',
+        'Country',
+        'City',
         'ProfileImage',
         'icon',
     ];
@@ -55,7 +57,7 @@ class User extends Authenticatable
 
     public function UserType()
     {
-        return $this->belongsTo(UserType::class,'id','UserTypeId');
+        return $this->belongsTo(UserType::class,'UserTypeId','id');
     }
 
     public function Patient(): HasOne

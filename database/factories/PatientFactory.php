@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Patient;
+use App\Models\User;
 
 class PatientFactory extends Factory
 {
@@ -22,6 +23,7 @@ class PatientFactory extends Factory
     {
         $array=['female','male'];
         return [
+            'id'=>collect(User::whereHas('UserType',fn($query)=>$query->where('UserType','Patient'))->pluck('id'))->random(),
             'NationalNumber' => $this->faker->regexify('[A-Z0-9]{10}'),
             'PatientStatus' => $this->faker->word,
             'Gender' => $array[rand(0,1)],
