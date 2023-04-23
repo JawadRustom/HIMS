@@ -23,6 +23,7 @@ class DepartmentFactory extends Factory
     {
         return [
             'DepartmentName' => $this->faker->word,
+            'Description' => $this->faker->realText(),
             'ManagerID' => '1',
         ];
     }

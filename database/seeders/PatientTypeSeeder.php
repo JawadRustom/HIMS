@@ -48,6 +48,8 @@ class PatientTypeSeeder extends Seeder
         'email'=>'Patient3.Patient3@gmail.com',
         'password'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',//password
         'PhoneNumber'=>'0987372763',
+        'Country'=>'Syria',
+        'City'=>'Damascus',
     ]);
     }
 }

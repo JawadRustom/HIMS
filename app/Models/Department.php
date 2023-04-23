@@ -20,6 +20,7 @@ class Department extends Model
      */
     protected $fillable = [
         'DepartmentName',
+        'Description',
         'ManagerID',
     ];
 
