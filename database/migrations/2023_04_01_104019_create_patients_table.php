@@ -6,29 +6,30 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create('patients', function (Blueprint $table) {
-            $table->id()->foreign('users.id');
-            $table->string('NationalNumber');
-            $table->string('PatientStatus')->nullable();
-            $table->string('Gender');
-            $table->timestamp('BirthDate');
-            $table->integer('PatientLength')->nullable();
-            $table->integer('PatientWeight')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
-    }
+  /**
+   * Run the migrations.
+   */
+  public function up(): void
+  {
+    Schema::create('patients', function (Blueprint $table) {
+      $table->id();
+      $table->foreignId('user_id')->reference('id')->on('users');
+      $table->string('NationalNumber');
+      $table->string('PatientStatus')->nullable();
+      $table->string('Gender');
+      $table->timestamp('BirthDate');
+      $table->integer('PatientLength')->nullable();
+      $table->integer('PatientWeight')->nullable();
+      $table->timestamps();
+      $table->softDeletes();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('patients');
-    }
+  /**
+   * Reverse the migrations.
+   */
+  public function down(): void
+  {
+    Schema::dropIfExists('patients');
+  }
 };
