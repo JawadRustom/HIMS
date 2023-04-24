@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Death;
+use App\Models\Patient;
 
 class DeathFactory extends Factory
 {
@@ -21,6 +22,7 @@ class DeathFactory extends Factory
     public function definition(): array
     {
         return [
+            'PatientID'=>Patient::factory(),
             'DeathDate' => $this->faker->date(),
         ];
     }

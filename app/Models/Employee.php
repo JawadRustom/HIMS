@@ -85,5 +85,8 @@ class Employee extends Model
     {
         return $this->HasMany(employee::class,'ManagerID','id');
     }
-
+    public function EmployeeType(): belongsTo
+    {
+        return $this->belongsTo(EmployeeType::class,'EmployeeTypeId','id');
+    }
 }

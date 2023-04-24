@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\Department;
 use App\Models\Employee;
+use App\Models\EmployeeType;
+use App\Models\User;
 
 class EmployeeFactory extends Factory
 {
@@ -21,7 +23,10 @@ class EmployeeFactory extends Factory
      */
     public function definition(): array
     {
+        $FirstEmployeeTypeId = EmployeeType::first()->id;
         return [
+            'user_id'=>User::factory(),
+            'EmployeeTypeId'=>rand($FirstEmployeeTypeId,EmployeeType::count()),
             'NationalNumber' => $this->faker->word,
             'DepartmentID' => Department::factory(),
             'Address' => $this->faker->word,

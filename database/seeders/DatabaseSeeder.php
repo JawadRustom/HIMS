@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Patient;
 use App\Models\UserType;
 use Illuminate\Database\Seeder;
 
@@ -33,6 +34,7 @@ class DatabaseSeeder extends Seeder
             RoomSeeder::class,
             SymptomSeeder::class,
             OperationSeeder::class,
+            EmployeeTypeSeeder::class,
             EmployeeSeeder::class,
             BloodBankSeeder::class,
             CertificationEmployeeSeeder::class,
@@ -41,9 +43,10 @@ class DatabaseSeeder extends Seeder
             DiagnosedSeeder::class,
             EquipmentSeeder::class,
             EquipmentBillSeeder::class,
-            MedicineBillSeeder::class,
+            MedicineBillSeeder::class,    
             AdminSeeder::class,
             DoctorSeeder::class,
+            PatientTypeSeeder::class,
             PatientAnalysiSeeder::class,
             PatientAppointmentSeeder::class,
             PatientMedicineSeeder::class,
