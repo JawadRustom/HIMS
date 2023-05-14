@@ -27,4 +27,5 @@ class Analysi extends Model
     protected $casts = [
         'id' => 'integer',
     ];
+    
 }
