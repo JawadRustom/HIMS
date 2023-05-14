@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::disableForeignKeyConstraints();
 
         Schema::create('employees', function (Blueprint $table) {
-            $table->id()->foreign('users.id');
+            $table->id();
+            $table->foreignId('user_id')->reference('id')->on('users');
+            $table->foreignId('EmployeeTypeId')->reference('id')->on('employee_types');
             $table->string('NationalNumber');
             $table->foreignId('DepartmentID')->constrained('departments')->uniqid();
             $table->string('Address')->nullable();

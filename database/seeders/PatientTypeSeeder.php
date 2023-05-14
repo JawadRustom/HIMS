@@ -15,15 +15,6 @@ class PatientTypeSeeder extends Seeder
     {
       $Admin = User::create([
         'UserTypeId'=>'3',
-        'NickName'=>'LoaiJd',
-        'FirstName'=>'Loai',
-        'LastName'=>'Judeh',
-        'email'=>'admin.admin2@gmail.com',
-        'password'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',//password
-        'PhoneNumber'=>'0987372763',
-    ]);
-      $Admin = User::create([
-        'UserTypeId'=>'3',
         'NickName'=>'Patient1',
         'FirstName'=>'Patient1',
         'LastName'=>'Patient1',

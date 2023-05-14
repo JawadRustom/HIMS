@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::disableForeignKeyConstraints();
-
-        Schema::create('deaths', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->reference('id')->on('patients');
-            $table->timestamp('DeathDate');
+            $table->integer('imageable_id')->unsigned();
+            $table->string('imageable_type');
+            $table->string('filename');
             $table->timestamps();
+            $table->softDeletes();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('deaths');
+        Schema::dropIfExists('photos');
     }
 };

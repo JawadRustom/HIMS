@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::disableForeignKeyConstraints();
-
-        Schema::create('deaths', function (Blueprint $table) {
+        Schema::create('employee_types', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->reference('id')->on('patients');
-            $table->timestamp('DeathDate');
+            $table->string('Type');
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('deaths');
+        Schema::dropIfExists('employee_types');
     }
 };
