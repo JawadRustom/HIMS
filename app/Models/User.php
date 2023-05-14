@@ -71,6 +71,6 @@ class User extends Authenticatable
   }
   public function photos()
   {
-    return $this->morphMany(related: 'App\Photo',name:'imageable');
+    return $this->morphMany(Photo::class, 'imageable');
   }
 }

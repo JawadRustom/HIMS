@@ -8,21 +8,21 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Post extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = [
-        'Title',
-        'Text',
-        'PostType',
-        'PostDate',
-    ];
+  protected $fillable = [
+    'Title',
+    'Text',
+    'PostType',
+    'PostDate',
+  ];
 
-    protected $casts = [
-        'id' => 'integer',
-        'PostDate' => 'date',
-    ];
-    public function photos()
-    {
-      return $this->morphMany(related: 'App\Photo',name:'imageable');
-    }
+  protected $casts = [
+    'id' => 'integer',
+    'PostDate' => 'date',
+  ];
+  public function photos()
+  {
+    return $this->morphMany(Photo::class, 'imageable');
+  }
 }
