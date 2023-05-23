@@ -1,0 +1,256 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/login:
+    post:
+      summary: Login
+      operationId: login
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1
+                properties:
+                  token:
+                    type: string
+                    example: 2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1
+        400:
+          description: 'User send a valid token'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'You are already logged in'
+                properties:
+                  message:
+                    type: string
+                    example: 'You are already logged in'
+        401:
+          description: 'Email or password is wrong or user type not user'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The email field is required. (and 1 more error)'
+                  errors:
+                    email:
+                      - 'The email field is required.'
+                    password:
+                      - 'The password field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The email field is required. (and 1 more error)'
+                  errors:
+                    type: object
+                    properties:
+                      email:
+                        type: array
+                        example:
+                          - 'The email field is required.'
+                        items:
+                          type: string
+                      password:
+                        type: array
+                        example:
+                          - 'The password field is required.'
+                        items:
+                          type: string
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The email field is required. (and 1 more error)'
+                  errors:
+                    email:
+                      - 'The email field is required.'
+                    password:
+                      - 'The password field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The email field is required. (and 1 more error)'
+                  errors:
+                    type: object
+                    properties:
+                      email:
+                        type: array
+                        example:
+                          - 'The email field is required.'
+                        items:
+                          type: string
+                      password:
+                        type: array
+                        example:
+                          - 'The password field is required.'
+                        items:
+                          type: string
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: cary13@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: voluptas
+              required:
+                - email
+                - password
+      security: []
+  /api/LoginAdmin:
+    post:
+      summary: ''
+      operationId: postApiLoginAdmin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: francisca.hammes@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: enim
+              required:
+                - email
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                NickName:
+                  type: string
+                  description: ''
+                  example: incidunt
+                FirstName:
+                  type: string
+                  description: ''
+                  example: aut
+                LastName:
+                  type: string
+                  description: ''
+                  example: non
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: piper.hane@example.net
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+                  example: g.bKqM6alIi
+                PhoneNumber:
+                  type: string
+                  description: ''
+                  example: minus
+                Country:
+                  type: string
+                  description: ''
+                  example: null
+                City:
+                  type: string
+                  description: ''
+                  example: null
+                ProfileImage:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+                icon:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+              required:
+                - NickName
+                - FirstName
+                - LastName
+                - email
+                - password
+                - PhoneNumber
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Authentication
+      security: []
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Authentication
+    description: "\nThis Api For Authentication"
+  -
+    name: Endpoints
+    description: ''
