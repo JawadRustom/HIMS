@@ -10,13 +10,54 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * @group Authentication
+ * 
+ * This Api For Authentication
+ */
 class AuthenticationController extends Controller
 {
+  /**
+   * Login
+   * 
+   * @response {
+   * "token":"2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1"
+   * }
+   * 
+   * @response 422 scenario="Validation errors"{
+   "message": "The email field is required. (and 1 more error)",
+   "errors": {
+     "email": [
+       "The email field is required."
+      ],
+      "password": [
+        "The password field is required."
+        ]
+      }
+}
+    * 
+    * 
+   * @response 401 scenario="Email or password is wrong or user type not user"{
+   "message": "The email field is required. (and 1 more error)",
+   "errors": {
+     "email": [
+       "The email field is required."
+      ],
+      "password": [
+        "The password field is required."
+        ]
+      }
+}
+   * 
+   * @response 400 scenario="User send a valid token"{
+   * "message": "You are already logged in"
+   * }
+   */
     public function login(LoginRequest $Request)
     {
       if(!Auth::attempt(['email'=>$Request->email,'password'=>$Request->password,'UserTypeId'=>range(3,4)]))
       {
-        return response(['message'=>'email or password is wrong'],422);
+        return response(['message'=>'email or password is wrong'],401);
       }
       $token = auth()->user()->createToken("token")->plainTextToken;
       return response(['token'=>$token]);
@@ -26,7 +67,7 @@ class AuthenticationController extends Controller
     {
       if(!Auth::attempt(['email'=>$Request->email,'password'=>$Request->password,'UserTypeId'=>range(1,2)]))
       {
-        return response(['message'=>'email or password is wrong'],422);
+        return response(['message'=>'email or password is wrong'],401);
       }
       $token = auth()->user()->createToken("token")->plainTextToken;
       return response(['token'=>$token]);
