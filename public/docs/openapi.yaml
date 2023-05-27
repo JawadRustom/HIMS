@@ -45,31 +45,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'The email field is required. (and 1 more error)'
-                  errors:
-                    email:
-                      - 'The email field is required.'
-                    password:
-                      - 'The password field is required.'
+                  message: 'email or password is wrong'
                 properties:
                   message:
                     type: string
-                    example: 'The email field is required. (and 1 more error)'
-                  errors:
-                    type: object
-                    properties:
-                      email:
-                        type: array
-                        example:
-                          - 'The email field is required.'
-                        items:
-                          type: string
-                      password:
-                        type: array
-                        example:
-                          - 'The password field is required.'
-                        items:
-                          type: string
+                    example: 'email or password is wrong'
         422:
           description: 'Validation errors'
           content:
@@ -114,22 +94,90 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: cary13@example.com
+                  example: gideon85@example.net
                 password:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: vero
               required:
                 - email
                 - password
       security: []
   /api/LoginAdmin:
     post:
-      summary: ''
-      operationId: postApiLoginAdmin
+      summary: LoginAdmin
+      operationId: loginAdmin
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL
+                properties:
+                  token:
+                    type: string
+                    example: 10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL
+        400:
+          description: 'User send a valid token'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'You are already logged in'
+                properties:
+                  message:
+                    type: string
+                    example: 'You are already logged in'
+        401:
+          description: 'Email or password is wrong or user type not admin or doctor'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'email or password is wrong'
+                properties:
+                  message:
+                    type: string
+                    example: 'email or password is wrong'
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The email field is required. (and 1 more error)'
+                  errors:
+                    email:
+                      - 'The email field is required.'
+                    password:
+                      - 'The password field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The email field is required. (and 1 more error)'
+                  errors:
+                    type: object
+                    properties:
+                      email:
+                        type: array
+                        example:
+                          - 'The email field is required.'
+                        items:
+                          type: string
+                      password:
+                        type: array
+                        example:
+                          - 'The password field is required.'
+                        items:
+                          type: string
       tags:
         - Authentication
       requestBody:
@@ -142,22 +190,48 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: francisca.hammes@example.com
+                  example: candelario.witting@example.org
                 password:
                   type: string
                   description: ''
-                  example: enim
+                  example: adipisci
               required:
                 - email
                 - password
       security: []
   /api/register:
     post:
-      summary: ''
-      operationId: postApiRegister
+      summary: Register
+      operationId: register
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T
+                properties:
+                  token:
+                    type: string
+                    example: 11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T
+        400:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "scenario=\"User aalready login{\n\"message\": \"You are already logged in\"\n}"
+        422:
+          description: 'Validation errors'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}"
       tags:
         - Authentication
       requestBody:
@@ -170,27 +244,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: dolor
                 FirstName:
                   type: string
                   description: ''
-                  example: aut
+                  example: eaque
                 LastName:
                   type: string
                   description: ''
-                  example: non
+                  example: eum
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: piper.hane@example.net
+                  example: misael43@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: g.bKqM6alIi
+                  example: 'l4aKS|T-=]K7VSs!L~nK'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: minus
+                  example: corporis
                 Country:
                   type: string
                   description: ''
@@ -217,11 +291,25 @@ paths:
       security: []
   /api/logout:
     post:
-      summary: ''
-      operationId: postApiLogout
+      summary: Logout
+      operationId: logout
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        204:
+          description: 'Logout Success'
+        401:
+          description: 'User Not Login Yet'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Authentication
       security: []

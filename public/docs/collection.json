@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "7a8210c4-7148-4af7-9006-bc701d991433",
+        "_postman_id": "99e54c4d-38c7-468a-9de6-52f59c01cf86",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"cary13@example.com\",\"password\":\"voluptas\"}"
+                            "raw": "{\"email\":\"gideon85@example.net\",\"password\":\"vero\"}"
                         },
                         "description": "",
                         "auth": {
@@ -64,7 +64,7 @@
                         {
                             "header": [],
                             "code": 401,
-                            "body": "{\n\"message\": \"The email field is required. (and 1 more error)\",\n\"errors\": {\n\"email\": [\n\"The email field is required.\"\n],\n\"password\": [\n\"The password field is required.\"\n]\n}\n}",
+                            "body": "{\n\"message\": \"email or password is wrong\"\n}",
                             "name": "Email or password is wrong or user type not user"
                         },
                         {
@@ -76,7 +76,7 @@
                     ]
                 },
                 {
-                    "name": "POST api\/LoginAdmin",
+                    "name": "LoginAdmin",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -97,17 +97,42 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"francisca.hammes@example.com\",\"password\":\"enim\"}"
+                            "raw": "{\"email\":\"candelario.witting@example.org\",\"password\":\"adipisci\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"token\":\"10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n\"message\": \"You are already logged in\"\n}",
+                            "name": "User send a valid token"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"email or password is wrong\"\n}",
+                            "name": "Email or password is wrong or user type not admin or doctor"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The email field is required. (and 1 more error)\",\n\"errors\": {\n\"email\": [\n\"The email field is required.\"\n],\n\"password\": [\n\"The password field is required.\"\n]\n}\n}",
+                            "name": "Validation errors"
+                        }
+                    ]
                 },
                 {
-                    "name": "POST api\/register",
+                    "name": "Register",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -131,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "incidunt",
+                                    "value": "dolor",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "aut",
+                                    "value": "eaque",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "non",
+                                    "value": "eum",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "piper.hane@example.net",
+                                    "value": "misael43@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "g.bKqM6alIi",
+                                    "value": "l4aKS|T-=]K7VSs!L~nK",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "minus",
+                                    "value": "corporis",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -182,10 +207,29 @@
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"token\":\"11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "scenario=\"User aalready login{\n\"message\": \"You are already logged in\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}",
+                            "name": "Validation errors"
+                        }
+                    ]
                 },
                 {
-                    "name": "POST api\/logout",
+                    "name": "Logout",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -210,7 +254,20 @@
                             "type": "noauth"
                         }
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 204,
+                            "body": "{",
+                            "name": "Logout Success"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n    \"message\": \"Unauthenticated.\"\n}",
+                            "name": "User Not Login Yet"
+                        }
+                    ]
                 }
             ]
         },

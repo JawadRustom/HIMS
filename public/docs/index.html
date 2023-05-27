@@ -75,13 +75,13 @@
                                 <a href="#authentication-POSTapi-login">Login</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="authentication-POSTapi-LoginAdmin">
-                                <a href="#authentication-POSTapi-LoginAdmin">POST api/LoginAdmin</a>
+                                <a href="#authentication-POSTapi-LoginAdmin">LoginAdmin</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="authentication-POSTapi-register">
-                                <a href="#authentication-POSTapi-register">POST api/register</a>
+                                <a href="#authentication-POSTapi-register">Register</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="authentication-POSTapi-logout">
-                                <a href="#authentication-POSTapi-logout">POST api/logout</a>
+                                <a href="#authentication-POSTapi-logout">Logout</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -104,7 +104,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 23, 2023</li>
+        <li>Last updated: May 27, 2023</li>
     </ul>
 </div>
 
@@ -143,8 +143,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"cary13@example.com\",
-    \"password\": \"voluptas\"
+    \"email\": \"gideon85@example.net\",
+    \"password\": \"vero\"
 }"
 </code></pre></div>
 
@@ -160,8 +160,8 @@ const headers = {
 };
 
 let body = {
-    "email": "cary13@example.com",
-    "password": "voluptas"
+    "email": "gideon85@example.net",
+    "password": "vero"
 };
 
 fetch(url, {
@@ -197,15 +197,7 @@ fetch(url, {
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;The email field is required. (and 1 more error)&quot;,
-    &quot;errors&quot;: {
-        &quot;email&quot;: [
-            &quot;The email field is required.&quot;
-        ],
-        &quot;password&quot;: [
-            &quot;The password field is required.&quot;
-        ]
-    }
+    &quot;message&quot;: &quot;email or password is wrong&quot;
 }</code>
  </pre>
             <blockquote>
@@ -302,10 +294,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-login"
-               value="cary13@example.com"
+               value="gideon85@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>cary13@example.com</code></p>
+<p>Must be a valid email address. Example: <code>gideon85@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -313,14 +305,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-login"
-               value="voluptas"
+               value="vero"
                data-component="body">
     <br>
-<p>Example: <code>voluptas</code></p>
+<p>Example: <code>vero</code></p>
         </div>
         </form>
 
-                    <h2 id="authentication-POSTapi-LoginAdmin">POST api/LoginAdmin</h2>
+                    <h2 id="authentication-POSTapi-LoginAdmin">LoginAdmin</h2>
 
 <p>
 </p>
@@ -337,8 +329,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"francisca.hammes@example.com\",
-    \"password\": \"enim\"
+    \"email\": \"candelario.witting@example.org\",
+    \"password\": \"adipisci\"
 }"
 </code></pre></div>
 
@@ -354,8 +346,8 @@ const headers = {
 };
 
 let body = {
-    "email": "francisca.hammes@example.com",
-    "password": "enim"
+    "email": "candelario.witting@example.org",
+    "password": "adipisci"
 };
 
 fetch(url, {
@@ -367,7 +359,51 @@ fetch(url, {
 </span>
 
 <span id="example-responses-POSTapi-LoginAdmin">
-</span>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;token&quot;: &quot;10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (400, User send a valid token):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;You are already logged in&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Email or password is wrong or user type not admin or doctor):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;email or password is wrong&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422, Validation errors):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;The email field is required. (and 1 more error)&quot;,
+    &quot;errors&quot;: {
+        &quot;email&quot;: [
+            &quot;The email field is required.&quot;
+        ],
+        &quot;password&quot;: [
+            &quot;The password field is required.&quot;
+        ]
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-LoginAdmin" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-LoginAdmin"></span>:
@@ -444,10 +480,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-LoginAdmin"
-               value="francisca.hammes@example.com"
+               value="candelario.witting@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>francisca.hammes@example.com</code></p>
+<p>Must be a valid email address. Example: <code>candelario.witting@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -455,14 +491,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-LoginAdmin"
-               value="enim"
+               value="adipisci"
                data-component="body">
     <br>
-<p>Example: <code>enim</code></p>
+<p>Example: <code>adipisci</code></p>
         </div>
         </form>
 
-                    <h2 id="authentication-POSTapi-register">POST api/register</h2>
+                    <h2 id="authentication-POSTapi-register">Register</h2>
 
 <p>
 </p>
@@ -478,14 +514,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "NickName=incidunt" \
-    --form "FirstName=aut" \
-    --form "LastName=non" \
-    --form "email=piper.hane@example.net" \
-    --form "password=g.bKqM6alIi" \
-    --form "PhoneNumber=minus" \
-    --form "ProfileImage=@C:\Users\Loai Judeh\AppData\Local\Temp\phpEEFC.tmp" \
-    --form "icon=@C:\Users\Loai Judeh\AppData\Local\Temp\phpEF0C.tmp" </code></pre></div>
+    --form "NickName=dolor" \
+    --form "FirstName=eaque" \
+    --form "LastName=eum" \
+    --form "email=misael43@example.com" \
+    --form "password=l4aKS|T-=]K7VSs!L~nK" \
+    --form "PhoneNumber=corporis" \
+    --form "ProfileImage=@C:\Users\LENOVO\AppData\Local\Temp\phpB79D.tmp" \
+    --form "icon=@C:\Users\LENOVO\AppData\Local\Temp\phpB79E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -499,12 +535,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('NickName', 'incidunt');
-body.append('FirstName', 'aut');
-body.append('LastName', 'non');
-body.append('email', 'piper.hane@example.net');
-body.append('password', 'g.bKqM6alIi');
-body.append('PhoneNumber', 'minus');
+body.append('NickName', 'dolor');
+body.append('FirstName', 'eaque');
+body.append('LastName', 'eum');
+body.append('email', 'misael43@example.com');
+body.append('password', 'l4aKS|T-=]K7VSs!L~nK');
+body.append('PhoneNumber', 'corporis');
 body.append('ProfileImage', document.querySelector('input[name="ProfileImage"]').files[0]);
 body.append('icon', document.querySelector('input[name="icon"]').files[0]);
 
@@ -517,7 +553,53 @@ fetch(url, {
 </span>
 
 <span id="example-responses-POSTapi-register">
-</span>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;token&quot;: &quot;11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (400):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">scenario=&quot;User aalready login{
+&quot;message&quot;: &quot;You are already logged in&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (422, Validation errors):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+&quot;message&quot;: &quot;The nick name field is required. (and 5 more errors)&quot;,
+&quot;errors&quot;: {
+&quot;NickName&quot;: [
+&quot;The nick name field is required.&quot;
+],
+&quot;FirstName&quot;: [
+&quot;The first name field is required.&quot;
+],
+&quot;LastName&quot;: [
+&quot;The last name field is required.&quot;
+],
+&quot;email&quot;: [
+&quot;The email has already been taken.&quot;
+],
+&quot;password&quot;: [
+&quot;The password field must be at least 8 characters.&quot;
+],
+&quot;PhoneNumber&quot;: [
+&quot;The phone number field is required.&quot;
+]
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-register" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-register"></span>:
@@ -594,10 +676,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="NickName"                data-endpoint="POSTapi-register"
-               value="incidunt"
+               value="dolor"
                data-component="body">
     <br>
-<p>Example: <code>incidunt</code></p>
+<p>Example: <code>dolor</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>FirstName</code></b>&nbsp;&nbsp;
@@ -605,10 +687,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="FirstName"                data-endpoint="POSTapi-register"
-               value="aut"
+               value="eaque"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>eaque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>LastName</code></b>&nbsp;&nbsp;
@@ -616,10 +698,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="LastName"                data-endpoint="POSTapi-register"
-               value="non"
+               value="eum"
                data-component="body">
     <br>
-<p>Example: <code>non</code></p>
+<p>Example: <code>eum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -627,10 +709,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-register"
-               value="piper.hane@example.net"
+               value="misael43@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>piper.hane@example.net</code></p>
+<p>Must be a valid email address. Example: <code>misael43@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -638,10 +720,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-register"
-               value="g.bKqM6alIi"
+               value="l4aKS|T-=]K7VSs!L~nK"
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Must not be greater than 16 characters. Example: <code>g.bKqM6alIi</code></p>
+<p>Must be at least 8 characters. Must not be greater than 16 characters. Example: <code>l4aKS|T-=]K7VSs!L~nK</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>PhoneNumber</code></b>&nbsp;&nbsp;
@@ -649,10 +731,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="PhoneNumber"                data-endpoint="POSTapi-register"
-               value="minus"
+               value="corporis"
                data-component="body">
     <br>
-<p>Example: <code>minus</code></p>
+<p>Example: <code>corporis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Country</code></b>&nbsp;&nbsp;
@@ -685,7 +767,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Example: <code>C:\Users\Loai Judeh\AppData\Local\Temp\phpEEFC.tmp</code></p>
+<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\phpB79D.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>icon</code></b>&nbsp;&nbsp;
@@ -696,11 +778,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Example: <code>C:\Users\Loai Judeh\AppData\Local\Temp\phpEF0C.tmp</code></p>
+<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\phpB79E.tmp</code></p>
         </div>
         </form>
 
-                    <h2 id="authentication-POSTapi-logout">POST api/logout</h2>
+                    <h2 id="authentication-POSTapi-logout">Logout</h2>
 
 <p>
 </p>
@@ -736,7 +818,22 @@ fetch(url, {
 </span>
 
 <span id="example-responses-POSTapi-logout">
-</span>
+            <blockquote>
+            <p>Example response (204, Logout Success):</p>
+        </blockquote>
+                <pre>
+<code>Empty response</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, User Not Login Yet):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-logout" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-logout"></span>:
