@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('certification_employees', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('EmployeeID')->constrained('employees');
-            $table->foreignId('CertificationID')->constrained('certifications');
+            $table->foreignId('EmployeeID')->reference('id')->on('employees');
+            $table->foreignId('CertificationID')->reference('id')->on('employees');
             $table->timestamps();
             $table->softDeletes();
         });

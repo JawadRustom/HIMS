@@ -30,19 +30,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: cary13@example.com
+        example: oabshire@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: voluptas
+        example: dolores
         type: string
         custom: []
     cleanBodyParameters:
-      email: cary13@example.com
-      password: voluptas
+      email: oabshire@example.net
+      password: dolores
     fileParameters: []
     responses:
       -
@@ -52,7 +52,7 @@ endpoints:
           "token":"2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1"
           }
         headers: []
-        description: ''
+        description: 'Register Success'
         custom: []
       -
         status: 400
@@ -67,15 +67,7 @@ endpoints:
         status: 401
         content: |-
           {
-          "message": "The email field is required. (and 1 more error)",
-          "errors": {
-          "email": [
-          "The email field is required."
-          ],
-          "password": [
-          "The password field is required."
-          ]
-          }
+          "message": "email or password is wrong"
           }
         headers: []
         description: 'Email or password is wrong or user type not user'
@@ -114,7 +106,7 @@ endpoints:
         This Api For Authentication
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: LoginAdmin
       description: ''
       authenticated: false
       custom: []
@@ -130,21 +122,65 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: francisca.hammes@example.com
+        example: lockman.shanny@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: enim
+        example: labore
         type: string
         custom: []
     cleanBodyParameters:
-      email: francisca.hammes@example.com
-      password: enim
+      email: lockman.shanny@example.com
+      password: labore
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "token":"10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL"
+          }
+        headers: []
+        description: 'Register Success'
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+          "message": "You are already logged in"
+          }
+        headers: []
+        description: 'User send a valid token'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+          "message": "email or password is wrong"
+          }
+        headers: []
+        description: 'Email or password is wrong or user type not admin or doctor'
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The email field is required. (and 1 more error)",
+          "errors": {
+          "email": [
+          "The email field is required."
+          ],
+          "password": [
+          "The password field is required."
+          ]
+          }
+          }
+        headers: []
+        description: 'Validation errors'
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -162,7 +198,7 @@ endpoints:
         This Api For Authentication
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: Register
       description: ''
       authenticated: false
       custom: []
@@ -178,42 +214,42 @@ endpoints:
         name: NickName
         description: ''
         required: true
-        example: incidunt
+        example: sed
         type: string
         custom: []
       FirstName:
         name: FirstName
         description: ''
         required: true
-        example: aut
+        example: architecto
         type: string
         custom: []
       LastName:
         name: LastName
         description: ''
         required: true
-        example: non
+        example: ut
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: piper.hane@example.net
+        example: tillman.general@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: g.bKqM6alIi
+        example: "?e._-x'r"
         type: string
         custom: []
       PhoneNumber:
         name: PhoneNumber
         description: ''
         required: true
-        example: minus
+        example: accusantium
         type: string
         custom: []
       Country:
@@ -245,16 +281,62 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      NickName: incidunt
-      FirstName: aut
-      LastName: non
-      email: piper.hane@example.net
-      password: g.bKqM6alIi
-      PhoneNumber: minus
+      NickName: sed
+      FirstName: architecto
+      LastName: ut
+      email: tillman.general@example.net
+      password: "?e._-x'r"
+      PhoneNumber: accusantium
     fileParameters:
       ProfileImage: null
       icon: null
-    responses: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "token":"11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T"
+          }
+        headers: []
+        description: 'Register Success'
+        custom: []
+      -
+        status: 400
+        content: |-
+          scenario="User aalready login{
+          "message": "You are already logged in"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The nick name field is required. (and 5 more errors)",
+          "errors": {
+          "NickName": [
+          "The nick name field is required."
+          ],
+          "FirstName": [
+          "The first name field is required."
+          ],
+          "LastName": [
+          "The last name field is required."
+          ],
+          "email": [
+          "The email has already been taken."
+          ],
+          "password": [
+          "The password field must be at least 8 characters."
+          ],
+          "PhoneNumber": [
+          "The phone number field is required."
+          ]
+          }
+        headers: []
+        description: 'Validation errors'
+        custom: []
     responseFields: []
     auth: []
     controller: null
@@ -272,7 +354,7 @@ endpoints:
         This Api For Authentication
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: Logout
       description: ''
       authenticated: false
       custom: []
@@ -286,7 +368,22 @@ endpoints:
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses: []
+    responses:
+      -
+        status: 204
+        content: '{'
+        headers: []
+        description: 'Logout Success'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+              "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'User Not Login Yet'
+        custom: []
     responseFields: []
     auth: []
     controller: null

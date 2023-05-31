@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('NationalNumber');
             $table->foreignId('DepartmentID')->constrained('departments')->uniqid();
             $table->string('Address')->nullable();
-            $table->timestamp('HairDate');
+            $table->timestamp('HireDate');
             $table->string('Gender');
             $table->dateTime('BirthDate');
             $table->integer('Salary');
