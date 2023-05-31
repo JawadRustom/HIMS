@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -22,7 +23,7 @@ class Employee extends Model
         'NationalNumber',
         'DepartmentID',
         'Address',
-        'HairDate',
+        'HireDate',
         'BirthDate',
         'Gender',
         'Salary',
@@ -37,38 +38,48 @@ class Employee extends Model
     protected $casts = [
         'id' => 'integer',
         'DepartmentID' => 'integer',
-        'HairDate' => 'date',
+        'HireDate' => 'date',
         'BirthDate' => 'date',
     ];
 
+    protected function experianceYear(): Attribute
+    {
+        return Attribute::make(get: fn (string $value, array $attributes) => now()->diff($attributes['HairDate'])->y,);
+    }
+
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id','id');
     }
 
     public function department(): BelongsTo
     {
-        return $this->belongsTo(Department::class);
+        return $this->belongsTo(Department::class,'DepartmentID','id');
     }
 
     public function certificationEmployee(): HasMany
     {
-        return $this->hasMany(CertificationEmployee::class);
+        return $this->hasMany(CertificationEmployee::class,'EmployeeID','id');
     }
 
     public function diagnosed(): HasMany
     {
-        return $this->hasMany(Diagnosed::class);
+        return $this->hasMany(Diagnosed::class,'DoctoriD','id');
     }
 
     public function workSchedule(): HasMany
     {
-        return $this->hasMany(WorkSchedule::class);
+        return $this->hasMany(WorkSchedule::class,'EmployeeID','id');
     }
 
-    public function patientsOperation(): HasMany
+    public function patientsOperationDoctor(): HasMany
     {
-        return $this->hasMany(PatientsOperation::class);
+        return $this->hasMany(PatientsOperation::class,'DoctorID','id');
+    }
+    
+    public function patientsOperationAnesthesiologist(): HasMany
+    {
+        return $this->hasMany(PatientsOperation::class,'AnesthesiologistID','id');
     }
 
     public function Managerdepartment(): HasOne

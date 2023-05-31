@@ -30,7 +30,7 @@ class EmployeeFactory extends Factory
             'NationalNumber' => $this->faker->word,
             'DepartmentID' => Department::factory(),
             'Address' => $this->faker->word,
-            'HairDate' => $this->faker->date(),
+            'HireDate' => $this->faker->date(),
             'BirthDate' => $this->faker->date(),
             'Gender' => $this->faker->word,
             'Salary' => $this->faker->numberBetween(1, 100000),

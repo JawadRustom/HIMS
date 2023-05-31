@@ -20,7 +20,7 @@ class AuthenticationController extends Controller
   /**
    * Login
    * 
-   * @response {
+   * @response scenario="Register Success"{
    * "token":"2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1"
    * }
    * 
@@ -57,7 +57,7 @@ class AuthenticationController extends Controller
   /**
    * LoginAdmin
    * 
-   * @response {
+   * @response scenario="Register Success"{
    * "token":"10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL"
    * }
    * 
@@ -94,7 +94,7 @@ class AuthenticationController extends Controller
   /**
    * Register
    * 
-   * @response {
+   * @response scenario="Register Success"{
    * "token":"11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T"
    * }
    * 

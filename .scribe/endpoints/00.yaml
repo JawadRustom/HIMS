@@ -30,19 +30,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: gideon85@example.net
+        example: oabshire@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: vero
+        example: dolores
         type: string
         custom: []
     cleanBodyParameters:
-      email: gideon85@example.net
-      password: vero
+      email: oabshire@example.net
+      password: dolores
     fileParameters: []
     responses:
       -
@@ -52,7 +52,7 @@ endpoints:
           "token":"2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1"
           }
         headers: []
-        description: ''
+        description: 'Register Success'
         custom: []
       -
         status: 400
@@ -122,19 +122,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: candelario.witting@example.org
+        example: lockman.shanny@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: adipisci
+        example: labore
         type: string
         custom: []
     cleanBodyParameters:
-      email: candelario.witting@example.org
-      password: adipisci
+      email: lockman.shanny@example.com
+      password: labore
     fileParameters: []
     responses:
       -
@@ -144,7 +144,7 @@ endpoints:
           "token":"10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL"
           }
         headers: []
-        description: ''
+        description: 'Register Success'
         custom: []
       -
         status: 400
@@ -214,42 +214,42 @@ endpoints:
         name: NickName
         description: ''
         required: true
-        example: dolor
+        example: sed
         type: string
         custom: []
       FirstName:
         name: FirstName
         description: ''
         required: true
-        example: eaque
+        example: architecto
         type: string
         custom: []
       LastName:
         name: LastName
         description: ''
         required: true
-        example: eum
+        example: ut
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: misael43@example.com
+        example: tillman.general@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: 'l4aKS|T-=]K7VSs!L~nK'
+        example: "?e._-x'r"
         type: string
         custom: []
       PhoneNumber:
         name: PhoneNumber
         description: ''
         required: true
-        example: corporis
+        example: accusantium
         type: string
         custom: []
       Country:
@@ -281,12 +281,12 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      NickName: dolor
-      FirstName: eaque
-      LastName: eum
-      email: misael43@example.com
-      password: 'l4aKS|T-=]K7VSs!L~nK'
-      PhoneNumber: corporis
+      NickName: sed
+      FirstName: architecto
+      LastName: ut
+      email: tillman.general@example.net
+      password: "?e._-x'r"
+      PhoneNumber: accusantium
     fileParameters:
       ProfileImage: null
       icon: null
@@ -298,7 +298,7 @@ endpoints:
           "token":"11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T"
           }
         headers: []
-        description: ''
+        description: 'Register Success'
         custom: []
       -
         status: 400

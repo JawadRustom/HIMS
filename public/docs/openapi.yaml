@@ -15,7 +15,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: 'Register Success'
           content:
             application/json:
               schema:
@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gideon85@example.net
+                  example: oabshire@example.net
                 password:
                   type: string
                   description: ''
-                  example: vero
+                  example: dolores
               required:
                 - email
                 - password
@@ -111,7 +111,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: 'Register Success'
           content:
             application/json:
               schema:
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: candelario.witting@example.org
+                  example: lockman.shanny@example.com
                 password:
                   type: string
                   description: ''
-                  example: adipisci
+                  example: labore
               required:
                 - email
                 - password
@@ -207,7 +207,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: 'Register Success'
           content:
             application/json:
               schema:
@@ -244,27 +244,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: dolor
+                  example: sed
                 FirstName:
                   type: string
                   description: ''
-                  example: eaque
+                  example: architecto
                 LastName:
                   type: string
                   description: ''
-                  example: eum
+                  example: ut
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: misael43@example.com
+                  example: tillman.general@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'l4aKS|T-=]K7VSs!L~nK'
+                  example: "?e._-x'r"
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: corporis
+                  example: accusantium
                 Country:
                   type: string
                   description: ''
@@ -313,6 +313,205 @@ paths:
       tags:
         - Authentication
       security: []
+  /api/Doctor:
+    get:
+      summary: 'See All Doctor'
+      operationId: seeAllDoctor
+      description: ''
+      parameters:
+        -
+          in: query
+          name: DataCount
+          description: "To return limite data in single page.\nDefaults value for variable '15'."
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: "To return limite data in single page.\nDefaults value for variable '15'."
+            example: 10
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  current_page: 1
+                  data:
+                    -
+                      FirstName: Mathew
+                      CertificationName: qui
+                      City: null
+                      Country: null
+                      CertificationDonor: commodi
+                  first_page_url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  from: 1
+                  last_page: 1
+                  last_page_url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  links:
+                    -
+                      url: null
+                      label: '&laquo; Previous'
+                      active: false
+                    -
+                      url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: null
+                      label: 'Next &raquo;'
+                      active: false
+                  next_page_url: null
+                  path: 'http://127.0.0.1:8000/api/Doctor'
+                  per_page: 15
+                  prev_page_url: null
+                  to: 1
+                  total: 1
+                properties:
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example:
+                      -
+                        FirstName: Mathew
+                        CertificationName: qui
+                        City: null
+                        Country: null
+                        CertificationDonor: commodi
+                    items:
+                      type: object
+                      properties:
+                        FirstName:
+                          type: string
+                          example: Mathew
+                        CertificationName:
+                          type: string
+                          example: qui
+                        City:
+                          type: string
+                          example: null
+                        Country:
+                          type: string
+                          example: null
+                        CertificationDonor:
+                          type: string
+                          example: commodi
+                  first_page_url:
+                    type: string
+                    example: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  from:
+                    type: integer
+                    example: 1
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: '&laquo; Previous'
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://127.0.0.1:8000/api/Doctor'
+                  per_page:
+                    type: integer
+                    example: 15
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: integer
+                    example: 1
+                  total:
+                    type: integer
+                    example: 1
+      tags:
+        - DoctorHome
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DoctorHome
+      security: []
+  '/api/Doctor/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - DoctorHome
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DoctorHome
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DoctorHome
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Doctor.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/user:
     get:
       summary: ''
@@ -339,6 +538,9 @@ tags:
   -
     name: Authentication
     description: "\nThis Api For Authentication"
+  -
+    name: DoctorHome
+    description: "\nAPIs For Doctor In Home Page"
   -
     name: Endpoints
     description: ''

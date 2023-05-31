@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "99e54c4d-38c7-468a-9de6-52f59c01cf86",
+        "_postman_id": "f119994b-b926-4472-83ce-26361f862e8d",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gideon85@example.net\",\"password\":\"vero\"}"
+                            "raw": "{\"email\":\"oabshire@example.net\",\"password\":\"dolores\"}"
                         },
                         "description": "",
                         "auth": {
@@ -53,7 +53,7 @@
                             "header": [],
                             "code": 200,
                             "body": "{\n\"token\":\"2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1\"\n}",
-                            "name": ""
+                            "name": "Register Success"
                         },
                         {
                             "header": [],
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"candelario.witting@example.org\",\"password\":\"adipisci\"}"
+                            "raw": "{\"email\":\"lockman.shanny@example.com\",\"password\":\"labore\"}"
                         },
                         "description": "",
                         "auth": {
@@ -109,7 +109,7 @@
                             "header": [],
                             "code": 200,
                             "body": "{\n\"token\":\"10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL\"\n}",
-                            "name": ""
+                            "name": "Register Success"
                         },
                         {
                             "header": [],
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "dolor",
+                                    "value": "sed",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "eaque",
+                                    "value": "architecto",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "eum",
+                                    "value": "ut",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "misael43@example.com",
+                                    "value": "tillman.general@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "l4aKS|T-=]K7VSs!L~nK",
+                                    "value": "?e._-x'r",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "corporis",
+                                    "value": "accusantium",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -212,7 +212,7 @@
                             "header": [],
                             "code": 200,
                             "body": "{\n\"token\":\"11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T\"\n}",
-                            "name": ""
+                            "name": "Register Success"
                         },
                         {
                             "header": [],
@@ -268,6 +268,218 @@
                             "name": "User Not Login Yet"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "DoctorHome",
+            "description": "\nAPIs For Doctor In Home Page",
+            "item": [
+                {
+                    "name": "See All Doctor",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Doctor",
+                            "query": [
+                                {
+                                    "key": "DataCount",
+                                    "value": "10",
+                                    "description": "To return limite data in single page.\nDefaults value for variable '15'.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/Doctor?DataCount=10"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"current_page\": 1,\n\"data\": [\n{\n\"FirstName\": \"Mathew\",\n\"CertificationName\": \"qui\",\n\"City\": null,\n\"Country\": null,\n\"CertificationDonor\": \"commodi\"\n}\n],\n\"first_page_url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"from\": 1,\n\"last_page\": 1,\n\"last_page_url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": null,\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"next_page_url\": null,\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 15,\n\"prev_page_url\": null,\n\"to\": 1,\n\"total\": 1\n}",
+                            "name": "Success Process"
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Doctor",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Doctor"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Doctor\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Doctor\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Doctor."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Doctor\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Doctor\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Doctor."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Doctor\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Doctor\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Doctor."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         },
