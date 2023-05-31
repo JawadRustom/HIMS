@@ -15,8 +15,8 @@ class CertificationDoctorResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'Name Certifications'=>$this->certification->CertificationName,
-          'Doctor Certifications'=>$this->certification->CertificationDonor,
+          'Name_Certifications'=>$this->certification->CertificationName,
+          'Donor_Certifications'=>$this->certification->CertificationDonor,
         ];
     }
 }

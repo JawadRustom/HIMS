@@ -43,18 +43,17 @@ class DoctorController extends Controller
       // ->paginate($DataCount);
       //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get();
       //$doctor=Employee::with('user')->with('certificationEmployee')->get();
-
+      
       $doctors = DoctorResource::collection(Employee::get());//How Can User Paginate With Resource Way
       return response([
         'Doctors'=>$doctors
       ],200);
     }
-
     /**
      * Display the specified resource.
      */
     public function show(Employee $employee)
     {
-      //
+      
     }
 }
