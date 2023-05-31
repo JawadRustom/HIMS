@@ -9,9 +9,7 @@ use Illuminate\Database\Seeder;
 
 class DoctorSeeder extends Seeder
 {
-  /**
-   * Run the database seeds.
-   */
+
   public function run(): void
   {
     $Doctor = User::create([
@@ -25,7 +23,6 @@ class DoctorSeeder extends Seeder
       'Country' => 'Syria',
       'City' => 'Damascus',
     ]);
-    Employee::factory()->create(['user_id' => $Doctor->id]);
     $Doctor = User::create([
       'UserTypeId' => '2',
       'NickName' => 'Thear123',
@@ -37,7 +34,6 @@ class DoctorSeeder extends Seeder
       'Country' => 'Syria',
       'City' => 'Damascus',
     ]);
-    Employee::factory()->create(['user_id' => $Doctor->id]);
     $Doctor = User::create([
       'UserTypeId' => '2',
       'NickName' => 'Sami123',
@@ -49,6 +45,5 @@ class DoctorSeeder extends Seeder
       'Country' => 'Syria',
       'City' => 'Damascus',
     ]);
-    Employee::factory()->create(['user_id' => $Doctor->id]);
   }
 }

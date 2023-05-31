@@ -20,7 +20,7 @@ class AuthenticationController extends Controller
   /**
    * Login
    * 
-   * @response {
+   * @response scenario="Register Success"{
    * "token":"2|MPvbf6j8OVfoPKuF5bBMUXiE6JrymdQFFHVTHuK1"
    * }
    * 
@@ -38,16 +38,8 @@ class AuthenticationController extends Controller
     * 
     * 
    * @response 401 scenario="Email or password is wrong or user type not user"{
-   "message": "The email field is required. (and 1 more error)",
-   "errors": {
-     "email": [
-       "The email field is required."
-      ],
-      "password": [
-        "The password field is required."
-        ]
-      }
-}
+    "message": "email or password is wrong"
+   }
    * 
    * @response 400 scenario="User send a valid token"{
    * "message": "You are already logged in"
@@ -62,7 +54,34 @@ class AuthenticationController extends Controller
       $token = auth()->user()->createToken("token")->plainTextToken;
       return response(['token'=>$token]);
     }
-
+  /**
+   * LoginAdmin
+   * 
+   * @response scenario="Register Success"{
+   * "token":"10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL"
+   * }
+   * 
+   * @response 422 scenario="Validation errors"{
+   "message": "The email field is required. (and 1 more error)",
+   "errors": {
+     "email": [
+       "The email field is required."
+      ],
+      "password": [
+        "The password field is required."
+        ]
+      }
+}
+    * 
+    * 
+   * @response 401 scenario="Email or password is wrong or user type not admin or doctor"{
+    "message": "email or password is wrong"
+   }
+   * 
+   * @response 400 scenario="User send a valid token"{
+   * "message": "You are already logged in"
+   * }
+   */
     public function LoginAdmin(LoginRequest $Request)
     {
       if(!Auth::attempt(['email'=>$Request->email,'password'=>$Request->password,'UserTypeId'=>range(1,2)]))
@@ -72,7 +91,42 @@ class AuthenticationController extends Controller
       $token = auth()->user()->createToken("token")->plainTextToken;
       return response(['token'=>$token]);
     }
-
+  /**
+   * Register
+   * 
+   * @response scenario="Register Success"{
+   * "token":"11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T"
+   * }
+   * 
+   * @response 422 scenario="Validation errors"{
+    "message": "The nick name field is required. (and 5 more errors)",
+    "errors": {
+        "NickName": [
+            "The nick name field is required."
+        ],
+        "FirstName": [
+            "The first name field is required."
+        ],
+        "LastName": [
+            "The last name field is required."
+        ],
+        "email": [
+            "The email has already been taken."
+        ],
+        "password": [
+            "The password field must be at least 8 characters."
+        ],
+        "PhoneNumber": [
+            "The phone number field is required."
+        ]
+    }
+    * 
+    * 
+   * 
+   * @response 400 scenario="User aalready login{
+   * "message": "You are already logged in"
+   * }
+   */
     public function register(RegisterRequest $Request)
     {
       $user=User::create([
@@ -93,7 +147,17 @@ class AuthenticationController extends Controller
       $token = auth()->user()->createToken("token")->plainTextToken;
       return response(['token'=>$token]);
     }
-
+  /**
+   * Logout
+   * 
+   * 
+   * @response 204 scenario="Logout Success"{
+    * 
+    * 
+   * @response 401 scenario="User Not Login Yet"{
+   *     "message": "Unauthenticated."
+   * }
+   */
     public function logout()
     {
       auth()->user()->currentAccessToken()->delete();

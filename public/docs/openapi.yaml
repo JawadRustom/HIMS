@@ -15,7 +15,7 @@ paths:
       parameters: []
       responses:
         200:
-          description: ''
+          description: 'Register Success'
           content:
             application/json:
               schema:
@@ -45,31 +45,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'The email field is required. (and 1 more error)'
-                  errors:
-                    email:
-                      - 'The email field is required.'
-                    password:
-                      - 'The password field is required.'
+                  message: 'email or password is wrong'
                 properties:
                   message:
                     type: string
-                    example: 'The email field is required. (and 1 more error)'
-                  errors:
-                    type: object
-                    properties:
-                      email:
-                        type: array
-                        example:
-                          - 'The email field is required.'
-                        items:
-                          type: string
-                      password:
-                        type: array
-                        example:
-                          - 'The password field is required.'
-                        items:
-                          type: string
+                    example: 'email or password is wrong'
         422:
           description: 'Validation errors'
           content:
@@ -114,22 +94,90 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: cary13@example.com
+                  example: oabshire@example.net
                 password:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: dolores
               required:
                 - email
                 - password
       security: []
   /api/LoginAdmin:
     post:
-      summary: ''
-      operationId: postApiLoginAdmin
+      summary: LoginAdmin
+      operationId: loginAdmin
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: 'Register Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL
+                properties:
+                  token:
+                    type: string
+                    example: 10|tMg2ECrNKojN04dLReIzUIitovJT0NFA3UWUpQPL
+        400:
+          description: 'User send a valid token'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'You are already logged in'
+                properties:
+                  message:
+                    type: string
+                    example: 'You are already logged in'
+        401:
+          description: 'Email or password is wrong or user type not admin or doctor'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'email or password is wrong'
+                properties:
+                  message:
+                    type: string
+                    example: 'email or password is wrong'
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The email field is required. (and 1 more error)'
+                  errors:
+                    email:
+                      - 'The email field is required.'
+                    password:
+                      - 'The password field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The email field is required. (and 1 more error)'
+                  errors:
+                    type: object
+                    properties:
+                      email:
+                        type: array
+                        example:
+                          - 'The email field is required.'
+                        items:
+                          type: string
+                      password:
+                        type: array
+                        example:
+                          - 'The password field is required.'
+                        items:
+                          type: string
       tags:
         - Authentication
       requestBody:
@@ -142,22 +190,48 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: francisca.hammes@example.com
+                  example: lockman.shanny@example.com
                 password:
                   type: string
                   description: ''
-                  example: enim
+                  example: labore
               required:
                 - email
                 - password
       security: []
   /api/register:
     post:
-      summary: ''
-      operationId: postApiRegister
+      summary: Register
+      operationId: register
       description: ''
       parameters: []
-      responses: {  }
+      responses:
+        200:
+          description: 'Register Success'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T
+                properties:
+                  token:
+                    type: string
+                    example: 11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T
+        400:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "scenario=\"User aalready login{\n\"message\": \"You are already logged in\"\n}"
+        422:
+          description: 'Validation errors'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}"
       tags:
         - Authentication
       requestBody:
@@ -170,27 +244,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: sed
                 FirstName:
                   type: string
                   description: ''
-                  example: aut
+                  example: architecto
                 LastName:
                   type: string
                   description: ''
-                  example: non
+                  example: ut
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: piper.hane@example.net
+                  example: tillman.general@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: g.bKqM6alIi
+                  example: "?e._-x'r"
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: minus
+                  example: accusantium
                 Country:
                   type: string
                   description: ''
@@ -217,14 +291,227 @@ paths:
       security: []
   /api/logout:
     post:
-      summary: ''
-      operationId: postApiLogout
+      summary: Logout
+      operationId: logout
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: 'Logout Success'
+        401:
+          description: 'User Not Login Yet'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Authentication
+      security: []
+  /api/Doctor:
+    get:
+      summary: 'See All Doctor'
+      operationId: seeAllDoctor
+      description: ''
+      parameters:
+        -
+          in: query
+          name: DataCount
+          description: "To return limite data in single page.\nDefaults value for variable '15'."
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: "To return limite data in single page.\nDefaults value for variable '15'."
+            example: 10
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  current_page: 1
+                  data:
+                    -
+                      FirstName: Mathew
+                      CertificationName: qui
+                      City: null
+                      Country: null
+                      CertificationDonor: commodi
+                  first_page_url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  from: 1
+                  last_page: 1
+                  last_page_url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  links:
+                    -
+                      url: null
+                      label: '&laquo; Previous'
+                      active: false
+                    -
+                      url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                      label: '1'
+                      active: true
+                    -
+                      url: null
+                      label: 'Next &raquo;'
+                      active: false
+                  next_page_url: null
+                  path: 'http://127.0.0.1:8000/api/Doctor'
+                  per_page: 15
+                  prev_page_url: null
+                  to: 1
+                  total: 1
+                properties:
+                  current_page:
+                    type: integer
+                    example: 1
+                  data:
+                    type: array
+                    example:
+                      -
+                        FirstName: Mathew
+                        CertificationName: qui
+                        City: null
+                        Country: null
+                        CertificationDonor: commodi
+                    items:
+                      type: object
+                      properties:
+                        FirstName:
+                          type: string
+                          example: Mathew
+                        CertificationName:
+                          type: string
+                          example: qui
+                        City:
+                          type: string
+                          example: null
+                        Country:
+                          type: string
+                          example: null
+                        CertificationDonor:
+                          type: string
+                          example: commodi
+                  first_page_url:
+                    type: string
+                    example: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  from:
+                    type: integer
+                    example: 1
+                  last_page:
+                    type: integer
+                    example: 1
+                  last_page_url:
+                    type: string
+                    example: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                  links:
+                    type: array
+                    example:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          example: null
+                        label:
+                          type: string
+                          example: '&laquo; Previous'
+                        active:
+                          type: boolean
+                          example: false
+                  next_page_url:
+                    type: string
+                    example: null
+                  path:
+                    type: string
+                    example: 'http://127.0.0.1:8000/api/Doctor'
+                  per_page:
+                    type: integer
+                    example: 15
+                  prev_page_url:
+                    type: string
+                    example: null
+                  to:
+                    type: integer
+                    example: 1
+                  total:
+                    type: integer
+                    example: 1
+      tags:
+        - DoctorHome
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Authentication
+        - DoctorHome
       security: []
+  '/api/Doctor/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - DoctorHome
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DoctorHome
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - DoctorHome
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Doctor.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/user:
     get:
       summary: ''
@@ -251,6 +538,9 @@ tags:
   -
     name: Authentication
     description: "\nThis Api For Authentication"
+  -
+    name: DoctorHome
+    description: "\nAPIs For Doctor In Home Page"
   -
     name: Endpoints
     description: ''
