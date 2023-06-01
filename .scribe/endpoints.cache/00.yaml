@@ -32,19 +32,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: oabshire@example.net
+        example: lester87@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: dolores
+        example: laboriosam
         type: string
         custom: []
     cleanBodyParameters:
-      email: oabshire@example.net
-      password: dolores
+      email: lester87@example.org
+      password: laboriosam
     fileParameters: []
     responses:
       -
@@ -124,19 +124,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: lockman.shanny@example.com
+        example: ramon.howell@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: labore
+        example: quo
         type: string
         custom: []
     cleanBodyParameters:
-      email: lockman.shanny@example.com
-      password: labore
+      email: ramon.howell@example.com
+      password: quo
     fileParameters: []
     responses:
       -
@@ -216,42 +216,42 @@ endpoints:
         name: NickName
         description: ''
         required: true
-        example: sed
+        example: est
         type: string
         custom: []
       FirstName:
         name: FirstName
         description: ''
         required: true
-        example: architecto
+        example: in
         type: string
         custom: []
       LastName:
         name: LastName
         description: ''
         required: true
-        example: ut
+        example: dolor
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: tillman.general@example.net
+        example: zoey13@example.net
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: "?e._-x'r"
+        example: "Y'@v&-Hk9"
         type: string
         custom: []
       PhoneNumber:
         name: PhoneNumber
         description: ''
         required: true
-        example: accusantium
+        example: omnis
         type: string
         custom: []
       Country:
@@ -283,12 +283,12 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      NickName: sed
-      FirstName: architecto
-      LastName: ut
-      email: tillman.general@example.net
-      password: "?e._-x'r"
-      PhoneNumber: accusantium
+      NickName: est
+      FirstName: in
+      LastName: dolor
+      email: zoey13@example.net
+      password: "Y'@v&-Hk9"
+      PhoneNumber: omnis
     fileParameters:
       ProfileImage: null
       icon: null
@@ -305,11 +305,11 @@ endpoints:
       -
         status: 400
         content: |-
-          scenario="User aalready login{
+          {
           "message": "You are already logged in"
           }
         headers: []
-        description: ''
+        description: 'User already login'
         custom: []
       -
         status: 422

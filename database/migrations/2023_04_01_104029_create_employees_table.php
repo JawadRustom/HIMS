@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->reference('id')->on('users');
             $table->foreignId('EmployeeTypeId')->reference('id')->on('employee_types');
             $table->string('NationalNumber');
-            $table->foreignId('DepartmentID')->constrained('departments')->uniqid();
+            $table->foreignId('DepartmentID')->reference('id')->on('departments')->uniqid();
             $table->string('Address')->nullable();
             $table->timestamp('HireDate');
             $table->string('Gender');

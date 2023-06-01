@@ -31,11 +31,6 @@ class Death extends Model
 
     public function patient(): BelongsTo
     {
-        return $this->belongsTo(Patient::class);
-    }
-
-    public function id(): BelongsTo
-    {
-        return $this->belongsTo(Patient::class);
+        return $this->belongsTo(Patient::class,'PatientID','id');
     }
 }

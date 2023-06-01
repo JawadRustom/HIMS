@@ -37,12 +37,12 @@ class PatientSymptom extends Model
 
     public function patient(): BelongsTo
     {
-        return $this->belongsTo(Patient::class);
+        return $this->belongsTo(Patient::class,'PatientID','id');
     }
 
     public function symptom(): BelongsTo
     {
-        return $this->belongsTo(Symptom::class);
+        return $this->belongsTo(Symptom::class,'SymptomID','id');
     }
 
 }

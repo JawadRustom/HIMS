@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Clinic extends Model
@@ -33,12 +34,11 @@ class Clinic extends Model
 
     public function department(): BelongsTo
     {
-        return $this->belongsTo(Department::class);
+        return $this->belongsTo(Department::class,'DepartmentID','id');
     }
 
-    public function Room(): BelongsTo
+    public function PatientAppointment(): HasMany
     {
-        return $this->belongsTo(Room::class);
+        return $this->HasMany(PatientAppointment::class,'ClinicID','id');
     }
-
 }

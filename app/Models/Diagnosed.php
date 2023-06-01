@@ -39,22 +39,26 @@ class Diagnosed extends Model
 
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class,'DoctoriD','id');
     }
 
     public function patient(): BelongsTo
     {
-        return $this->belongsTo(Patient::class);
+        return $this->belongsTo(Patient::class,'PatientID','id');
     }
 
     public function disease(): BelongsTo
     {
-        return $this->belongsTo(Disease::class);
+        return $this->belongsTo(Disease::class,'DiseaseID','id');
     }
 
     public function patientMedicine(): BelongsTo
     {
-        return $this->belongsTo(PatientMedicine::class);
+        return $this->belongsTo(PatientMedicine::class,'PatientMedicineID','id');
+    }
+    public function PatientAppointment(): BelongsTo
+    {
+        return $this->belongsTo(PatientAppointment::class,'PatientAppointmentID','id');
     }
 
 }

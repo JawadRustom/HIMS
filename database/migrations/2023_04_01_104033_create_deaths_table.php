@@ -15,7 +15,7 @@ return new class extends Migration
 
         Schema::create('deaths', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->reference('id')->on('patients');
+            $table->foreignId('PatientID')->reference('id')->on('patients')->uniqid();
             $table->timestamp('DeathDate');
             $table->timestamps();
         });

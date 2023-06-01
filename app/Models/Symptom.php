@@ -31,6 +31,6 @@ class Symptom extends Model
 
     public function patientSymptoms(): HasMany
     {
-        return $this->hasMany(PatientSymptom::class);
+        return $this->hasMany(PatientSymptom::class,'SymptomID','id');
     }
 }

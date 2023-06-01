@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "f119994b-b926-4472-83ce-26361f862e8d",
+        "_postman_id": "c06e5e43-e5e4-4641-a961-2aad673e81e3",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"oabshire@example.net\",\"password\":\"dolores\"}"
+                            "raw": "{\"email\":\"lester87@example.org\",\"password\":\"laboriosam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"lockman.shanny@example.com\",\"password\":\"labore\"}"
+                            "raw": "{\"email\":\"ramon.howell@example.com\",\"password\":\"quo\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "sed",
+                                    "value": "est",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "architecto",
+                                    "value": "in",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "ut",
+                                    "value": "dolor",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "tillman.general@example.net",
+                                    "value": "zoey13@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "?e._-x'r",
+                                    "value": "Y'@v&-Hk9",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "accusantium",
+                                    "value": "omnis",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -217,8 +217,8 @@
                         {
                             "header": [],
                             "code": 400,
-                            "body": "scenario=\"User aalready login{\n\"message\": \"You are already logged in\"\n}",
-                            "name": ""
+                            "body": "{\n\"message\": \"You are already logged in\"\n}",
+                            "name": "User already login"
                         },
                         {
                             "header": [],
@@ -284,12 +284,12 @@
                             "query": [
                                 {
                                     "key": "DataCount",
-                                    "value": "10",
+                                    "value": "13",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?DataCount=10"
+                            "raw": "{{baseUrl}}\/api\/Doctor?DataCount=13"
                         },
                         "method": "GET",
                         "header": [
@@ -312,41 +312,13 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"current_page\": 1,\n\"data\": [\n{\n\"FirstName\": \"Mathew\",\n\"CertificationName\": \"qui\",\n\"City\": null,\n\"Country\": null,\n\"CertificationDonor\": \"commodi\"\n}\n],\n\"first_page_url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"from\": 1,\n\"last_page\": 1,\n\"last_page_url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": null,\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"next_page_url\": null,\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 15,\n\"prev_page_url\": null,\n\"to\": 1,\n\"total\": 1\n}",
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 1,\n\"Doctor_Name\": {\n\"FirstName\": \"Mikel\",\n\"LastName\": \"Rodriguez\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 24,\n\"Doctor_Image\": \"http:\/\/durgan.com\/odio-eum-quia-quis-placeat-dolorem-assumenda.html\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 2,\n\"Doctor_Name\": {\n\"FirstName\": \"Sammy\",\n\"LastName\": \"Cassin\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 52,\n\"Doctor_Image\": \"http:\/\/volkman.com\/\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 3,\n\"Doctor_Name\": {\n\"FirstName\": \"Joanne\",\n\"LastName\": \"Lueilwitz\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 14,\n\"Doctor_Image\": \"http:\/\/hane.com\/\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 4,\n\"Doctor_Name\": {\n\"FirstName\": \"Constantin\",\n\"LastName\": \"Rippin\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 33,\n\"Doctor_Image\": \"http:\/\/www.shields.info\/ut-id-minus-eum-vel-assumenda-est-consequatur\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 5,\n\"Doctor_Name\": {\n\"FirstName\": \"Mollie\",\n\"LastName\": \"Mayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 10,\n\"Doctor_Image\": \"http:\/\/daugherty.com\/\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 6,\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http:\/\/mclaughlin.com\/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 7,\n\"Doctor_Name\": {\n\"FirstName\": \"Valentine\",\n\"LastName\": \"Quitzon\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 4,\n\"Doctor_Image\": \"http:\/\/www.gibson.biz\/veniam-possimus-voluptatem-porro-qui.html\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 8,\n\"Doctor_Name\": {\n\"FirstName\": \"Chad\",\n\"LastName\": \"Bode\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 40,\n\"Doctor_Image\": \"http:\/\/hickle.net\/\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 9,\n\"Doctor_Name\": {\n\"FirstName\": \"Gladys\",\n\"LastName\": \"Denesik\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 21,\n\"Doctor_Image\": \"http:\/\/www.fadel.com\/alias-atque-architecto-impedit-quas-minus-tempora.html\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 10,\n\"Doctor_Name\": {\n\"FirstName\": \"Telly\",\n\"LastName\": \"Altenwerth\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 23,\n\"Doctor_Image\": \"http:\/\/www.mcdermott.com\/in-labore-sunt-mollitia-velit-aut-voluptatem\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 11,\n\"Doctor_Name\": {\n\"FirstName\": \"Drew\",\n\"LastName\": \"Conroy\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"hic\",\n\"Donor_Certifications\": \"voluptatem\"\n}\n],\n\"Doctor Experience\": 36,\n\"Doctor_Image\": \"http:\/\/carter.com\/\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 12,\n\"Doctor_Name\": {\n\"FirstName\": \"Horacio\",\n\"LastName\": \"Schmitt\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"aliquam\",\n\"Donor_Certifications\": \"possimus\"\n}\n],\n\"Doctor Experience\": 18,\n\"Doctor_Image\": \"http:\/\/wunsch.com\/enim-commodi-qui-accusantium-ducimus\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 13,\n\"Doctor_Name\": {\n\"FirstName\": \"Idella\",\n\"LastName\": \"Abernathy\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"accusamus\",\n\"Donor_Certifications\": \"autem\"\n}\n],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http:\/\/www.jerde.com\/ullam-nihil-id-harum-est\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 14,\n\"Doctor_Name\": {\n\"FirstName\": \"Christian\",\n\"LastName\": \"Boyer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"unde\",\n\"Donor_Certifications\": \"quasi\"\n}\n],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"https:\/\/will.org\/fugit-cupiditate-vitae-iure-quis.html\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 15,\n\"Doctor_Name\": {\n\"FirstName\": \"Kenya\",\n\"LastName\": \"Kuhlman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"ipsa\",\n\"Donor_Certifications\": \"atque\"\n}\n],\n\"Doctor Experience\": 23,\n\"Doctor_Image\": \"http:\/\/price.com\/eveniet-perspiciatis-nisi-id\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=10\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 10,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=9\",\n\"label\": \"9\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=10\",\n\"label\": \"10\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 15,\n\"to\": 15,\n\"total\": 143\n}\n}",
                             "name": "Success Process"
                         }
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/Doctor",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/Doctor"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
+                    "name": "See One Doctor",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -381,105 +353,18 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
+                            "header": [],
                             "code": 200,
-                            "body": "",
-                            "name": ""
+                            "body": "{\n\"data\": {\n\"Doctor_ID\": 143,\n\"doctor_name\": {\n\"FirstName\": \"Ada\",\n\"LastName\": \"Marvin\"\n},\n\"doctor_speciality_and_donor_name\": [],\n\"doctor experience\": 32,\n\"doctor_city\": null,\n\"doctor_country\": null,\n\"doctor_work_schedule\": [\n{\n\"from_hour\": \"12:00 am\",\n\"to_hour\": \"12:00 am\",\n\"day_name\": \"Wednesday\"\n}\n]\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"No query results for model [App\\\\Models\\\\Employee] 1444\",\n\"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n\"line\": 408,\n\"trace\": [\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n\"line\": 384,\n\"function\": \"prepareException\",\n\"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n\"line\": 51,\n\"function\": \"render\",\n\"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 185,\n\"function\": \"handleException\",\n\"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n\"line\": 152,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n\"line\": 128,\n\"function\": \"handleRequest\",\n\"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n\"line\": 80,\n\"function\": \"handleRequestUsingNamedLimiter\",\n\"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 116,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n\"line\": 798,\n\"function\": \"then\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n\"line\": 775,\n\"function\": \"runRouteWithinStack\",\n\"class\": \"Illuminate\\\\Routing\\\\Router\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n\"line\": 739,\n\"function\": \"runRoute\",\n\"class\": \"Illuminate\\\\Routing\\\\Router\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n\"line\": 728,\n\"function\": \"dispatchToRoute\",\n\"class\": \"Illuminate\\\\Routing\\\\Router\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n\"line\": 200,\n\"function\": \"dispatch\",\n\"class\": \"Illuminate\\\\Routing\\\\Router\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 141,\n\"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n\"line\": 21,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n\"line\": 31,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n\"line\": 21,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n\"line\": 40,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n\"line\": 27,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n\"line\": 86,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n\"line\": 62,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n\"line\": 39,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 180,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n\"line\": 116,\n\"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n\"line\": 175,\n\"function\": \"then\",\n\"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n\"line\": 144,\n\"function\": \"sendRequestThroughRouter\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\public\\\\index.php\",\n\"line\": 52,\n\"function\": \"handle\",\n\"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n\"type\": \"->\"\n},\n{\n\"file\": \"C:\\\\EveryThings\\\\Jawad\\\\Project\\\\VisualStudioCode\\\\Laravel\\\\HIMS\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n\"line\": 16,\n\"function\": \"require_once\"\n}\n]\n}",
+                            "name": "This Doctor Not Found"
                         }
                     ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/Doctor\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/Doctor\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the Doctor."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/Doctor\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/Doctor\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the Doctor."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
                 }
             ]
         },

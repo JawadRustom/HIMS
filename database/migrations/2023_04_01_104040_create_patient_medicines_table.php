@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('patient_medicines', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('MedicineID')->constrained('medicines');
-            $table->foreignId('DiagnosedID')->constrained('diagnoseds');
+            $table->foreignId('MedicineID')->reference('id')->on('medicines');
+            $table->foreignId('DiagnosedID')->reference('id')->on('diagnoseds');
             $table->integer('MedicineCaliber');
             $table->integer('DosagePerDay');
             $table->integer('DaysCount')->nullable();

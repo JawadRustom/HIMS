@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('patient_symptoms', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->constrained('patients');
-            $table->foreignId('SymptomID')->constrained('symptoms');
+            $table->foreignId('PatientID')->reference('id')->on('patients');
+            $table->foreignId('SymptomID')->reference('id')->on('symptoms');
             $table->timestamp('SymptomDate');
             $table->string('Description');
             $table->timestamps();

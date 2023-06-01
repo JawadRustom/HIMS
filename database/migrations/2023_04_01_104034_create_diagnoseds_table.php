@@ -15,11 +15,12 @@ return new class extends Migration
 
         Schema::create('diagnoseds', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('DoctoriD')->constrained('employees');
-            $table->foreignId('PatientID')->constrained('patients');
-            $table->foreignId('DiseaseID')->constrained('diseases');
+            $table->foreignId('DoctoriD')->reference('id')->on('employees');
+            $table->foreignId('PatientID')->reference('id')->on('patients');
+            $table->foreignId('DiseaseID')->reference('id')->on('diseases');
             $table->string('Details');
-            $table->foreignId('PatientAppointmentID')->constrained('patient_appointments');
+            $table->foreignId('PatientAppointmentID')->reference('id')->on('patient_appointments');
+            $table->foreignId('PatientMedicineID')->reference('id')->on('patient_medicines');
             $table->timestamps();
             $table->softDeletes();
         });

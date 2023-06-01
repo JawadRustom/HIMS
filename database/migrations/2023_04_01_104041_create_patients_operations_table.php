@@ -15,10 +15,10 @@ return new class extends Migration
 
         Schema::create('patients_operations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->constrained('patients');
-            $table->foreignId('DoctorID')->constrained('employees');
-            $table->foreignId('AnesthesiologistID')->constrained('employees');
-            $table->foreignId('OperationID')->constrained('operations');
+            $table->foreignId('PatientID')->reference('id')->on('patients');
+            $table->foreignId('DoctorID')->reference('id')->on('employees');
+            $table->foreignId('AnesthesiologistID')->reference('id')->on('employees');
+            $table->foreignId('OperationID')->reference('id')->on('operations');
             $table->timestamp('OperationDate');
             $table->integer('DoctorCommission');
             $table->timestamps();

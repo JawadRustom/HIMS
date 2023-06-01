@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('Name');
             $table->string('Type');
             $table->integer('Quantity');
-            $table->foreignId('RoomID')->constrained('rooms')->uniqid();
+            $table->foreignId('RoomID')->reference('id')->on('rooms')->uniqid();
             $table->timestamps();
             $table->softDeletes();
         });

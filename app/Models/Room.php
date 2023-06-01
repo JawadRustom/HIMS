@@ -33,16 +33,16 @@ class Room extends Model
 
     public function bloodBank(): HasOne
     {
-        return $this->hasOne(BloodBank::class);
+        return $this->hasOne(BloodBank::class,'RoomID','id');
     }
 
     public function roomContent(): HasMany
     {
-        return $this->hasMany(RoomContent::class);
+        return $this->hasMany(RoomContent::class,'RoomID','id');
     }
 
     public function workSchedule(): HasMany
     {
-        return $this->hasMany(WorkSchedule::class);
+        return $this->hasMany(WorkSchedule::class,'RoomID','id');
     }
 }

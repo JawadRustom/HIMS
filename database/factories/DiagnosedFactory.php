@@ -9,6 +9,7 @@ use App\Models\Disease;
 use App\Models\Employee;
 use App\Models\Patient;
 use App\Models\PatientAppointment;
+use App\Models\PatientMedicine;
 
 class DiagnosedFactory extends Factory
 {
@@ -30,6 +31,7 @@ class DiagnosedFactory extends Factory
             'DiseaseID' => Disease::factory(),
             'Details' => $this->faker->word,
             'PatientAppointmentID' => PatientAppointment::factory(),
+            'PatientMedicineID'=>PatientMedicine::factory(),
         ];
     }
 }

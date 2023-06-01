@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('clinics', function (Blueprint $table) {
             $table->id();
             $table->string('ClinicsType');
-            $table->foreignId('DepartmentID')->constrained('departments')->uniqid();
+            $table->foreignId('DepartmentID')->reference('id')->on('departments')->uniqid();
             $table->timestamps();
             $table->softDeletes();
         });

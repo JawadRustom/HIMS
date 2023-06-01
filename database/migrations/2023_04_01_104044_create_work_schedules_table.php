@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('work_schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('EmployeeID')->constrained('employees');
-            $table->foreignId('RoomID')->constrained('rooms');
+            $table->foreignId('EmployeeID')->reference('id')->on('employees');
+            $table->foreignId('RoomID')->reference('id')->on('rooms');
             $table->time('FromHour');
             $table->time('ToHour');
             $table->timestamp('WorkDayName');

@@ -32,6 +32,6 @@ class Operation extends Model
 
     public function patientsOperations(): HasMany
     {
-        return $this->hasMany(PatientsOperation::class);
+        return $this->hasMany(PatientsOperation::class,'OperationID','id');
     }
 }

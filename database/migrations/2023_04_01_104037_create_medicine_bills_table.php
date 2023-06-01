@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('medicine_bills', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('MedicineID')->constrained('medicines');
-            $table->foreignId('EmployeeID')->constrained('employees');
+            $table->foreignId('MedicineID')->reference('id')->on('medicines');
+            $table->foreignId('EmployeeID')->reference('id')->on('employees');
             $table->timestamp('BillDate');
             $table->integer('Quantity');
             $table->integer('BuyPrice');

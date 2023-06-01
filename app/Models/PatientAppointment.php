@@ -37,16 +37,16 @@ class PatientAppointment extends Model
 
     public function patient(): BelongsTo
     {
-        return $this->belongsTo(Patient::class);
+        return $this->belongsTo(Patient::class,'PatientID','id');
     }
 
     public function clinic(): BelongsTo
     {
-        return $this->belongsTo(Clinic::class);
+        return $this->belongsTo(Clinic::class,'ClinicID','id');
     }
 
     public function Diagnosed(): HasMany
     {
-        return $this->hasMany(Diagnosed::class);
+        return $this->hasMany(Diagnosed::class,'PatientAppointmentID','id');
     }
 }

@@ -31,6 +31,6 @@ class EquipmentType extends Model
 
     public function equipment(): HasMany
     {
-        return $this->hasMany(Equipment::class);
+        return $this->hasMany(Equipment::class,'EquipmentTypeID','id');
     }
 }
