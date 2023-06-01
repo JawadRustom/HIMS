@@ -33,11 +33,11 @@ class Medicine extends Model
 
     public function medicineBill(): HasMany
     {
-        return $this->hasMany(MedicineBill::class);
+        return $this->hasMany(MedicineBill::class,'MedicineID','id');
     }
 
     public function patientMedicine(): HasMany
     {
-        return $this->hasMany(PatientMedicine::class);
+        return $this->hasMany(PatientMedicine::class,'MedicineID','id');
     }
 }

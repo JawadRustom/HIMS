@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: oabshire@example.net
+                  example: lester87@example.org
                 password:
                   type: string
                   description: ''
-                  example: dolores
+                  example: laboriosam
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lockman.shanny@example.com
+                  example: ramon.howell@example.com
                 password:
                   type: string
                   description: ''
-                  example: labore
+                  example: quo
               required:
                 - email
                 - password
@@ -219,12 +219,17 @@ paths:
                     type: string
                     example: 11|mrQIWhkKsOorLKuQC0scfJWiKvv7scLmuw2wz71T
         400:
-          description: ''
+          description: 'User already login'
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: "scenario=\"User aalready login{\n\"message\": \"You are already logged in\"\n}"
+                type: object
+                example:
+                  message: 'You are already logged in'
+                properties:
+                  message:
+                    type: string
+                    example: 'You are already logged in'
         422:
           description: 'Validation errors'
           content:
@@ -244,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: sed
+                  example: est
                 FirstName:
                   type: string
                   description: ''
-                  example: architecto
+                  example: in
                 LastName:
                   type: string
                   description: ''
-                  example: ut
+                  example: dolor
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: tillman.general@example.net
+                  example: zoey13@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: "?e._-x'r"
+                  example: "Y'@v&-Hk9"
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: accusantium
+                  example: omnis
                 Country:
                   type: string
                   description: ''
@@ -323,12 +328,12 @@ paths:
           in: query
           name: DataCount
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 10
+          example: 13
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 10
+            example: 13
       responses:
         200:
           description: 'Success Process'
@@ -337,83 +342,182 @@ paths:
               schema:
                 type: object
                 example:
-                  current_page: 1
                   data:
                     -
-                      FirstName: Mathew
-                      CertificationName: qui
-                      City: null
-                      Country: null
-                      CertificationDonor: commodi
-                  first_page_url: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                  from: 1
-                  last_page: 1
-                  last_page_url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                      Doctor_ID: 1
+                      Doctor_Name:
+                        FirstName: Mikel
+                        LastName: Rodriguez
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 24
+                      Doctor_Image: 'http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 2
+                      Doctor_Name:
+                        FirstName: Sammy
+                        LastName: Cassin
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 52
+                      Doctor_Image: 'http://volkman.com/'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 3
+                      Doctor_Name:
+                        FirstName: Joanne
+                        LastName: Lueilwitz
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 14
+                      Doctor_Image: 'http://hane.com/'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 4
+                      Doctor_Name:
+                        FirstName: Constantin
+                        LastName: Rippin
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 33
+                      Doctor_Image: 'http://www.shields.info/ut-id-minus-eum-vel-assumenda-est-consequatur'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 5
+                      Doctor_Name:
+                        FirstName: Mollie
+                        LastName: Mayer
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 10
+                      Doctor_Image: 'http://daugherty.com/'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 6
+                      Doctor_Name:
+                        FirstName: Fernando
+                        LastName: Herman
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 46
+                      Doctor_Image: 'http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 7
+                      Doctor_Name:
+                        FirstName: Valentine
+                        LastName: Quitzon
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 4
+                      Doctor_Image: 'http://www.gibson.biz/veniam-possimus-voluptatem-porro-qui.html'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 8
+                      Doctor_Name:
+                        FirstName: Chad
+                        LastName: Bode
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 40
+                      Doctor_Image: 'http://hickle.net/'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 9
+                      Doctor_Name:
+                        FirstName: Gladys
+                        LastName: Denesik
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 21
+                      Doctor_Image: 'http://www.fadel.com/alias-atque-architecto-impedit-quas-minus-tempora.html'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 10
+                      Doctor_Name:
+                        FirstName: Telly
+                        LastName: Altenwerth
+                      Doctor_Speciality_And_Donor_Name: []
+                      'Doctor Experience': 23
+                      Doctor_Image: 'http://www.mcdermott.com/in-labore-sunt-mollitia-velit-aut-voluptatem'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 11
+                      Doctor_Name:
+                        FirstName: Drew
+                        LastName: Conroy
+                      Doctor_Speciality_And_Donor_Name:
+                        -
+                          Name_Certifications: hic
+                          Donor_Certifications: voluptatem
+                      'Doctor Experience': 36
+                      Doctor_Image: 'http://carter.com/'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 12
+                      Doctor_Name:
+                        FirstName: Horacio
+                        LastName: Schmitt
+                      Doctor_Speciality_And_Donor_Name:
+                        -
+                          Name_Certifications: aliquam
+                          Donor_Certifications: possimus
+                      'Doctor Experience': 18
+                      Doctor_Image: 'http://wunsch.com/enim-commodi-qui-accusantium-ducimus'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 13
+                      Doctor_Name:
+                        FirstName: Idella
+                        LastName: Abernathy
+                      Doctor_Speciality_And_Donor_Name:
+                        -
+                          Name_Certifications: accusamus
+                          Donor_Certifications: autem
+                      'Doctor Experience': 46
+                      Doctor_Image: 'http://www.jerde.com/ullam-nihil-id-harum-est'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 14
+                      Doctor_Name:
+                        FirstName: Christian
+                        LastName: Boyer
+                      Doctor_Speciality_And_Donor_Name:
+                        -
+                          Name_Certifications: unde
+                          Donor_Certifications: quasi
+                      'Doctor Experience': 46
+                      Doctor_Image: 'https://will.org/fugit-cupiditate-vitae-iure-quis.html'
+                      Doctor_City: null
+                      Doctor_Country: null
+                    -
+                      Doctor_ID: 15
+                      Doctor_Name:
+                        FirstName: Kenya
+                        LastName: Kuhlman
+                      Doctor_Speciality_And_Donor_Name:
+                        -
+                          Name_Certifications: ipsa
+                          Donor_Certifications: atque
+                      'Doctor Experience': 23
+                      Doctor_Image: 'http://price.com/eveniet-perspiciatis-nisi-id'
+                      Doctor_City: null
+                      Doctor_Country: null
                   links:
-                    -
-                      url: null
-                      label: '&laquo; Previous'
-                      active: false
-                    -
-                      url: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                      label: '1'
-                      active: true
-                    -
-                      url: null
-                      label: 'Next &raquo;'
-                      active: false
-                  next_page_url: null
-                  path: 'http://127.0.0.1:8000/api/Doctor'
-                  per_page: 15
-                  prev_page_url: null
-                  to: 1
-                  total: 1
-                properties:
-                  current_page:
-                    type: integer
-                    example: 1
-                  data:
-                    type: array
-                    example:
-                      -
-                        FirstName: Mathew
-                        CertificationName: qui
-                        City: null
-                        Country: null
-                        CertificationDonor: commodi
-                    items:
-                      type: object
-                      properties:
-                        FirstName:
-                          type: string
-                          example: Mathew
-                        CertificationName:
-                          type: string
-                          example: qui
-                        City:
-                          type: string
-                          example: null
-                        Country:
-                          type: string
-                          example: null
-                        CertificationDonor:
-                          type: string
-                          example: commodi
-                  first_page_url:
-                    type: string
-                    example: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                  from:
-                    type: integer
-                    example: 1
-                  last_page:
-                    type: integer
-                    example: 1
-                  last_page_url:
-                    type: string
-                    example: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                  links:
-                    type: array
-                    example:
+                    first: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                    last: 'http://127.0.0.1:8000/api/Doctor?page=10'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/Doctor?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 10
+                    links:
                       -
                         url: null
                         label: '&laquo; Previous'
@@ -423,83 +527,866 @@ paths:
                         label: '1'
                         active: true
                       -
-                        url: null
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=8'
+                        label: '8'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=10'
+                        label: '10'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Doctor?page=2'
                         label: 'Next &raquo;'
                         active: false
+                    path: 'http://127.0.0.1:8000/api/Doctor'
+                    per_page: 15
+                    to: 15
+                    total: 143
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        Doctor_ID: 1
+                        Doctor_Name:
+                          FirstName: Mikel
+                          LastName: Rodriguez
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 24
+                        Doctor_Image: 'http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 2
+                        Doctor_Name:
+                          FirstName: Sammy
+                          LastName: Cassin
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 52
+                        Doctor_Image: 'http://volkman.com/'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 3
+                        Doctor_Name:
+                          FirstName: Joanne
+                          LastName: Lueilwitz
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 14
+                        Doctor_Image: 'http://hane.com/'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 4
+                        Doctor_Name:
+                          FirstName: Constantin
+                          LastName: Rippin
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 33
+                        Doctor_Image: 'http://www.shields.info/ut-id-minus-eum-vel-assumenda-est-consequatur'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 5
+                        Doctor_Name:
+                          FirstName: Mollie
+                          LastName: Mayer
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 10
+                        Doctor_Image: 'http://daugherty.com/'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 6
+                        Doctor_Name:
+                          FirstName: Fernando
+                          LastName: Herman
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 46
+                        Doctor_Image: 'http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 7
+                        Doctor_Name:
+                          FirstName: Valentine
+                          LastName: Quitzon
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 4
+                        Doctor_Image: 'http://www.gibson.biz/veniam-possimus-voluptatem-porro-qui.html'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 8
+                        Doctor_Name:
+                          FirstName: Chad
+                          LastName: Bode
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 40
+                        Doctor_Image: 'http://hickle.net/'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 9
+                        Doctor_Name:
+                          FirstName: Gladys
+                          LastName: Denesik
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 21
+                        Doctor_Image: 'http://www.fadel.com/alias-atque-architecto-impedit-quas-minus-tempora.html'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 10
+                        Doctor_Name:
+                          FirstName: Telly
+                          LastName: Altenwerth
+                        Doctor_Speciality_And_Donor_Name: []
+                        'Doctor Experience': 23
+                        Doctor_Image: 'http://www.mcdermott.com/in-labore-sunt-mollitia-velit-aut-voluptatem'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 11
+                        Doctor_Name:
+                          FirstName: Drew
+                          LastName: Conroy
+                        Doctor_Speciality_And_Donor_Name:
+                          -
+                            Name_Certifications: hic
+                            Donor_Certifications: voluptatem
+                        'Doctor Experience': 36
+                        Doctor_Image: 'http://carter.com/'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 12
+                        Doctor_Name:
+                          FirstName: Horacio
+                          LastName: Schmitt
+                        Doctor_Speciality_And_Donor_Name:
+                          -
+                            Name_Certifications: aliquam
+                            Donor_Certifications: possimus
+                        'Doctor Experience': 18
+                        Doctor_Image: 'http://wunsch.com/enim-commodi-qui-accusantium-ducimus'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 13
+                        Doctor_Name:
+                          FirstName: Idella
+                          LastName: Abernathy
+                        Doctor_Speciality_And_Donor_Name:
+                          -
+                            Name_Certifications: accusamus
+                            Donor_Certifications: autem
+                        'Doctor Experience': 46
+                        Doctor_Image: 'http://www.jerde.com/ullam-nihil-id-harum-est'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 14
+                        Doctor_Name:
+                          FirstName: Christian
+                          LastName: Boyer
+                        Doctor_Speciality_And_Donor_Name:
+                          -
+                            Name_Certifications: unde
+                            Donor_Certifications: quasi
+                        'Doctor Experience': 46
+                        Doctor_Image: 'https://will.org/fugit-cupiditate-vitae-iure-quis.html'
+                        Doctor_City: null
+                        Doctor_Country: null
+                      -
+                        Doctor_ID: 15
+                        Doctor_Name:
+                          FirstName: Kenya
+                          LastName: Kuhlman
+                        Doctor_Speciality_And_Donor_Name:
+                          -
+                            Name_Certifications: ipsa
+                            Donor_Certifications: atque
+                        'Doctor Experience': 23
+                        Doctor_Image: 'http://price.com/eveniet-perspiciatis-nisi-id'
+                        Doctor_City: null
+                        Doctor_Country: null
                     items:
                       type: object
                       properties:
-                        url:
+                        Doctor_ID:
+                          type: integer
+                          example: 1
+                        Doctor_Name:
+                          type: object
+                          properties:
+                            FirstName:
+                              type: string
+                              example: Mikel
+                            LastName:
+                              type: string
+                              example: Rodriguez
+                        Doctor_Speciality_And_Donor_Name:
+                          type: array
+                          example: []
+                        'Doctor Experience':
+                          type: integer
+                          example: 24
+                        Doctor_Image:
+                          type: string
+                          example: 'http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html'
+                        Doctor_City:
                           type: string
                           example: null
-                        label:
+                        Doctor_Country:
                           type: string
-                          example: '&laquo; Previous'
-                        active:
-                          type: boolean
-                          example: false
-                  next_page_url:
-                    type: string
-                    example: null
-                  path:
-                    type: string
-                    example: 'http://127.0.0.1:8000/api/Doctor'
-                  per_page:
-                    type: integer
-                    example: 15
-                  prev_page_url:
-                    type: string
-                    example: null
-                  to:
-                    type: integer
-                    example: 1
-                  total:
-                    type: integer
-                    example: 1
-      tags:
-        - DoctorHome
-      security: []
-    post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
+                          example: null
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                      last:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Doctor?page=10'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Doctor?page=2'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 10
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=8'
+                            label: '8'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=10'
+                            label: '10'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Doctor?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Doctor'
+                      per_page:
+                        type: integer
+                        example: 15
+                      to:
+                        type: integer
+                        example: 15
+                      total:
+                        type: integer
+                        example: 143
       tags:
         - DoctorHome
       security: []
   '/api/Doctor/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'See One Doctor'
+      operationId: seeOneDoctor
       description: ''
       parameters: []
       responses:
         200:
-          description: ''
+          description: 'Success Process'
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: ''
-      tags:
-        - DoctorHome
-      security: []
-    put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - DoctorHome
-      security: []
-    delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
-      description: ''
-      parameters: []
-      responses: {  }
+                type: object
+                example:
+                  data:
+                    Doctor_ID: 143
+                    doctor_name:
+                      FirstName: Ada
+                      LastName: Marvin
+                    doctor_speciality_and_donor_name: []
+                    'doctor experience': 32
+                    doctor_city: null
+                    doctor_country: null
+                    doctor_work_schedule:
+                      -
+                        from_hour: '12:00 am'
+                        to_hour: '12:00 am'
+                        day_name: Wednesday
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      Doctor_ID:
+                        type: integer
+                        example: 143
+                      doctor_name:
+                        type: object
+                        properties:
+                          FirstName:
+                            type: string
+                            example: Ada
+                          LastName:
+                            type: string
+                            example: Marvin
+                      doctor_speciality_and_donor_name:
+                        type: array
+                        example: []
+                      'doctor experience':
+                        type: integer
+                        example: 32
+                      doctor_city:
+                        type: string
+                        example: null
+                      doctor_country:
+                        type: string
+                        example: null
+                      doctor_work_schedule:
+                        type: array
+                        example:
+                          -
+                            from_hour: '12:00 am'
+                            to_hour: '12:00 am'
+                            day_name: Wednesday
+                        items:
+                          type: object
+                          properties:
+                            from_hour:
+                              type: string
+                              example: '12:00 am'
+                            to_hour:
+                              type: string
+                              example: '12:00 am'
+                            day_name:
+                              type: string
+                              example: Wednesday
+        404:
+          description: 'This Doctor Not Found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\Employee] 1444'
+                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                  line: 408
+                  trace:
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                      line: 384
+                      function: prepareException
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
+                      line: 51
+                      function: render
+                      class: Illuminate\Foundation\Exceptions\Handler
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 185
+                      function: handleException
+                      class: Illuminate\Routing\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 152
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 128
+                      function: handleRequest
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                      line: 80
+                      function: handleRequestUsingNamedLimiter
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Routing\Middleware\ThrottleRequests
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 798
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 775
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 739
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                      line: 728
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 141
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
+                      line: 40
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
+                      line: 86
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
+                      line: 39
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 180
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                      line: 116
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\public\index.php'
+                      line: 52
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php'
+                      line: 16
+                      function: require_once
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\Employee] 1444'
+                  exception:
+                    type: string
+                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                  file:
+                    type: string
+                    example: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                  line:
+                    type: integer
+                    example: 408
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                        line: 384
+                        function: prepareException
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
+                        line: 51
+                        function: render
+                        class: Illuminate\Foundation\Exceptions\Handler
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 185
+                        function: handleException
+                        class: Illuminate\Routing\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 152
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 128
+                        function: handleRequest
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
+                        line: 80
+                        function: handleRequestUsingNamedLimiter
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Routing\Middleware\ThrottleRequests
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 798
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 775
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 739
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
+                        line: 728
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 141
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
+                        line: 40
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
+                        line: 86
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
+                        line: 39
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 180
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
+                        line: 116
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\public\index.php'
+                        line: 52
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php'
+                        line: 16
+                        function: require_once
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                        line:
+                          type: integer
+                          example: 384
+                        function:
+                          type: string
+                          example: prepareException
+                        class:
+                          type: string
+                          example: Illuminate\Foundation\Exceptions\Handler
+                        type:
+                          type: string
+                          example: '->'
       tags:
         - DoctorHome
       security: []

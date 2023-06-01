@@ -42,12 +42,12 @@ class MedicineBill extends Model
 
     public function medicine(): BelongsTo
     {
-        return $this->belongsTo(Medicine::class);
+        return $this->belongsTo(Medicine::class,'MedicineID','id');
     }
 
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class,'EmployeeID','id');
     }
 
 }

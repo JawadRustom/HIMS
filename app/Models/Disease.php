@@ -31,6 +31,6 @@ class Disease extends Model
 
     public function diagnosed(): HasMany
     {
-        return $this->hasMany(Diagnosed::class);
+        return $this->hasMany(Diagnosed::class,'DiseaseID','id');
     }
 }

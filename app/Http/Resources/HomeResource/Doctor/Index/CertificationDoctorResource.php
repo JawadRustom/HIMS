@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources\Api\HomeResource\Doctor\Resource;
+namespace App\Http\Resources\HomeResource\Doctor\Index;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -14,9 +14,9 @@ class CertificationDoctorResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
-          'Name_Certifications'=>$this->certification->CertificationName,
-          'Donor_Certifications'=>$this->certification->CertificationDonor,
-        ];
+      return [
+        'Name_Certifications'=>$this->certification->CertificationName,
+        'Donor_Certifications'=>$this->certification->CertificationDonor,
+      ];
     }
 }

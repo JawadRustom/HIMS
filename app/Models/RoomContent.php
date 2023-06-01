@@ -34,12 +34,12 @@ class RoomContent extends Model
 
     public function equipment(): BelongsTo
     {
-        return $this->belongsTo(Equipment::class);
+        return $this->belongsTo(Equipment::class,'EquipmentID','id');
     }
 
     public function room(): BelongsTo
     {
-        return $this->belongsTo(Room::class);
+        return $this->belongsTo(Room::class,'RoomID','id');
     }
 
 }

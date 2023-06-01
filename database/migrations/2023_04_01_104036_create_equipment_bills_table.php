@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('equipment_bills', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('EmployeeID')->constrained('employees');
-            $table->foreignId('EquipmentID')->constrained('equipment');
+            $table->foreignId('EmployeeID')->reference('id')->on('employees');
+            $table->foreignId('EquipmentID')->reference('id')->on('equipment');
             $table->timestamp('BillDate');
             $table->integer('Quantity');
             $table->integer('Price');

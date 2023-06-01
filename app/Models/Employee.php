@@ -100,4 +100,8 @@ class Employee extends Model
   {
     return $this->belongsTo(EmployeeType::class, 'EmployeeTypeId', 'id');
   }
+  public function MedicineBill(): HasMany
+  {
+      return $this->HasMany(MedicineBill::class,'EmployeeID','id');
+  }
 }

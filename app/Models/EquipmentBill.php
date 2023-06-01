@@ -38,12 +38,12 @@ class EquipmentBill extends Model
 
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class,'EmployeeID','id');
     }
 
     public function equipment(): BelongsTo
     {
-        return $this->belongsTo(Equipment::class);
+        return $this->belongsTo(Equipment::class,'EquipmentID','id');
     }
 
 }

@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('patient_analysis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->constrained('patients');
-            $table->foreignId('AnalysisID')->constrained('analysis');
+            $table->foreignId('PatientID')->reference('id')->on('patients');
+            $table->foreignId('AnalysisID')->reference('id')->on('analysis');
             $table->timestamp('AnalysisDate');
             $table->string('AnalysisRatio');
             $table->string('AnalysisResult');

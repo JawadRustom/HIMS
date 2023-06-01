@@ -61,15 +61,15 @@ class User extends Authenticatable
 
   public function Patient(): HasOne
   {
-    return $this->HasOne(Patient::class);
+    return $this->HasOne(Patient::class,'user_id', 'id');
   }
 
   public function Employee(): HasOne
   {
-    return $this->HasOne(Employee::class);
+    return $this->HasOne(Employee::class,'user_id', 'id');
   }
   public function photos()
   {
-    return $this->morphMany(Photo::class, 'imageable');
+    return $this->morphMany(Photo::class,'imageable');
   }
 }

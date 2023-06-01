@@ -123,7 +123,7 @@ class AuthenticationController extends Controller
     * 
     * 
    * 
-   * @response 400 scenario="User aalready login{
+   * @response 400 scenario="User already login"{
    * "message": "You are already logged in"
    * }
    */

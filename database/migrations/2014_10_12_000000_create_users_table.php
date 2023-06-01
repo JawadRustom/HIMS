@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('UserTypeId')->constrained('user_types');
+            $table->foreignId('UserTypeId')->reference('id')->on('user_types');
             //$table->foreignId('UserTypeId')->references('id')->on('user_types');
             //$table->bigInteger('UserTypeId')->unsigned();$table->foreign('UserTypeId')->references('id')->on('user_types');
             $table->string('NickName');

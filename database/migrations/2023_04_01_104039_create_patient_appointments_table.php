@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('patient_appointments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('PatientID')->constrained('patients');
-            $table->foreignId('ClinicID')->constrained('clinics');
+            $table->foreignId('PatientID')->reference('id')->on('patients');
+            $table->foreignId('ClinicID')->reference('id')->on('clinics');
             $table->timestamp('AppointmentDate');
             $table->timestamps();
             $table->softDeletes();

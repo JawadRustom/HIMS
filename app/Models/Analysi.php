@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Analysi extends Model
@@ -28,4 +29,8 @@ class Analysi extends Model
         'id' => 'integer',
     ];
     
+    public function PatientAnalysis(): HasMany
+    {
+        return $this->HasMany(Analysi::class,'AnalysisID','id');
+    }
 }

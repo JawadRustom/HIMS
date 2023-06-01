@@ -41,17 +41,17 @@ class PatientsOperation extends Model
 
     public function patient(): BelongsTo
     {
-        return $this->belongsTo(Patient::class);
+        return $this->belongsTo(Patient::class,'PatientID','id');
     }
 
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class,'DoctorID','id');
     }
 
     public function operation(): BelongsTo
     {
-        return $this->belongsTo(Operation::class);
+        return $this->belongsTo(Operation::class,'OperationID','id');
     }
 
 }

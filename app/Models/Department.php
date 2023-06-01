@@ -35,12 +35,12 @@ class Department extends Model
 
   public function employee(): HasOne
   {
-    return $this->hasOne(Employee::class);
+    return $this->hasOne(Employee::class,'DepartmentID','id');
   }
 
   public function clinic(): HasMany
   {
-    return $this->hasMany(Clinic::class);
+    return $this->hasMany(Clinic::class,'DepartmentID','id');
   }
 
   public function ManagerID(): BelongsTo
