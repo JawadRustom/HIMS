@@ -359,10 +359,10 @@ class DoctorController extends Controller
    */
   public function show(Employee $Doctor)
   {
-    if ($Doctor->EmployeeType->Type != 'Doctor') {
+    if ($Doctor->EmployeeType->Type = 'Doctor') {
       abort(404);
     }
-    return $Doctor;
+    return new DoctorResource($Doctor);
     //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get();
     // if($doctors)
     // {
