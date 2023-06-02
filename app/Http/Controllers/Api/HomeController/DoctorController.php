@@ -327,7 +327,7 @@ class DoctorController extends Controller
     // ->paginate($DataCount);
     //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get();
     //$doctor=Employee::with('user')->with('certificationEmployee')->get();
-    return IndexDoctorResource::collection(Employee::paginate($DataCount));
+    return IndexDoctorResource::collection(Employee::whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->paginate($DataCount));
   }
 
   /**
