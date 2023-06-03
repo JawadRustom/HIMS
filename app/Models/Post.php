@@ -14,12 +14,10 @@ class Post extends Model
     'Title',
     'Text',
     'PostType',
-    'PostDate',
   ];
 
   protected $casts = [
     'id' => 'integer',
-    'PostDate' => 'date',
   ];
   public function photos()
   {

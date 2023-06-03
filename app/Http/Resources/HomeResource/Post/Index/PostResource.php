@@ -19,7 +19,6 @@ class PostResource extends JsonResource
           'post_title'=>$this->Title,
           'post_text'=>$this->Text,
           'post_type'=>$this->PostType,
-          'post_date'=>$this->PostDate,
         ];
     }
 }

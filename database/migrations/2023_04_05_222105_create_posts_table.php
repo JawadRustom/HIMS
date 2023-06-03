@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('Title');
             $table->string('Text');
             $table->string('PostType');
-            $table->timestamp('PostDate');
             $table->timestamps();
             $table->softDeletes();
         });
