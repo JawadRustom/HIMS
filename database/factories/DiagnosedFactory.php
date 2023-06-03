@@ -31,7 +31,6 @@ class DiagnosedFactory extends Factory
             'DiseaseID' => Disease::factory(),
             'Details' => $this->faker->word,
             'PatientAppointmentID' => PatientAppointment::factory(),
-            'PatientMedicineID'=>PatientMedicine::factory(),
         ];
     }
 }
