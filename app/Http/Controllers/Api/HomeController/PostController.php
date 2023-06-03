@@ -10,20 +10,20 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
 
-    /**
-     * Display a listing of the resource.
-     */
-  // public function index(Request $request/*,$postType*/)
-  // {
-  //   return response('Erorr');
-  //   // return PostResource::collection(Post::Where('PostType',$postType)->paginate($request->perPage ?? 15));
-  // }
+  /**
+   * Display a listing of the resource.
+   */
+  public function index(Request $request/*,$postType*/)
+  {
+    return response('Erorr');
+    // return PostResource::collection(Post::Where('PostType',$postType)->paginate($request->perPage ?? 15));
+  }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Post $post)
-    {
-        
-    }
+  /**
+   * Display the specified resource.
+   */
+  public function show(Post $Post)
+  {
+    return response(['post' => $Post]);
+  }
 }
