@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lester87@example.org
+                  example: bianka.schneider@example.org
                 password:
                   type: string
                   description: ''
-                  example: laboriosam
+                  example: id
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ramon.howell@example.com
+                  example: keebler.carson@example.org
                 password:
                   type: string
                   description: ''
-                  example: quo
+                  example: id
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: est
+                  example: qui
                 FirstName:
                   type: string
                   description: ''
-                  example: in
+                  example: asperiores
                 LastName:
                   type: string
                   description: ''
-                  example: dolor
+                  example: qui
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: zoey13@example.net
+                  example: lorenz99@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: "Y'@v&-Hk9"
+                  example: ':J8!!iNA?;C\*'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: omnis
+                  example: recusandae
                 Country:
                   type: string
                   description: ''
@@ -328,12 +328,12 @@ paths:
           in: query
           name: DataCount
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 13
+          example: 5
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 13
+            example: 5
       responses:
         200:
           description: 'Success Process'
@@ -344,57 +344,8 @@ paths:
                 example:
                   data:
                     -
-                      Doctor_ID: 1
-                      Doctor_Name:
-                        FirstName: Mikel
-                        LastName: Rodriguez
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 24
-                      Doctor_Image: 'http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 2
-                      Doctor_Name:
-                        FirstName: Sammy
-                        LastName: Cassin
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 52
-                      Doctor_Image: 'http://volkman.com/'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 3
-                      Doctor_Name:
-                        FirstName: Joanne
-                        LastName: Lueilwitz
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 14
-                      Doctor_Image: 'http://hane.com/'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 4
-                      Doctor_Name:
-                        FirstName: Constantin
-                        LastName: Rippin
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 33
-                      Doctor_Image: 'http://www.shields.info/ut-id-minus-eum-vel-assumenda-est-consequatur'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 5
-                      Doctor_Name:
-                        FirstName: Mollie
-                        LastName: Mayer
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 10
-                      Doctor_Image: 'http://daugherty.com/'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
                       Doctor_ID: 6
+                      type: Doctor
                       Doctor_Name:
                         FirstName: Fernando
                         LastName: Herman
@@ -404,119 +355,56 @@ paths:
                       Doctor_City: null
                       Doctor_Country: null
                     -
-                      Doctor_ID: 7
+                      Doctor_ID: 17
+                      type: Doctor
                       Doctor_Name:
-                        FirstName: Valentine
-                        LastName: Quitzon
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 4
-                      Doctor_Image: 'http://www.gibson.biz/veniam-possimus-voluptatem-porro-qui.html'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 8
-                      Doctor_Name:
-                        FirstName: Chad
-                        LastName: Bode
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 40
-                      Doctor_Image: 'http://hickle.net/'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 9
-                      Doctor_Name:
-                        FirstName: Gladys
-                        LastName: Denesik
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 21
-                      Doctor_Image: 'http://www.fadel.com/alias-atque-architecto-impedit-quas-minus-tempora.html'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 10
-                      Doctor_Name:
-                        FirstName: Telly
-                        LastName: Altenwerth
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 23
-                      Doctor_Image: 'http://www.mcdermott.com/in-labore-sunt-mollitia-velit-aut-voluptatem'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 11
-                      Doctor_Name:
-                        FirstName: Drew
-                        LastName: Conroy
+                        FirstName: Casper
+                        LastName: Bayer
                       Doctor_Speciality_And_Donor_Name:
                         -
-                          Name_Certifications: hic
-                          Donor_Certifications: voluptatem
-                      'Doctor Experience': 36
-                      Doctor_Image: 'http://carter.com/'
+                          Name_Certifications: vel
+                          Donor_Certifications: omnis
+                      'Doctor Experience': 1
+                      Doctor_Image: 'http://ankunding.com/optio-eaque-quia-officia-harum-iure'
                       Doctor_City: null
                       Doctor_Country: null
                     -
-                      Doctor_ID: 12
+                      Doctor_ID: 18
+                      type: Doctor
                       Doctor_Name:
-                        FirstName: Horacio
-                        LastName: Schmitt
+                        FirstName: Kadin
+                        LastName: King
                       Doctor_Speciality_And_Donor_Name:
                         -
-                          Name_Certifications: aliquam
-                          Donor_Certifications: possimus
-                      'Doctor Experience': 18
-                      Doctor_Image: 'http://wunsch.com/enim-commodi-qui-accusantium-ducimus'
+                          Name_Certifications: est
+                          Donor_Certifications: molestias
+                      'Doctor Experience': 15
+                      Doctor_Image: 'http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias'
                       Doctor_City: null
                       Doctor_Country: null
                     -
-                      Doctor_ID: 13
+                      Doctor_ID: 19
+                      type: Doctor
                       Doctor_Name:
-                        FirstName: Idella
-                        LastName: Abernathy
+                        FirstName: Raven
+                        LastName: Wehner
                       Doctor_Speciality_And_Donor_Name:
                         -
-                          Name_Certifications: accusamus
-                          Donor_Certifications: autem
-                      'Doctor Experience': 46
-                      Doctor_Image: 'http://www.jerde.com/ullam-nihil-id-harum-est'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 14
-                      Doctor_Name:
-                        FirstName: Christian
-                        LastName: Boyer
-                      Doctor_Speciality_And_Donor_Name:
-                        -
-                          Name_Certifications: unde
-                          Donor_Certifications: quasi
-                      'Doctor Experience': 46
-                      Doctor_Image: 'https://will.org/fugit-cupiditate-vitae-iure-quis.html'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 15
-                      Doctor_Name:
-                        FirstName: Kenya
-                        LastName: Kuhlman
-                      Doctor_Speciality_And_Donor_Name:
-                        -
-                          Name_Certifications: ipsa
-                          Donor_Certifications: atque
-                      'Doctor Experience': 23
-                      Doctor_Image: 'http://price.com/eveniet-perspiciatis-nisi-id'
+                          Name_Certifications: et
+                          Donor_Certifications: facilis
+                      'Doctor Experience': 43
+                      Doctor_Image: 'http://koelpin.info/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at'
                       Doctor_City: null
                       Doctor_Country: null
                   links:
                     first: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                    last: 'http://127.0.0.1:8000/api/Doctor?page=10'
+                    last: 'http://127.0.0.1:8000/api/Doctor?page=6'
                     prev: null
                     next: 'http://127.0.0.1:8000/api/Doctor?page=2'
                   meta:
                     current_page: 1
                     from: 1
-                    last_page: 10
+                    last_page: 6
                     links:
                       -
                         url: null
@@ -547,85 +435,20 @@ paths:
                         label: '6'
                         active: false
                       -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=7'
-                        label: '7'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=8'
-                        label: '8'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=9'
-                        label: '9'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=10'
-                        label: '10'
-                        active: false
-                      -
                         url: 'http://127.0.0.1:8000/api/Doctor?page=2'
                         label: 'Next &raquo;'
                         active: false
                     path: 'http://127.0.0.1:8000/api/Doctor'
-                    per_page: 15
-                    to: 15
-                    total: 143
+                    per_page: 4
+                    to: 4
+                    total: 22
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        Doctor_ID: 1
-                        Doctor_Name:
-                          FirstName: Mikel
-                          LastName: Rodriguez
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 24
-                        Doctor_Image: 'http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 2
-                        Doctor_Name:
-                          FirstName: Sammy
-                          LastName: Cassin
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 52
-                        Doctor_Image: 'http://volkman.com/'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 3
-                        Doctor_Name:
-                          FirstName: Joanne
-                          LastName: Lueilwitz
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 14
-                        Doctor_Image: 'http://hane.com/'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 4
-                        Doctor_Name:
-                          FirstName: Constantin
-                          LastName: Rippin
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 33
-                        Doctor_Image: 'http://www.shields.info/ut-id-minus-eum-vel-assumenda-est-consequatur'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 5
-                        Doctor_Name:
-                          FirstName: Mollie
-                          LastName: Mayer
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 10
-                        Doctor_Image: 'http://daugherty.com/'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
                         Doctor_ID: 6
+                        type: Doctor
                         Doctor_Name:
                           FirstName: Fernando
                           LastName: Herman
@@ -635,108 +458,45 @@ paths:
                         Doctor_City: null
                         Doctor_Country: null
                       -
-                        Doctor_ID: 7
+                        Doctor_ID: 17
+                        type: Doctor
                         Doctor_Name:
-                          FirstName: Valentine
-                          LastName: Quitzon
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 4
-                        Doctor_Image: 'http://www.gibson.biz/veniam-possimus-voluptatem-porro-qui.html'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 8
-                        Doctor_Name:
-                          FirstName: Chad
-                          LastName: Bode
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 40
-                        Doctor_Image: 'http://hickle.net/'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 9
-                        Doctor_Name:
-                          FirstName: Gladys
-                          LastName: Denesik
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 21
-                        Doctor_Image: 'http://www.fadel.com/alias-atque-architecto-impedit-quas-minus-tempora.html'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 10
-                        Doctor_Name:
-                          FirstName: Telly
-                          LastName: Altenwerth
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 23
-                        Doctor_Image: 'http://www.mcdermott.com/in-labore-sunt-mollitia-velit-aut-voluptatem'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 11
-                        Doctor_Name:
-                          FirstName: Drew
-                          LastName: Conroy
+                          FirstName: Casper
+                          LastName: Bayer
                         Doctor_Speciality_And_Donor_Name:
                           -
-                            Name_Certifications: hic
-                            Donor_Certifications: voluptatem
-                        'Doctor Experience': 36
-                        Doctor_Image: 'http://carter.com/'
+                            Name_Certifications: vel
+                            Donor_Certifications: omnis
+                        'Doctor Experience': 1
+                        Doctor_Image: 'http://ankunding.com/optio-eaque-quia-officia-harum-iure'
                         Doctor_City: null
                         Doctor_Country: null
                       -
-                        Doctor_ID: 12
+                        Doctor_ID: 18
+                        type: Doctor
                         Doctor_Name:
-                          FirstName: Horacio
-                          LastName: Schmitt
+                          FirstName: Kadin
+                          LastName: King
                         Doctor_Speciality_And_Donor_Name:
                           -
-                            Name_Certifications: aliquam
-                            Donor_Certifications: possimus
-                        'Doctor Experience': 18
-                        Doctor_Image: 'http://wunsch.com/enim-commodi-qui-accusantium-ducimus'
+                            Name_Certifications: est
+                            Donor_Certifications: molestias
+                        'Doctor Experience': 15
+                        Doctor_Image: 'http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias'
                         Doctor_City: null
                         Doctor_Country: null
                       -
-                        Doctor_ID: 13
+                        Doctor_ID: 19
+                        type: Doctor
                         Doctor_Name:
-                          FirstName: Idella
-                          LastName: Abernathy
+                          FirstName: Raven
+                          LastName: Wehner
                         Doctor_Speciality_And_Donor_Name:
                           -
-                            Name_Certifications: accusamus
-                            Donor_Certifications: autem
-                        'Doctor Experience': 46
-                        Doctor_Image: 'http://www.jerde.com/ullam-nihil-id-harum-est'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 14
-                        Doctor_Name:
-                          FirstName: Christian
-                          LastName: Boyer
-                        Doctor_Speciality_And_Donor_Name:
-                          -
-                            Name_Certifications: unde
-                            Donor_Certifications: quasi
-                        'Doctor Experience': 46
-                        Doctor_Image: 'https://will.org/fugit-cupiditate-vitae-iure-quis.html'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 15
-                        Doctor_Name:
-                          FirstName: Kenya
-                          LastName: Kuhlman
-                        Doctor_Speciality_And_Donor_Name:
-                          -
-                            Name_Certifications: ipsa
-                            Donor_Certifications: atque
-                        'Doctor Experience': 23
-                        Doctor_Image: 'http://price.com/eveniet-perspiciatis-nisi-id'
+                            Name_Certifications: et
+                            Donor_Certifications: facilis
+                        'Doctor Experience': 43
+                        Doctor_Image: 'http://koelpin.info/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at'
                         Doctor_City: null
                         Doctor_Country: null
                     items:
@@ -744,25 +504,28 @@ paths:
                       properties:
                         Doctor_ID:
                           type: integer
-                          example: 1
+                          example: 6
+                        type:
+                          type: string
+                          example: Doctor
                         Doctor_Name:
                           type: object
                           properties:
                             FirstName:
                               type: string
-                              example: Mikel
+                              example: Fernando
                             LastName:
                               type: string
-                              example: Rodriguez
+                              example: Herman
                         Doctor_Speciality_And_Donor_Name:
                           type: array
                           example: []
                         'Doctor Experience':
                           type: integer
-                          example: 24
+                          example: 46
                         Doctor_Image:
                           type: string
-                          example: 'http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html'
+                          example: 'http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione'
                         Doctor_City:
                           type: string
                           example: null
@@ -777,7 +540,7 @@ paths:
                         example: 'http://127.0.0.1:8000/api/Doctor?page=1'
                       last:
                         type: string
-                        example: 'http://127.0.0.1:8000/api/Doctor?page=10'
+                        example: 'http://127.0.0.1:8000/api/Doctor?page=6'
                       prev:
                         type: string
                         example: null
@@ -795,7 +558,7 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 10
+                        example: 6
                       links:
                         type: array
                         example:
@@ -828,22 +591,6 @@ paths:
                             label: '6'
                             active: false
                           -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=7'
-                            label: '7'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=8'
-                            label: '8'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=9'
-                            label: '9'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=10'
-                            label: '10'
-                            active: false
-                          -
                             url: 'http://127.0.0.1:8000/api/Doctor?page=2'
                             label: 'Next &raquo;'
                             active: false
@@ -864,13 +611,13 @@ paths:
                         example: 'http://127.0.0.1:8000/api/Doctor'
                       per_page:
                         type: integer
-                        example: 15
+                        example: 4
                       to:
                         type: integer
-                        example: 15
+                        example: 4
                       total:
                         type: integer
-                        example: 143
+                        example: 22
       tags:
         - DoctorHome
       security: []
@@ -956,437 +703,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\Employee] 1444'
-                  exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
-                  line: 408
-                  trace:
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
-                      line: 384
-                      function: prepareException
-                      class: Illuminate\Foundation\Exceptions\Handler
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
-                      line: 51
-                      function: render
-                      class: Illuminate\Foundation\Exceptions\Handler
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 185
-                      function: handleException
-                      class: Illuminate\Routing\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 152
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 128
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 80
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 798
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 775
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 739
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 728
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 200
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 175
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 144
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\public\index.php'
-                      line: 52
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php'
-                      line: 16
-                      function: require_once
+                  message: 'not found'
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\Employee] 1444'
-                  exception:
-                    type: string
-                    example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-                  file:
-                    type: string
-                    example: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
-                  line:
-                    type: integer
-                    example: 408
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
-                        line: 384
-                        function: prepareException
-                        class: Illuminate\Foundation\Exceptions\Handler
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php'
-                        line: 51
-                        function: render
-                        class: Illuminate\Foundation\Exceptions\Handler
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 185
-                        function: handleException
-                        class: Illuminate\Routing\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 152
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 128
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 80
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 798
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 775
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 739
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 728
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 200
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 175
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 144
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\public\index.php'
-                        line: 52
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php'
-                        line: 16
-                        function: require_once
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: 'C:\EveryThings\Jawad\Project\VisualStudioCode\Laravel\HIMS\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
-                        line:
-                          type: integer
-                          example: 384
-                        function:
-                          type: string
-                          example: prepareException
-                        class:
-                          type: string
-                          example: Illuminate\Foundation\Exceptions\Handler
-                        type:
-                          type: string
-                          example: '->'
+                    example: 'not found'
       tags:
         - DoctorHome
       security: []
@@ -1406,18 +727,13 @@ paths:
       description: ''
       parameters: []
       responses:
-        401:
+        200:
           description: ''
           content:
-            application/json:
+            text/plain:
               schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                type: string
+                example: ''
       tags:
         - Endpoints
       security: []

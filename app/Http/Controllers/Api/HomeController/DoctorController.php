@@ -22,69 +22,10 @@ class DoctorController extends Controller
    * See All Doctor
    * 
    * @response 200 scenario="Success Process"{
-    "data": [
-        {
-            "Doctor_ID": 1,
-            "Doctor_Name": {
-                "FirstName": "Mikel",
-                "LastName": "Rodriguez"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 24,
-            "Doctor_Image": "http://durgan.com/odio-eum-quia-quis-placeat-dolorem-assumenda.html",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 2,
-            "Doctor_Name": {
-                "FirstName": "Sammy",
-                "LastName": "Cassin"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 52,
-            "Doctor_Image": "http://volkman.com/",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 3,
-            "Doctor_Name": {
-                "FirstName": "Joanne",
-                "LastName": "Lueilwitz"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 14,
-            "Doctor_Image": "http://hane.com/",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 4,
-            "Doctor_Name": {
-                "FirstName": "Constantin",
-                "LastName": "Rippin"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 33,
-            "Doctor_Image": "http://www.shields.info/ut-id-minus-eum-vel-assumenda-est-consequatur",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 5,
-            "Doctor_Name": {
-                "FirstName": "Mollie",
-                "LastName": "Mayer"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 10,
-            "Doctor_Image": "http://daugherty.com/",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
+   * "data": [
         {
             "Doctor_ID": 6,
+            "type": "Doctor",
             "Doctor_Name": {
                 "FirstName": "Fernando",
                 "LastName": "Herman"
@@ -96,149 +37,70 @@ class DoctorController extends Controller
             "Doctor_Country": null
         },
         {
-            "Doctor_ID": 7,
+            "Doctor_ID": 17,
+            "type": "Doctor",
             "Doctor_Name": {
-                "FirstName": "Valentine",
-                "LastName": "Quitzon"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 4,
-            "Doctor_Image": "http://www.gibson.biz/veniam-possimus-voluptatem-porro-qui.html",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 8,
-            "Doctor_Name": {
-                "FirstName": "Chad",
-                "LastName": "Bode"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 40,
-            "Doctor_Image": "http://hickle.net/",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 9,
-            "Doctor_Name": {
-                "FirstName": "Gladys",
-                "LastName": "Denesik"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 21,
-            "Doctor_Image": "http://www.fadel.com/alias-atque-architecto-impedit-quas-minus-tempora.html",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 10,
-            "Doctor_Name": {
-                "FirstName": "Telly",
-                "LastName": "Altenwerth"
-            },
-            "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 23,
-            "Doctor_Image": "http://www.mcdermott.com/in-labore-sunt-mollitia-velit-aut-voluptatem",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 11,
-            "Doctor_Name": {
-                "FirstName": "Drew",
-                "LastName": "Conroy"
+                "FirstName": "Casper",
+                "LastName": "Bayer"
             },
             "Doctor_Speciality_And_Donor_Name": [
                 {
-                    "Name_Certifications": "hic",
-                    "Donor_Certifications": "voluptatem"
+                    "Name_Certifications": "vel",
+                    "Donor_Certifications": "omnis"
                 }
             ],
-            "Doctor Experience": 36,
-            "Doctor_Image": "http://carter.com/",
+            "Doctor Experience": 1,
+            "Doctor_Image": "http://ankunding.com/optio-eaque-quia-officia-harum-iure",
             "Doctor_City": null,
             "Doctor_Country": null
         },
         {
-            "Doctor_ID": 12,
+            "Doctor_ID": 18,
+            "type": "Doctor",
             "Doctor_Name": {
-                "FirstName": "Horacio",
-                "LastName": "Schmitt"
+                "FirstName": "Kadin",
+                "LastName": "King"
             },
             "Doctor_Speciality_And_Donor_Name": [
                 {
-                    "Name_Certifications": "aliquam",
-                    "Donor_Certifications": "possimus"
+                    "Name_Certifications": "est",
+                    "Donor_Certifications": "molestias"
                 }
             ],
-            "Doctor Experience": 18,
-            "Doctor_Image": "http://wunsch.com/enim-commodi-qui-accusantium-ducimus",
+            "Doctor Experience": 15,
+            "Doctor_Image": "http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias",
             "Doctor_City": null,
             "Doctor_Country": null
         },
         {
-            "Doctor_ID": 13,
+            "Doctor_ID": 19,
+            "type": "Doctor",
             "Doctor_Name": {
-                "FirstName": "Idella",
-                "LastName": "Abernathy"
+                "FirstName": "Raven",
+                "LastName": "Wehner"
             },
             "Doctor_Speciality_And_Donor_Name": [
                 {
-                    "Name_Certifications": "accusamus",
-                    "Donor_Certifications": "autem"
+                    "Name_Certifications": "et",
+                    "Donor_Certifications": "facilis"
                 }
             ],
-            "Doctor Experience": 46,
-            "Doctor_Image": "http://www.jerde.com/ullam-nihil-id-harum-est",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 14,
-            "Doctor_Name": {
-                "FirstName": "Christian",
-                "LastName": "Boyer"
-            },
-            "Doctor_Speciality_And_Donor_Name": [
-                {
-                    "Name_Certifications": "unde",
-                    "Donor_Certifications": "quasi"
-                }
-            ],
-            "Doctor Experience": 46,
-            "Doctor_Image": "https://will.org/fugit-cupiditate-vitae-iure-quis.html",
-            "Doctor_City": null,
-            "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 15,
-            "Doctor_Name": {
-                "FirstName": "Kenya",
-                "LastName": "Kuhlman"
-            },
-            "Doctor_Speciality_And_Donor_Name": [
-                {
-                    "Name_Certifications": "ipsa",
-                    "Donor_Certifications": "atque"
-                }
-            ],
-            "Doctor Experience": 23,
-            "Doctor_Image": "http://price.com/eveniet-perspiciatis-nisi-id",
+            "Doctor Experience": 43,
+            "Doctor_Image": "http://koelpin.info/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at",
             "Doctor_City": null,
             "Doctor_Country": null
         }
     ],
     "links": {
         "first": "http://127.0.0.1:8000/api/Doctor?page=1",
-        "last": "http://127.0.0.1:8000/api/Doctor?page=10",
+        "last": "http://127.0.0.1:8000/api/Doctor?page=6",
         "prev": null,
         "next": "http://127.0.0.1:8000/api/Doctor?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
-        "last_page": 10,
+        "last_page": 6,
         "links": [
             {
                 "url": null,
@@ -276,43 +138,23 @@ class DoctorController extends Controller
                 "active": false
             },
             {
-                "url": "http://127.0.0.1:8000/api/Doctor?page=7",
-                "label": "7",
-                "active": false
-            },
-            {
-                "url": "http://127.0.0.1:8000/api/Doctor?page=8",
-                "label": "8",
-                "active": false
-            },
-            {
-                "url": "http://127.0.0.1:8000/api/Doctor?page=9",
-                "label": "9",
-                "active": false
-            },
-            {
-                "url": "http://127.0.0.1:8000/api/Doctor?page=10",
-                "label": "10",
-                "active": false
-            },
-            {
                 "url": "http://127.0.0.1:8000/api/Doctor?page=2",
                 "label": "Next &raquo;",
                 "active": false
             }
         ],
         "path": "http://127.0.0.1:8000/api/Doctor",
-        "per_page": 15,
-        "to": 15,
-        "total": 143
+        "per_page": 4,
+        "to": 4,
+        "total": 22
     }
-}
+   * }
    * 
    * @queryparam DataCount int 
    * To return limite data in single page.
    * Defaults value for variable '15'.
    */
-  public function index($DataCount = 15)
+  public function index($DataCount = 4)
   {
 
     //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get('FirstName');
