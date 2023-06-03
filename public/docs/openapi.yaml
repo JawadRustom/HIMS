@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: bianka.schneider@example.org
+                  example: evelyn.hettinger@example.com
                 password:
                   type: string
                   description: ''
-                  example: id
+                  example: ullam
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: keebler.carson@example.org
+                  example: edwin.greenfelder@example.net
                 password:
                   type: string
                   description: ''
-                  example: id
+                  example: fugit
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: qui
+                  example: esse
                 FirstName:
                   type: string
                   description: ''
-                  example: asperiores
+                  example: nulla
                 LastName:
                   type: string
                   description: ''
-                  example: qui
+                  example: odit
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: lorenz99@example.org
+                  example: delphine.kutch@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: ':J8!!iNA?;C\*'
+                  example: '/1V{u0q'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: recusandae
+                  example: soluta
                 Country:
                   type: string
                   description: ''
@@ -328,296 +328,20 @@ paths:
           in: query
           name: DataCount
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 5
+          example: 18
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 5
+            example: 18
       responses:
         200:
           description: 'Success Process'
           content:
-            application/json:
+            text/plain:
               schema:
-                type: object
-                example:
-                  data:
-                    -
-                      Doctor_ID: 6
-                      type: Doctor
-                      Doctor_Name:
-                        FirstName: Fernando
-                        LastName: Herman
-                      Doctor_Speciality_And_Donor_Name: []
-                      'Doctor Experience': 46
-                      Doctor_Image: 'http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 17
-                      type: Doctor
-                      Doctor_Name:
-                        FirstName: Casper
-                        LastName: Bayer
-                      Doctor_Speciality_And_Donor_Name:
-                        -
-                          Name_Certifications: vel
-                          Donor_Certifications: omnis
-                      'Doctor Experience': 1
-                      Doctor_Image: 'http://ankunding.com/optio-eaque-quia-officia-harum-iure'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 18
-                      type: Doctor
-                      Doctor_Name:
-                        FirstName: Kadin
-                        LastName: King
-                      Doctor_Speciality_And_Donor_Name:
-                        -
-                          Name_Certifications: est
-                          Donor_Certifications: molestias
-                      'Doctor Experience': 15
-                      Doctor_Image: 'http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias'
-                      Doctor_City: null
-                      Doctor_Country: null
-                    -
-                      Doctor_ID: 19
-                      type: Doctor
-                      Doctor_Name:
-                        FirstName: Raven
-                        LastName: Wehner
-                      Doctor_Speciality_And_Donor_Name:
-                        -
-                          Name_Certifications: et
-                          Donor_Certifications: facilis
-                      'Doctor Experience': 43
-                      Doctor_Image: 'http://koelpin.info/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at'
-                      Doctor_City: null
-                      Doctor_Country: null
-                  links:
-                    first: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                    last: 'http://127.0.0.1:8000/api/Doctor?page=6'
-                    prev: null
-                    next: 'http://127.0.0.1:8000/api/Doctor?page=2'
-                  meta:
-                    current_page: 1
-                    from: 1
-                    last_page: 6
-                    links:
-                      -
-                        url: null
-                        label: '&laquo; Previous'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                        label: '1'
-                        active: true
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=2'
-                        label: '2'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=3'
-                        label: '3'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=4'
-                        label: '4'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=5'
-                        label: '5'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=6'
-                        label: '6'
-                        active: false
-                      -
-                        url: 'http://127.0.0.1:8000/api/Doctor?page=2'
-                        label: 'Next &raquo;'
-                        active: false
-                    path: 'http://127.0.0.1:8000/api/Doctor'
-                    per_page: 4
-                    to: 4
-                    total: 22
-                properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        Doctor_ID: 6
-                        type: Doctor
-                        Doctor_Name:
-                          FirstName: Fernando
-                          LastName: Herman
-                        Doctor_Speciality_And_Donor_Name: []
-                        'Doctor Experience': 46
-                        Doctor_Image: 'http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 17
-                        type: Doctor
-                        Doctor_Name:
-                          FirstName: Casper
-                          LastName: Bayer
-                        Doctor_Speciality_And_Donor_Name:
-                          -
-                            Name_Certifications: vel
-                            Donor_Certifications: omnis
-                        'Doctor Experience': 1
-                        Doctor_Image: 'http://ankunding.com/optio-eaque-quia-officia-harum-iure'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 18
-                        type: Doctor
-                        Doctor_Name:
-                          FirstName: Kadin
-                          LastName: King
-                        Doctor_Speciality_And_Donor_Name:
-                          -
-                            Name_Certifications: est
-                            Donor_Certifications: molestias
-                        'Doctor Experience': 15
-                        Doctor_Image: 'http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias'
-                        Doctor_City: null
-                        Doctor_Country: null
-                      -
-                        Doctor_ID: 19
-                        type: Doctor
-                        Doctor_Name:
-                          FirstName: Raven
-                          LastName: Wehner
-                        Doctor_Speciality_And_Donor_Name:
-                          -
-                            Name_Certifications: et
-                            Donor_Certifications: facilis
-                        'Doctor Experience': 43
-                        Doctor_Image: 'http://koelpin.info/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at'
-                        Doctor_City: null
-                        Doctor_Country: null
-                    items:
-                      type: object
-                      properties:
-                        Doctor_ID:
-                          type: integer
-                          example: 6
-                        type:
-                          type: string
-                          example: Doctor
-                        Doctor_Name:
-                          type: object
-                          properties:
-                            FirstName:
-                              type: string
-                              example: Fernando
-                            LastName:
-                              type: string
-                              example: Herman
-                        Doctor_Speciality_And_Donor_Name:
-                          type: array
-                          example: []
-                        'Doctor Experience':
-                          type: integer
-                          example: 46
-                        Doctor_Image:
-                          type: string
-                          example: 'http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione'
-                        Doctor_City:
-                          type: string
-                          example: null
-                        Doctor_Country:
-                          type: string
-                          example: null
-                  links:
-                    type: object
-                    properties:
-                      first:
-                        type: string
-                        example: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                      last:
-                        type: string
-                        example: 'http://127.0.0.1:8000/api/Doctor?page=6'
-                      prev:
-                        type: string
-                        example: null
-                      next:
-                        type: string
-                        example: 'http://127.0.0.1:8000/api/Doctor?page=2'
-                  meta:
-                    type: object
-                    properties:
-                      current_page:
-                        type: integer
-                        example: 1
-                      from:
-                        type: integer
-                        example: 1
-                      last_page:
-                        type: integer
-                        example: 6
-                      links:
-                        type: array
-                        example:
-                          -
-                            url: null
-                            label: '&laquo; Previous'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=1'
-                            label: '1'
-                            active: true
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=2'
-                            label: '2'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=3'
-                            label: '3'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=4'
-                            label: '4'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=5'
-                            label: '5'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=6'
-                            label: '6'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Doctor?page=2'
-                            label: 'Next &raquo;'
-                            active: false
-                        items:
-                          type: object
-                          properties:
-                            url:
-                              type: string
-                              example: null
-                            label:
-                              type: string
-                              example: '&laquo; Previous'
-                            active:
-                              type: boolean
-                              example: false
-                      path:
-                        type: string
-                        example: 'http://127.0.0.1:8000/api/Doctor'
-                      per_page:
-                        type: integer
-                        example: 4
-                      to:
-                        type: integer
-                        example: 4
-                      total:
-                        type: integer
-                        example: 22
+                type: string
+                example: "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http://ankunding.com/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"last\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http://127.0.0.1:8000/api/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http://127.0.0.1:8000/api/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}"
       tags:
         - DoctorHome
       security: []
@@ -716,6 +440,132 @@ paths:
         in: path
         name: id
         description: 'The ID of the Doctor.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/Post:
+    get:
+      summary: 'See All Doctor'
+      operationId: seeAllDoctor
+      description: ''
+      parameters:
+        -
+          in: query
+          name: DataCount
+          description: "To return limite data in single page.\nDefaults value for variable '15'."
+          example: 3
+          required: false
+          schema:
+            type: integer
+            description: "To return limite data in single page.\nDefaults value for variable '15'."
+            example: 3
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http://ankunding.com/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"last\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http://127.0.0.1:8000/api/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http://127.0.0.1:8000/api/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}"
+      tags:
+        - DoctorHome
+      security: []
+  '/api/Post/{id}':
+    get:
+      summary: 'See One Doctor'
+      operationId: seeOneDoctor
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    Doctor_ID: 143
+                    doctor_name:
+                      FirstName: Ada
+                      LastName: Marvin
+                    doctor_speciality_and_donor_name: []
+                    'doctor experience': 32
+                    doctor_city: null
+                    doctor_country: null
+                    doctor_work_schedule:
+                      -
+                        from_hour: '12:00 am'
+                        to_hour: '12:00 am'
+                        day_name: Wednesday
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      Doctor_ID:
+                        type: integer
+                        example: 143
+                      doctor_name:
+                        type: object
+                        properties:
+                          FirstName:
+                            type: string
+                            example: Ada
+                          LastName:
+                            type: string
+                            example: Marvin
+                      doctor_speciality_and_donor_name:
+                        type: array
+                        example: []
+                      'doctor experience':
+                        type: integer
+                        example: 32
+                      doctor_city:
+                        type: string
+                        example: null
+                      doctor_country:
+                        type: string
+                        example: null
+                      doctor_work_schedule:
+                        type: array
+                        example:
+                          -
+                            from_hour: '12:00 am'
+                            to_hour: '12:00 am'
+                            day_name: Wednesday
+                        items:
+                          type: object
+                          properties:
+                            from_hour:
+                              type: string
+                              example: '12:00 am'
+                            to_hour:
+                              type: string
+                              example: '12:00 am'
+                            day_name:
+                              type: string
+                              example: Wednesday
+        404:
+          description: 'This Doctor Not Found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - DoctorHome
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Post.'
         example: 1
         required: true
         schema:

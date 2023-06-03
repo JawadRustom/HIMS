@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 require_once 'Api/Authentication.php';
 require_once 'Api/Doctor.php';
+require_once 'Api/Post.php';
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

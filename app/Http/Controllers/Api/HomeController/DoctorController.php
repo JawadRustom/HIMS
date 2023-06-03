@@ -71,36 +71,18 @@ class DoctorController extends Controller
             "Doctor_Image": "http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias",
             "Doctor_City": null,
             "Doctor_Country": null
-        },
-        {
-            "Doctor_ID": 19,
-            "type": "Doctor",
-            "Doctor_Name": {
-                "FirstName": "Raven",
-                "LastName": "Wehner"
-            },
-            "Doctor_Speciality_And_Donor_Name": [
-                {
-                    "Name_Certifications": "et",
-                    "Donor_Certifications": "facilis"
-                }
-            ],
-            "Doctor Experience": 43,
-            "Doctor_Image": "http://koelpin.info/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at",
-            "Doctor_City": null,
-            "Doctor_Country": null
         }
     ],
     "links": {
         "first": "http://127.0.0.1:8000/api/Doctor?page=1",
-        "last": "http://127.0.0.1:8000/api/Doctor?page=6",
+        "last": "http://127.0.0.1:8000/api/Doctor?page=8",
         "prev": null,
         "next": "http://127.0.0.1:8000/api/Doctor?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
-        "last_page": 6,
+        "last_page": 8,
         "links": [
             {
                 "url": null,
@@ -138,16 +120,27 @@ class DoctorController extends Controller
                 "active": false
             },
             {
+                "url": "http://127.0.0.1:8000/api/Doctor?page=7",
+                "label": "7",
+                "active": false
+            },
+            {
+                "url": "http://127.0.0.1:8000/api/Doctor?page=8",
+                "label": "8",
+                "active": false
+            },
+            {
                 "url": "http://127.0.0.1:8000/api/Doctor?page=2",
                 "label": "Next &raquo;",
                 "active": false
             }
         ],
         "path": "http://127.0.0.1:8000/api/Doctor",
-        "per_page": 4,
-        "to": 4,
+        "per_page": 3,
+        "to": 3,
         "total": 22
     }
+}
    * }
    * 
    * @queryparam DataCount int 
@@ -169,7 +162,7 @@ class DoctorController extends Controller
     // ->paginate($DataCount);
     //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get();
     //$doctor=Employee::with('user')->with('certificationEmployee')->get();
-    return IndexDoctorResource::collection(Employee::whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->paginate($request->perPage));
+    return IndexDoctorResource::collection(Employee::whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->paginate($request->perPage ?? 15));
   }
 
   /**
@@ -201,7 +194,7 @@ class DoctorController extends Controller
    */
   public function show(Employee $Doctor)
   {
-    if ($Doctor->EmployeeType->Type = 'Doctor') {
+    if (!$Doctor->EmployeeType->Type = 'Doctor') {
       abort(404);
     }
     return new DoctorResource($Doctor);
