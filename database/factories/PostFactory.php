@@ -22,7 +22,6 @@ class PostFactory extends Factory
             'Title' => $this->faker->title(),
             'Text' => $this->faker->text(),
             'PostType' => $PostArray[rand(0,1)],
-            'PostDate' => $this->faker->dateTime(),
         ];
     }
 }
