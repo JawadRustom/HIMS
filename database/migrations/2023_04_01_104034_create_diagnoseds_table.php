@@ -20,7 +20,6 @@ return new class extends Migration
             $table->foreignId('DiseaseID')->reference('id')->on('diseases');
             $table->string('Details');
             $table->foreignId('PatientAppointmentID')->reference('id')->on('patient_appointments');
-            $table->foreignId('PatientMedicineID')->reference('id')->on('patient_medicines');
             $table->timestamps();
             $table->softDeletes();
         });

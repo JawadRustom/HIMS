@@ -42,7 +42,7 @@ class PatientMedicine extends Model
 
     public function diagnosed(): BelongsTo
     {
-        return $this->belongsTo(Diagnosed::class,'PatientMedicineID','id');
+        return $this->belongsTo(Diagnosed::class,'DiagnosedID','id');
     }
 
 }
