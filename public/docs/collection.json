@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "fb798d44-fbd2-4096-84cf-d9a5481e2154",
+        "_postman_id": "cfe2a328-4e93-4e75-af2d-09c2363eb3aa",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"bianka.schneider@example.org\",\"password\":\"id\"}"
+                            "raw": "{\"email\":\"evelyn.hettinger@example.com\",\"password\":\"ullam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"keebler.carson@example.org\",\"password\":\"id\"}"
+                            "raw": "{\"email\":\"edwin.greenfelder@example.net\",\"password\":\"fugit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "qui",
+                                    "value": "esse",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "asperiores",
+                                    "value": "nulla",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "qui",
+                                    "value": "odit",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "lorenz99@example.org",
+                                    "value": "delphine.kutch@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": ":J8!!iNA?;C\\*",
+                                    "value": "\/1V{u0q",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "recusandae",
+                                    "value": "soluta",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -284,12 +284,12 @@
                             "query": [
                                 {
                                     "key": "DataCount",
-                                    "value": "5",
+                                    "value": "18",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?DataCount=5"
+                            "raw": "{{baseUrl}}\/api\/Doctor?DataCount=18"
                         },
                         "method": "GET",
                         "header": [
@@ -312,7 +312,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http:\/\/mclaughlin.com\/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http:\/\/ankunding.com\/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http:\/\/goodwin.com\/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 19,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Raven\",\n\"LastName\": \"Wehner\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"et\",\n\"Donor_Certifications\": \"facilis\"\n}\n],\n\"Doctor Experience\": 43,\n\"Doctor_Image\": \"http:\/\/koelpin.info\/enim-nesciunt-dolor-inventore-nihil-corrupti-eum-veniam-at\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 6,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 4,\n\"to\": 4,\n\"total\": 22\n}\n}",
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http:\/\/mclaughlin.com\/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http:\/\/ankunding.com\/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http:\/\/goodwin.com\/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}",
                             "name": "Success Process"
                         }
                     ]
@@ -331,6 +331,97 @@
                                     "key": "id",
                                     "value": "1",
                                     "description": "The ID of the Doctor."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"Doctor_ID\": 143,\n\"doctor_name\": {\n\"FirstName\": \"Ada\",\n\"LastName\": \"Marvin\"\n},\n\"doctor_speciality_and_donor_name\": [],\n\"doctor experience\": 32,\n\"doctor_city\": null,\n\"doctor_country\": null,\n\"doctor_work_schedule\": [\n{\n\"from_hour\": \"12:00 am\",\n\"to_hour\": \"12:00 am\",\n\"day_name\": \"Wednesday\"\n}\n]\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This Doctor Not Found"
+                        }
+                    ]
+                },
+                {
+                    "name": "See All Doctor",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Post",
+                            "query": [
+                                {
+                                    "key": "DataCount",
+                                    "value": "3",
+                                    "description": "To return limite data in single page.\nDefaults value for variable '15'.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/Post?DataCount=3"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http:\/\/mclaughlin.com\/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http:\/\/ankunding.com\/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http:\/\/goodwin.com\/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}",
+                            "name": "Success Process"
+                        }
+                    ]
+                },
+                {
+                    "name": "See One Doctor",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Post\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Post\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Post."
                                 }
                             ]
                         },

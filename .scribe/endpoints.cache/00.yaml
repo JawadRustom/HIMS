@@ -32,19 +32,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: bianka.schneider@example.org
+        example: evelyn.hettinger@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: id
+        example: ullam
         type: string
         custom: []
     cleanBodyParameters:
-      email: bianka.schneider@example.org
-      password: id
+      email: evelyn.hettinger@example.com
+      password: ullam
     fileParameters: []
     responses:
       -
@@ -124,19 +124,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: keebler.carson@example.org
+        example: edwin.greenfelder@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: id
+        example: fugit
         type: string
         custom: []
     cleanBodyParameters:
-      email: keebler.carson@example.org
-      password: id
+      email: edwin.greenfelder@example.net
+      password: fugit
     fileParameters: []
     responses:
       -
@@ -216,42 +216,42 @@ endpoints:
         name: NickName
         description: ''
         required: true
-        example: qui
+        example: esse
         type: string
         custom: []
       FirstName:
         name: FirstName
         description: ''
         required: true
-        example: asperiores
+        example: nulla
         type: string
         custom: []
       LastName:
         name: LastName
         description: ''
         required: true
-        example: qui
+        example: odit
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: lorenz99@example.org
+        example: delphine.kutch@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: ':J8!!iNA?;C\*'
+        example: '/1V{u0q'
         type: string
         custom: []
       PhoneNumber:
         name: PhoneNumber
         description: ''
         required: true
-        example: recusandae
+        example: soluta
         type: string
         custom: []
       Country:
@@ -283,12 +283,12 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      NickName: qui
-      FirstName: asperiores
-      LastName: qui
-      email: lorenz99@example.org
-      password: ':J8!!iNA?;C\*'
-      PhoneNumber: recusandae
+      NickName: esse
+      FirstName: nulla
+      LastName: odit
+      email: delphine.kutch@example.com
+      password: '/1V{u0q'
+      PhoneNumber: soluta
     fileParameters:
       ProfileImage: null
       icon: null
