@@ -13,10 +13,9 @@ class PostController extends Controller
   /**
    * Display a listing of the resource.
    */
-  public function index(Request $request/*,$postType*/)
+  public function index(Request $request)
   {
-    return response('Erorr');
-    // return PostResource::collection(Post::Where('PostType',$postType)->paginate($request->perPage ?? 15));
+    return PostResource::collection(Post::Where('PostType',$request->postType)->paginate($request->perPage ?? 15));
   }
 
   /**
