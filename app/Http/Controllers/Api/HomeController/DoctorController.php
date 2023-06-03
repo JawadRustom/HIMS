@@ -154,7 +154,7 @@ class DoctorController extends Controller
    * To return limite data in single page.
    * Defaults value for variable '15'.
    */
-  public function index($DataCount = 4)
+  public function index(Request $request)
   {
 
     //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get('FirstName');
@@ -169,7 +169,7 @@ class DoctorController extends Controller
     // ->paginate($DataCount);
     //$doctors = Employee::whereHas('User',fn($query)=>$query->whereHas('UserType',fn($query)=>$query->where('UserType','Doctor')))->get();
     //$doctor=Employee::with('user')->with('certificationEmployee')->get();
-    return IndexDoctorResource::collection(Employee::whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->paginate($DataCount));
+    return IndexDoctorResource::collection(Employee::whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->paginate($request->perPage));
   }
 
   /**
