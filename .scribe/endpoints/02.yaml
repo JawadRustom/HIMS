@@ -1,16 +1,20 @@
-name: Endpoints
-description: ''
+name: PostHome
+description: |-
+
+  APIs For Posts In Home Page
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/user
+    uri: api/Post
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: PostHome
+      groupDescription: |-
+
+        APIs For Posts In Home Page
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'See all Post'
       description: ''
       authenticated: false
       custom: []
@@ -19,6 +23,134 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
+    queryParameters:
+      perPage:
+        name: perPage
+        description: |-
+          To return limite data in single page.
+          Defaults value for variable '15'.
+        required: false
+        example: 17
+        type: integer
+        custom: []
+      postType:
+        name: postType
+        description: "String To return Type of post in single page Example ('News','Event')."
+        required: true
+        example: 19
+        type: integer
+        custom: []
+    cleanQueryParameters:
+      perPage: 17
+      postType: 19
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "data": [
+          {
+          "post_id": 1,
+          "post_title": "Dr.",
+          "post_text": "Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.",
+          "post_type": "Event"
+          },
+          {
+          "post_id": 2,
+          "post_title": "Ms.",
+          "post_text": "Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.",
+          "post_type": "Event"
+          },
+          {
+          "post_id": 3,
+          "post_title": "Dr.",
+          "post_text": "Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.",
+          "post_type": "Event"
+          }
+          ],
+          "links": {
+          "first": "http://127.0.0.1:8000/api/Post?page=1",
+          "last": "http://127.0.0.1:8000/api/Post?page=3",
+          "prev": null,
+          "next": "http://127.0.0.1:8000/api/Post?page=2"
+          },
+          "meta": {
+          "current_page": 1,
+          "from": 1,
+          "last_page": 3,
+          "links": [
+          {
+          "url": null,
+          "label": "&laquo; Previous",
+          "active": false
+          },
+          {
+          "url": "http://127.0.0.1:8000/api/Post?page=1",
+          "label": "1",
+          "active": true
+          },
+          {
+          "url": "http://127.0.0.1:8000/api/Post?page=2",
+          "label": "2",
+          "active": false
+          },
+          {
+          "url": "http://127.0.0.1:8000/api/Post?page=3",
+          "label": "3",
+          "active": false
+          },
+          {
+          "url": "http://127.0.0.1:8000/api/Post?page=2",
+          "label": "Next &raquo;",
+          "active": false
+          }
+          ],
+          "path": "http://127.0.0.1:8000/api/Post",
+          "per_page": 3,
+          "to": 3,
+          "total": 7
+          }
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/Post/{id}'
+    metadata:
+      groupName: PostHome
+      groupDescription: |-
+
+        APIs For Posts In Home Page
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'See One Post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the Post.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -27,12 +159,26 @@ endpoints:
     responses:
       -
         status: 200
-        content: ''
-        headers:
-          content-type: 'text/html; charset=UTF-8'
-          cache-control: 'no-cache, private'
-          access-control-allow-origin: '*'
-        description: null
+        content: |-
+          {
+          "data": {
+          "post_id": 1,
+          "post_title": "Dr.",
+          "post_text": "Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.",
+          "post_type": "Event"
+          }
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+          "message": "not found"
+          }
+        headers: []
+        description: 'This post not found'
         custom: []
     responseFields: []
     auth: []

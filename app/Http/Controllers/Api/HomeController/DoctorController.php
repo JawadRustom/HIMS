@@ -143,7 +143,7 @@ class DoctorController extends Controller
 }
    * }
    * 
-   * @queryparam DataCount int 
+   * @queryparam perPage int 
    * To return limite data in single page.
    * Defaults value for variable '15'.
    */

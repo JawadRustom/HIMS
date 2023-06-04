@@ -21,6 +21,6 @@ class Post extends Model
   ];
   public function photos()
   {
-    return $this->morphMany(Photo::class, 'imageable');
+    return $this->morphOne(Photo::class, 'imageable');
   }
 }
