@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: evelyn.hettinger@example.com
+                  example: asia10@example.net
                 password:
                   type: string
                   description: ''
-                  example: ullam
+                  example: doloremque
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: edwin.greenfelder@example.net
+                  example: frami.marisa@example.com
                 password:
                   type: string
                   description: ''
-                  example: fugit
+                  example: aut
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: esse
+                  example: repudiandae
                 FirstName:
                   type: string
                   description: ''
-                  example: nulla
+                  example: id
                 LastName:
                   type: string
                   description: ''
-                  example: odit
+                  example: est
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: delphine.kutch@example.com
+                  example: hheaney@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: '/1V{u0q'
+                  example: 'd?0)sj{'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: soluta
+                  example: ducimus
                 Country:
                   type: string
                   description: ''
@@ -326,7 +326,7 @@ paths:
       parameters:
         -
           in: query
-          name: DataCount
+          name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
           example: 18
           required: false
@@ -444,132 +444,6 @@ paths:
         required: true
         schema:
           type: integer
-  /api/Post:
-    get:
-      summary: 'See All Doctor'
-      operationId: seeAllDoctor
-      description: ''
-      parameters:
-        -
-          in: query
-          name: DataCount
-          description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 3
-          required: false
-          schema:
-            type: integer
-            description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 3
-      responses:
-        200:
-          description: 'Success Process'
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http://ankunding.com/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"last\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http://127.0.0.1:8000/api/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http://127.0.0.1:8000/api/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}"
-      tags:
-        - DoctorHome
-      security: []
-  '/api/Post/{id}':
-    get:
-      summary: 'See One Doctor'
-      operationId: seeOneDoctor
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: 'Success Process'
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    Doctor_ID: 143
-                    doctor_name:
-                      FirstName: Ada
-                      LastName: Marvin
-                    doctor_speciality_and_donor_name: []
-                    'doctor experience': 32
-                    doctor_city: null
-                    doctor_country: null
-                    doctor_work_schedule:
-                      -
-                        from_hour: '12:00 am'
-                        to_hour: '12:00 am'
-                        day_name: Wednesday
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      Doctor_ID:
-                        type: integer
-                        example: 143
-                      doctor_name:
-                        type: object
-                        properties:
-                          FirstName:
-                            type: string
-                            example: Ada
-                          LastName:
-                            type: string
-                            example: Marvin
-                      doctor_speciality_and_donor_name:
-                        type: array
-                        example: []
-                      'doctor experience':
-                        type: integer
-                        example: 32
-                      doctor_city:
-                        type: string
-                        example: null
-                      doctor_country:
-                        type: string
-                        example: null
-                      doctor_work_schedule:
-                        type: array
-                        example:
-                          -
-                            from_hour: '12:00 am'
-                            to_hour: '12:00 am'
-                            day_name: Wednesday
-                        items:
-                          type: object
-                          properties:
-                            from_hour:
-                              type: string
-                              example: '12:00 am'
-                            to_hour:
-                              type: string
-                              example: '12:00 am'
-                            day_name:
-                              type: string
-                              example: Wednesday
-        404:
-          description: 'This Doctor Not Found'
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'not found'
-                properties:
-                  message:
-                    type: string
-                    example: 'not found'
-      tags:
-        - DoctorHome
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the Post.'
-        example: 1
-        required: true
-        schema:
-          type: integer
   /api/user:
     get:
       summary: ''
@@ -587,6 +461,260 @@ paths:
       tags:
         - Endpoints
       security: []
+  /api/Post:
+    get:
+      summary: 'See all Post'
+      operationId: seeAllPost
+      description: ''
+      parameters:
+        -
+          in: query
+          name: perPage
+          description: "To return limite data in single page.\nDefaults value for variable '15'."
+          example: 17
+          required: false
+          schema:
+            type: integer
+            description: "To return limite data in single page.\nDefaults value for variable '15'."
+            example: 17
+        -
+          in: query
+          name: postType
+          description: "String To return Type of post in single page Example ('News','Event')."
+          example: 19
+          required: true
+          schema:
+            type: integer
+            description: "String To return Type of post in single page Example ('News','Event')."
+            example: 19
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      post_id: 1
+                      post_title: Dr.
+                      post_text: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                      post_type: Event
+                    -
+                      post_id: 2
+                      post_title: Ms.
+                      post_text: 'Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.'
+                      post_type: Event
+                    -
+                      post_id: 3
+                      post_title: Dr.
+                      post_text: 'Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.'
+                      post_type: Event
+                  links:
+                    first: 'http://127.0.0.1:8000/api/Post?page=1'
+                    last: 'http://127.0.0.1:8000/api/Post?page=3'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/Post?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 3
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Post?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/Post?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Post?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Post?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/Post'
+                    per_page: 3
+                    to: 3
+                    total: 7
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        post_id: 1
+                        post_title: Dr.
+                        post_text: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                        post_type: Event
+                      -
+                        post_id: 2
+                        post_title: Ms.
+                        post_text: 'Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.'
+                        post_type: Event
+                      -
+                        post_id: 3
+                        post_title: Dr.
+                        post_text: 'Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.'
+                        post_type: Event
+                    items:
+                      type: object
+                      properties:
+                        post_id:
+                          type: integer
+                          example: 1
+                        post_title:
+                          type: string
+                          example: Dr.
+                        post_text:
+                          type: string
+                          example: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                        post_type:
+                          type: string
+                          example: Event
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Post?page=1'
+                      last:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Post?page=3'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Post?page=2'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 3
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Post?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/Post?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Post?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Post?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Post'
+                      per_page:
+                        type: integer
+                        example: 3
+                      to:
+                        type: integer
+                        example: 3
+                      total:
+                        type: integer
+                        example: 7
+      tags:
+        - PostHome
+      security: []
+  '/api/Post/{id}':
+    get:
+      summary: 'See One Post'
+      operationId: seeOnePost
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    post_id: 1
+                    post_title: Dr.
+                    post_text: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                    post_type: Event
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      post_id:
+                        type: integer
+                        example: 1
+                      post_title:
+                        type: string
+                        example: Dr.
+                      post_text:
+                        type: string
+                        example: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                      post_type:
+                        type: string
+                        example: Event
+        404:
+          description: 'This post not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - PostHome
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
 tags:
   -
     name: Authentication
@@ -597,3 +725,6 @@ tags:
   -
     name: Endpoints
     description: ''
+  -
+    name: PostHome
+    description: "\nAPIs For Posts In Home Page"
