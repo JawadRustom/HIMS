@@ -93,7 +93,7 @@ class PostController extends Controller
    */
   public function index(Request $request)
   {
-    return PostResource::collection(Post::Where('PostType',$request->postType)->paginate($request->perPage ?? 15));
+    return PostResource::collection(Post::Where('PostType', $request->postType)->paginate($request->perPage ?? 15));
   }
 
   /**
@@ -113,9 +113,6 @@ class PostController extends Controller
    */
   public function show(Post $Post)
   {
-    if (!$Post) {
-      abort(404);
-    }
     return new PostResource($Post);
   }
 }

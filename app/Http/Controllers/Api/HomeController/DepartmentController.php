@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\HomeResource\Department\Index\DepartmentResource;
 use App\Models\Department;
 use Illuminate\Http\Request;
+
 /**
  * @group DepartmentHome
  * 
@@ -133,10 +134,10 @@ class DepartmentController extends Controller
    * Defaults value for variable '15'.
    * 
    */
-    public function index(Request $request)
-    {
-      return DepartmentResource::collection(Department::paginate($request->perPage ?? 15));
-    }
+  public function index(Request $request)
+  {
+    return DepartmentResource::collection(Department::paginate($request->perPage ?? 15));
+  }
 
   /**
    * See One Department
@@ -153,12 +154,12 @@ class DepartmentController extends Controller
     "message": "not found"
 }
    */
-    public function show(Department $department)
-    {
-      // if (!$department) {
-      //   abort(404);
-      // }
-      //return new DepartmentResource(Department::find(1)); This run
-      return new DepartmentResource($department);// But this not run
-    }
+  public function show(Department $Department)
+  {
+    // if (!$Department) {
+    //   abort(404);
+    // }
+    //return new DepartmentResource(Department::find(1)); This run
+    return new DepartmentResource($Department); // But this not run
+  }
 }
