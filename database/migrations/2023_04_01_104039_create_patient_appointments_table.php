@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('PatientID')->reference('id')->on('patients');
             $table->foreignId('ClinicID')->reference('id')->on('clinics');
+            $table->foreignId('doctor_id')->reference('id')->on('employees');
             $table->timestamp('AppointmentDate');
             $table->timestamps();
             $table->softDeletes();

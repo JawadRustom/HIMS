@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "0b51ad07-ff24-4524-854d-325ef42bf370",
+        "_postman_id": "253a0b6d-07ff-43ec-880f-d75289847c34",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"asia10@example.net\",\"password\":\"doloremque\"}"
+                            "raw": "{\"email\":\"wilderman.marianna@example.net\",\"password\":\"velit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"frami.marisa@example.com\",\"password\":\"aut\"}"
+                            "raw": "{\"email\":\"retta.cremin@example.net\",\"password\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "repudiandae",
+                                    "value": "qui",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "id",
+                                    "value": "ut",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "est",
+                                    "value": "minima",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "hheaney@example.org",
+                                    "value": "marvin.justen@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "d?0)sj{",
+                                    "value": "TirUqG_Jq}M",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "ducimus",
+                                    "value": "et",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -272,6 +272,103 @@
             ]
         },
         {
+            "name": "DepartmentHome",
+            "description": "\nAPIs For Departments In Home Page",
+            "item": [
+                {
+                    "name": "See all Department",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Department",
+                            "query": [
+                                {
+                                    "key": "perPage",
+                                    "value": "4",
+                                    "description": "To return limite data in single page.\nDefaults value for variable '15'.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=4"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"department_id\": 1,\n\"department_name\": \"modi\",\n\"description\": \"Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious.\"\n},\n{\n\"department_id\": 2,\n\"department_name\": \"id\",\n\"description\": \"Dormouse fell asleep instantly, and Alice thought she might as well as she said to the Cheshire Cat, she was playing against herself, for this curious child was very hot, she kept fanning herself.\"\n},\n{\n\"department_id\": 3,\n\"department_name\": \"minima\",\n\"description\": \"King hastily said, and went to school in the middle of her sister, as well as pigs, and was gone across to the table, half hoping that they were all turning into little cakes as they came nearer.\"\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=47\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 47,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=9\",\n\"label\": \"9\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=10\",\n\"label\": \"10\",\n\"active\": false\n},\n{\n\"url\": null,\n\"label\": \"...\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=46\",\n\"label\": \"46\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=47\",\n\"label\": \"47\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Department\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 140\n}\n}",
+                            "name": "Success Process"
+                        }
+                    ]
+                },
+                {
+                    "name": "See One Department",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Department\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Department\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Department."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"department_id\": 1,\n\"department_name\": \"modi\",\n\"description\": \"Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious.\"\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This Department not found"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "DoctorHome",
             "description": "\nAPIs For Doctor In Home Page",
             "item": [
@@ -284,12 +381,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "18",
+                                    "value": "16",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=18"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=16"
                         },
                         "method": "GET",
                         "header": [
@@ -402,21 +499,71 @@
                         {
                             "header": [
                                 {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
                                     "key": "cache-control",
                                     "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PatientAppointment",
+            "description": "\nThis Api For PatientAppointment",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"PatientID\":\"quod\",\"ClinicID\":\"nemo\",\"doctor_id\":\"quaerat\",\"AppointmentDate\":\"2024-11-20\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 204,
+                            "body": "{\n}",
+                            "name": "Create Appointment Success"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The selected patient i d is invalid. (and 3 more errors)\",\n\"errors\": {\n\"PatientID\": [\n\"The selected patient i d is invalid.\"\n],\n\"ClinicID\": [\n\"The clinic i d field is required.\"\n],\n\"doctor_id\": [\n\"The doctor id field is required.\"\n],\n\"AppointmentDate\": [\n\"The appointment date field must be a date after today.\"\n]\n}\n}",
+                            "name": "Validation errors"
                         }
                     ]
                 }
@@ -435,18 +582,18 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "17",
+                                    "value": "1",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "19",
+                                    "value": "11",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=17&postType=19"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=1&postType=11"
                         },
                         "method": "GET",
                         "header": [

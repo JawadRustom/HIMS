@@ -30,19 +30,19 @@ endpoints:
           To return limite data in single page.
           Defaults value for variable '15'.
         required: false
-        example: 17
+        example: 1
         type: integer
         custom: []
       postType:
         name: postType
         description: "String To return Type of post in single page Example ('News','Event')."
         required: true
-        example: 19
+        example: 11
         type: integer
         custom: []
     cleanQueryParameters:
-      perPage: 17
-      postType: 19
+      perPage: 1
+      postType: 11
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []

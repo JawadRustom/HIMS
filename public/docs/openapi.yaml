@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: asia10@example.net
+                  example: wilderman.marianna@example.net
                 password:
                   type: string
                   description: ''
-                  example: doloremque
+                  example: velit
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: frami.marisa@example.com
+                  example: retta.cremin@example.net
                 password:
                   type: string
                   description: ''
-                  example: aut
+                  example: et
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: repudiandae
+                  example: qui
                 FirstName:
                   type: string
                   description: ''
-                  example: id
+                  example: ut
                 LastName:
                   type: string
                   description: ''
-                  example: est
+                  example: minima
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hheaney@example.org
+                  example: marvin.justen@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'd?0)sj{'
+                  example: 'TirUqG_Jq}M'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: et
                 Country:
                   type: string
                   description: ''
@@ -318,6 +318,317 @@ paths:
       tags:
         - Authentication
       security: []
+  /api/Department:
+    get:
+      summary: 'See all Department'
+      operationId: seeAllDepartment
+      description: ''
+      parameters:
+        -
+          in: query
+          name: perPage
+          description: "To return limite data in single page.\nDefaults value for variable '15'."
+          example: 4
+          required: false
+          schema:
+            type: integer
+            description: "To return limite data in single page.\nDefaults value for variable '15'."
+            example: 4
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      department_id: 1
+                      department_name: modi
+                      description: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                    -
+                      department_id: 2
+                      department_name: id
+                      description: 'Dormouse fell asleep instantly, and Alice thought she might as well as she said to the Cheshire Cat, she was playing against herself, for this curious child was very hot, she kept fanning herself.'
+                    -
+                      department_id: 3
+                      department_name: minima
+                      description: 'King hastily said, and went to school in the middle of her sister, as well as pigs, and was gone across to the table, half hoping that they were all turning into little cakes as they came nearer.'
+                  links:
+                    first: 'http://127.0.0.1:8000/api/Department?page=1'
+                    last: 'http://127.0.0.1:8000/api/Department?page=47'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/Department?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 47
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=8'
+                        label: '8'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=10'
+                        label: '10'
+                        active: false
+                      -
+                        url: null
+                        label: ...
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=46'
+                        label: '46'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=47'
+                        label: '47'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Department?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/Department'
+                    per_page: 3
+                    to: 3
+                    total: 140
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        department_id: 1
+                        department_name: modi
+                        description: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                      -
+                        department_id: 2
+                        department_name: id
+                        description: 'Dormouse fell asleep instantly, and Alice thought she might as well as she said to the Cheshire Cat, she was playing against herself, for this curious child was very hot, she kept fanning herself.'
+                      -
+                        department_id: 3
+                        department_name: minima
+                        description: 'King hastily said, and went to school in the middle of her sister, as well as pigs, and was gone across to the table, half hoping that they were all turning into little cakes as they came nearer.'
+                    items:
+                      type: object
+                      properties:
+                        department_id:
+                          type: integer
+                          example: 1
+                        department_name:
+                          type: string
+                          example: modi
+                        description:
+                          type: string
+                          example: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Department?page=1'
+                      last:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Department?page=47'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Department?page=2'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 47
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=8'
+                            label: '8'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=10'
+                            label: '10'
+                            active: false
+                          -
+                            url: null
+                            label: ...
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=46'
+                            label: '46'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=47'
+                            label: '47'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Department?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Department'
+                      per_page:
+                        type: integer
+                        example: 3
+                      to:
+                        type: integer
+                        example: 3
+                      total:
+                        type: integer
+                        example: 140
+      tags:
+        - DepartmentHome
+      security: []
+  '/api/Department/{id}':
+    get:
+      summary: 'See One Department'
+      operationId: seeOneDepartment
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    department_id: 1
+                    department_name: modi
+                    description: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      department_id:
+                        type: integer
+                        example: 1
+                      department_name:
+                        type: string
+                        example: modi
+                      description:
+                        type: string
+                        example: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+        404:
+          description: 'This Department not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - DepartmentHome
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Department.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/Doctor:
     get:
       summary: 'See All Doctor'
@@ -328,12 +639,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 18
+          example: 16
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 18
+            example: 16
       responses:
         200:
           description: 'Success Process'
@@ -451,15 +762,108 @@ paths:
       description: ''
       parameters: []
       responses:
-        200:
+        401:
           description: ''
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: ''
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Endpoints
+      security: []
+  /api/PatientAppointment:
+    post:
+      summary: Register
+      operationId: register
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: 'Create Appointment Success'
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The selected patient i d is invalid. (and 3 more errors)'
+                  errors:
+                    PatientID:
+                      - 'The selected patient i d is invalid.'
+                    ClinicID:
+                      - 'The clinic i d field is required.'
+                    doctor_id:
+                      - 'The doctor id field is required.'
+                    AppointmentDate:
+                      - 'The appointment date field must be a date after today.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The selected patient i d is invalid. (and 3 more errors)'
+                  errors:
+                    type: object
+                    properties:
+                      PatientID:
+                        type: array
+                        example:
+                          - 'The selected patient i d is invalid.'
+                        items:
+                          type: string
+                      ClinicID:
+                        type: array
+                        example:
+                          - 'The clinic i d field is required.'
+                        items:
+                          type: string
+                      doctor_id:
+                        type: array
+                        example:
+                          - 'The doctor id field is required.'
+                        items:
+                          type: string
+                      AppointmentDate:
+                        type: array
+                        example:
+                          - 'The appointment date field must be a date after today.'
+                        items:
+                          type: string
+      tags:
+        - PatientAppointment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                PatientID:
+                  type: string
+                  description: ''
+                  example: quod
+                ClinicID:
+                  type: string
+                  description: ''
+                  example: nemo
+                doctor_id:
+                  type: string
+                  description: ''
+                  example: quaerat
+                AppointmentDate:
+                  type: string
+                  description: 'Must be a valid date. Must be a date after <code>today</code>.'
+                  example: '2024-11-20'
+              required:
+                - PatientID
+                - ClinicID
+                - doctor_id
+                - AppointmentDate
       security: []
   /api/Post:
     get:
@@ -471,22 +875,22 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 17
+          example: 1
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 17
+            example: 1
         -
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 19
+          example: 11
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 19
+            example: 11
       responses:
         200:
           description: 'Success Process'
@@ -720,11 +1124,17 @@ tags:
     name: Authentication
     description: "\nThis Api For Authentication"
   -
+    name: DepartmentHome
+    description: "\nAPIs For Departments In Home Page"
+  -
     name: DoctorHome
     description: "\nAPIs For Doctor In Home Page"
   -
     name: Endpoints
     description: ''
+  -
+    name: PatientAppointment
+    description: "\nThis Api For PatientAppointment"
   -
     name: PostHome
     description: "\nAPIs For Posts In Home Page"

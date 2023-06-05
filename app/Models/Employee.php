@@ -104,4 +104,8 @@ class Employee extends Model
   {
       return $this->HasMany(MedicineBill::class,'EmployeeID','id');
   }
+  public function PatientAppointment(): HasMany
+  {
+      return $this->hasMany(PatientAppointment::class,'doctor_id','id');
+  }
 }

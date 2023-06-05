@@ -1,0 +1,100 @@
+name: PatientAppointment
+description: |-
+
+  This Api For PatientAppointment
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/PatientAppointment
+    metadata:
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
+      subgroup: ''
+      subgroupDescription: ''
+      title: Register
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      PatientID:
+        name: PatientID
+        description: ''
+        required: true
+        example: quod
+        type: string
+        custom: []
+      ClinicID:
+        name: ClinicID
+        description: ''
+        required: true
+        example: nemo
+        type: string
+        custom: []
+      doctor_id:
+        name: doctor_id
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        custom: []
+      AppointmentDate:
+        name: AppointmentDate
+        description: 'Must be a valid date. Must be a date after <code>today</code>.'
+        required: true
+        example: '2024-11-20'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      PatientID: quod
+      ClinicID: nemo
+      doctor_id: quaerat
+      AppointmentDate: '2024-11-20'
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: |-
+          {
+          }
+        headers: []
+        description: 'Create Appointment Success'
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The selected patient i d is invalid. (and 3 more errors)",
+          "errors": {
+          "PatientID": [
+          "The selected patient i d is invalid."
+          ],
+          "ClinicID": [
+          "The clinic i d field is required."
+          ],
+          "doctor_id": [
+          "The doctor id field is required."
+          ],
+          "AppointmentDate": [
+          "The appointment date field must be a date after today."
+          ]
+          }
+          }
+        headers: []
+        description: 'Validation errors'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -143,10 +143,9 @@ class DepartmentController extends Controller
    * See One Department
    * @response 200 scenario="Success Process"{
     "data": {
-        "post_id": 1,
-        "post_title": "Dr.",
-        "post_text": "Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.",
-        "post_type": "Event"
+        "department_id": 1,
+        "department_name": "modi",
+        "description": "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
     }
 }
    * 
@@ -156,10 +155,6 @@ class DepartmentController extends Controller
    */
   public function show(Department $Department)
   {
-    // if (!$Department) {
-    //   abort(404);
-    // }
-    //return new DepartmentResource(Department::find(1)); This run
-    return new DepartmentResource($Department); // But this not run
+    return new DepartmentResource($Department);
   }
 }
