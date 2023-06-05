@@ -30,35 +30,35 @@ endpoints:
         name: PatientID
         description: ''
         required: true
-        example: quod
+        example: consequuntur
         type: string
         custom: []
       ClinicID:
         name: ClinicID
         description: ''
         required: true
-        example: nemo
+        example: voluptatem
         type: string
         custom: []
       doctor_id:
         name: doctor_id
         description: ''
         required: true
-        example: quaerat
+        example: doloribus
         type: string
         custom: []
       AppointmentDate:
         name: AppointmentDate
         description: 'Must be a valid date. Must be a date after <code>today</code>.'
         required: true
-        example: '2024-11-20'
+        example: '2083-07-01'
         type: string
         custom: []
     cleanBodyParameters:
-      PatientID: quod
-      ClinicID: nemo
-      doctor_id: quaerat
-      AppointmentDate: '2024-11-20'
+      PatientID: consequuntur
+      ClinicID: voluptatem
+      doctor_id: doloribus
+      AppointmentDate: '2083-07-01'
     fileParameters: []
     responses:
       -

@@ -19,7 +19,7 @@ class Post extends Model
   protected $casts = [
     'id' => 'integer',
   ];
-  public function photos()
+  public function photo()
   {
     return $this->morphOne(Photo::class, 'imageable');
   }

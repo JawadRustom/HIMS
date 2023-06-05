@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: wilderman.marianna@example.net
+                  example: adrienne.ratke@example.org
                 password:
                   type: string
                   description: ''
-                  example: velit
+                  example: distinctio
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: retta.cremin@example.net
+                  example: rutherford.lula@example.net
                 password:
                   type: string
                   description: ''
-                  example: et
+                  example: aperiam
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: qui
+                  example: est
                 FirstName:
                   type: string
                   description: ''
-                  example: ut
+                  example: sit
                 LastName:
                   type: string
                   description: ''
-                  example: minima
+                  example: sit
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: marvin.justen@example.net
+                  example: cole.drake@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'TirUqG_Jq}M'
+                  example: 'Fy,1nZj9e,^;e'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: et
+                  example: minima
                 Country:
                   type: string
                   description: ''
@@ -328,12 +328,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 4
+          example: 12
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 4
+            example: 12
       responses:
         200:
           description: 'Success Process'
@@ -345,16 +345,19 @@ paths:
                   data:
                     -
                       department_id: 1
-                      department_name: modi
-                      description: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                      department_name: eum
+                      description: "Where CAN I have to beat time when I grow up, I'll write one--but I'm grown up now,' she said, 'than waste it in a hurry: a large plate came skimming out, straight at the proposal. 'Then the."
+                      Image: null
                     -
                       department_id: 2
-                      department_name: id
-                      description: 'Dormouse fell asleep instantly, and Alice thought she might as well as she said to the Cheshire Cat, she was playing against herself, for this curious child was very hot, she kept fanning herself.'
+                      department_name: cumque
+                      description: 'March Hare will be much the most curious thing I ever saw one that size? Why, it fills the whole thing very absurd, but they began moving about again, and made another rush at the Lizard as she.'
+                      Image: null
                     -
                       department_id: 3
-                      department_name: minima
-                      description: 'King hastily said, and went to school in the middle of her sister, as well as pigs, and was gone across to the table, half hoping that they were all turning into little cakes as they came nearer.'
+                      department_name: animi
+                      description: "Queen: so she went on in the air. She did it so VERY wide, but she thought at first she thought it over here,' said the Hatter. 'Stolen!' the King said, turning to Alice for protection. 'You shan't."
+                      Image: null
                   links:
                     first: 'http://127.0.0.1:8000/api/Department?page=1'
                     last: 'http://127.0.0.1:8000/api/Department?page=47'
@@ -428,23 +431,26 @@ paths:
                     path: 'http://127.0.0.1:8000/api/Department'
                     per_page: 3
                     to: 3
-                    total: 140
+                    total: 141
                 properties:
                   data:
                     type: array
                     example:
                       -
                         department_id: 1
-                        department_name: modi
-                        description: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                        department_name: eum
+                        description: "Where CAN I have to beat time when I grow up, I'll write one--but I'm grown up now,' she said, 'than waste it in a hurry: a large plate came skimming out, straight at the proposal. 'Then the."
+                        Image: null
                       -
                         department_id: 2
-                        department_name: id
-                        description: 'Dormouse fell asleep instantly, and Alice thought she might as well as she said to the Cheshire Cat, she was playing against herself, for this curious child was very hot, she kept fanning herself.'
+                        department_name: cumque
+                        description: 'March Hare will be much the most curious thing I ever saw one that size? Why, it fills the whole thing very absurd, but they began moving about again, and made another rush at the Lizard as she.'
+                        Image: null
                       -
                         department_id: 3
-                        department_name: minima
-                        description: 'King hastily said, and went to school in the middle of her sister, as well as pigs, and was gone across to the table, half hoping that they were all turning into little cakes as they came nearer.'
+                        department_name: animi
+                        description: "Queen: so she went on in the air. She did it so VERY wide, but she thought at first she thought it over here,' said the Hatter. 'Stolen!' the King said, turning to Alice for protection. 'You shan't."
+                        Image: null
                     items:
                       type: object
                       properties:
@@ -453,10 +459,13 @@ paths:
                           example: 1
                         department_name:
                           type: string
-                          example: modi
+                          example: eum
                         description:
                           type: string
-                          example: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                          example: "Where CAN I have to beat time when I grow up, I'll write one--but I'm grown up now,' she said, 'than waste it in a hurry: a large plate came skimming out, straight at the proposal. 'Then the."
+                        Image:
+                          type: string
+                          example: null
                   links:
                     type: object
                     properties:
@@ -570,7 +579,7 @@ paths:
                         example: 3
                       total:
                         type: integer
-                        example: 140
+                        example: 141
       tags:
         - DepartmentHome
       security: []
@@ -589,22 +598,26 @@ paths:
                 type: object
                 example:
                   data:
-                    department_id: 1
-                    department_name: modi
-                    description: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                    department_id: 141
+                    department_name: asasssssssssa
+                    description: aassassasasas
+                    Image: odksaok
                 properties:
                   data:
                     type: object
                     properties:
                       department_id:
                         type: integer
-                        example: 1
+                        example: 141
                       department_name:
                         type: string
-                        example: modi
+                        example: asasssssssssa
                       description:
                         type: string
-                        example: "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+                        example: aassassasasas
+                      Image:
+                        type: string
+                        example: odksaok
         404:
           description: 'This Department not found'
           content:
@@ -639,12 +652,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 16
+          example: 4
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 16
+            example: 4
       responses:
         200:
           description: 'Success Process'
@@ -846,19 +859,19 @@ paths:
                 PatientID:
                   type: string
                   description: ''
-                  example: quod
+                  example: consequuntur
                 ClinicID:
                   type: string
                   description: ''
-                  example: nemo
+                  example: voluptatem
                 doctor_id:
                   type: string
                   description: ''
-                  example: quaerat
+                  example: doloribus
                 AppointmentDate:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>today</code>.'
-                  example: '2024-11-20'
+                  example: '2083-07-01'
               required:
                 - PatientID
                 - ClinicID
@@ -875,22 +888,22 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 1
+          example: 11
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 1
+            example: 11
         -
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 11
+          example: 7
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 11
+            example: 7
       responses:
         200:
           description: 'Success Process'
@@ -901,29 +914,32 @@ paths:
                 example:
                   data:
                     -
-                      post_id: 1
+                      post_id: 4
                       post_title: Dr.
-                      post_text: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                      post_text: 'Aut id necessitatibus ducimus. Sit est voluptatum debitis non et. Maxime in ducimus est distinctio aut fugit.'
                       post_type: Event
+                      Image: null
                     -
-                      post_id: 2
-                      post_title: Ms.
-                      post_text: 'Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.'
-                      post_type: Event
-                    -
-                      post_id: 3
+                      post_id: 6
                       post_title: Dr.
-                      post_text: 'Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.'
+                      post_text: 'Reiciendis sit ratione nulla. Architecto tenetur maiores qui. Necessitatibus vitae ducimus recusandae officia error est.'
                       post_type: Event
+                      Image: null
+                    -
+                      post_id: 7
+                      post_title: Dr.
+                      post_text: 'Sint quas modi aut fuga animi. Quia doloremque aut et aut omnis rerum. Ea consectetur consequuntur autem iste ut.'
+                      post_type: Event
+                      Image: null
                   links:
                     first: 'http://127.0.0.1:8000/api/Post?page=1'
-                    last: 'http://127.0.0.1:8000/api/Post?page=3'
+                    last: 'http://127.0.0.1:8000/api/Post?page=2'
                     prev: null
                     next: 'http://127.0.0.1:8000/api/Post?page=2'
                   meta:
                     current_page: 1
                     from: 1
-                    last_page: 3
+                    last_page: 2
                     links:
                       -
                         url: null
@@ -938,51 +954,53 @@ paths:
                         label: '2'
                         active: false
                       -
-                        url: 'http://127.0.0.1:8000/api/Post?page=3'
-                        label: '3'
-                        active: false
-                      -
                         url: 'http://127.0.0.1:8000/api/Post?page=2'
                         label: 'Next &raquo;'
                         active: false
                     path: 'http://127.0.0.1:8000/api/Post'
                     per_page: 3
                     to: 3
-                    total: 7
+                    total: 5
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        post_id: 1
+                        post_id: 4
                         post_title: Dr.
-                        post_text: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                        post_text: 'Aut id necessitatibus ducimus. Sit est voluptatum debitis non et. Maxime in ducimus est distinctio aut fugit.'
                         post_type: Event
+                        Image: null
                       -
-                        post_id: 2
-                        post_title: Ms.
-                        post_text: 'Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.'
-                        post_type: Event
-                      -
-                        post_id: 3
+                        post_id: 6
                         post_title: Dr.
-                        post_text: 'Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.'
+                        post_text: 'Reiciendis sit ratione nulla. Architecto tenetur maiores qui. Necessitatibus vitae ducimus recusandae officia error est.'
                         post_type: Event
+                        Image: null
+                      -
+                        post_id: 7
+                        post_title: Dr.
+                        post_text: 'Sint quas modi aut fuga animi. Quia doloremque aut et aut omnis rerum. Ea consectetur consequuntur autem iste ut.'
+                        post_type: Event
+                        Image: null
                     items:
                       type: object
                       properties:
                         post_id:
                           type: integer
-                          example: 1
+                          example: 4
                         post_title:
                           type: string
                           example: Dr.
                         post_text:
                           type: string
-                          example: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                          example: 'Aut id necessitatibus ducimus. Sit est voluptatum debitis non et. Maxime in ducimus est distinctio aut fugit.'
                         post_type:
                           type: string
                           example: Event
+                        Image:
+                          type: string
+                          example: null
                   links:
                     type: object
                     properties:
@@ -991,7 +1009,7 @@ paths:
                         example: 'http://127.0.0.1:8000/api/Post?page=1'
                       last:
                         type: string
-                        example: 'http://127.0.0.1:8000/api/Post?page=3'
+                        example: 'http://127.0.0.1:8000/api/Post?page=2'
                       prev:
                         type: string
                         example: null
@@ -1009,7 +1027,7 @@ paths:
                         example: 1
                       last_page:
                         type: integer
-                        example: 3
+                        example: 2
                       links:
                         type: array
                         example:
@@ -1024,10 +1042,6 @@ paths:
                           -
                             url: 'http://127.0.0.1:8000/api/Post?page=2'
                             label: '2'
-                            active: false
-                          -
-                            url: 'http://127.0.0.1:8000/api/Post?page=3'
-                            label: '3'
                             active: false
                           -
                             url: 'http://127.0.0.1:8000/api/Post?page=2'
@@ -1056,7 +1070,7 @@ paths:
                         example: 3
                       total:
                         type: integer
-                        example: 7
+                        example: 5
       tags:
         - PostHome
       security: []
@@ -1075,26 +1089,30 @@ paths:
                 type: object
                 example:
                   data:
-                    post_id: 1
-                    post_title: Dr.
-                    post_text: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
-                    post_type: Event
+                    post_id: 12
+                    post_title: asasssssssssa
+                    post_text: aassassasasas
+                    post_type: News
+                    Image: odksaok
                 properties:
                   data:
                     type: object
                     properties:
                       post_id:
                         type: integer
-                        example: 1
+                        example: 12
                       post_title:
                         type: string
-                        example: Dr.
+                        example: asasssssssssa
                       post_text:
                         type: string
-                        example: 'Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.'
+                        example: aassassasasas
                       post_type:
                         type: string
-                        example: Event
+                        example: News
+                      Image:
+                        type: string
+                        example: odksaok
         404:
           description: 'This post not found'
           content:
