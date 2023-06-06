@@ -33,9 +33,9 @@ class Department extends Model
     'id' => 'integer',
   ];
 
-  public function employee(): HasOne
+  public function employees(): HasMany
   {
-    return $this->hasOne(Employee::class,'DepartmentID','id');
+    return $this->HasMany(Employee::class,'DepartmentID','id');
   }
 
   public function clinic(): HasMany
