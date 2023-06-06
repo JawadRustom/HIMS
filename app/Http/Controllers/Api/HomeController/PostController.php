@@ -20,34 +20,37 @@ class PostController extends Controller
    * @response 200 scenario="Success Process"{
     "data": [
         {
-            "post_id": 1,
+            "post_id": 4,
             "post_title": "Dr.",
-            "post_text": "Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.",
-            "post_type": "Event"
+            "post_text": "Aut id necessitatibus ducimus. Sit est voluptatum debitis non et. Maxime in ducimus est distinctio aut fugit.",
+            "post_type": "Event",
+            "Image": null
         },
         {
-            "post_id": 2,
-            "post_title": "Ms.",
-            "post_text": "Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.",
-            "post_type": "Event"
+            "post_id": 6,
+            "post_title": "Dr.",
+            "post_text": "Reiciendis sit ratione nulla. Architecto tenetur maiores qui. Necessitatibus vitae ducimus recusandae officia error est.",
+            "post_type": "Event",
+            "Image": null
         },
         {
-            "post_id": 3,
+            "post_id": 7,
             "post_title": "Dr.",
-            "post_text": "Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.",
-            "post_type": "Event"
+            "post_text": "Sint quas modi aut fuga animi. Quia doloremque aut et aut omnis rerum. Ea consectetur consequuntur autem iste ut.",
+            "post_type": "Event",
+            "Image": null
         }
     ],
     "links": {
         "first": "http://127.0.0.1:8000/api/Post?page=1",
-        "last": "http://127.0.0.1:8000/api/Post?page=3",
+        "last": "http://127.0.0.1:8000/api/Post?page=2",
         "prev": null,
         "next": "http://127.0.0.1:8000/api/Post?page=2"
     },
     "meta": {
         "current_page": 1,
         "from": 1,
-        "last_page": 3,
+        "last_page": 2,
         "links": [
             {
                 "url": null,
@@ -65,11 +68,6 @@ class PostController extends Controller
                 "active": false
             },
             {
-                "url": "http://127.0.0.1:8000/api/Post?page=3",
-                "label": "3",
-                "active": false
-            },
-            {
                 "url": "http://127.0.0.1:8000/api/Post?page=2",
                 "label": "Next &raquo;",
                 "active": false
@@ -78,7 +76,7 @@ class PostController extends Controller
         "path": "http://127.0.0.1:8000/api/Post",
         "per_page": 3,
         "to": 3,
-        "total": 7
+        "total": 5
     }
 }
    * 
@@ -100,10 +98,11 @@ class PostController extends Controller
    * See One Post
    * @response 200 scenario="Success Process"{
     "data": {
-        "post_id": 1,
-        "post_title": "Dr.",
-        "post_text": "Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.",
-        "post_type": "Event"
+        "post_id": 12,
+        "post_title": "asasssssssssa",
+        "post_text": "aassassasasas",
+        "post_type": "News",
+        "Image": "odksaok"
     }
 }
    * 

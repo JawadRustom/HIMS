@@ -19,6 +19,7 @@ class PostResource extends JsonResource
           'post_title'=>$this->Title,
           'post_text'=>$this->Text,
           'post_type'=>$this->PostType,
+          'Image'=>$this->photo->filename??null,
         ];
     }
 }

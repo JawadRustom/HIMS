@@ -18,6 +18,8 @@ require_once 'Api/Authentication.php';
 require_once 'Api/Doctor.php';
 require_once 'Api/Post.php';
 require_once 'Api/Department.php';
+require_once 'Api/PatientAppointment.php';
+require_once 'Api/PatientDashbord.php';
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

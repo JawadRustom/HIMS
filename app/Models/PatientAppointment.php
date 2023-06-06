@@ -20,6 +20,7 @@ class PatientAppointment extends Model
     protected $fillable = [
         'PatientID',
         'ClinicID',
+        'doctor_id',
         'AppointmentDate',
     ];
 
@@ -32,6 +33,7 @@ class PatientAppointment extends Model
         'id' => 'integer',
         'PatientID' => 'integer',
         'ClinicID' => 'integer',
+        'doctor_id'=>'integer',
         'AppointmentDate' => 'date',
     ];
 
@@ -48,5 +50,10 @@ class PatientAppointment extends Model
     public function Diagnosed(): HasMany
     {
         return $this->hasMany(Diagnosed::class,'PatientAppointmentID','id');
+    }
+
+    public function employee(): BelongsTo
+    {
+        return $this->BelongsTo(Employee::class,'doctor_id','id');
     }
 }

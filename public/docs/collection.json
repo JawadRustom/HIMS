@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "0b51ad07-ff24-4524-854d-325ef42bf370",
+        "_postman_id": "b5c2a53f-19f9-4b35-93bb-9384c1a3d748",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"asia10@example.net\",\"password\":\"doloremque\"}"
+                            "raw": "{\"email\":\"adrienne.ratke@example.org\",\"password\":\"distinctio\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"frami.marisa@example.com\",\"password\":\"aut\"}"
+                            "raw": "{\"email\":\"rutherford.lula@example.net\",\"password\":\"aperiam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "repudiandae",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "FirstName",
-                                    "value": "id",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "LastName",
                                     "value": "est",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
+                                    "key": "FirstName",
+                                    "value": "sit",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "LastName",
+                                    "value": "sit",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
                                     "key": "email",
-                                    "value": "hheaney@example.org",
+                                    "value": "cole.drake@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "d?0)sj{",
+                                    "value": "Fy,1nZj9e,^;e",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "ducimus",
+                                    "value": "minima",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -272,6 +272,103 @@
             ]
         },
         {
+            "name": "DepartmentHome",
+            "description": "\nAPIs For Departments In Home Page",
+            "item": [
+                {
+                    "name": "See all Department",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Department",
+                            "query": [
+                                {
+                                    "key": "perPage",
+                                    "value": "12",
+                                    "description": "To return limite data in single page.\nDefaults value for variable '15'.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=12"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"department_id\": 1,\n\"department_name\": \"eum\",\n\"description\": \"Where CAN I have to beat time when I grow up, I'll write one--but I'm grown up now,' she said, 'than waste it in a hurry: a large plate came skimming out, straight at the proposal. 'Then the.\",\n\"Image\": null\n},\n{\n\"department_id\": 2,\n\"department_name\": \"cumque\",\n\"description\": \"March Hare will be much the most curious thing I ever saw one that size? Why, it fills the whole thing very absurd, but they began moving about again, and made another rush at the Lizard as she.\",\n\"Image\": null\n},\n{\n\"department_id\": 3,\n\"department_name\": \"animi\",\n\"description\": \"Queen: so she went on in the air. She did it so VERY wide, but she thought at first she thought it over here,' said the Hatter. 'Stolen!' the King said, turning to Alice for protection. 'You shan't.\",\n\"Image\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=47\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 47,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=9\",\n\"label\": \"9\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=10\",\n\"label\": \"10\",\n\"active\": false\n},\n{\n\"url\": null,\n\"label\": \"...\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=46\",\n\"label\": \"46\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=47\",\n\"label\": \"47\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Department?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Department\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 141\n}\n}",
+                            "name": "Success Process"
+                        }
+                    ]
+                },
+                {
+                    "name": "See One Department",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Department\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Department\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Department."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"department_id\": 141,\n\"department_name\": \"asasssssssssa\",\n\"description\": \"aassassasasas\",\n\"Image\": \"odksaok\"\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This Department not found"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "DoctorHome",
             "description": "\nAPIs For Doctor In Home Page",
             "item": [
@@ -284,12 +381,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "18",
+                                    "value": "4",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=18"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=4"
                         },
                         "method": "GET",
                         "header": [
@@ -402,21 +499,71 @@
                         {
                             "header": [
                                 {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
                                     "key": "cache-control",
                                     "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
                                     "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "",
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PatientAppointment",
+            "description": "\nThis Api For PatientAppointment",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"PatientID\":\"consequuntur\",\"ClinicID\":\"voluptatem\",\"doctor_id\":\"doloribus\",\"AppointmentDate\":\"2083-07-01\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 204,
+                            "body": "{\n}",
+                            "name": "Create Appointment Success"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The selected patient i d is invalid. (and 3 more errors)\",\n\"errors\": {\n\"PatientID\": [\n\"The selected patient i d is invalid.\"\n],\n\"ClinicID\": [\n\"The clinic i d field is required.\"\n],\n\"doctor_id\": [\n\"The doctor id field is required.\"\n],\n\"AppointmentDate\": [\n\"The appointment date field must be a date after today.\"\n]\n}\n}",
+                            "name": "Validation errors"
                         }
                     ]
                 }
@@ -435,18 +582,18 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "17",
+                                    "value": "11",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "19",
+                                    "value": "7",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=17&postType=19"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=11&postType=7"
                         },
                         "method": "GET",
                         "header": [
@@ -469,7 +616,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": [\n{\n\"post_id\": 1,\n\"post_title\": \"Dr.\",\n\"post_text\": \"Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.\",\n\"post_type\": \"Event\"\n},\n{\n\"post_id\": 2,\n\"post_title\": \"Ms.\",\n\"post_text\": \"Repellendus et explicabo sequi unde. Rerum consequatur aut excepturi inventore quo. Ut sint adipisci nostrum blanditiis. Qui qui et odio iusto repellat quas voluptate.\",\n\"post_type\": \"Event\"\n},\n{\n\"post_id\": 3,\n\"post_title\": \"Dr.\",\n\"post_text\": \"Quo et et velit non earum beatae. A et facere occaecati. Tempore sed odit voluptatem recusandae.\",\n\"post_type\": \"Event\"\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=3\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 3,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Post\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 7\n}\n}",
+                            "body": "{\n\"data\": [\n{\n\"post_id\": 4,\n\"post_title\": \"Dr.\",\n\"post_text\": \"Aut id necessitatibus ducimus. Sit est voluptatum debitis non et. Maxime in ducimus est distinctio aut fugit.\",\n\"post_type\": \"Event\",\n\"Image\": null\n},\n{\n\"post_id\": 6,\n\"post_title\": \"Dr.\",\n\"post_text\": \"Reiciendis sit ratione nulla. Architecto tenetur maiores qui. Necessitatibus vitae ducimus recusandae officia error est.\",\n\"post_type\": \"Event\",\n\"Image\": null\n},\n{\n\"post_id\": 7,\n\"post_title\": \"Dr.\",\n\"post_text\": \"Sint quas modi aut fuga animi. Quia doloremque aut et aut omnis rerum. Ea consectetur consequuntur autem iste ut.\",\n\"post_type\": \"Event\",\n\"Image\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 2,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Post?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Post\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 5\n}\n}",
                             "name": "Success Process"
                         }
                     ]
@@ -512,7 +659,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": {\n\"post_id\": 1,\n\"post_title\": \"Dr.\",\n\"post_text\": \"Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.\",\n\"post_type\": \"Event\"\n}\n}",
+                            "body": "{\n\"data\": {\n\"post_id\": 12,\n\"post_title\": \"asasssssssssa\",\n\"post_text\": \"aassassasasas\",\n\"post_type\": \"News\",\n\"Image\": \"odksaok\"\n}\n}",
                             "name": "Success Process"
                         },
                         {

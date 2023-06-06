@@ -47,7 +47,7 @@ class Department extends Model
   {
     return $this->belongsTo(Employee::class, 'ManagerID', 'id', 'HasOne');
   }
-  public function photos()
+  public function photo()
   {
     return $this->morphOne(Photo::class, 'imageable');
   }

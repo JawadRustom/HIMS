@@ -20,18 +20,21 @@ class DepartmentController extends Controller
     "data": [
         {
             "department_id": 1,
-            "department_name": "modi",
-            "description": "Cat again, sitting on the breeze that followed them, the melancholy words:-- 'Soo--oop of the jury had a door leading right into it. 'That's very curious!' she thought. 'But everything's curious."
+            "department_name": "eum",
+            "description": "Where CAN I have to beat time when I grow up, I'll write one--but I'm grown up now,' she said, 'than waste it in a hurry: a large plate came skimming out, straight at the proposal. 'Then the.",
+            "Image": null
         },
         {
             "department_id": 2,
-            "department_name": "id",
-            "description": "Dormouse fell asleep instantly, and Alice thought she might as well as she said to the Cheshire Cat, she was playing against herself, for this curious child was very hot, she kept fanning herself."
+            "department_name": "cumque",
+            "description": "March Hare will be much the most curious thing I ever saw one that size? Why, it fills the whole thing very absurd, but they began moving about again, and made another rush at the Lizard as she.",
+            "Image": null
         },
         {
             "department_id": 3,
-            "department_name": "minima",
-            "description": "King hastily said, and went to school in the middle of her sister, as well as pigs, and was gone across to the table, half hoping that they were all turning into little cakes as they came nearer."
+            "department_name": "animi",
+            "description": "Queen: so she went on in the air. She did it so VERY wide, but she thought at first she thought it over here,' said the Hatter. 'Stolen!' the King said, turning to Alice for protection. 'You shan't.",
+            "Image": null
         }
     ],
     "links": {
@@ -124,7 +127,7 @@ class DepartmentController extends Controller
         "path": "http://127.0.0.1:8000/api/Department",
         "per_page": 3,
         "to": 3,
-        "total": 140
+        "total": 141
     }
 }
    * 
@@ -143,10 +146,10 @@ class DepartmentController extends Controller
    * See One Department
    * @response 200 scenario="Success Process"{
     "data": {
-        "post_id": 1,
-        "post_title": "Dr.",
-        "post_text": "Quia et nihil possimus rerum. Dolor aut quo ut voluptates facilis. Quis voluptatem quod alias. Accusamus a provident voluptatum molestias et quae doloremque quo. Provident voluptatem minima quia.",
-        "post_type": "Event"
+        "department_id": 141,
+        "department_name": "asasssssssssa",
+        "description": "aassassasasas",
+        "Image": "odksaok"
     }
 }
    * 
@@ -156,10 +159,6 @@ class DepartmentController extends Controller
    */
   public function show(Department $Department)
   {
-    // if (!$Department) {
-    //   abort(404);
-    // }
-    //return new DepartmentResource(Department::find(1)); This run
-    return new DepartmentResource($Department); // But this not run
+    return new DepartmentResource($Department);
   }
 }
