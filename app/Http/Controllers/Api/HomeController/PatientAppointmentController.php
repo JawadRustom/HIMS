@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Api\HomeController;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\HomeRequest\PatientAppointmentRequest;
+use App\Http\Resources\HomeController\PatientAppointment\DoctorOfDepartmentResource;
+use App\Models\Department;
+use App\Models\Employee;
 use App\Models\PatientAppointment;
 use Illuminate\Http\Request;
 /**
@@ -40,11 +43,16 @@ class PatientAppointmentController extends Controller
     public function store(PatientAppointmentRequest $Request)
     {
       $patientAppointment=PatientAppointment::create([
-        'PatientID' =>$Request->PatientID,
+        'PatientID' =>auth()->user()->Patient->id,
         'ClinicID'=>$Request->ClinicID,
         'doctor_id'=>$Request->doctor_id,
         'AppointmentDate'=>$Request->AppointmentDate,
       ]);
       return response()->noContent();
+    } 
+
+    public function doctorOfDepartment(Department $id)
+    {
+      return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
     }
 }

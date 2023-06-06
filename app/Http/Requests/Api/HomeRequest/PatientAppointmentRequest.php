@@ -22,7 +22,6 @@ class PatientAppointmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-          'PatientID' => ['required','exists:patients,id'],
           'ClinicID' =>['required','exists:clinics,id'],
           'doctor_id' =>['required','exists:employees,id'],
           'AppointmentDate' =>['required','date', 'after:today']
