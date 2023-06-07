@@ -15,7 +15,7 @@ class PatientOperationResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'OperationName'=>$this->operation->OperationName,
+          'OperationName'=>$this->operation?->OperationName,
           'OperationDate'=>$this->OperationDate,
         ];
     }
