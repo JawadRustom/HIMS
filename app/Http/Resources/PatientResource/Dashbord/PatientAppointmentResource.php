@@ -15,8 +15,8 @@ class PatientAppointmentResource extends JsonResource
     public function toArray(Request $request): array
     {
       return [
-        'OperationName'=>$this->operation->OperationName,
-        'OperationDate'=>$this->employee->user->FirstName,
+        'appointment_date'=>$this->AppointmentDate,
+        'doctor_name'=>$this->employee->user->FirstName,
       ];
     }
 }
