@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "b5c2a53f-19f9-4b35-93bb-9384c1a3d748",
+        "_postman_id": "4cd5c750-f8dc-449c-b573-de6589acd530",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"adrienne.ratke@example.org\",\"password\":\"distinctio\"}"
+                            "raw": "{\"email\":\"gutmann.erna@example.com\",\"password\":\"porro\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"rutherford.lula@example.net\",\"password\":\"aperiam\"}"
+                            "raw": "{\"email\":\"stephania23@example.org\",\"password\":\"commodi\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "est",
+                                    "value": "culpa",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "sit",
+                                    "value": "voluptatem",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "sit",
+                                    "value": "inventore",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "cole.drake@example.net",
+                                    "value": "hackett.barney@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "Fy,1nZj9e,^;e",
+                                    "value": ")#<`>F#.~3i4",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "minima",
+                                    "value": "hic",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -284,12 +284,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "12",
+                                    "value": "4",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Department?perPage=12"
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=4"
                         },
                         "method": "GET",
                         "header": [
@@ -381,12 +381,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "4",
+                                    "value": "10",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=4"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=10"
                         },
                         "method": "GET",
                         "header": [
@@ -507,8 +507,8 @@
                                     "value": "application\/json"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "vary",
+                                    "value": "Origin"
                                 }
                             ],
                             "code": 401,
@@ -524,7 +524,7 @@
             "description": "\nThis Api For PatientAppointment",
             "item": [
                 {
-                    "name": "Register",
+                    "name": "Create PatientAppointment",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -545,7 +545,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"PatientID\":\"consequuntur\",\"ClinicID\":\"voluptatem\",\"doctor_id\":\"doloribus\",\"AppointmentDate\":\"2083-07-01\"}"
+                            "raw": "{\"ClinicID\":\"qui\",\"doctor_id\":\"repellat\",\"AppointmentDate\":\"2111-09-06\"}"
                         },
                         "description": "",
                         "auth": {
@@ -561,9 +561,193 @@
                         },
                         {
                             "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        },
+                        {
+                            "header": [],
                             "code": 422,
-                            "body": "{\n\"message\": \"The selected patient i d is invalid. (and 3 more errors)\",\n\"errors\": {\n\"PatientID\": [\n\"The selected patient i d is invalid.\"\n],\n\"ClinicID\": [\n\"The clinic i d field is required.\"\n],\n\"doctor_id\": [\n\"The doctor id field is required.\"\n],\n\"AppointmentDate\": [\n\"The appointment date field must be a date after today.\"\n]\n}\n}",
+                            "body": "{\n\"message\": \"The selected patient i d is invalid. (and 3 more errors)\",\n\"errors\": {\n\"ClinicID\": [\n\"The clinic i d field is required.\"\n],\n\"doctor_id\": [\n\"The doctor id field is required.\"\n],\n\"AppointmentDate\": [\n\"The appointment date field must be a date after today.\"\n]\n}\n}",
                             "name": "Validation errors"
+                        }
+                    ]
+                },
+                {
+                    "name": "See doctors from one department",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment\/DoctorOfDepartment\/:id_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment\/DoctorOfDepartment\/:id_id",
+                            "variable": [
+                                {
+                                    "id": "id_id",
+                                    "key": "id_id",
+                                    "value": "1",
+                                    "description": "The ID of the id."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 74,\n\"Doctor_Name\": {\n\"FirstName\": \"Cleo\",\n\"LastName\": \"Frami\"\n}\n}\n]\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PatientDashBoardController",
+            "description": "\nThis Api For PatientDashBoardController",
+            "item": [
+                {
+                    "name": "DashBorad Details",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Patient\/Dashbord",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Patient\/Dashbord"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"user_id\": 98,\n\"nick_name\": \"stark.johnson\",\n\"first_name\": \"Mario\",\n\"last_name\": \"Schuster\",\n\"patient_id\": 90,\n\"profile_image\": \"http:\/\/schulist.org\/saepe-quae-excepturi-tenetur-quaerat-et\",\n\"national_number\": \"YE1Q3DDD2I\",\n\"gender\": \"female\",\n\"birth_date\": \"2010-12-26T22:00:00.000000Z\",\n\"patient_length\": 194,\n\"patient_weight\": 64,\n\"email\": \"joannie03@example.com\",\n\"phone_number\": \"1-623-694-9795\",\n\"patient_operation\": [],\n\"patient_appointment\": [\n{\n\"appointment_date\": \"2032-06-04T21:00:00.000000Z\",\n\"doctor_name\": \"Mariam\"\n},\n{\n\"appointment_date\": \"2032-06-04T21:00:00.000000Z\",\n\"doctor_name\": \"Mariam\"\n}\n]\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        }
+                    ]
+                },
+                {
+                    "name": "PatientTest Details",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Patient\/PatientTest",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Patient\/PatientTest"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"FirstName\": \"Brandt\",\n\"LastName\": \"King\",\n\"AnalysisResult\": [\n{\n\"analysis_name\": \"ea\",\n\"analysis_date\": \"2008-05-10T21:00:00.000000Z\",\n\"analysis_ratio\": \"aliquam\",\n\"analysis_result\": \"et\"\n}\n]\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        }
+                    ]
+                },
+                {
+                    "name": "PatientAppointment Details",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Patient\/PatientAppointment",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Patient\/PatientAppointment"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"FirstName\": \"Brandt\",\n\"LastName\": \"King\",\n\"patient_appointment\": [\n{\n\"appointment_date\": \"2032-06-04T21:00:00.000000Z\",\n\"doctor_name\": \"Mariam\"\n},\n{\n\"appointment_date\": \"2032-06-04T21:00:00.000000Z\",\n\"doctor_name\": \"Mariam\"\n}\n]\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
                         }
                     ]
                 }
@@ -582,18 +766,18 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "11",
+                                    "value": "13",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "7",
+                                    "value": "11",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=11&postType=7"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=13&postType=11"
                         },
                         "method": "GET",
                         "header": [
