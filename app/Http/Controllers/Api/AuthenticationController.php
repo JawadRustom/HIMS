@@ -130,7 +130,7 @@ class AuthenticationController extends Controller
     public function register(RegisterRequest $Request)
     {
       $user=User::create([
-        'NickName' =>$Request->NickName,+
+        'NickName' =>$Request->NickName,
         'FirstName'=>$Request->FirstName,
         'LastName'=>$Request->LastName,
         'email'=>$Request->email,
