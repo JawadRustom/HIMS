@@ -1,16 +1,20 @@
-name: Endpoints
-description: ''
+name: PatientAppointment
+description: |-
+
+  This Api For PatientAppointment
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/user
+      - POST
+    uri: api/PatientAppointment
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create PatientAppointment'
       description: ''
       authenticated: false
       custom: []
@@ -21,18 +25,136 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
+    bodyParameters:
+      ClinicID:
+        name: ClinicID
+        description: ''
+        required: true
+        example: qui
+        type: string
+        custom: []
+      doctor_id:
+        name: doctor_id
+        description: ''
+        required: true
+        example: repellat
+        type: string
+        custom: []
+      AppointmentDate:
+        name: AppointmentDate
+        description: 'Must be a valid date. Must be a date after <code>today</code>.'
+        required: true
+        example: '2111-09-06'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      ClinicID: qui
+      doctor_id: repellat
+      AppointmentDate: '2111-09-06'
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: |-
+          {
+          }
+        headers: []
+        description: 'Create Appointment Success'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+          "message": "The selected patient i d is invalid. (and 3 more errors)",
+          "errors": {
+          "ClinicID": [
+          "The clinic i d field is required."
+          ],
+          "doctor_id": [
+          "The doctor id field is required."
+          ],
+          "AppointmentDate": [
+          "The appointment date field must be a date after today."
+          ]
+          }
+          }
+        headers: []
+        description: 'Validation errors'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/PatientAppointment/DoctorOfDepartment/{id_id}'
+    metadata:
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'See doctors from one department'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_id:
+        name: id_id
+        description: 'The ID of the id.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
+        status: 200
+        content: |-
+          {
+          "data": [
+          {
+          "Doctor_ID": 74,
+          "Doctor_Name": {
+          "FirstName": "Cleo",
+          "LastName": "Frami"
+          }
+          }
+          ]
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
         status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
         custom: []
     responseFields: []
     auth: []

@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: adrienne.ratke@example.org
+                  example: gutmann.erna@example.com
                 password:
                   type: string
                   description: ''
-                  example: distinctio
+                  example: porro
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: rutherford.lula@example.net
+                  example: stephania23@example.org
                 password:
                   type: string
                   description: ''
-                  example: aperiam
+                  example: commodi
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: est
+                  example: culpa
                 FirstName:
                   type: string
                   description: ''
-                  example: sit
+                  example: voluptatem
                 LastName:
                   type: string
                   description: ''
-                  example: sit
+                  example: inventore
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: cole.drake@example.net
+                  example: hackett.barney@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'Fy,1nZj9e,^;e'
+                  example: ')#<`>F#.~3i4'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: minima
+                  example: hic
                 Country:
                   type: string
                   description: ''
@@ -328,12 +328,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 12
+          example: 4
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 12
+            example: 4
       responses:
         200:
           description: 'Success Process'
@@ -652,12 +652,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 4
+          example: 10
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 4
+            example: 10
       responses:
         200:
           description: 'Success Process'
@@ -792,13 +792,25 @@ paths:
       security: []
   /api/PatientAppointment:
     post:
-      summary: Register
-      operationId: register
+      summary: 'Create PatientAppointment'
+      operationId: createPatientAppointment
       description: ''
       parameters: []
       responses:
         204:
           description: 'Create Appointment Success'
+        401:
+          description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
         422:
           description: 'Validation errors'
           content:
@@ -808,8 +820,6 @@ paths:
                 example:
                   message: 'The selected patient i d is invalid. (and 3 more errors)'
                   errors:
-                    PatientID:
-                      - 'The selected patient i d is invalid.'
                     ClinicID:
                       - 'The clinic i d field is required.'
                     doctor_id:
@@ -823,12 +833,6 @@ paths:
                   errors:
                     type: object
                     properties:
-                      PatientID:
-                        type: array
-                        example:
-                          - 'The selected patient i d is invalid.'
-                        items:
-                          type: string
                       ClinicID:
                         type: array
                         example:
@@ -856,27 +860,343 @@ paths:
             schema:
               type: object
               properties:
-                PatientID:
-                  type: string
-                  description: ''
-                  example: consequuntur
                 ClinicID:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: qui
                 doctor_id:
                   type: string
                   description: ''
-                  example: doloribus
+                  example: repellat
                 AppointmentDate:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>today</code>.'
-                  example: '2083-07-01'
+                  example: '2111-09-06'
               required:
-                - PatientID
                 - ClinicID
                 - doctor_id
                 - AppointmentDate
+      security: []
+  '/api/PatientAppointment/DoctorOfDepartment/{id_id}':
+    get:
+      summary: 'See doctors from one department'
+      operationId: seeDoctorsFromOneDepartment
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      Doctor_ID: 74
+                      Doctor_Name:
+                        FirstName: Cleo
+                        LastName: Frami
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        Doctor_ID: 74
+                        Doctor_Name:
+                          FirstName: Cleo
+                          LastName: Frami
+                    items:
+                      type: object
+                      properties:
+                        Doctor_ID:
+                          type: integer
+                          example: 74
+                        Doctor_Name:
+                          type: object
+                          properties:
+                            FirstName:
+                              type: string
+                              example: Cleo
+                            LastName:
+                              type: string
+                              example: Frami
+        401:
+          description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientAppointment
+      security: []
+    parameters:
+      -
+        in: path
+        name: id_id
+        description: 'The ID of the id.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/Patient/Dashbord:
+    get:
+      summary: 'DashBorad Details'
+      operationId: dashBoradDetails
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    user_id: 98
+                    nick_name: stark.johnson
+                    first_name: Mario
+                    last_name: Schuster
+                    patient_id: 90
+                    profile_image: 'http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et'
+                    national_number: YE1Q3DDD2I
+                    gender: female
+                    birth_date: '2010-12-26T22:00:00.000000Z'
+                    patient_length: 194
+                    patient_weight: 64
+                    email: joannie03@example.com
+                    phone_number: 1-623-694-9795
+                    patient_operation: []
+                    patient_appointment:
+                      -
+                        appointment_date: '2032-06-04T21:00:00.000000Z'
+                        doctor_name: Mariam
+                      -
+                        appointment_date: '2032-06-04T21:00:00.000000Z'
+                        doctor_name: Mariam
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      user_id:
+                        type: integer
+                        example: 98
+                      nick_name:
+                        type: string
+                        example: stark.johnson
+                      first_name:
+                        type: string
+                        example: Mario
+                      last_name:
+                        type: string
+                        example: Schuster
+                      patient_id:
+                        type: integer
+                        example: 90
+                      profile_image:
+                        type: string
+                        example: 'http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et'
+                      national_number:
+                        type: string
+                        example: YE1Q3DDD2I
+                      gender:
+                        type: string
+                        example: female
+                      birth_date:
+                        type: string
+                        example: '2010-12-26T22:00:00.000000Z'
+                      patient_length:
+                        type: integer
+                        example: 194
+                      patient_weight:
+                        type: integer
+                        example: 64
+                      email:
+                        type: string
+                        example: joannie03@example.com
+                      phone_number:
+                        type: string
+                        example: 1-623-694-9795
+                      patient_operation:
+                        type: array
+                        example: []
+                      patient_appointment:
+                        type: array
+                        example:
+                          -
+                            appointment_date: '2032-06-04T21:00:00.000000Z'
+                            doctor_name: Mariam
+                          -
+                            appointment_date: '2032-06-04T21:00:00.000000Z'
+                            doctor_name: Mariam
+                        items:
+                          type: object
+                          properties:
+                            appointment_date:
+                              type: string
+                              example: '2032-06-04T21:00:00.000000Z'
+                            doctor_name:
+                              type: string
+                              example: Mariam
+        401:
+          description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientDashBoardController
+      security: []
+  /api/Patient/PatientTest:
+    get:
+      summary: 'PatientTest Details'
+      operationId: patientTestDetails
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    FirstName: Brandt
+                    LastName: King
+                    AnalysisResult:
+                      -
+                        analysis_name: ea
+                        analysis_date: '2008-05-10T21:00:00.000000Z'
+                        analysis_ratio: aliquam
+                        analysis_result: et
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      FirstName:
+                        type: string
+                        example: Brandt
+                      LastName:
+                        type: string
+                        example: King
+                      AnalysisResult:
+                        type: array
+                        example:
+                          -
+                            analysis_name: ea
+                            analysis_date: '2008-05-10T21:00:00.000000Z'
+                            analysis_ratio: aliquam
+                            analysis_result: et
+                        items:
+                          type: object
+                          properties:
+                            analysis_name:
+                              type: string
+                              example: ea
+                            analysis_date:
+                              type: string
+                              example: '2008-05-10T21:00:00.000000Z'
+                            analysis_ratio:
+                              type: string
+                              example: aliquam
+                            analysis_result:
+                              type: string
+                              example: et
+        401:
+          description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientDashBoardController
+      security: []
+  /api/Patient/PatientAppointment:
+    get:
+      summary: 'PatientAppointment Details'
+      operationId: patientAppointmentDetails
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    FirstName: Brandt
+                    LastName: King
+                    patient_appointment:
+                      -
+                        appointment_date: '2032-06-04T21:00:00.000000Z'
+                        doctor_name: Mariam
+                      -
+                        appointment_date: '2032-06-04T21:00:00.000000Z'
+                        doctor_name: Mariam
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      FirstName:
+                        type: string
+                        example: Brandt
+                      LastName:
+                        type: string
+                        example: King
+                      patient_appointment:
+                        type: array
+                        example:
+                          -
+                            appointment_date: '2032-06-04T21:00:00.000000Z'
+                            doctor_name: Mariam
+                          -
+                            appointment_date: '2032-06-04T21:00:00.000000Z'
+                            doctor_name: Mariam
+                        items:
+                          type: object
+                          properties:
+                            appointment_date:
+                              type: string
+                              example: '2032-06-04T21:00:00.000000Z'
+                            doctor_name:
+                              type: string
+                              example: Mariam
+        401:
+          description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientDashBoardController
       security: []
   /api/Post:
     get:
@@ -888,22 +1208,22 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 11
+          example: 13
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 11
+            example: 13
         -
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 7
+          example: 11
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 7
+            example: 11
       responses:
         200:
           description: 'Success Process'
@@ -1153,6 +1473,9 @@ tags:
   -
     name: PatientAppointment
     description: "\nThis Api For PatientAppointment"
+  -
+    name: PatientDashBoardController
+    description: "\nThis Api For PatientDashBoardController"
   -
     name: PostHome
     description: "\nAPIs For Posts In Home Page"

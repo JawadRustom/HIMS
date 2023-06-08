@@ -1,20 +1,20 @@
-name: PatientAppointment
+name: PatientDashBoardController
 description: |-
 
-  This Api For PatientAppointment
+  This Api For PatientDashBoardController
 endpoints:
   -
     httpMethods:
-      - POST
-    uri: api/PatientAppointment
+      - GET
+    uri: api/Patient/Dashbord
     metadata:
-      groupName: PatientAppointment
+      groupName: PatientDashBoardController
       groupDescription: |-
 
-        This Api For PatientAppointment
+        This Api For PatientDashBoardController
       subgroup: ''
       subgroupDescription: ''
-      title: Register
+      title: 'DashBorad Details'
       description: ''
       authenticated: false
       custom: []
@@ -25,72 +25,176 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      PatientID:
-        name: PatientID
-        description: ''
-        required: true
-        example: consequuntur
-        type: string
-        custom: []
-      ClinicID:
-        name: ClinicID
-        description: ''
-        required: true
-        example: voluptatem
-        type: string
-        custom: []
-      doctor_id:
-        name: doctor_id
-        description: ''
-        required: true
-        example: doloribus
-        type: string
-        custom: []
-      AppointmentDate:
-        name: AppointmentDate
-        description: 'Must be a valid date. Must be a date after <code>today</code>.'
-        required: true
-        example: '2083-07-01'
-        type: string
-        custom: []
-    cleanBodyParameters:
-      PatientID: consequuntur
-      ClinicID: voluptatem
-      doctor_id: doloribus
-      AppointmentDate: '2083-07-01'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 204
+        status: 200
         content: |-
           {
+          "data": {
+          "user_id": 98,
+          "nick_name": "stark.johnson",
+          "first_name": "Mario",
+          "last_name": "Schuster",
+          "patient_id": 90,
+          "profile_image": "http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et",
+          "national_number": "YE1Q3DDD2I",
+          "gender": "female",
+          "birth_date": "2010-12-26T22:00:00.000000Z",
+          "patient_length": 194,
+          "patient_weight": 64,
+          "email": "joannie03@example.com",
+          "phone_number": "1-623-694-9795",
+          "patient_operation": [],
+          "patient_appointment": [
+          {
+          "appointment_date": "2032-06-04T21:00:00.000000Z",
+          "doctor_name": "Mariam"
+          },
+          {
+          "appointment_date": "2032-06-04T21:00:00.000000Z",
+          "doctor_name": "Mariam"
           }
-        headers: []
-        description: 'Create Appointment Success'
-        custom: []
-      -
-        status: 422
-        content: |-
-          {
-          "message": "The selected patient i d is invalid. (and 3 more errors)",
-          "errors": {
-          "PatientID": [
-          "The selected patient i d is invalid."
-          ],
-          "ClinicID": [
-          "The clinic i d field is required."
-          ],
-          "doctor_id": [
-          "The doctor id field is required."
-          ],
-          "AppointmentDate": [
-          "The appointment date field must be a date after today."
           ]
           }
           }
         headers: []
-        description: 'Validation errors'
+        description: 'Success Process'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Patient/PatientTest
+    metadata:
+      groupName: PatientDashBoardController
+      groupDescription: |-
+
+        This Api For PatientDashBoardController
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'PatientTest Details'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "data": {
+          "FirstName": "Brandt",
+          "LastName": "King",
+          "AnalysisResult": [
+          {
+          "analysis_name": "ea",
+          "analysis_date": "2008-05-10T21:00:00.000000Z",
+          "analysis_ratio": "aliquam",
+          "analysis_result": "et"
+          }
+          ]
+          }
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Patient/PatientAppointment
+    metadata:
+      groupName: PatientDashBoardController
+      groupDescription: |-
+
+        This Api For PatientDashBoardController
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'PatientAppointment Details'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "data": {
+          "FirstName": "Brandt",
+          "LastName": "King",
+          "patient_appointment": [
+          {
+          "appointment_date": "2032-06-04T21:00:00.000000Z",
+          "doctor_name": "Mariam"
+          },
+          {
+          "appointment_date": "2032-06-04T21:00:00.000000Z",
+          "doctor_name": "Mariam"
+          }
+          ]
+          }
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
         custom: []
     responseFields: []
     auth: []

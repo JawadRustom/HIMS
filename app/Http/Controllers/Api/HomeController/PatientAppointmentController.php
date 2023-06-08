@@ -17,29 +17,28 @@ use Illuminate\Http\Request;
 class PatientAppointmentController extends Controller
 {
   /**
-   * Register
+   * Create PatientAppointment
    * 
    * @response 204 scenario="Create Appointment Success"{
    * }
-   * 
    * @response 422 scenario="Validation errors"{
-    "message": "The selected patient i d is invalid. (and 3 more errors)",
-    "errors": {
-        "PatientID": [
-            "The selected patient i d is invalid."
-        ],
-        "ClinicID": [
-            "The clinic i d field is required."
-        ],
-        "doctor_id": [
-            "The doctor id field is required."
-        ],
-        "AppointmentDate": [
-            "The appointment date field must be a date after today."
+   "message": "The selected patient i d is invalid. (and 3 more errors)",
+   "errors": {
+     "ClinicID": [
+       "The clinic i d field is required."
+      ],
+      "doctor_id": [
+        "The doctor id field is required."
+      ],
+      "AppointmentDate": [
+        "The appointment date field must be a date after today."
         ]
+      }
     }
+    * @response 401 scenario="This user not patient"{
+    "message": "Unauthenticated."
 }
-   */
+    */
     public function store(PatientAppointmentRequest $Request)
     {
       $patientAppointment=PatientAppointment::create([
@@ -50,7 +49,25 @@ class PatientAppointmentController extends Controller
       ]);
       return response()->noContent();
     } 
-
+  /**
+   * See doctors from one department
+   * @response 200 scenario="Success Process"{
+    "data": [
+        {
+            "Doctor_ID": 74,
+            "Doctor_Name": {
+                "FirstName": "Cleo",
+                "LastName": "Frami"
+            }
+        }
+    ]
+}
+   * 
+   * @response 401 scenario="This user not patient"{
+    "message": "Unauthenticated."
+}
+   * 
+   */
     public function doctorOfDepartment(Department $id)
     {
       return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
