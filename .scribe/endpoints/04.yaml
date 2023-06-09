@@ -202,3 +202,184 @@ endpoints:
     method: null
     route: null
     custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Patient/EditPatientProfile
+    metadata:
+      groupName: PatientDashBoardController
+      groupDescription: |-
+
+        This Api For PatientDashBoardController
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      NickName:
+        name: NickName
+        description: ''
+        required: true
+        example: occaecati
+        type: string
+        custom: []
+      FirstName:
+        name: FirstName
+        description: ''
+        required: true
+        example: vel
+        type: string
+        custom: []
+      LastName:
+        name: LastName
+        description: ''
+        required: true
+        example: dolores
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: ccronin@example.net
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+        required: true
+        example: '7i66qNP?1D'
+        type: string
+        custom: []
+      PhoneNumber:
+        name: PhoneNumber
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+      Country:
+        name: Country
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      City:
+        name: City
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      ProfileImage:
+        name: ProfileImage
+        description: 'Must be an image.'
+        required: false
+        example: null
+        type: file
+        custom: []
+      icon:
+        name: icon
+        description: 'Must be an image.'
+        required: false
+        example: null
+        type: file
+        custom: []
+    cleanBodyParameters:
+      NickName: occaecati
+      FirstName: vel
+      LastName: dolores
+      email: ccronin@example.net
+      password: '7i66qNP?1D'
+      PhoneNumber: est
+    fileParameters:
+      ProfileImage: null
+      icon: null
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Patient/showPatientProfile
+    metadata:
+      groupName: PatientDashBoardController
+      groupDescription: |-
+
+        This Api For PatientDashBoardController
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Patient Profile Details'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "data": {
+          "NickName": "ahmad",
+          "FirstName": "Mario",
+          "LastName": "Schuster",
+          "email": "joannie03@example.com",
+          "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+          "PhoneNumber": "1-623-694-9795",
+          "Country": null,
+          "City": null,
+          "ProfileImage": "http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et",
+          "icon": null,
+          "UserTypeId": 4
+          }
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -148,6 +148,12 @@
                                                                                 <li class="tocify-item level-2" data-unique="patientdashboardcontroller-GETapi-Patient-PatientAppointment">
                                 <a href="#patientdashboardcontroller-GETapi-Patient-PatientAppointment">PatientAppointment Details</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="patientdashboardcontroller-GETapi-Patient-EditPatientProfile">
+                                <a href="#patientdashboardcontroller-GETapi-Patient-EditPatientProfile">GET api/Patient/EditPatientProfile</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="patientdashboardcontroller-GETapi-Patient-showPatientProfile">
+                                <a href="#patientdashboardcontroller-GETapi-Patient-showPatientProfile">Patient Profile Details</a>
+                            </li>
                                                                         </ul>
                             </ul>
                     <ul id="tocify-header-posthome" class="tocify-header">
@@ -172,7 +178,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: June 8, 2023</li>
+        <li>Last updated: June 9, 2023</li>
     </ul>
 </div>
 
@@ -211,8 +217,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"gutmann.erna@example.com\",
-    \"password\": \"porro\"
+    \"email\": \"babshire@example.com\",
+    \"password\": \"sint\"
 }"
 </code></pre></div>
 
@@ -228,8 +234,8 @@ const headers = {
 };
 
 let body = {
-    "email": "gutmann.erna@example.com",
-    "password": "porro"
+    "email": "babshire@example.com",
+    "password": "sint"
 };
 
 fetch(url, {
@@ -362,10 +368,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-login"
-               value="gutmann.erna@example.com"
+               value="babshire@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>gutmann.erna@example.com</code></p>
+<p>Must be a valid email address. Example: <code>babshire@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -373,10 +379,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-login"
-               value="porro"
+               value="sint"
                data-component="body">
     <br>
-<p>Example: <code>porro</code></p>
+<p>Example: <code>sint</code></p>
         </div>
         </form>
 
@@ -397,8 +403,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"stephania23@example.org\",
-    \"password\": \"commodi\"
+    \"email\": \"dicki.jan@example.org\",
+    \"password\": \"aliquid\"
 }"
 </code></pre></div>
 
@@ -414,8 +420,8 @@ const headers = {
 };
 
 let body = {
-    "email": "stephania23@example.org",
-    "password": "commodi"
+    "email": "dicki.jan@example.org",
+    "password": "aliquid"
 };
 
 fetch(url, {
@@ -548,10 +554,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-LoginAdmin"
-               value="stephania23@example.org"
+               value="dicki.jan@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>stephania23@example.org</code></p>
+<p>Must be a valid email address. Example: <code>dicki.jan@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -559,10 +565,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-LoginAdmin"
-               value="commodi"
+               value="aliquid"
                data-component="body">
     <br>
-<p>Example: <code>commodi</code></p>
+<p>Example: <code>aliquid</code></p>
         </div>
         </form>
 
@@ -582,14 +588,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
     "http://localhost/api/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "NickName=culpa" \
-    --form "FirstName=voluptatem" \
-    --form "LastName=inventore" \
-    --form "email=hackett.barney@example.com" \
-    --form "password=)#&lt;`&gt;F#.~3i4" \
-    --form "PhoneNumber=hic" \
-    --form "ProfileImage=@C:\Users\LENOVO\AppData\Local\Temp\php3075.tmp" \
-    --form "icon=@C:\Users\LENOVO\AppData\Local\Temp\php3076.tmp" </code></pre></div>
+    --form "NickName=veniam" \
+    --form "FirstName=molestiae" \
+    --form "LastName=est" \
+    --form "email=georgianna.schowalter@example.net" \
+    --form "password=W;}kj"M4+K&amp;]&amp;#}n4" \
+    --form "PhoneNumber=doloremque" \
+    --form "ProfileImage=@C:\Users\LENOVO\AppData\Local\Temp\php2D9.tmp" \
+    --form "icon=@C:\Users\LENOVO\AppData\Local\Temp\php347.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -603,12 +609,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('NickName', 'culpa');
-body.append('FirstName', 'voluptatem');
-body.append('LastName', 'inventore');
-body.append('email', 'hackett.barney@example.com');
-body.append('password', ')#&lt;`&gt;F#.~3i4');
-body.append('PhoneNumber', 'hic');
+body.append('NickName', 'veniam');
+body.append('FirstName', 'molestiae');
+body.append('LastName', 'est');
+body.append('email', 'georgianna.schowalter@example.net');
+body.append('password', 'W;}kj"M4+K&amp;]&amp;#}n4');
+body.append('PhoneNumber', 'doloremque');
 body.append('ProfileImage', document.querySelector('input[name="ProfileImage"]').files[0]);
 body.append('icon', document.querySelector('input[name="icon"]').files[0]);
 
@@ -744,10 +750,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="NickName"                data-endpoint="POSTapi-register"
-               value="culpa"
+               value="veniam"
                data-component="body">
     <br>
-<p>Example: <code>culpa</code></p>
+<p>Example: <code>veniam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>FirstName</code></b>&nbsp;&nbsp;
@@ -755,10 +761,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="FirstName"                data-endpoint="POSTapi-register"
-               value="voluptatem"
+               value="molestiae"
                data-component="body">
     <br>
-<p>Example: <code>voluptatem</code></p>
+<p>Example: <code>molestiae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>LastName</code></b>&nbsp;&nbsp;
@@ -766,10 +772,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="LastName"                data-endpoint="POSTapi-register"
-               value="inventore"
+               value="est"
                data-component="body">
     <br>
-<p>Example: <code>inventore</code></p>
+<p>Example: <code>est</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -777,10 +783,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-register"
-               value="hackett.barney@example.com"
+               value="georgianna.schowalter@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>hackett.barney@example.com</code></p>
+<p>Must be a valid email address. Example: <code>georgianna.schowalter@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -788,10 +794,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-register"
-               value=")#<`>F#.~3i4"
+               value="W;}kj"M4+K&]&#}n4"
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Must not be greater than 16 characters. Example: <code>)#&lt;</code>&gt;F#.~3i4`</p>
+<p>Must be at least 8 characters. Must not be greater than 16 characters. Example: <code>W;}kj"M4+K&amp;]&amp;#}n4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>PhoneNumber</code></b>&nbsp;&nbsp;
@@ -799,10 +805,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="PhoneNumber"                data-endpoint="POSTapi-register"
-               value="hic"
+               value="doloremque"
                data-component="body">
     <br>
-<p>Example: <code>hic</code></p>
+<p>Example: <code>doloremque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>Country</code></b>&nbsp;&nbsp;
@@ -835,7 +841,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\php3075.tmp</code></p>
+<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\php2D9.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>icon</code></b>&nbsp;&nbsp;
@@ -846,7 +852,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\php3076.tmp</code></p>
+<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\php347.tmp</code></p>
         </div>
         </form>
 
@@ -990,7 +996,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/Department?perPage=4" \
+    --get "http://localhost/api/Department?perPage=16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1001,7 +1007,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "perPage": "4",
+    "perPage": "16",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1216,11 +1222,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                name="perPage"                data-endpoint="GETapi-Department"
-               value="4"
+               value="16"
                data-component="query">
     <br>
 <p>To return limite data in single page.
-Defaults value for variable '15'. Example: <code>4</code></p>
+Defaults value for variable '15'. Example: <code>16</code></p>
             </div>
                 </form>
 
@@ -1384,7 +1390,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/Doctor?perPage=10" \
+    --get "http://localhost/api/Doctor?perPage=2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1395,7 +1401,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "perPage": "10",
+    "perPage": "2",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -1617,11 +1623,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                name="perPage"                data-endpoint="GETapi-Doctor"
-               value="10"
+               value="2"
                data-component="query">
     <br>
 <p>To return limite data in single page.
-Defaults value for variable '15'. Example: <code>10</code></p>
+Defaults value for variable '15'. Example: <code>2</code></p>
             </div>
                 </form>
 
@@ -1929,9 +1935,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"ClinicID\": \"qui\",
-    \"doctor_id\": \"repellat\",
-    \"AppointmentDate\": \"2111-09-06\"
+    \"ClinicID\": \"non\",
+    \"doctor_id\": \"cumque\",
+    \"AppointmentDate\": \"2098-08-07\"
 }"
 </code></pre></div>
 
@@ -1947,9 +1953,9 @@ const headers = {
 };
 
 let body = {
-    "ClinicID": "qui",
-    "doctor_id": "repellat",
-    "AppointmentDate": "2111-09-06"
+    "ClinicID": "non",
+    "doctor_id": "cumque",
+    "AppointmentDate": "2098-08-07"
 };
 
 fetch(url, {
@@ -2073,10 +2079,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="ClinicID"                data-endpoint="POSTapi-PatientAppointment"
-               value="qui"
+               value="non"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>non</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>doctor_id</code></b>&nbsp;&nbsp;
@@ -2084,10 +2090,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="doctor_id"                data-endpoint="POSTapi-PatientAppointment"
-               value="repellat"
+               value="cumque"
                data-component="body">
     <br>
-<p>Example: <code>repellat</code></p>
+<p>Example: <code>cumque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>AppointmentDate</code></b>&nbsp;&nbsp;
@@ -2095,10 +2101,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="AppointmentDate"                data-endpoint="POSTapi-PatientAppointment"
-               value="2111-09-06"
+               value="2098-08-07"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>today</code>. Example: <code>2111-09-06</code></p>
+<p>Must be a valid date. Must be a date after <code>today</code>. Example: <code>2098-08-07</code></p>
         </div>
         </form>
 
@@ -2679,6 +2685,398 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
+                    <h2 id="patientdashboardcontroller-GETapi-Patient-EditPatientProfile">GET api/Patient/EditPatientProfile</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-Patient-EditPatientProfile">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/Patient/EditPatientProfile" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "NickName=occaecati" \
+    --form "FirstName=vel" \
+    --form "LastName=dolores" \
+    --form "email=ccronin@example.net" \
+    --form "password=7i66qNP?1D" \
+    --form "PhoneNumber=est" \
+    --form "ProfileImage=@C:\Users\LENOVO\AppData\Local\Temp\php432.tmp" \
+    --form "icon=@C:\Users\LENOVO\AppData\Local\Temp\php433.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/Patient/EditPatientProfile"
+);
+
+const headers = {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('NickName', 'occaecati');
+body.append('FirstName', 'vel');
+body.append('LastName', 'dolores');
+body.append('email', 'ccronin@example.net');
+body.append('password', '7i66qNP?1D');
+body.append('PhoneNumber', 'est');
+body.append('ProfileImage', document.querySelector('input[name="ProfileImage"]').files[0]);
+body.append('icon', document.querySelector('input[name="icon"]').files[0]);
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-Patient-EditPatientProfile">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-Patient-EditPatientProfile" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-Patient-EditPatientProfile"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-Patient-EditPatientProfile"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-Patient-EditPatientProfile" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-Patient-EditPatientProfile">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-Patient-EditPatientProfile" data-method="GET"
+      data-path="api/Patient/EditPatientProfile"
+      data-authed="0"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-Patient-EditPatientProfile', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-Patient-EditPatientProfile"
+                    onclick="tryItOut('GETapi-Patient-EditPatientProfile');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-Patient-EditPatientProfile"
+                    onclick="cancelTryOut('GETapi-Patient-EditPatientProfile');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-Patient-EditPatientProfile"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/Patient/EditPatientProfile</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="multipart/form-data"
+               data-component="header">
+    <br>
+<p>Example: <code>multipart/form-data</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>NickName</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="NickName"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="occaecati"
+               data-component="body">
+    <br>
+<p>Example: <code>occaecati</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>FirstName</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="FirstName"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="vel"
+               data-component="body">
+    <br>
+<p>Example: <code>vel</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>LastName</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="LastName"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="dolores"
+               data-component="body">
+    <br>
+<p>Example: <code>dolores</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="email"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="ccronin@example.net"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>ccronin@example.net</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="password"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="7i66qNP?1D"
+               data-component="body">
+    <br>
+<p>Must be at least 8 characters. Must not be greater than 16 characters. Example: <code>7i66qNP?1D</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>PhoneNumber</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="PhoneNumber"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value="est"
+               data-component="body">
+    <br>
+<p>Example: <code>est</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>Country</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="Country"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value=""
+               data-component="body">
+    <br>
+
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>City</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+               name="City"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value=""
+               data-component="body">
+    <br>
+
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>ProfileImage</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="file" style="display: none"
+               name="ProfileImage"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\php432.tmp</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>icon</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="file" style="display: none"
+               name="icon"                data-endpoint="GETapi-Patient-EditPatientProfile"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be an image. Example: <code>C:\Users\LENOVO\AppData\Local\Temp\php433.tmp</code></p>
+        </div>
+        </form>
+
+                    <h2 id="patientdashboardcontroller-GETapi-Patient-showPatientProfile">Patient Profile Details</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-Patient-showPatientProfile">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/Patient/showPatientProfile" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/Patient/showPatientProfile"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-Patient-showPatientProfile">
+            <blockquote>
+            <p>Example response (200, Success Process):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;NickName&quot;: &quot;ahmad&quot;,
+        &quot;FirstName&quot;: &quot;Mario&quot;,
+        &quot;LastName&quot;: &quot;Schuster&quot;,
+        &quot;email&quot;: &quot;joannie03@example.com&quot;,
+        &quot;password&quot;: &quot;$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi&quot;,
+        &quot;PhoneNumber&quot;: &quot;1-623-694-9795&quot;,
+        &quot;Country&quot;: null,
+        &quot;City&quot;: null,
+        &quot;ProfileImage&quot;: &quot;http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et&quot;,
+        &quot;icon&quot;: null,
+        &quot;UserTypeId&quot;: 4
+    }
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, This user not patient):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-Patient-showPatientProfile" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-Patient-showPatientProfile"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-Patient-showPatientProfile"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-Patient-showPatientProfile" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-Patient-showPatientProfile">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-Patient-showPatientProfile" data-method="GET"
+      data-path="api/Patient/showPatientProfile"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-Patient-showPatientProfile', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-Patient-showPatientProfile"
+                    onclick="tryItOut('GETapi-Patient-showPatientProfile');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-Patient-showPatientProfile"
+                    onclick="cancelTryOut('GETapi-Patient-showPatientProfile');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-Patient-showPatientProfile"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/Patient/showPatientProfile</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Content-Type"                data-endpoint="GETapi-Patient-showPatientProfile"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+               name="Accept"                data-endpoint="GETapi-Patient-showPatientProfile"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
                 <h1 id="posthome">PostHome</h1>
 
     <p>APIs For Posts In Home Page</p>
@@ -2696,7 +3094,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/Post?perPage=13&amp;postType=11" \
+    --get "http://localhost/api/Post?perPage=4&amp;postType=18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2707,8 +3105,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const params = {
-    "perPage": "13",
-    "postType": "11",
+    "perPage": "4",
+    "postType": "18",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2871,11 +3269,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                name="perPage"                data-endpoint="GETapi-Post"
-               value="13"
+               value="4"
                data-component="query">
     <br>
 <p>To return limite data in single page.
-Defaults value for variable '15'. Example: <code>13</code></p>
+Defaults value for variable '15'. Example: <code>4</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>postType</code></b>&nbsp;&nbsp;
@@ -2883,10 +3281,10 @@ Defaults value for variable '15'. Example: <code>13</code></p>
  &nbsp;
                 <input type="number" style="display: none"
                name="postType"                data-endpoint="GETapi-Post"
-               value="11"
+               value="18"
                data-component="query">
     <br>
-<p>String To return Type of post in single page Example ('News','Event'). Example: <code>11</code></p>
+<p>String To return Type of post in single page Example ('News','Event'). Example: <code>18</code></p>
             </div>
                 </form>
 

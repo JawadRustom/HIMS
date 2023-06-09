@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "4cd5c750-f8dc-449c-b573-de6589acd530",
+        "_postman_id": "c4ac5dc5-b7c6-4ac2-98ec-7d084d6ea03d",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gutmann.erna@example.com\",\"password\":\"porro\"}"
+                            "raw": "{\"email\":\"babshire@example.com\",\"password\":\"sint\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +97,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"stephania23@example.org\",\"password\":\"commodi\"}"
+                            "raw": "{\"email\":\"dicki.jan@example.org\",\"password\":\"aliquid\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,37 +156,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "culpa",
+                                    "value": "veniam",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "voluptatem",
+                                    "value": "molestiae",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "inventore",
+                                    "value": "est",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "hackett.barney@example.com",
+                                    "value": "georgianna.schowalter@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": ")#<`>F#.~3i4",
+                                    "value": "W;}kj\"M4+K&]&#}n4",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "hic",
+                                    "value": "doloremque",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -284,12 +284,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "4",
+                                    "value": "16",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Department?perPage=4"
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=16"
                         },
                         "method": "GET",
                         "header": [
@@ -381,12 +381,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "10",
+                                    "value": "2",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=10"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=2"
                         },
                         "method": "GET",
                         "header": [
@@ -545,7 +545,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ClinicID\":\"qui\",\"doctor_id\":\"repellat\",\"AppointmentDate\":\"2111-09-06\"}"
+                            "raw": "{\"ClinicID\":\"non\",\"doctor_id\":\"cumque\",\"AppointmentDate\":\"2098-08-07\"}"
                         },
                         "description": "",
                         "auth": {
@@ -750,6 +750,145 @@
                             "name": "This user not patient"
                         }
                     ]
+                },
+                {
+                    "name": "GET api\/Patient\/EditPatientProfile",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Patient\/EditPatientProfile",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Patient\/EditPatientProfile"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "NickName",
+                                    "value": "occaecati",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "FirstName",
+                                    "value": "vel",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "LastName",
+                                    "value": "dolores",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "ccronin@example.net",
+                                    "type": "text",
+                                    "description": "Must be a valid email address."
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "7i66qNP?1D",
+                                    "type": "text",
+                                    "description": "Must be at least 8 characters. Must not be greater than 16 characters."
+                                },
+                                {
+                                    "key": "PhoneNumber",
+                                    "value": "est",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "ProfileImage",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "icon",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Patient Profile Details",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Patient\/showPatientProfile",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Patient\/showPatientProfile"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"NickName\": \"ahmad\",\n\"FirstName\": \"Mario\",\n\"LastName\": \"Schuster\",\n\"email\": \"joannie03@example.com\",\n\"password\": \"$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi\",\n\"PhoneNumber\": \"1-623-694-9795\",\n\"Country\": null,\n\"City\": null,\n\"ProfileImage\": \"http:\/\/schulist.org\/saepe-quae-excepturi-tenetur-quaerat-et\",\n\"icon\": null,\n\"UserTypeId\": 4\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        }
+                    ]
                 }
             ]
         },
@@ -766,18 +905,18 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "13",
+                                    "value": "4",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "11",
+                                    "value": "18",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=13&postType=11"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=4&postType=18"
                         },
                         "method": "GET",
                         "header": [

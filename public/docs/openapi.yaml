@@ -94,11 +94,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gutmann.erna@example.com
+                  example: babshire@example.com
                 password:
                   type: string
                   description: ''
-                  example: porro
+                  example: sint
               required:
                 - email
                 - password
@@ -190,11 +190,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: stephania23@example.org
+                  example: dicki.jan@example.org
                 password:
                   type: string
                   description: ''
-                  example: commodi
+                  example: aliquid
               required:
                 - email
                 - password
@@ -249,27 +249,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: culpa
+                  example: veniam
                 FirstName:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: molestiae
                 LastName:
                   type: string
                   description: ''
-                  example: inventore
+                  example: est
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hackett.barney@example.com
+                  example: georgianna.schowalter@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: ')#<`>F#.~3i4'
+                  example: 'W;}kj"M4+K&]&#}n4'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: hic
+                  example: doloremque
                 Country:
                   type: string
                   description: ''
@@ -328,12 +328,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 4
+          example: 16
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 4
+            example: 16
       responses:
         200:
           description: 'Success Process'
@@ -652,12 +652,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 10
+          example: 2
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 10
+            example: 2
       responses:
         200:
           description: 'Success Process'
@@ -863,15 +863,15 @@ paths:
                 ClinicID:
                   type: string
                   description: ''
-                  example: qui
+                  example: non
                 doctor_id:
                   type: string
                   description: ''
-                  example: repellat
+                  example: cumque
                 AppointmentDate:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>today</code>.'
-                  example: '2111-09-06'
+                  example: '2098-08-07'
               required:
                 - ClinicID
                 - doctor_id
@@ -1198,6 +1198,160 @@ paths:
       tags:
         - PatientDashBoardController
       security: []
+  /api/Patient/EditPatientProfile:
+    get:
+      summary: ''
+      operationId: getApiPatientEditPatientProfile
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientDashBoardController
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                NickName:
+                  type: string
+                  description: ''
+                  example: occaecati
+                FirstName:
+                  type: string
+                  description: ''
+                  example: vel
+                LastName:
+                  type: string
+                  description: ''
+                  example: dolores
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: ccronin@example.net
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+                  example: '7i66qNP?1D'
+                PhoneNumber:
+                  type: string
+                  description: ''
+                  example: est
+                Country:
+                  type: string
+                  description: ''
+                  example: null
+                City:
+                  type: string
+                  description: ''
+                  example: null
+                ProfileImage:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+                icon:
+                  type: string
+                  format: binary
+                  description: 'Must be an image.'
+              required:
+                - NickName
+                - FirstName
+                - LastName
+                - email
+                - password
+                - PhoneNumber
+      security: []
+  /api/Patient/showPatientProfile:
+    get:
+      summary: 'Patient Profile Details'
+      operationId: patientProfileDetails
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    NickName: ahmad
+                    FirstName: Mario
+                    LastName: Schuster
+                    email: joannie03@example.com
+                    password: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+                    PhoneNumber: 1-623-694-9795
+                    Country: null
+                    City: null
+                    ProfileImage: 'http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et'
+                    icon: null
+                    UserTypeId: 4
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      NickName:
+                        type: string
+                        example: ahmad
+                      FirstName:
+                        type: string
+                        example: Mario
+                      LastName:
+                        type: string
+                        example: Schuster
+                      email:
+                        type: string
+                        example: joannie03@example.com
+                      password:
+                        type: string
+                        example: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+                      PhoneNumber:
+                        type: string
+                        example: 1-623-694-9795
+                      Country:
+                        type: string
+                        example: null
+                      City:
+                        type: string
+                        example: null
+                      ProfileImage:
+                        type: string
+                        example: 'http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et'
+                      icon:
+                        type: string
+                        example: null
+                      UserTypeId:
+                        type: integer
+                        example: 4
+        401:
+          description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientDashBoardController
+      security: []
   /api/Post:
     get:
       summary: 'See all Post'
@@ -1208,22 +1362,22 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 13
+          example: 4
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 13
+            example: 4
         -
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 11
+          example: 18
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 11
+            example: 18
       responses:
         200:
           description: 'Success Process'
