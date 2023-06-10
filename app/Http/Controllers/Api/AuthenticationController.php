@@ -139,7 +139,7 @@ class AuthenticationController extends Controller
         'Country'=>$Request->Country,
         'City'=>$Request->City,
         'ProfileImage'=>$Request->file('ProfileImage')?->store('pic'),
-        'icon'=>$Request->icon,
+        'icon'=>$Request->file('icon')?->store('icon'),
         'UserTypeId'=>4,
       ]);
 

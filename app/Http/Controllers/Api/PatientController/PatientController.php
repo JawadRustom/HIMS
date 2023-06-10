@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Api\PatientController;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\Authentication\RegisterRequest;
+use App\Http\Requests\Api\PatietnRequest\EditPatientDetailsRequest;
 use App\Http\Resources\PatientResource\Dashbord\PatientAppointmentResource2;
 use App\Http\Resources\PatientResource\Dashbord\PatientResource;
 use App\Http\Resources\PatientResource\Dashbord\PatientTestResource;
+use App\Http\Resources\PatientResource\Dashbord\ShowPatientDetailsResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * @group PatientDashBoardController
@@ -119,5 +123,53 @@ class PatientController extends Controller
       $user = auth()->user();
       $user->load('Patient');
       return new PatientAppointmentResource2($user);
+    }
+    
+    public function EditPatientProfile(EditPatientDetailsRequest $Request)
+    {
+      $user = auth()->user();
+      $user->update([
+        'NickName' =>$Request->NickName,
+        'FirstName'=>$Request->FirstName,
+        'LastName'=>$Request->LastName,
+        'email'=>$Request->email,
+        'password'=>Hash::make($Request->password),
+        'PhoneNumber'=>$Request->PhoneNumber,
+        'Country'=>$Request->Country,
+        'City'=>$Request->City,
+        'ProfileImage'=>$Request->file('ProfileImage')?->store('pic'),
+        'icon'=>$Request->file('icon')?->store('icon'),
+        'UserTypeId'=>4,
+      ]);
+    }
+      /**
+   * Patient Profile Details
+   * 
+   * @response scenario="Success Process"{
+  "data": {
+      "NickName": "ahmad",
+      "FirstName": "Mario",
+      "LastName": "Schuster",
+      "email": "joannie03@example.com",
+      "password": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+      "PhoneNumber": "1-623-694-9795",
+      "Country": null,
+      "City": null,
+      "ProfileImage": "http://schulist.org/saepe-quae-excepturi-tenetur-quaerat-et",
+      "icon": null,
+      "UserTypeId": 4
+  }
+}
+   * 
+   * 
+   * 
+   * @response 401 scenario="This user not patient"{
+    "message": "Unauthenticated."
+}
+   */
+    public function showPatientProfile()
+    {
+      $user = auth()->user();
+      return new ShowPatientDetailsResource($user);
     }
 }
