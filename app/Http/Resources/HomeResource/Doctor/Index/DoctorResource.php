@@ -20,7 +20,7 @@ class DoctorResource extends JsonResource
         'type'=>$this->EmployeeType->Type,
         'Doctor_Name' => ['FirstName' => $this->user->FirstName, 'LastName' => $this->user->LastName],
         'Doctor_Speciality_And_Donor_Name' => CertificationDoctorResource::collection($this->certificationEmployee), //$this->certificationEmployee->certification->CertificationName,//Error This Can Return Many CertificationName
-        'Doctor Experience' => $this->experiance_year,
+        'doctor_experience' => $this->experiance_year,
         'Doctor_Image' => $this->user->ProfileImage,
         'Doctor_City' => $this->user->City,
         'Doctor_Country' => $this->user->Country,
