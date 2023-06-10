@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Api\PatietnRequest;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class EditPatientDetailsRequest extends FormRequest
 {
@@ -22,12 +23,12 @@ class EditPatientDetailsRequest extends FormRequest
     public function rules(): array
     {
       return [
-        'NickName' =>['required'],
-        'FirstName'=>['required'],
-        'LastName'=>['required'],
-        'email'=>['required', 'email','unique:users,email'],
-        'password'=>['required','string','min:8','max:16'],
-        'PhoneNumber'=>['required'],
+        'NickName' =>['nullable'],
+        'FirstName'=>['nullable'],
+        'LastName'=>['nullable'],
+        'email'=>['nullable', 'email',Rule::unique('users')->ignore(auth()->user())],
+        'password'=>['nullable','string','min:8','max:16'],
+        'PhoneNumber'=>['nullable'],
         'Country'=>['nullable'],
         'City'=>['nullable'],
         'ProfileImage'=>['nullable','image'],
