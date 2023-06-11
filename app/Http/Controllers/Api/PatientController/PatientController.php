@@ -124,25 +124,36 @@ class PatientController extends Controller
       $user->load('Patient');
       return new PatientAppointmentResource2($user);
     }
-    
+          /**
+   * Patient Profile Details
+   * 
+   * @response 402 scenario="Success Process"{
+   * }
+   * 
+   * 
+   * @response 401 scenario="This user not patient"{
+    "message": "Unauthenticated."
+}
+   */
     public function EditPatientProfile(EditPatientDetailsRequest $Request)
     {
       $user = auth()->user();
       $user->update([
-        'NickName' =>$Request->NickName,
-        'FirstName'=>$Request->FirstName,
-        'LastName'=>$Request->LastName,
-        'email'=>$Request->email,
-        'password'=>Hash::make($Request->password),
-        'PhoneNumber'=>$Request->PhoneNumber,
-        'Country'=>$Request->Country,
-        'City'=>$Request->City,
-        'ProfileImage'=>$Request->file('ProfileImage')?->store('pic'),
-        'icon'=>$Request->file('icon')?->store('icon'),
-        'UserTypeId'=>4,
+        'NickName' =>$Request->NickName??auth()->user()->NickName,
+        'FirstName'=>$Request->FirstName??auth()->user()->FirstName,
+        'LastName'=>$Request->LastName??auth()->user()->LastName,
+        'email'=>$Request->email??auth()->user()->email,
+        'password'=>Hash::make($Request->password)??auth()->user()->password,
+        'PhoneNumber'=>$Request->PhoneNumber??auth()->user()->PhoneNumber,
+        'Country'=>$Request->Country??auth()->user()->Country,
+        'City'=>$Request->City??auth()->user()->City,
+        'ProfileImage'=>$Request->file('ProfileImage')?->store('pic')??auth()->user()->ProfileImage,
+        'icon'=>$Request->file('icon')?->store('icon')??auth()->user()->icon,
+        'UserTypeId'=>3,
       ]);
+      return response()->noContent();
     }
-      /**
+    /**
    * Patient Profile Details
    * 
    * @response scenario="Success Process"{
