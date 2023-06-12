@@ -11,3 +11,4 @@ Route::middleware(['auth:sanctum', 'userType:patient'])->group(function () {
 });
 Route::get('/PatientAppointment/DoctorOfDepartment/{id}', [PatientAppointmentController::class, 'doctorOfDepartment']);
 Route::get('/PatientAppointment/doctorOfClinic/{id}', [PatientAppointmentController::class, 'doctorOfClinic']);
+Route::get('/PatientAppointment/clinic', [PatientAppointmentController::class, 'clinic']);
