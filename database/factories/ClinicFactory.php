@@ -24,6 +24,8 @@ class ClinicFactory extends Factory
         return [
             'ClinicsType' => $this->faker->word,
             'DepartmentID' => Department::factory(),
+            
         ];
+        
     }
 }
