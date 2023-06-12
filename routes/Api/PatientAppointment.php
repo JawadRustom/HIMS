@@ -9,5 +9,5 @@ Route::middleware(['auth:sanctum', 'userType:patient'])->group(function () {
   Route::apiResource('/PatientAppointment', PatientAppointmentController::class)->only(['store']);
   Route::get('/PatientAppointment/DoctorOfDepartment/{id}', [PatientAppointmentController::class, 'doctorOfDepartment']);
   Route::get('/PatientAppointment/doctorOfClinic/{id}', [PatientAppointmentController::class, 'doctorOfClinic']);
+  Route::get('/PatientAppointment/avalible-appointment/{id}', [PatientAppointmentController::class, 'AvalibleAppointment']);
 });
-Route::get('/PatientAppointment/avalible-appointment/{id}', [PatientAppointmentController::class, 'AvalibleAppointment']);

@@ -5,7 +5,7 @@ namespace App\Http\Resources\HomeController\PatientAppointment;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class DoctorOfDepartmentResource extends JsonResource
+class ClinicResource extends JsonResource
 {
   /**
    * Transform the resource into an array.
@@ -16,7 +16,7 @@ class DoctorOfDepartmentResource extends JsonResource
   {
     return [
       'Doctor_ID' => $this->id,
-      'Doctor_Name' => ['FirstName' => $this->user->FirstName, 'LastName' => $this->user->LastName],
+      'ClinicsType' => $this->ClinicsType,
     ];
   }
 }
