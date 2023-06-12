@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Resources\HomeController\PatientAppointment;
+namespace App\Http\Resources\AdminResource;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class DoctorOfDepartmentResource extends JsonResource
+class AnalysiResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,8 +15,9 @@ class DoctorOfDepartmentResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'Doctor_ID' => $this->employees->id,
-          //'Doctor_Name' => ['FirstName' => $this->user->FirstName, 'LastName' => $this->user->LastName],
+          'id'=>$this->id,
+          'analysis_name'=>$this->AnalysisName,
         ];
     }
 }
+    

@@ -20,7 +20,12 @@ require_once 'Api/Post.php';
 require_once 'Api/Department.php';
 require_once 'Api/PatientAppointment.php';
 
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+//Admin Api Route
+Route::middleware(['auth:sanctum', 'userType:admin'])->group(function(){
+  require_once 'Api/Admin/Analysi.php';
 });

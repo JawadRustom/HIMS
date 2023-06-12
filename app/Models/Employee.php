@@ -20,6 +20,8 @@ class Employee extends Model
    * @var array
    */
   protected $fillable = [
+    'user_id',
+    'EmployeeTypeId',
     'NationalNumber',
     'DepartmentID',
     'Address',
@@ -37,6 +39,8 @@ class Employee extends Model
    */
   protected $casts = [
     'id' => 'integer',
+    'user_id'=> 'integer',
+    'EmployeeTypeId'=> 'integer',
     'DepartmentID' => 'integer',
     'HireDate' => 'date',
     'BirthDate' => 'date',
