@@ -12,6 +12,8 @@ use App\Models\Employee;
 use App\Models\PatientAppointment;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\isNull;
+
 /**
  * @group PatientAppointment
  * 
@@ -81,14 +83,25 @@ class PatientAppointmentController extends Controller
     //return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
     return DoctorOfClinicResource::collection($id->department->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
   }
-  public function AvalibleAppointment(PatientAppointmentRequest $Request)
-  {
 
-    $patientAppointment = PatientAppointment::create([
-      'PatientID' => auth()->user()->Patient->id,
-      'ClinicID' => $Request->ClinicID,
-      'doctor_id' => $Request->doctor_id,
-      'AppointmentDate' => $Request->AppointmentDate,
+  public function AvalibleAppointment(Employee $id)
+  {
+    $startTime = strtotime('10:00 am');
+    $endTime = strtotime('10:00 pm');
+    $timeStep = 30 * 60; // 30 minutes in seconds
+
+    $timeslots = range($startTime, $endTime, $timeStep);
+
+    $unavailableAppointments = $id->PatientAppointment->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
+    $availableAppointment = collect($timeslots)->map(function ($timestamp) use ($unavailableAppointments) {
+      $appointment = date('h:i', $timestamp);
+      if (!$unavailableAppointments->contains($appointment)) {
+        return date('h:i', $timestamp);
+      }
+    })->filter(fn ($item) => !empty($item));
+
+    return response([
+      'available_appontement' => $availableAppointment->values(),
     ]);
   }
 }
