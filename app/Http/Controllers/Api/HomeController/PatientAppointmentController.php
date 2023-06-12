@@ -11,6 +11,7 @@ use App\Models\Department;
 use App\Models\Employee;
 use App\Models\PatientAppointment;
 use Illuminate\Http\Request;
+
 /**
  * @group PatientAppointment
  * 
@@ -37,20 +38,20 @@ class PatientAppointmentController extends Controller
         ]
       }
     }
-    * @response 401 scenario="This user not patient"{
+   * @response 401 scenario="This user not patient"{
     "message": "Unauthenticated."
 }
-    */
-    public function store(PatientAppointmentRequest $Request)
-    {
-      $patientAppointment=PatientAppointment::create([
-        'PatientID' =>auth()->user()->Patient->id,
-        'ClinicID'=>$Request->ClinicID,
-        'doctor_id'=>$Request->doctor_id,
-        'AppointmentDate'=>$Request->AppointmentDate,
-      ]);
-      return response()->noContent();
-    } 
+   */
+  public function store(PatientAppointmentRequest $Request)
+  {
+    $patientAppointment = PatientAppointment::create([
+      'PatientID' => auth()->user()->Patient->id,
+      'ClinicID' => $Request->ClinicID,
+      'doctor_id' => $Request->doctor_id,
+      'AppointmentDate' => $Request->AppointmentDate,
+    ]);
+    return response()->noContent();
+  }
   /**
    * See doctors from one department
    * @response 200 scenario="Success Process"{
@@ -70,24 +71,24 @@ class PatientAppointmentController extends Controller
 }
    * 
    */
-    public function doctorOfDepartment(Department $id)
-    {
-      return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
-    }
+  public function doctorOfDepartment(Department $id)
+  {
+    return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
+  }
 
-    public function doctorOfClinic(Clinic $id)
-    {
-      //return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
-      return DoctorOfClinicResource::collection($id->department()->whereHas('employees',fn ($query) => $query->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor')))->get());
-    }
-    public function AvalibleAppointment(PatientAppointmentRequest $Request)
-    {
-      
-      $patientAppointment=PatientAppointment::create([
-        'PatientID' =>auth()->user()->Patient->id,
-        'ClinicID'=>$Request->ClinicID,
-        'doctor_id'=>$Request->doctor_id,
-        'AppointmentDate'=>$Request->AppointmentDate,
-      ]);
-    } 
+  public function doctorOfClinic(Clinic $id)
+  {
+    //return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
+    return DoctorOfClinicResource::collection($id->department->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
+  }
+  public function AvalibleAppointment(PatientAppointmentRequest $Request)
+  {
+
+    $patientAppointment = PatientAppointment::create([
+      'PatientID' => auth()->user()->Patient->id,
+      'ClinicID' => $Request->ClinicID,
+      'doctor_id' => $Request->doctor_id,
+      'AppointmentDate' => $Request->AppointmentDate,
+    ]);
+  }
 }
