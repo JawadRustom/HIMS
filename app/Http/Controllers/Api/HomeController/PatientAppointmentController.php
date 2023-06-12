@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api\HomeController;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\HomeRequest\PatientAppointmentRequest;
+use App\Http\Resources\HomeController\PatientAppointment\DoctorOfClinicResource;
 use App\Http\Resources\HomeController\PatientAppointment\DoctorOfDepartmentResource;
+use App\Models\Clinic;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\PatientAppointment;
@@ -72,4 +74,20 @@ class PatientAppointmentController extends Controller
     {
       return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
     }
+
+    public function doctorOfClinic(Clinic $id)
+    {
+      //return DoctorOfDepartmentResource::collection($id->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
+      return DoctorOfClinicResource::collection($id->department()->whereHas('employees',fn ($query) => $query->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor')))->get());
+    }
+    public function AvalibleAppointment(PatientAppointmentRequest $Request)
+    {
+      
+      $patientAppointment=PatientAppointment::create([
+        'PatientID' =>auth()->user()->Patient->id,
+        'ClinicID'=>$Request->ClinicID,
+        'doctor_id'=>$Request->doctor_id,
+        'AppointmentDate'=>$Request->AppointmentDate,
+      ]);
+    } 
 }
