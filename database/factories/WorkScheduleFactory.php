@@ -25,9 +25,9 @@ class WorkScheduleFactory extends Factory
         return [
             'EmployeeID' => Employee::factory(),
             'RoomID' => Room::factory(),
-            'FromHour' => $this->faker->date(),
-            'ToHour' => $this->faker->date(),
-            'WorkDayName' => $this->faker->date(),
+            'FromHour' => $this->faker->time('H:i:s'),
+            'ToHour' => $this->faker->time('H:i:s'),
+            'WorkDayName' => $this->faker->dayOfWeek(),
         ];
     }
 }

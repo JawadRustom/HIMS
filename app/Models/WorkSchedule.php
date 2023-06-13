@@ -33,9 +33,7 @@ class WorkSchedule extends Model
         'id' => 'integer',
         'EmployeeID' => 'integer',
         'RoomID' => 'integer',
-        'FromHour' => 'date',
-        'ToHour' => 'date',
-        'WorkDayName' => 'date',
+
     ];
     
     public function employee(): BelongsTo

@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('EmployeeID')->reference('id')->on('employees');
             $table->foreignId('RoomID')->reference('id')->on('rooms');
-            $table->time('FromHour');
-            $table->time('ToHour');
-            $table->timestamp('WorkDayName');
+            $table->string('FromHour');
+            $table->string('ToHour');
+            $table->string('WorkDayName');
             $table->timestamps();
             $table->softDeletes();
         });

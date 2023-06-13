@@ -97,18 +97,18 @@ class PatientAppointmentController extends Controller
     // }
 
 
-    $workSchedule = $id->workSchedule->WorkDayName;
-    $found = false;
-    foreach ($workSchedule as $work) {
-        if ($work == $request->appointmentDate) {
-            $found = true;
-            break;
-        }
-    }
-    
-    if (!$found) {
-        return response('This doctor does not work on this date', 400);
-    }
+    // $workSchedule = $id->workSchedule->WorkDayName;
+    // $found = false;
+    // foreach ($workSchedule as $work) {
+    //     if ($work == $request->appointmentDate) {
+    //         $found = true;
+    //         break;
+    //     }
+    // }
+
+    // if (!$found) {
+    //     return response('This doctor does not work on this date', 400);
+    // }
 
     if($id->EmployeeTypeId != 1)
     {
@@ -121,7 +121,7 @@ class PatientAppointmentController extends Controller
 
     $timeslots = range($startTime, $endTime, $timeStep);
 
-    $unavailableAppointments = $id->PatientAppointment->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
+    $unavailableAppointments = $id->PatientAppointment->where(date("l",strtotime('AppointmentDate')),$request->date)->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
     $availableAppointment = collect($timeslots)->map(function ($timestamp) use ($unavailableAppointments) {
       $appointment = date('h:i', $timestamp);
       if (!$unavailableAppointments->contains($appointment)) {
@@ -137,7 +137,6 @@ class PatientAppointmentController extends Controller
   public function doctorWorkSchedule(Employee $id)
   {
     return DoctorWorkScheduleResource::collection($id->workSchedule);
-    
   }
 
   public function clinic(Request $request)
