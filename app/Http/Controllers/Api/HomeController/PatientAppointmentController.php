@@ -7,6 +7,8 @@ use App\Http\Requests\Api\HomeRequest\PatientAppointmentRequest;
 use App\Http\Resources\HomeController\PatientAppointment\ClinicResource;
 use App\Http\Resources\HomeController\PatientAppointment\DoctorOfClinicResource;
 use App\Http\Resources\HomeController\PatientAppointment\DoctorOfDepartmentResource;
+use App\Http\Resources\HomeController\PatientAppointment\DoctorWorkScheduleResource;
+use App\Http\Resources\test11;
 use App\Models\Clinic;
 use App\Models\Department;
 use App\Models\Employee;
@@ -132,7 +134,11 @@ class PatientAppointmentController extends Controller
     ]);
   }
 
-  
+  public function doctorWorkSchedule(Employee $id)
+  {
+    return DoctorWorkScheduleResource::collection($id->workSchedule);
+    
+  }
 
   public function clinic(Request $request)
   {
