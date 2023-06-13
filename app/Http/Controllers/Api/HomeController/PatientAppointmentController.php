@@ -7,6 +7,8 @@ use App\Http\Requests\Api\HomeRequest\PatientAppointmentRequest;
 use App\Http\Resources\HomeController\PatientAppointment\ClinicResource;
 use App\Http\Resources\HomeController\PatientAppointment\DoctorOfClinicResource;
 use App\Http\Resources\HomeController\PatientAppointment\DoctorOfDepartmentResource;
+use App\Http\Resources\HomeController\PatientAppointment\DoctorWorkScheduleResource;
+use App\Http\Resources\test11;
 use App\Models\Clinic;
 use App\Models\Department;
 use App\Models\Employee;
@@ -86,15 +88,40 @@ class PatientAppointmentController extends Controller
     return DoctorOfClinicResource::collection($id->department->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
   }
 
-  public function AvalibleAppointment(Employee $id)
+  public function AvalibleAppointment(Employee $id,Request $request)
   {
+    // $work=$id->workSchedule->WorkDayName;
+    // if($work != $request->appointmentDate)
+    // {
+    //   return response('This doctor not work in this date',400);
+    // }
+
+
+    // $workSchedule = $id->workSchedule->WorkDayName;
+    // $found = false;
+    // foreach ($workSchedule as $work) {
+    //     if ($work == $request->appointmentDate) {
+    //         $found = true;
+    //         break;
+    //     }
+    // }
+
+    // if (!$found) {
+    //     return response('This doctor does not work on this date', 400);
+    // }
+
+    if($id->EmployeeTypeId != 1)
+    {
+      return response('This Employee is Not Doctor',400);
+    }
+
     $startTime = strtotime('10:00 am');
     $endTime = strtotime('10:00 pm');
     $timeStep = 30 * 60; // 30 minutes in seconds
 
     $timeslots = range($startTime, $endTime, $timeStep);
 
-    $unavailableAppointments = $id->PatientAppointment->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
+    $unavailableAppointments = $id->PatientAppointment->where(date("l",strtotime('AppointmentDate')),$request->date)->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
     $availableAppointment = collect($timeslots)->map(function ($timestamp) use ($unavailableAppointments) {
       $appointment = date('h:i', $timestamp);
       if (!$unavailableAppointments->contains($appointment)) {
@@ -105,6 +132,11 @@ class PatientAppointmentController extends Controller
     return response([
       'available_appontement' => $availableAppointment->values(),
     ]);
+  }
+
+  public function doctorWorkSchedule(Employee $id)
+  {
+    return DoctorWorkScheduleResource::collection($id->workSchedule);
   }
 
   public function clinic(Request $request)
