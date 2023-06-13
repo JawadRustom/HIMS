@@ -88,7 +88,7 @@ class PatientAppointmentController extends Controller
     return DoctorOfClinicResource::collection($id->department->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
   }
 
-  public function AvalibleAppointment(Employee $id,Request $request)
+  public function AvalibleAppointment(Employee $id, Request $request)
   {
     // $work=$id->workSchedule->WorkDayName;
     // if($work != $request->appointmentDate)
@@ -110,9 +110,18 @@ class PatientAppointmentController extends Controller
     //     return response('This doctor does not work on this date', 400);
     // }
 
-    if($id->EmployeeTypeId != 1)
-    {
-      return response('This Employee is Not Doctor',400);
+    if ($id->EmployeeTypeId != 1) {
+      return response(['message' => 'This Employee is Not Doctor'], 400);
+    }
+    if (!$id->workSchedule->contains(fn ($value, $key) => $value->WorkDayName == date('l', strtotime($request->date)))) {
+      return response([
+        'message' => 'Doctor is on holiday on that day',
+      ], 400);
+    }
+    if (!$id->workSchedule->contains(fn ($value, $key) => date('h:i', strtotime($value->FromHour)) <= date('h:i', strtotime($request->date)) && date('h:i', strtotime($value->ToHour)) >= date('h:i', strtotime($request->date)))) {
+      return response([
+        'message' => 'Doctor don\'t work on this time',
+      ], 400);
     }
 
     $startTime = strtotime('10:00 am');
@@ -121,7 +130,7 @@ class PatientAppointmentController extends Controller
 
     $timeslots = range($startTime, $endTime, $timeStep);
 
-    $unavailableAppointments = $id->PatientAppointment->where(date("l",strtotime('AppointmentDate')),$request->date)->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
+    $unavailableAppointments = $id->PatientAppointment->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
     $availableAppointment = collect($timeslots)->map(function ($timestamp) use ($unavailableAppointments) {
       $appointment = date('h:i', $timestamp);
       if (!$unavailableAppointments->contains($appointment)) {
