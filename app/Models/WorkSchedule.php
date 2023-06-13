@@ -37,7 +37,7 @@ class WorkSchedule extends Model
         'ToHour' => 'date',
         'WorkDayName' => 'date',
     ];
-
+    
     public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class,'EmployeeID','id');

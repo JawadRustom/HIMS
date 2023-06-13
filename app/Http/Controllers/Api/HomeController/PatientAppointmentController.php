@@ -86,8 +86,33 @@ class PatientAppointmentController extends Controller
     return DoctorOfClinicResource::collection($id->department->employees()->whereHas('EmployeeType', fn ($query) => $query->where('Type', 'Doctor'))->get());
   }
 
-  public function AvalibleAppointment(Employee $id)
+  public function AvalibleAppointment(Employee $id,Request $request)
   {
+    // $work=$id->workSchedule->WorkDayName;
+    // if($work != $request->appointmentDate)
+    // {
+    //   return response('This doctor not work in this date',400);
+    // }
+
+
+    $workSchedule = $id->workSchedule->WorkDayName;
+    $found = false;
+    foreach ($workSchedule as $work) {
+        if ($work == $request->appointmentDate) {
+            $found = true;
+            break;
+        }
+    }
+    
+    if (!$found) {
+        return response('This doctor does not work on this date', 400);
+    }
+
+    if($id->EmployeeTypeId != 1)
+    {
+      return response('This Employee is Not Doctor',400);
+    }
+
     $startTime = strtotime('10:00 am');
     $endTime = strtotime('10:00 pm');
     $timeStep = 30 * 60; // 30 minutes in seconds
@@ -106,6 +131,8 @@ class PatientAppointmentController extends Controller
       'available_appontement' => $availableAppointment->values(),
     ]);
   }
+
+  
 
   public function clinic(Request $request)
   {
