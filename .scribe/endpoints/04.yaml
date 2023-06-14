@@ -250,14 +250,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: jerel.padberg@example.org
+        example: hessel.coralie@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: false
-        example: '!=ZEWsfYf0'
+        example: 'NMF(Cz1?C3gL":w>wv'
         type: string
         custom: []
       PhoneNumber:
@@ -296,8 +296,8 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      email: jerel.padberg@example.org
-      password: '!=ZEWsfYf0'
+      email: hessel.coralie@example.com
+      password: 'NMF(Cz1?C3gL":w>wv'
     fileParameters:
       ProfileImage: null
       icon: null

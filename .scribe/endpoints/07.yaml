@@ -169,11 +169,11 @@ endpoints:
         name: AnalysisName
         description: ''
         required: true
-        example: incidunt
+        example: iure
         type: string
         custom: []
     cleanBodyParameters:
-      AnalysisName: incidunt
+      AnalysisName: iure
     fileParameters: []
     responses:
       -
@@ -314,11 +314,11 @@ endpoints:
         name: AnalysisName
         description: ''
         required: true
-        example: in
+        example: eveniet
         type: string
         custom: []
     cleanBodyParameters:
-      AnalysisName: in
+      AnalysisName: eveniet
     fileParameters: []
     responses:
       -

@@ -151,35 +151,35 @@ endpoints:
         name: Name
         description: ''
         required: true
-        example: quidem
+        example: quod
         type: string
         custom: []
       Type:
         name: Type
         description: ''
         required: true
-        example: iure
+        example: quo
         type: string
         custom: []
       Quantity:
         name: Quantity
         description: 'Must be at least 1.'
         required: true
-        example: 33
+        example: 30
         type: number
         custom: []
       RoomID:
         name: RoomID
         description: ''
         required: true
-        example: mollitia
+        example: temporibus
         type: string
         custom: []
     cleanBodyParameters:
-      Name: quidem
-      Type: iure
-      Quantity: 33
-      RoomID: mollitia
+      Name: quod
+      Type: quo
+      Quantity: 30
+      RoomID: temporibus
     fileParameters: []
     responses:
       -
@@ -347,35 +347,35 @@ endpoints:
         name: Name
         description: ''
         required: true
-        example: et
+        example: ut
         type: string
         custom: []
       Type:
         name: Type
         description: ''
         required: true
-        example: dolorum
+        example: sapiente
         type: string
         custom: []
       Quantity:
         name: Quantity
         description: 'Must be at least 1.'
         required: true
-        example: 32
+        example: 9
         type: number
         custom: []
       RoomID:
         name: RoomID
         description: ''
         required: true
-        example: quam
+        example: perferendis
         type: string
         custom: []
     cleanBodyParameters:
-      Name: et
-      Type: dolorum
-      Quantity: 32
-      RoomID: quam
+      Name: ut
+      Type: sapiente
+      Quantity: 9
+      RoomID: perferendis
     fileParameters: []
     responses:
       -

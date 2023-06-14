@@ -117,6 +117,9 @@ class AuthenticationController extends Controller
             "The password field must be at least 8 characters."
         ],
         "PhoneNumber": [
+            "The phone number field must be 9 characters."
+        ]
+        "PhoneNumber": [
             "The phone number field is required."
         ]
     }

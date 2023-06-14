@@ -30,11 +30,11 @@ endpoints:
           To return limite data in single page.
           Defaults value for variable '15'.
         required: false
-        example: 1
+        example: 11
         type: integer
         custom: []
     cleanQueryParameters:
-      perPage: 1
+      perPage: 11
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -52,7 +52,7 @@ endpoints:
           "LastName": "Herman"
           },
           "Doctor_Speciality_And_Donor_Name": [],
-          "Doctor Experience": 46,
+          "doctor_experience": 46,
           "Doctor_Image": "http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione",
           "Doctor_City": null,
           "Doctor_Country": null
@@ -70,7 +70,7 @@ endpoints:
           "Donor_Certifications": "omnis"
           }
           ],
-          "Doctor Experience": 1,
+          "doctor_experience": 1,
           "Doctor_Image": "http://ankunding.com/optio-eaque-quia-officia-harum-iure",
           "Doctor_City": null,
           "Doctor_Country": null
@@ -88,7 +88,7 @@ endpoints:
           "Donor_Certifications": "molestias"
           }
           ],
-          "Doctor Experience": 15,
+          "doctor_experience": 15,
           "Doctor_Image": "http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias",
           "Doctor_City": null,
           "Doctor_Country": null
@@ -217,7 +217,7 @@ endpoints:
           "LastName": "Marvin"
           },
           "doctor_speciality_and_donor_name": [],
-          "doctor experience": 32,
+          "doctor_experience": 32,
           "doctor_city": null,
           "doctor_country": null,
           "doctor_work_schedule": [

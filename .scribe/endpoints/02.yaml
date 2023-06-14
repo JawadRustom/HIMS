@@ -37,12 +37,12 @@ endpoints:
         name: postType
         description: "String To return Type of post in single page Example ('News','Event')."
         required: true
-        example: 6
+        example: 11
         type: integer
         custom: []
     cleanQueryParameters:
       perPage: 8
-      postType: 6
+      postType: 11
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "4adb2cd4-f8cd-4ab8-b3ab-4aab4609bebf",
+        "_postman_id": "c521ae81-b49b-46c8-a67b-fe91cfb81020",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -82,7 +82,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"AnalysisName\":\"incidunt\"}"
+                            "raw": "{\"AnalysisName\":\"iure\"}"
                         },
                         "description": "",
                         "auth": {
@@ -189,7 +189,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"AnalysisName\":\"in\"}"
+                            "raw": "{\"AnalysisName\":\"eveniet\"}"
                         },
                         "description": "",
                         "auth": {
@@ -294,7 +294,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"dicki.armando@example.org\",\"password\":\"in\"}"
+                            "raw": "{\"email\":\"reymundo91@example.com\",\"password\":\"quis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -350,7 +350,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"makenzie01@example.org\",\"password\":\"delectus\"}"
+                            "raw": "{\"email\":\"gleason.electa@example.net\",\"password\":\"similique\"}"
                         },
                         "description": "",
                         "auth": {
@@ -409,37 +409,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "ipsum",
+                                    "value": "id",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "similique",
+                                    "value": "deserunt",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "tempora",
+                                    "value": "repellat",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "aliza53@example.com",
+                                    "value": "schoen.pasquale@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "DJ}l})P",
+                                    "value": ":D~dBbx",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "iorvhiqon",
+                                    "value": "uupjabcxf",
                                     "type": "text",
                                     "description": "Must be 9 characters."
                                 },
@@ -476,7 +476,7 @@
                         {
                             "header": [],
                             "code": 422,
-                            "body": "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}",
+                            "body": "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field must be 9 characters.\"\n]\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}",
                             "name": "Validation errors"
                         }
                     ]
@@ -591,7 +591,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"Name\":\"quidem\",\"Type\":\"iure\",\"Quantity\":33,\"RoomID\":\"mollitia\"}"
+                            "raw": "{\"Name\":\"quod\",\"Type\":\"quo\",\"Quantity\":30,\"RoomID\":\"temporibus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -704,7 +704,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"Name\":\"et\",\"Type\":\"dolorum\",\"Quantity\":32,\"RoomID\":\"quam\"}"
+                            "raw": "{\"Name\":\"ut\",\"Type\":\"sapiente\",\"Quantity\":9,\"RoomID\":\"perferendis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -808,12 +808,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "15",
+                                    "value": "11",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Department?perPage=15"
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=11"
                         },
                         "method": "GET",
                         "header": [
@@ -905,12 +905,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "1",
+                                    "value": "11",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=1"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=11"
                         },
                         "method": "GET",
                         "header": [
@@ -933,7 +933,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http:\/\/mclaughlin.com\/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http:\/\/ankunding.com\/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http:\/\/goodwin.com\/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}",
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"doctor_experience\": 46,\n\"Doctor_Image\": \"http:\/\/mclaughlin.com\/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"doctor_experience\": 1,\n\"Doctor_Image\": \"http:\/\/ankunding.com\/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"doctor_experience\": 15,\n\"Doctor_Image\": \"http:\/\/goodwin.com\/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}",
                             "name": "Success Process"
                         }
                     ]
@@ -976,7 +976,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n\"data\": {\n\"Doctor_ID\": 143,\n\"doctor_name\": {\n\"FirstName\": \"Ada\",\n\"LastName\": \"Marvin\"\n},\n\"doctor_speciality_and_donor_name\": [],\n\"doctor experience\": 32,\n\"doctor_city\": null,\n\"doctor_country\": null,\n\"doctor_work_schedule\": [\n{\n\"from_hour\": \"12:00 am\",\n\"to_hour\": \"12:00 am\",\n\"day_name\": \"Wednesday\"\n}\n]\n}\n}",
+                            "body": "{\n\"data\": {\n\"Doctor_ID\": 143,\n\"doctor_name\": {\n\"FirstName\": \"Ada\",\n\"LastName\": \"Marvin\"\n},\n\"doctor_speciality_and_donor_name\": [],\n\"doctor_experience\": 32,\n\"doctor_city\": null,\n\"doctor_country\": null,\n\"doctor_work_schedule\": [\n{\n\"from_hour\": \"12:00 am\",\n\"to_hour\": \"12:00 am\",\n\"day_name\": \"Wednesday\"\n}\n]\n}\n}",
                             "name": "Success Process"
                         },
                         {
@@ -1069,7 +1069,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ClinicID\":\"beatae\",\"doctor_id\":\"est\",\"AppointmentDate\":\"2069-04-22\"}"
+                            "raw": "{\"ClinicID\":\"adipisci\",\"doctor_id\":\"earum\",\"AppointmentDate\":\"2032-05-25\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1516,13 +1516,13 @@
                             "formdata": [
                                 {
                                     "key": "email",
-                                    "value": "jerel.padberg@example.org",
+                                    "value": "hessel.coralie@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "!=ZEWsfYf0",
+                                    "value": "NMF(Cz1?C3gL\":w>wv",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
@@ -1620,12 +1620,12 @@
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "6",
+                                    "value": "11",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=8&postType=6"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=8&postType=11"
                         },
                         "method": "GET",
                         "header": [

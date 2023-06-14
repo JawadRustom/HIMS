@@ -283,7 +283,7 @@ paths:
                 AnalysisName:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: iure
               required:
                 - AnalysisName
       security: []
@@ -386,7 +386,7 @@ paths:
                 AnalysisName:
                   type: string
                   description: ''
-                  example: in
+                  example: eveniet
               required:
                 - AnalysisName
       security: []
@@ -509,11 +509,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: dicki.armando@example.org
+                  example: reymundo91@example.com
                 password:
                   type: string
                   description: ''
-                  example: in
+                  example: quis
               required:
                 - email
                 - password
@@ -605,11 +605,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: makenzie01@example.org
+                  example: gleason.electa@example.net
                 password:
                   type: string
                   description: ''
-                  example: delectus
+                  example: similique
               required:
                 - email
                 - password
@@ -651,7 +651,7 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}"
+                example: "{\n\"message\": \"The nick name field is required. (and 5 more errors)\",\n\"errors\": {\n\"NickName\": [\n\"The nick name field is required.\"\n],\n\"FirstName\": [\n\"The first name field is required.\"\n],\n\"LastName\": [\n\"The last name field is required.\"\n],\n\"email\": [\n\"The email has already been taken.\"\n],\n\"password\": [\n\"The password field must be at least 8 characters.\"\n],\n\"PhoneNumber\": [\n\"The phone number field must be 9 characters.\"\n]\n\"PhoneNumber\": [\n\"The phone number field is required.\"\n]\n}"
       tags:
         - Authentication
       requestBody:
@@ -664,27 +664,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: ipsum
+                  example: id
                 FirstName:
                   type: string
                   description: ''
-                  example: similique
+                  example: deserunt
                 LastName:
                   type: string
                   description: ''
-                  example: tempora
+                  example: repellat
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: aliza53@example.com
+                  example: schoen.pasquale@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'DJ}l})P'
+                  example: ':D~dBbx'
                 PhoneNumber:
                   type: string
                   description: 'Must be 9 characters.'
-                  example: iorvhiqon
+                  example: uupjabcxf
                 Country:
                   type: string
                   description: ''
@@ -1038,19 +1038,19 @@ paths:
                 Name:
                   type: string
                   description: ''
-                  example: quidem
+                  example: quod
                 Type:
                   type: string
                   description: ''
-                  example: iure
+                  example: quo
                 Quantity:
                   type: number
                   description: 'Must be at least 1.'
-                  example: 33
+                  example: 30
                 RoomID:
                   type: string
                   description: ''
-                  example: mollitia
+                  example: temporibus
               required:
                 - Name
                 - Type
@@ -1245,19 +1245,19 @@ paths:
                 Name:
                   type: string
                   description: ''
-                  example: et
+                  example: ut
                 Type:
                   type: string
                   description: ''
-                  example: dolorum
+                  example: sapiente
                 Quantity:
                   type: number
                   description: 'Must be at least 1.'
-                  example: 32
+                  example: 9
                 RoomID:
                   type: string
                   description: ''
-                  example: quam
+                  example: perferendis
               required:
                 - Name
                 - Type
@@ -1318,12 +1318,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 15
+          example: 11
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 15
+            example: 11
       responses:
         200:
           description: 'Success Process'
@@ -1642,12 +1642,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 1
+          example: 11
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 1
+            example: 11
       responses:
         200:
           description: 'Success Process'
@@ -1655,7 +1655,7 @@ paths:
             text/plain:
               schema:
                 type: string
-                example: "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"Doctor Experience\": 46,\n\"Doctor_Image\": \"http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"Doctor Experience\": 1,\n\"Doctor_Image\": \"http://ankunding.com/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"Doctor Experience\": 15,\n\"Doctor_Image\": \"http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"last\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http://127.0.0.1:8000/api/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http://127.0.0.1:8000/api/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}"
+                example: "{\n\"data\": [\n{\n\"Doctor_ID\": 6,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Fernando\",\n\"LastName\": \"Herman\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [],\n\"doctor_experience\": 46,\n\"Doctor_Image\": \"http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 17,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Casper\",\n\"LastName\": \"Bayer\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"vel\",\n\"Donor_Certifications\": \"omnis\"\n}\n],\n\"doctor_experience\": 1,\n\"Doctor_Image\": \"http://ankunding.com/optio-eaque-quia-officia-harum-iure\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n},\n{\n\"Doctor_ID\": 18,\n\"type\": \"Doctor\",\n\"Doctor_Name\": {\n\"FirstName\": \"Kadin\",\n\"LastName\": \"King\"\n},\n\"Doctor_Speciality_And_Donor_Name\": [\n{\n\"Name_Certifications\": \"est\",\n\"Donor_Certifications\": \"molestias\"\n}\n],\n\"doctor_experience\": 15,\n\"Doctor_Image\": \"http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias\",\n\"Doctor_City\": null,\n\"Doctor_Country\": null\n}\n],\n\"links\": {\n\"first\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"last\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"prev\": null,\n\"next\": \"http://127.0.0.1:8000/api/Doctor?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 8,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http://127.0.0.1:8000/api/Doctor?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http://127.0.0.1:8000/api/Doctor\",\n\"per_page\": 3,\n\"to\": 3,\n\"total\": 22\n}\n}\n}"
       tags:
         - DoctorHome
       security: []
@@ -1679,7 +1679,7 @@ paths:
                       FirstName: Ada
                       LastName: Marvin
                     doctor_speciality_and_donor_name: []
-                    'doctor experience': 32
+                    doctor_experience: 32
                     doctor_city: null
                     doctor_country: null
                     doctor_work_schedule:
@@ -1706,7 +1706,7 @@ paths:
                       doctor_speciality_and_donor_name:
                         type: array
                         example: []
-                      'doctor experience':
+                      doctor_experience:
                         type: integer
                         example: 32
                       doctor_city:
@@ -1853,15 +1853,15 @@ paths:
                 ClinicID:
                   type: string
                   description: ''
-                  example: beatae
+                  example: adipisci
                 doctor_id:
                   type: string
                   description: ''
-                  example: est
+                  example: earum
                 AppointmentDate:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>today</code>.'
-                  example: '2069-04-22'
+                  example: '2032-05-25'
               required:
                 - ClinicID
                 - doctor_id
@@ -2354,11 +2354,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: jerel.padberg@example.org
+                  example: hessel.coralie@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: '!=ZEWsfYf0'
+                  example: 'NMF(Cz1?C3gL":w>wv'
                 PhoneNumber:
                   type: string
                   description: ''
@@ -2478,12 +2478,12 @@ paths:
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 6
+          example: 11
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 6
+            example: 11
       responses:
         200:
           description: 'Success Process'

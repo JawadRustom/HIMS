@@ -31,7 +31,7 @@ class DoctorController extends Controller
                 "LastName": "Herman"
             },
             "Doctor_Speciality_And_Donor_Name": [],
-            "Doctor Experience": 46,
+            "doctor_experience": 46,
             "Doctor_Image": "http://mclaughlin.com/ipsum-cum-ad-eius-inventore-dolores-et-ratione",
             "Doctor_City": null,
             "Doctor_Country": null
@@ -49,7 +49,7 @@ class DoctorController extends Controller
                     "Donor_Certifications": "omnis"
                 }
             ],
-            "Doctor Experience": 1,
+            "doctor_experience": 1,
             "Doctor_Image": "http://ankunding.com/optio-eaque-quia-officia-harum-iure",
             "Doctor_City": null,
             "Doctor_Country": null
@@ -67,7 +67,7 @@ class DoctorController extends Controller
                     "Donor_Certifications": "molestias"
                 }
             ],
-            "Doctor Experience": 15,
+            "doctor_experience": 15,
             "Doctor_Image": "http://goodwin.com/odio-quia-exercitationem-nesciunt-est-molestias",
             "Doctor_City": null,
             "Doctor_Country": null
@@ -175,7 +175,7 @@ class DoctorController extends Controller
             "LastName": "Marvin"
         },
         "doctor_speciality_and_donor_name": [],
-        "doctor experience": 32,
+        "doctor_experience": 32,
         "doctor_city": null,
         "doctor_country": null,
         "doctor_work_schedule": [
