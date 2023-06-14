@@ -13,6 +13,7 @@ use App\Models\Clinic;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\PatientAppointment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -118,19 +119,19 @@ class PatientAppointmentController extends Controller
         'message' => 'Doctor is on holiday on that day',
       ], 400);
     }
-    if (!$id->workSchedule->contains(fn ($value, $key) => date('h:i', strtotime($value->FromHour)) <= date('h:i', strtotime($request->date)) && date('h:i', strtotime($value->ToHour)) >= date('h:i', strtotime($request->date)))) {
-      return response([
-        'message' => 'Doctor don\'t work on this time',
-      ], 400);
-    }
+    // if (!$id->workSchedule->contains(fn ($value, $key) => date('H:i', strtotime($value->FromHour)) <= date('H:i', strtotime($request->date)) && date('H:i', strtotime($value->ToHour)) >= date('H:i', strtotime($request->date)))) {
+    //   return response([
+    //     'message' => 'Doctor don\'t work on this time',
+    //   ], 400);
+    // }
 
     $startTime = strtotime('10:00 am');
     $endTime = strtotime('10:00 pm');
     $timeStep = 30 * 60; // 30 minutes in seconds
 
     $timeslots = range($startTime, $endTime, $timeStep);
-
-    $unavailableAppointments = $id->PatientAppointment->map(fn ($appointment) => date('h:i', strtotime($appointment->AppointmentDate)));
+    
+    $unavailableAppointments = $id->PatientAppointment()->whereDate('AppointmentDate', date('Y-m-d',strtotime($request->date)))->get()->map(fn ($appointment) => Carbon::parse($appointment->AppointmentDate)->format('h:i'));
     $availableAppointment = collect($timeslots)->map(function ($timestamp) use ($unavailableAppointments) {
       $appointment = date('h:i', $timestamp);
       if (!$unavailableAppointments->contains($appointment)) {

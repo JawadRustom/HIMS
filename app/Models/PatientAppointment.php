@@ -34,7 +34,7 @@ class PatientAppointment extends Model
         'PatientID' => 'integer',
         'ClinicID' => 'integer',
         'doctor_id'=>'integer',
-        'AppointmentDate' => 'date',
+        'AppointmentDate' => 'datetime',
     ];
 
     public function patient(): BelongsTo
