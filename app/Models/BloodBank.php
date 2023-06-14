@@ -30,6 +30,7 @@ class BloodBank extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'Quantity' => 'integer',
         'RoomID' => 'integer',
     ];
 

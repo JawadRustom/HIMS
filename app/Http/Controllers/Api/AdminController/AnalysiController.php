@@ -173,6 +173,15 @@
        * @response 200 scenario="Success Process"{
        * }
        * 
+       * @response 422 scenario="Validation errors"{
+    "message": "The analysis name field is required.",
+    "errors": {
+        "AnalysisName": [
+            "The analysis name field is required."
+        ]
+    }
+}
+       * 
        * @response 401 scenario="Account Not Admin"{
     "message": "Unauthenticated."
 }
@@ -180,9 +189,9 @@
        */
       public function update(UpdateAnalysiRequest $request, Analysi $Analysi)
       {
-          $data = $Analysi->update($request->validated());
-
-          return new AnalysiResource($data);
+          $Analysi->update($request->validated());
+          $Analysi->refresh();
+          return new AnalysiResource($Analysi);
       }
       /**
        * Delete Analysi
@@ -193,9 +202,9 @@
 }
        * 
        */
-      public function destroy(Analysi $analysi)
+      public function destroy(Analysi $Analysi)
       {
-          $analysi->delete();
+          $Analysi->delete();
 
           return response()->noContent();
       }

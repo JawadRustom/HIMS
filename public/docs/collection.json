@@ -10,11 +10,264 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "c4ac5dc5-b7c6-4ac2-98ec-7d084d6ea03d",
+        "_postman_id": "4adb2cd4-f8cd-4ab8-b3ab-4aab4609bebf",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Analysi",
+            "description": "\nThis Api For Analysi",
+            "item": [
+                {
+                    "name": "See all Analysi",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Analysis",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Analysis"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"id\": 1,\n\"analysis_name\": \"omnis\"\n},\n{\n\"id\": 2,\n\"analysis_name\": \"incidunt\"\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=10\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 10,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=6\",\n\"label\": \"6\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=7\",\n\"label\": \"7\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=8\",\n\"label\": \"8\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=9\",\n\"label\": \"9\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=10\",\n\"label\": \"10\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/Analysis?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/Analysis\",\n\"per_page\": 2,\n\"to\": 2,\n\"total\": 20\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}\n* @queryparam perPage int\nTo return limite data in single page.\nDefaults value for variable '15'.",
+                            "name": "Account Not Admin"
+                        }
+                    ]
+                },
+                {
+                    "name": "Create Analysi",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Analysis",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Analysis"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"AnalysisName\":\"incidunt\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The analysis name field is required.\",\n\"errors\": {\n\"AnalysisName\": [\n\"The analysis name field is required.\"\n]\n}\n}",
+                            "name": "Validation errors"
+                        }
+                    ]
+                },
+                {
+                    "name": "See One Analysi",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Analysis\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Analysis\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Analysi."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"id\": 1,\n\"analysis_name\": \"omnis\"\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}\n\n* @response 404 scenario=\"This Analysi not found\"{\n\"message\": \"not found\"\n}*",
+                            "name": "Account Not Admin"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Analysi",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Analysis\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Analysis\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Analysi."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"AnalysisName\":\"in\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The analysis name field is required.\",\n\"errors\": {\n\"AnalysisName\": [\n\"The analysis name field is required.\"\n]\n}\n}",
+                            "name": "Validation errors"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Analysi",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/Analysis\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/Analysis\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the Analysi."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 204,
+                            "body": "",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Authentication",
             "description": "\nThis Api For Authentication",
@@ -41,7 +294,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"babshire@example.com\",\"password\":\"sint\"}"
+                            "raw": "{\"email\":\"dicki.armando@example.org\",\"password\":\"in\"}"
                         },
                         "description": "",
                         "auth": {
@@ -97,7 +350,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"dicki.jan@example.org\",\"password\":\"aliquid\"}"
+                            "raw": "{\"email\":\"makenzie01@example.org\",\"password\":\"delectus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -156,39 +409,39 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "veniam",
+                                    "value": "ipsum",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "molestiae",
+                                    "value": "similique",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "est",
+                                    "value": "tempora",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "georgianna.schowalter@example.net",
+                                    "value": "aliza53@example.com",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "W;}kj\"M4+K&]&#}n4",
+                                    "value": "DJ}l})P",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "doloremque",
+                                    "value": "iorvhiqon",
                                     "type": "text",
-                                    "description": ""
+                                    "description": "Must be 9 characters."
                                 },
                                 {
                                     "key": "ProfileImage",
@@ -272,6 +525,277 @@
             ]
         },
         {
+            "name": "BloodBank",
+            "description": "\nThis Api For BloodBank",
+            "item": [
+                {
+                    "name": "See all BloodBank",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/BloodBank",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/BloodBank"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"id\": 1,\n\"name\": \"enim\",\n\"type\": \"temporibus\",\n\"quantity\": 1834,\n\"roomID\": 11\n},\n{\n\"id\": 2,\n\"name\": \"alias\",\n\"type\": \"libero\",\n\"quantity\": 7118,\n\"roomID\": 12\n}\n],\n\"links\": {\n\"first\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=1\",\n\"last\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=5\",\n\"prev\": null,\n\"next\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=2\"\n},\n\"meta\": {\n\"current_page\": 1,\n\"from\": 1,\n\"last_page\": 5,\n\"links\": [\n{\n\"url\": null,\n\"label\": \"&laquo; Previous\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=1\",\n\"label\": \"1\",\n\"active\": true\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=2\",\n\"label\": \"2\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=3\",\n\"label\": \"3\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=4\",\n\"label\": \"4\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=5\",\n\"label\": \"5\",\n\"active\": false\n},\n{\n\"url\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank?page=2\",\n\"label\": \"Next &raquo;\",\n\"active\": false\n}\n],\n\"path\": \"http:\/\/127.0.0.1:8000\/api\/BloodBank\",\n\"per_page\": 2,\n\"to\": 2,\n\"total\": 10\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}\n\n* @queryparam perPage int\nTo return limite data in single page.\nDefaults value for variable '15'.",
+                            "name": "Account Not Admin"
+                        }
+                    ]
+                },
+                {
+                    "name": "Create BloodBank",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/BloodBank",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/BloodBank"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"Name\":\"quidem\",\"Type\":\"iure\",\"Quantity\":33,\"RoomID\":\"mollitia\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"id\": 12,\n\"name\": \"aaa\",\n\"type\": \"aaa\",\n\"quantity\": \"11\",\n\"roomID\": 40\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The name field is required. (and 3 more errors)\",\n\"errors\": {\n\"Name\": [\n\"The name field is required.\"\n],\n\"Type\": [\n\"The type field is required.\"\n],\n\"Quantity\": [\n\"The quantity field is required.\"\n],\n\"Quantity\": [\n\"The quantity field must be at least 1.\"\n],\n\"RoomID\": [\n\"The room i d field is required.\"\n]\n}\n}",
+                            "name": "Validation errors"
+                        }
+                    ]
+                },
+                {
+                    "name": "See One BloodBank",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/BloodBank\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/BloodBank\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the BloodBank."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"id\": 2,\n\"name\": \"alias\",\n\"type\": \"libero\",\n\"quantity\": 7118,\n\"roomID\": 12\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This BloodBank not found"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update BloodBank",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/BloodBank\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/BloodBank\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the BloodBank."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"Name\":\"et\",\"Type\":\"dolorum\",\"Quantity\":32,\"RoomID\":\"quam\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": {\n\"id\": 12,\n\"name\": \"aaa\",\n\"type\": \"aaa\",\n\"quantity\": 11,\n\"roomID\": 40\n}\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This BloodBank not found"
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\n\"message\": \"The name field is required. (and 3 more errors)\",\n\"errors\": {\n\"Name\": [\n\"The name field is required.\"\n],\n\"Type\": [\n\"The type field is required.\"\n],\n\"Quantity\": [\n\"The quantity field is required.\"\n],\n\"Quantity\": [\n\"The quantity field must be at least 1.\"\n],\n\"RoomID\": [\n\"The room i d field is required.\"\n]\n}\n}",
+                            "name": "Validation errors"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete BloodBank",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/BloodBank\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/BloodBank\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the BloodBank."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 204,
+                            "body": "",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "Account Not Admin"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This BloodBank not found"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "DepartmentHome",
             "description": "\nAPIs For Departments In Home Page",
             "item": [
@@ -284,12 +808,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "16",
+                                    "value": "15",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Department?perPage=16"
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=15"
                         },
                         "method": "GET",
                         "header": [
@@ -381,12 +905,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "2",
+                                    "value": "1",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=2"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=1"
                         },
                         "method": "GET",
                         "header": [
@@ -545,7 +1069,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ClinicID\":\"non\",\"doctor_id\":\"cumque\",\"AppointmentDate\":\"2098-08-07\"}"
+                            "raw": "{\"ClinicID\":\"beatae\",\"doctor_id\":\"est\",\"AppointmentDate\":\"2069-04-22\"}"
                         },
                         "description": "",
                         "auth": {
@@ -619,6 +1143,222 @@
                             "code": 401,
                             "body": "{\n\"message\": \"Unauthenticated.\"\n}",
                             "name": "This user not patient"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/PatientAppointment\/doctorOfClinic\/{id_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment\/doctorOfClinic\/:id_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment\/doctorOfClinic\/:id_id",
+                            "variable": [
+                                {
+                                    "id": "id_id",
+                                    "key": "id_id",
+                                    "value": "1",
+                                    "description": "The ID of the id."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/PatientAppointment\/clinic",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment\/clinic",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment\/clinic"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/PatientAppointment\/avalible-appointment\/{id_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment\/avalible-appointment\/:id_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment\/avalible-appointment\/:id_id",
+                            "variable": [
+                                {
+                                    "id": "id_id",
+                                    "key": "id_id",
+                                    "value": "1",
+                                    "description": "The ID of the id."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/PatientAppointment\/doctorWorkSchedule\/{id_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/PatientAppointment\/doctorWorkSchedule\/:id_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/PatientAppointment\/doctorWorkSchedule\/:id_id",
+                            "variable": [
+                                {
+                                    "id": "id_id",
+                                    "key": "id_id",
+                                    "value": "1",
+                                    "description": "The ID of the id."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
                         }
                     ]
                 }
@@ -752,7 +1492,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/Patient\/EditPatientProfile",
+                    "name": "Patient Profile Details",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -760,7 +1500,7 @@
                             "query": [],
                             "raw": "{{baseUrl}}\/api\/Patient\/EditPatientProfile"
                         },
-                        "method": "GET",
+                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -775,40 +1515,16 @@
                             "mode": "formdata",
                             "formdata": [
                                 {
-                                    "key": "NickName",
-                                    "value": "occaecati",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "FirstName",
-                                    "value": "vel",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "LastName",
-                                    "value": "dolores",
-                                    "type": "text",
-                                    "description": ""
-                                },
-                                {
                                     "key": "email",
-                                    "value": "ccronin@example.net",
+                                    "value": "jerel.padberg@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "7i66qNP?1D",
+                                    "value": "!=ZEWsfYf0",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
-                                },
-                                {
-                                    "key": "PhoneNumber",
-                                    "value": "est",
-                                    "type": "text",
-                                    "description": ""
                                 },
                                 {
                                     "key": "ProfileImage",
@@ -829,23 +1545,16 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
+                            "header": [],
                             "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        },
+                        {
+                            "header": [],
+                            "code": 402,
+                            "body": "{\n}",
+                            "name": "Success Process"
                         }
                     ]
                 },
@@ -905,18 +1614,18 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "4",
+                                    "value": "8",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "18",
+                                    "value": "6",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=4&postType=18"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=8&postType=6"
                         },
                         "method": "GET",
                         "header": [

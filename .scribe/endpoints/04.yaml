@@ -204,7 +204,7 @@ endpoints:
     custom: []
   -
     httpMethods:
-      - GET
+      - POST
     uri: api/Patient/EditPatientProfile
     metadata:
       groupName: PatientDashBoardController
@@ -213,7 +213,7 @@ endpoints:
         This Api For PatientDashBoardController
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Patient Profile Details'
       description: ''
       authenticated: false
       custom: []
@@ -228,43 +228,43 @@ endpoints:
       NickName:
         name: NickName
         description: ''
-        required: true
-        example: occaecati
+        required: false
+        example: null
         type: string
         custom: []
       FirstName:
         name: FirstName
         description: ''
-        required: true
-        example: vel
+        required: false
+        example: null
         type: string
         custom: []
       LastName:
         name: LastName
         description: ''
-        required: true
-        example: dolores
+        required: false
+        example: null
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
-        required: true
-        example: ccronin@example.net
+        required: false
+        example: jerel.padberg@example.org
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-        required: true
-        example: '7i66qNP?1D'
+        required: false
+        example: '!=ZEWsfYf0'
         type: string
         custom: []
       PhoneNumber:
         name: PhoneNumber
         description: ''
-        required: true
-        example: est
+        required: false
+        example: null
         type: string
         custom: []
       Country:
@@ -296,24 +296,28 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      NickName: occaecati
-      FirstName: vel
-      LastName: dolores
-      email: ccronin@example.net
-      password: '7i66qNP?1D'
-      PhoneNumber: est
+      email: jerel.padberg@example.org
+      password: '!=ZEWsfYf0'
     fileParameters:
       ProfileImage: null
       icon: null
     responses:
       -
         status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+      -
+        status: 402
+        content: |-
+          {
+          }
+        headers: []
+        description: 'Success Process'
         custom: []
     responseFields: []
     auth: []

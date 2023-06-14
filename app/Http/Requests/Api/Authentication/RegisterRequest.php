@@ -27,7 +27,7 @@ class RegisterRequest extends FormRequest
           'LastName'=>['required'],
           'email'=>['required', 'email','unique:users,email'],
           'password'=>['required','string','min:8','max:16'],
-          'PhoneNumber'=>['required'],
+          'PhoneNumber'=>['required','size:9'],
           'Country'=>['nullable'],
           'City'=>['nullable'],
           'ProfileImage'=>['nullable','image'],

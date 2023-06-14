@@ -28,4 +28,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Admin Api Route
 Route::middleware(['auth:sanctum', 'userType:admin'])->group(function(){
   require_once 'Api/Admin/Analysi.php';
+  require_once 'Api/Admin/BloodBank.php';
 });

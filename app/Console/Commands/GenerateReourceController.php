@@ -49,10 +49,16 @@ class GenerateReourceController extends Command
        * See all ' . $name . '
        * @response 200 scenario="Success Process"{
        * }
+       * 
+       * @response 401 scenario="Account Not Admin"{
+       "message": "Unauthenticated."
+   }
+       * 
        * * @queryparam perPage int 
        * To return limite data in single page.
        * Defaults value for variable \'15\'.
-       * */
+       * 
+       */
       public function index(Request $request)
       {
           $data = ' . $name . '::paginate($request->perPage ?? 15);
@@ -64,9 +70,17 @@ class GenerateReourceController extends Command
        * See One ' . $name . '
        * @response 200 scenario="Success Process"{
        * }
-       * * @response 404 scenario="This ' . $name . ' not found"{
-        "message": "not found"
-        }* */
+       * 
+       * @response 401 scenario="Account Not Admin"{
+       "message": "Unauthenticated."
+   }
+       * 
+       * 
+       * @response 404 scenario="This ' . $name . ' not found"{
+       "message": "not found"
+       }
+       * 
+       */
       public function show(Request $request, ' . $name . ' $' . Str::camel($name) . ')
       {
           return new ' . $name . 'Resource($' . Str::camel($name) . ');
@@ -75,7 +89,17 @@ class GenerateReourceController extends Command
       /**
        * Create ' . $name . '
        * @response 200 scenario="Success Process"{
-       * }* */
+       * }
+       * 
+       * 
+       * @response 422 scenario="Validation errors"{
+
+       * 
+       * @response 401 scenario="Account Not Admin"{
+       "message": "Unauthenticated."
+   }
+       * 
+       */
       public function store(Store' . $name . 'Request $request)
       {
           $data = ' . $name . '::create($request->validated());
@@ -86,17 +110,39 @@ class GenerateReourceController extends Command
       /**
        * Update ' . $name . '
        * @response 200 scenario="Success Process"{
-       * }* */
+       * }
+       * 
+       * @response 422 scenario="Validation errors"{
+       * 
+       * @response 404 scenario="This ' . $name . ' not found"{
+       "message": "not found"
+       }
+       * 
+       * @response 401 scenario="Account Not Admin"{
+       "message": "Unauthenticated."
+   }
+       * 
+       */
       public function update(Update' . $name . 'Request $request, ' . $name . ' $' . Str::camel($name) . ')
       {
-          $data = $' . Str::camel($name) . '->update($request->validated());
-
-          return new ' . $name . 'Resource($data);
+          $' . Str::camel($name) . '->update($request->validated());
+          $' . Str::camel($name) . '->refresh();
+          return new ' . $name . 'Resource($' . Str::camel($name) . ');
       }
       /**
        * Delete ' . $name . '
        * @response 204 scenario="Success Process"
-       * * */
+       * 
+       * @response 401 scenario="Account Not Admin"{
+       "message": "Unauthenticated."
+   }
+       * 
+       * 
+       * @response 404 scenario="This ' . $name . ' not found"{
+       "message": "not found"
+       }
+       * 
+       */
       public function destroy(' . $name . ' $' . Str::camel($name) . ')
       {
           $' . Str::camel($name) . '->delete();

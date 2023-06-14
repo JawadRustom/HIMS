@@ -32,11 +32,11 @@ endpoints:
           To return limite data in single page.
           Defaults value for variable '15'.
         required: false
-        example: 2
+        example: 1
         type: integer
         custom: []
     cleanQueryParameters:
-      perPage: 2
+      perPage: 1
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []

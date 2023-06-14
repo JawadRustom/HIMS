@@ -7,6 +7,421 @@ servers:
   -
     url: 'http://localhost'
 paths:
+  /api/Analysis:
+    get:
+      summary: 'See all Analysi'
+      operationId: seeAllAnalysi
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      analysis_name: omnis
+                    -
+                      id: 2
+                      analysis_name: incidunt
+                  links:
+                    first: 'http://127.0.0.1:8000/api/Analysis?page=1'
+                    last: 'http://127.0.0.1:8000/api/Analysis?page=10'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/Analysis?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 10
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=6'
+                        label: '6'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=7'
+                        label: '7'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=8'
+                        label: '8'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=9'
+                        label: '9'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=10'
+                        label: '10'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/Analysis?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/Analysis'
+                    per_page: 2
+                    to: 2
+                    total: 20
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        analysis_name: omnis
+                      -
+                        id: 2
+                        analysis_name: incidunt
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        analysis_name:
+                          type: string
+                          example: omnis
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Analysis?page=1'
+                      last:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Analysis?page=10'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Analysis?page=2'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 10
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=6'
+                            label: '6'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=7'
+                            label: '7'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=8'
+                            label: '8'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=9'
+                            label: '9'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=10'
+                            label: '10'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/Analysis?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/Analysis'
+                      per_page:
+                        type: integer
+                        example: 2
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 20
+        401:
+          description: 'Account Not Admin'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"Unauthenticated.\"\n}\n* @queryparam perPage int\nTo return limite data in single page.\nDefaults value for variable '15'."
+      tags:
+        - Analysi
+      security: []
+    post:
+      summary: 'Create Analysi'
+      operationId: createAnalysi
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The analysis name field is required.'
+                  errors:
+                    AnalysisName:
+                      - 'The analysis name field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The analysis name field is required.'
+                  errors:
+                    type: object
+                    properties:
+                      AnalysisName:
+                        type: array
+                        example:
+                          - 'The analysis name field is required.'
+                        items:
+                          type: string
+      tags:
+        - Analysi
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AnalysisName:
+                  type: string
+                  description: ''
+                  example: incidunt
+              required:
+                - AnalysisName
+      security: []
+  '/api/Analysis/{id}':
+    get:
+      summary: 'See One Analysi'
+      operationId: seeOneAnalysi
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    analysis_name: omnis
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      analysis_name:
+                        type: string
+                        example: omnis
+        401:
+          description: 'Account Not Admin'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"Unauthenticated.\"\n}\n\n* @response 404 scenario=\"This Analysi not found\"{\n\"message\": \"not found\"\n}*"
+      tags:
+        - Analysi
+      security: []
+    put:
+      summary: 'Update Analysi'
+      operationId: updateAnalysi
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The analysis name field is required.'
+                  errors:
+                    AnalysisName:
+                      - 'The analysis name field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The analysis name field is required.'
+                  errors:
+                    type: object
+                    properties:
+                      AnalysisName:
+                        type: array
+                        example:
+                          - 'The analysis name field is required.'
+                        items:
+                          type: string
+      tags:
+        - Analysi
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                AnalysisName:
+                  type: string
+                  description: ''
+                  example: in
+              required:
+                - AnalysisName
+      security: []
+    delete:
+      summary: 'Delete Analysi'
+      operationId: deleteAnalysi
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: 'Success Process'
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Analysi
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Analysi.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/login:
     post:
       summary: Login
@@ -94,11 +509,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: babshire@example.com
+                  example: dicki.armando@example.org
                 password:
                   type: string
                   description: ''
-                  example: sint
+                  example: in
               required:
                 - email
                 - password
@@ -190,11 +605,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: dicki.jan@example.org
+                  example: makenzie01@example.org
                 password:
                   type: string
                   description: ''
-                  example: aliquid
+                  example: delectus
               required:
                 - email
                 - password
@@ -249,27 +664,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: veniam
+                  example: ipsum
                 FirstName:
                   type: string
                   description: ''
-                  example: molestiae
+                  example: similique
                 LastName:
                   type: string
                   description: ''
-                  example: est
+                  example: tempora
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: georgianna.schowalter@example.net
+                  example: aliza53@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'W;}kj"M4+K&]&#}n4'
+                  example: 'DJ}l})P'
                 PhoneNumber:
                   type: string
-                  description: ''
-                  example: doloremque
+                  description: 'Must be 9 characters.'
+                  example: iorvhiqon
                 Country:
                   type: string
                   description: ''
@@ -318,6 +733,581 @@ paths:
       tags:
         - Authentication
       security: []
+  /api/BloodBank:
+    get:
+      summary: 'See all BloodBank'
+      operationId: seeAllBloodBank
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: enim
+                      type: temporibus
+                      quantity: 1834
+                      roomID: 11
+                    -
+                      id: 2
+                      name: alias
+                      type: libero
+                      quantity: 7118
+                      roomID: 12
+                  links:
+                    first: 'http://127.0.0.1:8000/api/BloodBank?page=1'
+                    last: 'http://127.0.0.1:8000/api/BloodBank?page=5'
+                    prev: null
+                    next: 'http://127.0.0.1:8000/api/BloodBank?page=2'
+                  meta:
+                    current_page: 1
+                    from: 1
+                    last_page: 5
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/BloodBank?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: 'http://127.0.0.1:8000/api/BloodBank?page=2'
+                        label: '2'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/BloodBank?page=3'
+                        label: '3'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/BloodBank?page=4'
+                        label: '4'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/BloodBank?page=5'
+                        label: '5'
+                        active: false
+                      -
+                        url: 'http://127.0.0.1:8000/api/BloodBank?page=2'
+                        label: 'Next &raquo;'
+                        active: false
+                    path: 'http://127.0.0.1:8000/api/BloodBank'
+                    per_page: 2
+                    to: 2
+                    total: 10
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: enim
+                        type: temporibus
+                        quantity: 1834
+                        roomID: 11
+                      -
+                        id: 2
+                        name: alias
+                        type: libero
+                        quantity: 7118
+                        roomID: 12
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: enim
+                        type:
+                          type: string
+                          example: temporibus
+                        quantity:
+                          type: integer
+                          example: 1834
+                        roomID:
+                          type: integer
+                          example: 11
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/BloodBank?page=1'
+                      last:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/BloodBank?page=5'
+                      prev:
+                        type: string
+                        example: null
+                      next:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/BloodBank?page=2'
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: integer
+                        example: 1
+                      from:
+                        type: integer
+                        example: 1
+                      last_page:
+                        type: integer
+                        example: 5
+                      links:
+                        type: array
+                        example:
+                          -
+                            url: null
+                            label: '&laquo; Previous'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/BloodBank?page=1'
+                            label: '1'
+                            active: true
+                          -
+                            url: 'http://127.0.0.1:8000/api/BloodBank?page=2'
+                            label: '2'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/BloodBank?page=3'
+                            label: '3'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/BloodBank?page=4'
+                            label: '4'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/BloodBank?page=5'
+                            label: '5'
+                            active: false
+                          -
+                            url: 'http://127.0.0.1:8000/api/BloodBank?page=2'
+                            label: 'Next &raquo;'
+                            active: false
+                        items:
+                          type: object
+                          properties:
+                            url:
+                              type: string
+                              example: null
+                            label:
+                              type: string
+                              example: '&laquo; Previous'
+                            active:
+                              type: boolean
+                              example: false
+                      path:
+                        type: string
+                        example: 'http://127.0.0.1:8000/api/BloodBank'
+                      per_page:
+                        type: integer
+                        example: 2
+                      to:
+                        type: integer
+                        example: 2
+                      total:
+                        type: integer
+                        example: 10
+        401:
+          description: 'Account Not Admin'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"Unauthenticated.\"\n}\n\n* @queryparam perPage int\nTo return limite data in single page.\nDefaults value for variable '15'."
+      tags:
+        - BloodBank
+      security: []
+    post:
+      summary: 'Create BloodBank'
+      operationId: createBloodBank
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 12
+                    name: aaa
+                    type: aaa
+                    quantity: '11'
+                    roomID: 40
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 12
+                      name:
+                        type: string
+                        example: aaa
+                      type:
+                        type: string
+                        example: aaa
+                      quantity:
+                        type: string
+                        example: '11'
+                      roomID:
+                        type: integer
+                        example: 40
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The name field is required. (and 3 more errors)'
+                  errors:
+                    Name:
+                      - 'The name field is required.'
+                    Type:
+                      - 'The type field is required.'
+                    Quantity:
+                      - 'The quantity field must be at least 1.'
+                    RoomID:
+                      - 'The room i d field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The name field is required. (and 3 more errors)'
+                  errors:
+                    type: object
+                    properties:
+                      Name:
+                        type: array
+                        example:
+                          - 'The name field is required.'
+                        items:
+                          type: string
+                      Type:
+                        type: array
+                        example:
+                          - 'The type field is required.'
+                        items:
+                          type: string
+                      Quantity:
+                        type: array
+                        example:
+                          - 'The quantity field must be at least 1.'
+                        items:
+                          type: string
+                      RoomID:
+                        type: array
+                        example:
+                          - 'The room i d field is required.'
+                        items:
+                          type: string
+      tags:
+        - BloodBank
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  description: ''
+                  example: quidem
+                Type:
+                  type: string
+                  description: ''
+                  example: iure
+                Quantity:
+                  type: number
+                  description: 'Must be at least 1.'
+                  example: 33
+                RoomID:
+                  type: string
+                  description: ''
+                  example: mollitia
+              required:
+                - Name
+                - Type
+                - Quantity
+                - RoomID
+      security: []
+  '/api/BloodBank/{id}':
+    get:
+      summary: 'See One BloodBank'
+      operationId: seeOneBloodBank
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 2
+                    name: alias
+                    type: libero
+                    quantity: 7118
+                    roomID: 12
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 2
+                      name:
+                        type: string
+                        example: alias
+                      type:
+                        type: string
+                        example: libero
+                      quantity:
+                        type: integer
+                        example: 7118
+                      roomID:
+                        type: integer
+                        example: 12
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+        404:
+          description: 'This BloodBank not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - BloodBank
+      security: []
+    put:
+      summary: 'Update BloodBank'
+      operationId: updateBloodBank
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 12
+                    name: aaa
+                    type: aaa
+                    quantity: 11
+                    roomID: 40
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 12
+                      name:
+                        type: string
+                        example: aaa
+                      type:
+                        type: string
+                        example: aaa
+                      quantity:
+                        type: integer
+                        example: 11
+                      roomID:
+                        type: integer
+                        example: 40
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+        404:
+          description: 'This BloodBank not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+        422:
+          description: 'Validation errors'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'The name field is required. (and 3 more errors)'
+                  errors:
+                    Name:
+                      - 'The name field is required.'
+                    Type:
+                      - 'The type field is required.'
+                    Quantity:
+                      - 'The quantity field must be at least 1.'
+                    RoomID:
+                      - 'The room i d field is required.'
+                properties:
+                  message:
+                    type: string
+                    example: 'The name field is required. (and 3 more errors)'
+                  errors:
+                    type: object
+                    properties:
+                      Name:
+                        type: array
+                        example:
+                          - 'The name field is required.'
+                        items:
+                          type: string
+                      Type:
+                        type: array
+                        example:
+                          - 'The type field is required.'
+                        items:
+                          type: string
+                      Quantity:
+                        type: array
+                        example:
+                          - 'The quantity field must be at least 1.'
+                        items:
+                          type: string
+                      RoomID:
+                        type: array
+                        example:
+                          - 'The room i d field is required.'
+                        items:
+                          type: string
+      tags:
+        - BloodBank
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  description: ''
+                  example: et
+                Type:
+                  type: string
+                  description: ''
+                  example: dolorum
+                Quantity:
+                  type: number
+                  description: 'Must be at least 1.'
+                  example: 32
+                RoomID:
+                  type: string
+                  description: ''
+                  example: quam
+              required:
+                - Name
+                - Type
+                - Quantity
+                - RoomID
+      security: []
+    delete:
+      summary: 'Delete BloodBank'
+      operationId: deleteBloodBank
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: 'Success Process'
+        401:
+          description: 'Account Not Admin'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+        404:
+          description: 'This BloodBank not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
+      tags:
+        - BloodBank
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the BloodBank.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/Department:
     get:
       summary: 'See all Department'
@@ -328,12 +1318,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 16
+          example: 15
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 16
+            example: 15
       responses:
         200:
           description: 'Success Process'
@@ -652,12 +1642,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 2
+          example: 1
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 2
+            example: 1
       responses:
         200:
           description: 'Success Process'
@@ -863,15 +1853,15 @@ paths:
                 ClinicID:
                   type: string
                   description: ''
-                  example: non
+                  example: beatae
                 doctor_id:
                   type: string
                   description: ''
-                  example: cumque
+                  example: est
                 AppointmentDate:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>today</code>.'
-                  example: '2098-08-07'
+                  example: '2069-04-22'
               required:
                 - ClinicID
                 - doctor_id
@@ -923,6 +1913,121 @@ paths:
                               example: Frami
         401:
           description: 'This user not patient'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientAppointment
+      security: []
+    parameters:
+      -
+        in: path
+        name: id_id
+        description: 'The ID of the id.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/PatientAppointment/doctorOfClinic/{id_id}':
+    get:
+      summary: ''
+      operationId: getApiPatientAppointmentDoctorOfClinicId_id
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientAppointment
+      security: []
+    parameters:
+      -
+        in: path
+        name: id_id
+        description: 'The ID of the id.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/PatientAppointment/clinic:
+    get:
+      summary: ''
+      operationId: getApiPatientAppointmentClinic
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientAppointment
+      security: []
+  '/api/PatientAppointment/avalible-appointment/{id_id}':
+    get:
+      summary: ''
+      operationId: getApiPatientAppointmentAvalibleAppointmentId_id
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - PatientAppointment
+      security: []
+    parameters:
+      -
+        in: path
+        name: id_id
+        description: 'The ID of the id.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/PatientAppointment/doctorWorkSchedule/{id_id}':
+    get:
+      summary: ''
+      operationId: getApiPatientAppointmentDoctorWorkScheduleId_id
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
           content:
             application/json:
               schema:
@@ -1199,14 +2304,14 @@ paths:
         - PatientDashBoardController
       security: []
   /api/Patient/EditPatientProfile:
-    get:
-      summary: ''
-      operationId: getApiPatientEditPatientProfile
+    post:
+      summary: 'Patient Profile Details'
+      operationId: patientProfileDetails
       description: ''
       parameters: []
       responses:
         401:
-          description: ''
+          description: 'This user not patient'
           content:
             application/json:
               schema:
@@ -1217,10 +2322,18 @@ paths:
                   message:
                     type: string
                     example: Unauthenticated.
+        402:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
       tags:
         - PatientDashBoardController
       requestBody:
-        required: true
+        required: false
         content:
           multipart/form-data:
             schema:
@@ -1229,27 +2342,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: null
                 FirstName:
                   type: string
                   description: ''
-                  example: vel
+                  example: null
                 LastName:
                   type: string
                   description: ''
-                  example: dolores
+                  example: null
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ccronin@example.net
+                  example: jerel.padberg@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: '7i66qNP?1D'
+                  example: '!=ZEWsfYf0'
                 PhoneNumber:
                   type: string
                   description: ''
-                  example: est
+                  example: null
                 Country:
                   type: string
                   description: ''
@@ -1266,13 +2379,6 @@ paths:
                   type: string
                   format: binary
                   description: 'Must be an image.'
-              required:
-                - NickName
-                - FirstName
-                - LastName
-                - email
-                - password
-                - PhoneNumber
       security: []
   /api/Patient/showPatientProfile:
     get:
@@ -1362,22 +2468,22 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 4
+          example: 8
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 4
+            example: 8
         -
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 18
+          example: 6
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 18
+            example: 6
       responses:
         200:
           description: 'Success Process'
@@ -1613,8 +2719,14 @@ paths:
           type: integer
 tags:
   -
+    name: Analysi
+    description: "\nThis Api For Analysi"
+  -
     name: Authentication
     description: "\nThis Api For Authentication"
+  -
+    name: BloodBank
+    description: "\nThis Api For BloodBank"
   -
     name: DepartmentHome
     description: "\nAPIs For Departments In Home Page"

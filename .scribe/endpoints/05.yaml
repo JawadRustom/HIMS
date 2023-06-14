@@ -30,27 +30,27 @@ endpoints:
         name: ClinicID
         description: ''
         required: true
-        example: non
+        example: beatae
         type: string
         custom: []
       doctor_id:
         name: doctor_id
         description: ''
         required: true
-        example: cumque
+        example: est
         type: string
         custom: []
       AppointmentDate:
         name: AppointmentDate
         description: 'Must be a valid date. Must be a date after <code>today</code>.'
         required: true
-        example: '2098-08-07'
+        example: '2069-04-22'
         type: string
         custom: []
     cleanBodyParameters:
-      ClinicID: non
-      doctor_id: cumque
-      AppointmentDate: '2098-08-07'
+      ClinicID: beatae
+      doctor_id: est
+      AppointmentDate: '2069-04-22'
     fileParameters: []
     responses:
       -
@@ -155,6 +155,194 @@ endpoints:
           }
         headers: []
         description: 'This user not patient'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/PatientAppointment/doctorOfClinic/{id_id}'
+    metadata:
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_id:
+        name: id_id
+        description: 'The ID of the id.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/PatientAppointment/clinic
+    metadata:
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/PatientAppointment/avalible-appointment/{id_id}'
+    metadata:
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_id:
+        name: id_id
+        description: 'The ID of the id.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/PatientAppointment/doctorWorkSchedule/{id_id}'
+    metadata:
+      groupName: PatientAppointment
+      groupDescription: |-
+
+        This Api For PatientAppointment
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_id:
+        name: id_id
+        description: 'The ID of the id.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
         custom: []
     responseFields: []
     auth: []
