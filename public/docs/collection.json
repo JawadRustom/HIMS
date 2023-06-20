@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "c521ae81-b49b-46c8-a67b-fe91cfb81020",
+        "_postman_id": "f6c30f36-1e70-438c-9f76-33983f9ca304",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -82,7 +82,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"AnalysisName\":\"iure\"}"
+                            "raw": "{\"AnalysisName\":\"delectus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -189,7 +189,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"AnalysisName\":\"eveniet\"}"
+                            "raw": "{\"AnalysisName\":\"accusamus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -294,7 +294,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"reymundo91@example.com\",\"password\":\"quis\"}"
+                            "raw": "{\"email\":\"carroll.edward@example.com\",\"password\":\"deserunt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -350,7 +350,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gleason.electa@example.net\",\"password\":\"similique\"}"
+                            "raw": "{\"email\":\"kianna70@example.net\",\"password\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -409,37 +409,37 @@
                             "formdata": [
                                 {
                                     "key": "NickName",
-                                    "value": "id",
+                                    "value": "et",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "FirstName",
-                                    "value": "deserunt",
+                                    "value": "error",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "LastName",
-                                    "value": "repellat",
+                                    "value": "molestiae",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "schoen.pasquale@example.com",
+                                    "value": "fred49@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": ":D~dBbx",
+                                    "value": "G!(\"fT{)8",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
                                 {
                                     "key": "PhoneNumber",
-                                    "value": "uupjabcxf",
+                                    "value": "hrlyrdosy",
                                     "type": "text",
                                     "description": "Must be 9 characters."
                                 },
@@ -591,7 +591,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"Name\":\"quod\",\"Type\":\"quo\",\"Quantity\":30,\"RoomID\":\"temporibus\"}"
+                            "raw": "{\"Name\":\"quia\",\"Type\":\"tenetur\",\"Quantity\":55,\"RoomID\":\"quod\"}"
                         },
                         "description": "",
                         "auth": {
@@ -704,7 +704,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"Name\":\"ut\",\"Type\":\"sapiente\",\"Quantity\":9,\"RoomID\":\"perferendis\"}"
+                            "raw": "{\"Name\":\"nostrum\",\"Type\":\"et\",\"Quantity\":24,\"RoomID\":\"voluptates\"}"
                         },
                         "description": "",
                         "auth": {
@@ -808,12 +808,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "11",
+                                    "value": "8",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Department?perPage=11"
+                            "raw": "{{baseUrl}}\/api\/Department?perPage=8"
                         },
                         "method": "GET",
                         "header": [
@@ -905,12 +905,12 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "11",
+                                    "value": "2",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=11"
+                            "raw": "{{baseUrl}}\/api\/Doctor?perPage=2"
                         },
                         "method": "GET",
                         "header": [
@@ -1069,7 +1069,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ClinicID\":\"adipisci\",\"doctor_id\":\"earum\",\"AppointmentDate\":\"2032-05-25\"}"
+                            "raw": "{\"ClinicID\":\"maiores\",\"doctor_id\":\"facere\",\"AppointmentDate\":\"2103-02-21\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1147,7 +1147,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/PatientAppointment\/doctorOfClinic\/{id_id}",
+                    "name": "See doctors from one department",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1182,28 +1182,27 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 84,\n\"Doctor_Name\": {\n\"FirstName\": \"Mike\",\n\"LastName\": \"Bruen\"\n}\n}\n]\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
                             "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This dotor not found"
                         }
                     ]
                 },
                 {
-                    "name": "GET api\/PatientAppointment\/clinic",
+                    "name": "See all clinic",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1230,28 +1229,27 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"Doctor_ID\": 1,\n\"ClinicsType\": \"nam\"\n},\n{\n\"Doctor_ID\": 2,\n\"ClinicsType\": \"tenetur\"\n},\n{\n\"Doctor_ID\": 3,\n\"ClinicsType\": \"quasi\"\n},\n{\n\"Doctor_ID\": 4,\n\"ClinicsType\": \"voluptate\"\n},\n{\n\"Doctor_ID\": 5,\n\"ClinicsType\": \"similique\"\n},\n{\n\"Doctor_ID\": 6,\n\"ClinicsType\": \"eum\"\n},\n{\n\"Doctor_ID\": 7,\n\"ClinicsType\": \"aliquam\"\n},\n{\n\"Doctor_ID\": 8,\n\"ClinicsType\": \"vel\"\n},\n{\n\"Doctor_ID\": 9,\n\"ClinicsType\": \"commodi\"\n},\n{\n\"Doctor_ID\": 10,\n\"ClinicsType\": \"quia\"\n},\n{\n\"Doctor_ID\": 11,\n\"ClinicsType\": \"hic\"\n},\n{\n\"Doctor_ID\": 12,\n\"ClinicsType\": \"illo\"\n},\n{\n\"Doctor_ID\": 13,\n\"ClinicsType\": \"corrupti\"\n},\n{\n\"Doctor_ID\": 14,\n\"ClinicsType\": \"nulla\"\n},\n{\n\"Doctor_ID\": 15,\n\"ClinicsType\": \"id\"\n},\n{\n\"Doctor_ID\": 16,\n\"ClinicsType\": \"asperiores\"\n},\n{\n\"Doctor_ID\": 17,\n\"ClinicsType\": \"corrupti\"\n},\n{\n\"Doctor_ID\": 18,\n\"ClinicsType\": \"est\"\n},\n{\n\"Doctor_ID\": 19,\n\"ClinicsType\": \"eum\"\n},\n{\n\"Doctor_ID\": 20,\n\"ClinicsType\": \"quae\"\n},\n{\n\"Doctor_ID\": 21,\n\"ClinicsType\": \"incidunt\"\n},\n{\n\"Doctor_ID\": 22,\n\"ClinicsType\": \"rerum\"\n},\n{\n\"Doctor_ID\": 23,\n\"ClinicsType\": \"voluptas\"\n},\n{\n\"Doctor_ID\": 24,\n\"ClinicsType\": \"quo\"\n},\n{\n\"Doctor_ID\": 25,\n\"ClinicsType\": \"iusto\"\n},\n{\n\"Doctor_ID\": 26,\n\"ClinicsType\": \"itaque\"\n},\n{\n\"Doctor_ID\": 27,\n\"ClinicsType\": \"magni\"\n},\n{\n\"Doctor_ID\": 28,\n\"ClinicsType\": \"perferendis\"\n},\n{\n\"Doctor_ID\": 29,\n\"ClinicsType\": \"eaque\"\n},\n{\n\"Doctor_ID\": 30,\n\"ClinicsType\": \"fugiat\"\n},\n{\n\"Doctor_ID\": 31,\n\"ClinicsType\": \"ea\"\n},\n{\n\"Doctor_ID\": 32,\n\"ClinicsType\": \"rerum\"\n},\n{\n\"Doctor_ID\": 33,\n\"ClinicsType\": \"quia\"\n},\n{\n\"Doctor_ID\": 34,\n\"ClinicsType\": \"commodi\"\n},\n{\n\"Doctor_ID\": 35,\n\"ClinicsType\": \"id\"\n},\n{\n\"Doctor_ID\": 36,\n\"ClinicsType\": \"atque\"\n},\n{\n\"Doctor_ID\": 37,\n\"ClinicsType\": \"ut\"\n},\n{\n\"Doctor_ID\": 38,\n\"ClinicsType\": \"non\"\n},\n{\n\"Doctor_ID\": 39,\n\"ClinicsType\": \"quam\"\n},\n{\n\"Doctor_ID\": 40,\n\"ClinicsType\": \"ut\"\n},\n{\n\"Doctor_ID\": 41,\n\"ClinicsType\": \"Eyes\"\n}\n]\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
                             "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This BloodBank not found"
                         }
                     ]
                 },
                 {
-                    "name": "GET api\/PatientAppointment\/avalible-appointment\/{id_id}",
+                    "name": "See doctors from one department",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1286,28 +1284,33 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"available_appontement\": [\n\"10:00\",\n\"10:30\",\n\"11:30\",\n\"12:30\",\n\"01:00\",\n\"01:30\",\n\"02:00\",\n\"02:30\",\n\"03:00\",\n\"03:30\",\n\"04:00\",\n\"04:30\",\n\"05:00\",\n\"05:30\",\n\"06:00\",\n\"06:30\",\n\"07:00\",\n\"07:30\",\n\"08:00\",\n\"08:30\",\n\"09:00\",\n\"09:30\",\n\"10:00\"\n]\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n\"message\": \"Doctor is on holiday on that day\"\n\"message\": \"This Employee is Not Doctor\"\n}\n\n\n* @queryparam perPage int\nTo return limite data in single page.\nDefaults value for variable '15'.\n\n* @queryparam date date\nTo return AvalibleAppointment in this date.",
+                            "name": "Validation errors"
+                        },
+                        {
+                            "header": [],
                             "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This doctor not found"
                         }
                     ]
                 },
                 {
-                    "name": "GET api\/PatientAppointment\/doctorWorkSchedule\/{id_id}",
+                    "name": "See WorkSchedule of one Doctor",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1342,23 +1345,22 @@
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "vary",
-                                    "value": "Origin"
-                                }
-                            ],
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"data\": [\n{\n\"WorkDayName\": \"Monday\"\n},\n{\n\"WorkDayName\": \"Tuesday\"\n},\n{\n\"WorkDayName\": \"Wednesday\"\n}\n]\n}",
+                            "name": "Success Process"
+                        },
+                        {
+                            "header": [],
                             "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
+                            "body": "{\n\"message\": \"Unauthenticated.\"\n}",
+                            "name": "This user not patient"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"not found\"\n}",
+                            "name": "This doctor not found"
                         }
                     ]
                 }
@@ -1516,13 +1518,13 @@
                             "formdata": [
                                 {
                                     "key": "email",
-                                    "value": "hessel.coralie@example.com",
+                                    "value": "mgoyette@example.net",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
                                 {
                                     "key": "password",
-                                    "value": "NMF(Cz1?C3gL\":w>wv",
+                                    "value": "-<vy`l5MRB6r&K",
                                     "type": "text",
                                     "description": "Must be at least 8 characters. Must not be greater than 16 characters."
                                 },
@@ -1614,18 +1616,18 @@
                             "query": [
                                 {
                                     "key": "perPage",
-                                    "value": "8",
+                                    "value": "14",
                                     "description": "To return limite data in single page.\nDefaults value for variable '15'.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "postType",
-                                    "value": "11",
+                                    "value": "18",
                                     "description": "String To return Type of post in single page Example ('News','Event').",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/Post?perPage=8&postType=11"
+                            "raw": "{{baseUrl}}\/api\/Post?perPage=14&postType=18"
                         },
                         "method": "GET",
                         "header": [

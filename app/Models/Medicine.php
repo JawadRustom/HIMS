@@ -29,6 +29,8 @@ class Medicine extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'MedicineQuantity'=>'integer',
+        'MedicinePrice'=>'integer',
     ];
 
     public function medicineBill(): HasMany

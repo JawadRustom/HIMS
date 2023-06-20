@@ -283,7 +283,7 @@ paths:
                 AnalysisName:
                   type: string
                   description: ''
-                  example: iure
+                  example: delectus
               required:
                 - AnalysisName
       security: []
@@ -386,7 +386,7 @@ paths:
                 AnalysisName:
                   type: string
                   description: ''
-                  example: eveniet
+                  example: accusamus
               required:
                 - AnalysisName
       security: []
@@ -509,11 +509,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: reymundo91@example.com
+                  example: carroll.edward@example.com
                 password:
                   type: string
                   description: ''
-                  example: quis
+                  example: deserunt
               required:
                 - email
                 - password
@@ -605,11 +605,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gleason.electa@example.net
+                  example: kianna70@example.net
                 password:
                   type: string
                   description: ''
-                  example: similique
+                  example: et
               required:
                 - email
                 - password
@@ -664,27 +664,27 @@ paths:
                 NickName:
                   type: string
                   description: ''
-                  example: id
+                  example: et
                 FirstName:
                   type: string
                   description: ''
-                  example: deserunt
+                  example: error
                 LastName:
                   type: string
                   description: ''
-                  example: repellat
+                  example: molestiae
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: schoen.pasquale@example.com
+                  example: fred49@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: ':D~dBbx'
+                  example: 'G!("fT{)8'
                 PhoneNumber:
                   type: string
                   description: 'Must be 9 characters.'
-                  example: uupjabcxf
+                  example: hrlyrdosy
                 Country:
                   type: string
                   description: ''
@@ -1038,19 +1038,19 @@ paths:
                 Name:
                   type: string
                   description: ''
-                  example: quod
+                  example: quia
                 Type:
                   type: string
                   description: ''
-                  example: quo
+                  example: tenetur
                 Quantity:
                   type: number
                   description: 'Must be at least 1.'
-                  example: 30
+                  example: 55
                 RoomID:
                   type: string
                   description: ''
-                  example: temporibus
+                  example: quod
               required:
                 - Name
                 - Type
@@ -1245,19 +1245,19 @@ paths:
                 Name:
                   type: string
                   description: ''
-                  example: ut
+                  example: nostrum
                 Type:
                   type: string
                   description: ''
-                  example: sapiente
+                  example: et
                 Quantity:
                   type: number
                   description: 'Must be at least 1.'
-                  example: 9
+                  example: 24
                 RoomID:
                   type: string
                   description: ''
-                  example: perferendis
+                  example: voluptates
               required:
                 - Name
                 - Type
@@ -1318,12 +1318,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 11
+          example: 8
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 11
+            example: 8
       responses:
         200:
           description: 'Success Process'
@@ -1642,12 +1642,12 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 11
+          example: 2
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 11
+            example: 2
       responses:
         200:
           description: 'Success Process'
@@ -1853,15 +1853,15 @@ paths:
                 ClinicID:
                   type: string
                   description: ''
-                  example: adipisci
+                  example: maiores
                 doctor_id:
                   type: string
                   description: ''
-                  example: earum
+                  example: facere
                 AppointmentDate:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>today</code>.'
-                  example: '2032-05-25'
+                  example: '2103-02-21'
               required:
                 - ClinicID
                 - doctor_id
@@ -1937,13 +1937,50 @@ paths:
           type: integer
   '/api/PatientAppointment/doctorOfClinic/{id_id}':
     get:
-      summary: ''
-      operationId: getApiPatientAppointmentDoctorOfClinicId_id
+      summary: 'See doctors from one department'
+      operationId: seeDoctorsFromOneDepartment
       description: ''
       parameters: []
       responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      Doctor_ID: 84
+                      Doctor_Name:
+                        FirstName: Mike
+                        LastName: Bruen
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        Doctor_ID: 84
+                        Doctor_Name:
+                          FirstName: Mike
+                          LastName: Bruen
+                    items:
+                      type: object
+                      properties:
+                        Doctor_ID:
+                          type: integer
+                          example: 84
+                        Doctor_Name:
+                          type: object
+                          properties:
+                            FirstName:
+                              type: string
+                              example: Mike
+                            LastName:
+                              type: string
+                              example: Bruen
         401:
-          description: ''
+          description: 'This user not patient'
           content:
             application/json:
               schema:
@@ -1954,6 +1991,18 @@ paths:
                   message:
                     type: string
                     example: Unauthenticated.
+        404:
+          description: 'This dotor not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
       tags:
         - PatientAppointment
       security: []
@@ -1968,13 +2017,280 @@ paths:
           type: integer
   /api/PatientAppointment/clinic:
     get:
-      summary: ''
-      operationId: getApiPatientAppointmentClinic
+      summary: 'See all clinic'
+      operationId: seeAllClinic
       description: ''
       parameters: []
       responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      Doctor_ID: 1
+                      ClinicsType: nam
+                    -
+                      Doctor_ID: 2
+                      ClinicsType: tenetur
+                    -
+                      Doctor_ID: 3
+                      ClinicsType: quasi
+                    -
+                      Doctor_ID: 4
+                      ClinicsType: voluptate
+                    -
+                      Doctor_ID: 5
+                      ClinicsType: similique
+                    -
+                      Doctor_ID: 6
+                      ClinicsType: eum
+                    -
+                      Doctor_ID: 7
+                      ClinicsType: aliquam
+                    -
+                      Doctor_ID: 8
+                      ClinicsType: vel
+                    -
+                      Doctor_ID: 9
+                      ClinicsType: commodi
+                    -
+                      Doctor_ID: 10
+                      ClinicsType: quia
+                    -
+                      Doctor_ID: 11
+                      ClinicsType: hic
+                    -
+                      Doctor_ID: 12
+                      ClinicsType: illo
+                    -
+                      Doctor_ID: 13
+                      ClinicsType: corrupti
+                    -
+                      Doctor_ID: 14
+                      ClinicsType: nulla
+                    -
+                      Doctor_ID: 15
+                      ClinicsType: id
+                    -
+                      Doctor_ID: 16
+                      ClinicsType: asperiores
+                    -
+                      Doctor_ID: 17
+                      ClinicsType: corrupti
+                    -
+                      Doctor_ID: 18
+                      ClinicsType: est
+                    -
+                      Doctor_ID: 19
+                      ClinicsType: eum
+                    -
+                      Doctor_ID: 20
+                      ClinicsType: quae
+                    -
+                      Doctor_ID: 21
+                      ClinicsType: incidunt
+                    -
+                      Doctor_ID: 22
+                      ClinicsType: rerum
+                    -
+                      Doctor_ID: 23
+                      ClinicsType: voluptas
+                    -
+                      Doctor_ID: 24
+                      ClinicsType: quo
+                    -
+                      Doctor_ID: 25
+                      ClinicsType: iusto
+                    -
+                      Doctor_ID: 26
+                      ClinicsType: itaque
+                    -
+                      Doctor_ID: 27
+                      ClinicsType: magni
+                    -
+                      Doctor_ID: 28
+                      ClinicsType: perferendis
+                    -
+                      Doctor_ID: 29
+                      ClinicsType: eaque
+                    -
+                      Doctor_ID: 30
+                      ClinicsType: fugiat
+                    -
+                      Doctor_ID: 31
+                      ClinicsType: ea
+                    -
+                      Doctor_ID: 32
+                      ClinicsType: rerum
+                    -
+                      Doctor_ID: 33
+                      ClinicsType: quia
+                    -
+                      Doctor_ID: 34
+                      ClinicsType: commodi
+                    -
+                      Doctor_ID: 35
+                      ClinicsType: id
+                    -
+                      Doctor_ID: 36
+                      ClinicsType: atque
+                    -
+                      Doctor_ID: 37
+                      ClinicsType: ut
+                    -
+                      Doctor_ID: 38
+                      ClinicsType: non
+                    -
+                      Doctor_ID: 39
+                      ClinicsType: quam
+                    -
+                      Doctor_ID: 40
+                      ClinicsType: ut
+                    -
+                      Doctor_ID: 41
+                      ClinicsType: Eyes
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        Doctor_ID: 1
+                        ClinicsType: nam
+                      -
+                        Doctor_ID: 2
+                        ClinicsType: tenetur
+                      -
+                        Doctor_ID: 3
+                        ClinicsType: quasi
+                      -
+                        Doctor_ID: 4
+                        ClinicsType: voluptate
+                      -
+                        Doctor_ID: 5
+                        ClinicsType: similique
+                      -
+                        Doctor_ID: 6
+                        ClinicsType: eum
+                      -
+                        Doctor_ID: 7
+                        ClinicsType: aliquam
+                      -
+                        Doctor_ID: 8
+                        ClinicsType: vel
+                      -
+                        Doctor_ID: 9
+                        ClinicsType: commodi
+                      -
+                        Doctor_ID: 10
+                        ClinicsType: quia
+                      -
+                        Doctor_ID: 11
+                        ClinicsType: hic
+                      -
+                        Doctor_ID: 12
+                        ClinicsType: illo
+                      -
+                        Doctor_ID: 13
+                        ClinicsType: corrupti
+                      -
+                        Doctor_ID: 14
+                        ClinicsType: nulla
+                      -
+                        Doctor_ID: 15
+                        ClinicsType: id
+                      -
+                        Doctor_ID: 16
+                        ClinicsType: asperiores
+                      -
+                        Doctor_ID: 17
+                        ClinicsType: corrupti
+                      -
+                        Doctor_ID: 18
+                        ClinicsType: est
+                      -
+                        Doctor_ID: 19
+                        ClinicsType: eum
+                      -
+                        Doctor_ID: 20
+                        ClinicsType: quae
+                      -
+                        Doctor_ID: 21
+                        ClinicsType: incidunt
+                      -
+                        Doctor_ID: 22
+                        ClinicsType: rerum
+                      -
+                        Doctor_ID: 23
+                        ClinicsType: voluptas
+                      -
+                        Doctor_ID: 24
+                        ClinicsType: quo
+                      -
+                        Doctor_ID: 25
+                        ClinicsType: iusto
+                      -
+                        Doctor_ID: 26
+                        ClinicsType: itaque
+                      -
+                        Doctor_ID: 27
+                        ClinicsType: magni
+                      -
+                        Doctor_ID: 28
+                        ClinicsType: perferendis
+                      -
+                        Doctor_ID: 29
+                        ClinicsType: eaque
+                      -
+                        Doctor_ID: 30
+                        ClinicsType: fugiat
+                      -
+                        Doctor_ID: 31
+                        ClinicsType: ea
+                      -
+                        Doctor_ID: 32
+                        ClinicsType: rerum
+                      -
+                        Doctor_ID: 33
+                        ClinicsType: quia
+                      -
+                        Doctor_ID: 34
+                        ClinicsType: commodi
+                      -
+                        Doctor_ID: 35
+                        ClinicsType: id
+                      -
+                        Doctor_ID: 36
+                        ClinicsType: atque
+                      -
+                        Doctor_ID: 37
+                        ClinicsType: ut
+                      -
+                        Doctor_ID: 38
+                        ClinicsType: non
+                      -
+                        Doctor_ID: 39
+                        ClinicsType: quam
+                      -
+                        Doctor_ID: 40
+                        ClinicsType: ut
+                      -
+                        Doctor_ID: 41
+                        ClinicsType: Eyes
+                    items:
+                      type: object
+                      properties:
+                        Doctor_ID:
+                          type: integer
+                          example: 1
+                        ClinicsType:
+                          type: string
+                          example: nam
         401:
-          description: ''
+          description: 'This user not patient'
           content:
             application/json:
               schema:
@@ -1985,18 +2301,97 @@ paths:
                   message:
                     type: string
                     example: Unauthenticated.
+        404:
+          description: 'This BloodBank not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
       tags:
         - PatientAppointment
       security: []
   '/api/PatientAppointment/avalible-appointment/{id_id}':
     get:
-      summary: ''
-      operationId: getApiPatientAppointmentAvalibleAppointmentId_id
+      summary: 'See doctors from one department'
+      operationId: seeDoctorsFromOneDepartment
       description: ''
       parameters: []
       responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  available_appontement:
+                    - '10:00'
+                    - '10:30'
+                    - '11:30'
+                    - '12:30'
+                    - '01:00'
+                    - '01:30'
+                    - '02:00'
+                    - '02:30'
+                    - '03:00'
+                    - '03:30'
+                    - '04:00'
+                    - '04:30'
+                    - '05:00'
+                    - '05:30'
+                    - '06:00'
+                    - '06:30'
+                    - '07:00'
+                    - '07:30'
+                    - '08:00'
+                    - '08:30'
+                    - '09:00'
+                    - '09:30'
+                    - '10:00'
+                properties:
+                  available_appontement:
+                    type: array
+                    example:
+                      - '10:00'
+                      - '10:30'
+                      - '11:30'
+                      - '12:30'
+                      - '01:00'
+                      - '01:30'
+                      - '02:00'
+                      - '02:30'
+                      - '03:00'
+                      - '03:30'
+                      - '04:00'
+                      - '04:30'
+                      - '05:00'
+                      - '05:30'
+                      - '06:00'
+                      - '06:30'
+                      - '07:00'
+                      - '07:30'
+                      - '08:00'
+                      - '08:30'
+                      - '09:00'
+                      - '09:30'
+                      - '10:00'
+                    items:
+                      type: string
+        400:
+          description: 'Validation errors'
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "{\n\"message\": \"Doctor is on holiday on that day\"\n\"message\": \"This Employee is Not Doctor\"\n}\n\n\n* @queryparam perPage int\nTo return limite data in single page.\nDefaults value for variable '15'.\n\n* @queryparam date date\nTo return AvalibleAppointment in this date."
         401:
-          description: ''
+          description: 'This user not patient'
           content:
             application/json:
               schema:
@@ -2007,6 +2402,18 @@ paths:
                   message:
                     type: string
                     example: Unauthenticated.
+        404:
+          description: 'This doctor not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
       tags:
         - PatientAppointment
       security: []
@@ -2021,13 +2428,43 @@ paths:
           type: integer
   '/api/PatientAppointment/doctorWorkSchedule/{id_id}':
     get:
-      summary: ''
-      operationId: getApiPatientAppointmentDoctorWorkScheduleId_id
+      summary: 'See WorkSchedule of one Doctor'
+      operationId: seeWorkScheduleOfOneDoctor
       description: ''
       parameters: []
       responses:
+        200:
+          description: 'Success Process'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      WorkDayName: Monday
+                    -
+                      WorkDayName: Tuesday
+                    -
+                      WorkDayName: Wednesday
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        WorkDayName: Monday
+                      -
+                        WorkDayName: Tuesday
+                      -
+                        WorkDayName: Wednesday
+                    items:
+                      type: object
+                      properties:
+                        WorkDayName:
+                          type: string
+                          example: Monday
         401:
-          description: ''
+          description: 'This user not patient'
           content:
             application/json:
               schema:
@@ -2038,6 +2475,18 @@ paths:
                   message:
                     type: string
                     example: Unauthenticated.
+        404:
+          description: 'This doctor not found'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'not found'
+                properties:
+                  message:
+                    type: string
+                    example: 'not found'
       tags:
         - PatientAppointment
       security: []
@@ -2354,11 +2803,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hessel.coralie@example.com
+                  example: mgoyette@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: 'NMF(Cz1?C3gL":w>wv'
+                  example: '-<vy`l5MRB6r&K'
                 PhoneNumber:
                   type: string
                   description: ''
@@ -2468,22 +2917,22 @@ paths:
           in: query
           name: perPage
           description: "To return limite data in single page.\nDefaults value for variable '15'."
-          example: 8
+          example: 14
           required: false
           schema:
             type: integer
             description: "To return limite data in single page.\nDefaults value for variable '15'."
-            example: 8
+            example: 14
         -
           in: query
           name: postType
           description: "String To return Type of post in single page Example ('News','Event')."
-          example: 11
+          example: 18
           required: true
           schema:
             type: integer
             description: "String To return Type of post in single page Example ('News','Event')."
-            example: 11
+            example: 18
       responses:
         200:
           description: 'Success Process'

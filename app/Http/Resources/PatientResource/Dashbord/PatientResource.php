@@ -15,21 +15,21 @@ class PatientResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'user_id'=>$this->id,
-          'nick_name'=>$this->NickName,
-          'first_name'=>$this->FirstName,
-          'last_name'=>$this->LastName,
+          'id'=>$this->id,
+          'NickName'=>$this->NickName,
+          'FirstName'=>$this->FirstName,
+          'LastName'=>$this->LastName,
           'patient_id'=>$this->Patient->id,
-          'profile_image'=>$this->ProfileImage,
-          'national_number'=>$this->Patient->NationalNumber,
-          'gender'=>$this->Patient->Gender,
-          'birth_date'=>$this->Patient->BirthDate,
-          'patient_length'=>$this->Patient->PatientLength,
-          'patient_weight'=>$this->Patient->PatientWeight,
+          'ProfileImage'=>$this->ProfileImage,
+          //'NationalNumber'=>$this->Patient->NationalNumber,
+          //'Gender'=>$this->Patient->Gender,
+          //'BirthDate'=>$this->Patient->BirthDate,
+          //'PatientLength'=>$this->Patient->PatientLength,
+          //'PatientWeight'=>$this->Patient->PatientWeight,
           'email'=>$this->email,
-          'phone_number'=>$this->PhoneNumber,
-          'patient_operation'=>PatientOperationResource::collection($this->Patient->patientsOperation),
-          'patient_appointment'=>PatientAppointmentResource::collection($this->Patient->patientAppointment),
+          'PhoneNumber'=>$this->PhoneNumber,
+          //'patient_operation'=>PatientOperationResource::collection($this->Patient->patientsOperation),
+          //'patient_appointment'=>PatientAppointmentResource::collection($this->Patient->patientAppointment),
         ];
     }
 }

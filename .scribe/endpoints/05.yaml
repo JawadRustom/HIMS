@@ -30,27 +30,27 @@ endpoints:
         name: ClinicID
         description: ''
         required: true
-        example: adipisci
+        example: maiores
         type: string
         custom: []
       doctor_id:
         name: doctor_id
         description: ''
         required: true
-        example: earum
+        example: facere
         type: string
         custom: []
       AppointmentDate:
         name: AppointmentDate
         description: 'Must be a valid date. Must be a date after <code>today</code>.'
         required: true
-        example: '2032-05-25'
+        example: '2103-02-21'
         type: string
         custom: []
     cleanBodyParameters:
-      ClinicID: adipisci
-      doctor_id: earum
-      AppointmentDate: '2032-05-25'
+      ClinicID: maiores
+      doctor_id: facere
+      AppointmentDate: '2103-02-21'
     fileParameters: []
     responses:
       -
@@ -173,7 +173,7 @@ endpoints:
         This Api For PatientAppointment
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'See doctors from one department'
       description: ''
       authenticated: false
       custom: []
@@ -197,13 +197,39 @@ endpoints:
     fileParameters: []
     responses:
       -
+        status: 200
+        content: |-
+          {
+          "data": [
+          {
+          "Doctor_ID": 84,
+          "Doctor_Name": {
+          "FirstName": "Mike",
+          "LastName": "Bruen"
+          }
+          }
+          ]
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
         status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+          "message": "not found"
+          }
+        headers: []
+        description: 'This dotor not found'
         custom: []
     responseFields: []
     auth: []
@@ -222,7 +248,7 @@ endpoints:
         This Api For PatientAppointment
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'See all clinic'
       description: ''
       authenticated: false
       custom: []
@@ -238,13 +264,196 @@ endpoints:
     fileParameters: []
     responses:
       -
+        status: 200
+        content: |-
+          {
+          "data": [
+          {
+          "Doctor_ID": 1,
+          "ClinicsType": "nam"
+          },
+          {
+          "Doctor_ID": 2,
+          "ClinicsType": "tenetur"
+          },
+          {
+          "Doctor_ID": 3,
+          "ClinicsType": "quasi"
+          },
+          {
+          "Doctor_ID": 4,
+          "ClinicsType": "voluptate"
+          },
+          {
+          "Doctor_ID": 5,
+          "ClinicsType": "similique"
+          },
+          {
+          "Doctor_ID": 6,
+          "ClinicsType": "eum"
+          },
+          {
+          "Doctor_ID": 7,
+          "ClinicsType": "aliquam"
+          },
+          {
+          "Doctor_ID": 8,
+          "ClinicsType": "vel"
+          },
+          {
+          "Doctor_ID": 9,
+          "ClinicsType": "commodi"
+          },
+          {
+          "Doctor_ID": 10,
+          "ClinicsType": "quia"
+          },
+          {
+          "Doctor_ID": 11,
+          "ClinicsType": "hic"
+          },
+          {
+          "Doctor_ID": 12,
+          "ClinicsType": "illo"
+          },
+          {
+          "Doctor_ID": 13,
+          "ClinicsType": "corrupti"
+          },
+          {
+          "Doctor_ID": 14,
+          "ClinicsType": "nulla"
+          },
+          {
+          "Doctor_ID": 15,
+          "ClinicsType": "id"
+          },
+          {
+          "Doctor_ID": 16,
+          "ClinicsType": "asperiores"
+          },
+          {
+          "Doctor_ID": 17,
+          "ClinicsType": "corrupti"
+          },
+          {
+          "Doctor_ID": 18,
+          "ClinicsType": "est"
+          },
+          {
+          "Doctor_ID": 19,
+          "ClinicsType": "eum"
+          },
+          {
+          "Doctor_ID": 20,
+          "ClinicsType": "quae"
+          },
+          {
+          "Doctor_ID": 21,
+          "ClinicsType": "incidunt"
+          },
+          {
+          "Doctor_ID": 22,
+          "ClinicsType": "rerum"
+          },
+          {
+          "Doctor_ID": 23,
+          "ClinicsType": "voluptas"
+          },
+          {
+          "Doctor_ID": 24,
+          "ClinicsType": "quo"
+          },
+          {
+          "Doctor_ID": 25,
+          "ClinicsType": "iusto"
+          },
+          {
+          "Doctor_ID": 26,
+          "ClinicsType": "itaque"
+          },
+          {
+          "Doctor_ID": 27,
+          "ClinicsType": "magni"
+          },
+          {
+          "Doctor_ID": 28,
+          "ClinicsType": "perferendis"
+          },
+          {
+          "Doctor_ID": 29,
+          "ClinicsType": "eaque"
+          },
+          {
+          "Doctor_ID": 30,
+          "ClinicsType": "fugiat"
+          },
+          {
+          "Doctor_ID": 31,
+          "ClinicsType": "ea"
+          },
+          {
+          "Doctor_ID": 32,
+          "ClinicsType": "rerum"
+          },
+          {
+          "Doctor_ID": 33,
+          "ClinicsType": "quia"
+          },
+          {
+          "Doctor_ID": 34,
+          "ClinicsType": "commodi"
+          },
+          {
+          "Doctor_ID": 35,
+          "ClinicsType": "id"
+          },
+          {
+          "Doctor_ID": 36,
+          "ClinicsType": "atque"
+          },
+          {
+          "Doctor_ID": 37,
+          "ClinicsType": "ut"
+          },
+          {
+          "Doctor_ID": 38,
+          "ClinicsType": "non"
+          },
+          {
+          "Doctor_ID": 39,
+          "ClinicsType": "quam"
+          },
+          {
+          "Doctor_ID": 40,
+          "ClinicsType": "ut"
+          },
+          {
+          "Doctor_ID": 41,
+          "ClinicsType": "Eyes"
+          }
+          ]
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
         status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+          "message": "not found"
+          }
+        headers: []
+        description: 'This BloodBank not found'
         custom: []
     responseFields: []
     auth: []
@@ -263,7 +472,7 @@ endpoints:
         This Api For PatientAppointment
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'See doctors from one department'
       description: ''
       authenticated: false
       custom: []
@@ -287,13 +496,73 @@ endpoints:
     fileParameters: []
     responses:
       -
+        status: 200
+        content: |-
+          {
+          "available_appontement": [
+          "10:00",
+          "10:30",
+          "11:30",
+          "12:30",
+          "01:00",
+          "01:30",
+          "02:00",
+          "02:30",
+          "03:00",
+          "03:30",
+          "04:00",
+          "04:30",
+          "05:00",
+          "05:30",
+          "06:00",
+          "06:30",
+          "07:00",
+          "07:30",
+          "08:00",
+          "08:30",
+          "09:00",
+          "09:30",
+          "10:00"
+          ]
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+          "message": "Doctor is on holiday on that day"
+          "message": "This Employee is Not Doctor"
+          }
+
+
+          * @queryparam perPage int
+          To return limite data in single page.
+          Defaults value for variable '15'.
+
+          * @queryparam date date
+          To return AvalibleAppointment in this date.
+        headers: []
+        description: 'Validation errors'
+        custom: []
+      -
         status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+          "message": "not found"
+          }
+        headers: []
+        description: 'This doctor not found'
         custom: []
     responseFields: []
     auth: []
@@ -312,7 +581,7 @@ endpoints:
         This Api For PatientAppointment
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'See WorkSchedule of one Doctor'
       description: ''
       authenticated: false
       custom: []
@@ -336,13 +605,41 @@ endpoints:
     fileParameters: []
     responses:
       -
+        status: 200
+        content: |-
+          {
+          "data": [
+          {
+          "WorkDayName": "Monday"
+          },
+          {
+          "WorkDayName": "Tuesday"
+          },
+          {
+          "WorkDayName": "Wednesday"
+          }
+          ]
+          }
+        headers: []
+        description: 'Success Process'
+        custom: []
+      -
         status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
+        content: |-
+          {
+          "message": "Unauthenticated."
+          }
+        headers: []
+        description: 'This user not patient'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+          "message": "not found"
+          }
+        headers: []
+        description: 'This doctor not found'
         custom: []
     responseFields: []
     auth: []

@@ -43,9 +43,9 @@ class Department extends Model
     return $this->hasMany(Clinic::class,'DepartmentID','id');
   }
 
-  public function ManagerID(): BelongsTo
+  public function managerId(): BelongsTo
   {
-    return $this->belongsTo(Employee::class, 'ManagerID', 'id', 'HasOne');
+    return $this->belongsTo(Employee::class, 'ManagerID', 'id');
   }
   public function photo()
   {

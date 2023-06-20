@@ -33,6 +33,9 @@ class PatientMedicine extends Model
         'id' => 'integer',
         'MedicineID' => 'integer',
         'DiagnosedID' => 'integer',
+        'MedicineCaliber'=> 'integer',
+        'DosagePerDay'=> 'integer',
+        'DaysCount'=> 'integer',
     ];
 
     public function medicine(): BelongsTo

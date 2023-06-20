@@ -16,6 +16,7 @@ class Death extends Model
      * @var array
      */
     protected $fillable = [
+        'PatientID',
         'DeathDate',
     ];
 
