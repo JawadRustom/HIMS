@@ -24,7 +24,8 @@ class DepartmentFactory extends Factory
         return [
             'DepartmentName' => $this->faker->word,
             'Description' => $this->faker->realText(),
-            'ManagerID' => rand(1,Employee::count()),
+            'ManagerID' => rand(1,10),
+            
         ];
     }
 }

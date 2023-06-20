@@ -22,6 +22,10 @@ class UpdateDepartmentRequest extends FormRequest
     public function rules(): array
     {
       return [
+      'DepartmentName' => ['required'],
+      'Description' => ['required'],
+      'ManagerID' => ['required'],
+      'filename' => ['nullable', 'image'],
       ];
     }
     }

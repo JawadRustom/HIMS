@@ -74,6 +74,7 @@
       public function store(StoreDepartmentRequest $request)
       {
           $data = Department::create($request->validated());
+          $data->photo()->create(['filename' => $request->file('filename')?->store('pic')]);
 
           return new DepartmentResource($data);
       }
@@ -97,6 +98,7 @@
       public function update(UpdateDepartmentRequest $request, Department $Department)
       {
           $Department->update($request->validated());
+          $Department->photo()->update(['filename' => $request->file('filename')?->store('pic')]);
           $Department->refresh();
           return new DepartmentResource($Department);
       }

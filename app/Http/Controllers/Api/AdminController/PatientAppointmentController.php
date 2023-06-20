@@ -101,6 +101,7 @@
           return new PatientAppointmentResource($PatientAppointment);
       }
       /**
+      
        * Delete PatientAppointment
        * @response 204 scenario="Success Process"
        * 

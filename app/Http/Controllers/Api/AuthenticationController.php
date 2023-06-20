@@ -161,11 +161,15 @@ class AuthenticationController extends Controller
    *     "message": "Unauthenticated."
    * }
    */
-    public function logout()
+    public function logout(Request $request)
     {
-      auth()->user()->currentAccessToken()->delete();
+    Auth::guard('web')->logout();
 
-      return response()->noContent();
+    $request->session()->invalidate();
+
+    $request->session()->regenerateToken();
+
+    return response()->noContent();
     }
 
 }
