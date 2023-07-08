@@ -15,16 +15,16 @@ class ShowPatientDetailsResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-        'NickName' =>$this->NickName,
-        'FirstName'=>$this->FirstName,
-        'LastName'=>$this->LastName,
-        'email'=>$this->email,
-        'password'=>$this->password,
-        'PhoneNumber'=>$this->PhoneNumber,
-        'Country'=>$this->Country,
-        'City'=>$this->City,
-        'ProfileImage'=>$this->ProfileImage,
-        'icon'=>$this->icon,
+        'NickName' =>$this->NickName??null,
+        'FirstName'=>$this->FirstName??null,
+        'LastName'=>$this->LastName??null,
+        'email'=>$this->email??null,
+        'password'=>$this->password??null,
+        'PhoneNumber'=>$this->PhoneNumber??null,
+        'Country'=>$this->Country??null,
+        'City'=>$this->City??null,
+        'ProfileImage'=>$this->ProfileImage??null,
+        'icon'=>$this->icon??null,
         'UserTypeId'=>4,
         ];
     }

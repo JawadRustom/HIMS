@@ -16,7 +16,7 @@ class DoctorResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'Doctor_ID' => $this->id,
+          'Doctor_ID' => $this->id??null,
           //'type'=>$this->EmployeeType->Type,
           'doctor_name' => ['FirstName' => $this->user?->FirstName, 'LastName' => $this->user?->LastName],
           'doctor_speciality_and_donor_name' => CertificationDoctorResource::collection($this->certificationEmployee), //$this->certificationEmployee->certification->CertificationName,//Error This Can Return Many CertificationName
