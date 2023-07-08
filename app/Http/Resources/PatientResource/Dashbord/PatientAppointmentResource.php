@@ -16,7 +16,7 @@ class PatientAppointmentResource extends JsonResource
     {
       return [
         'appointment_date'=>$this->AppointmentDate,
-        'doctor_name'=>$this->employee->user->FirstName,
+        'doctor_name'=>$this->employee?->user->FirstName,
       ];
     }
 }

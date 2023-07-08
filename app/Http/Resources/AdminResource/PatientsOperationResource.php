@@ -17,13 +17,13 @@ class PatientsOperationResource extends JsonResource
         return [
           'id'=>$this->id,
           'PatientID'=>$this->PatientID,
-          'FirstName'=>$this->patient->user->FirstName,
+          'FirstName'=>$this->patient?->user->FirstName,
           'DoctorID'=>$this->DoctorID,
-          'DoctorName'=>$this->employee->user->FirstName,
+          'DoctorName'=>$this->employee?->user->FirstName,
           'AnesthesiologistID'=>$this->AnesthesiologistID,
-          'AnesthesiologistName'=>$this->employee->user->FirstName,
+          'AnesthesiologistName'=>$this->employee?->user->FirstName,
           'OperationID'=>$this->OperationID,
-          'OperationName'=>$this->operation->OperationName,
+          'OperationName'=>$this->operation?->OperationName,
           'OperationDate'=>$this->OperationDate,
           'DoctorCommission'=>$this->DoctorCommission,
         ];

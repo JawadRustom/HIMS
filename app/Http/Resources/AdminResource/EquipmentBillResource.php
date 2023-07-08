@@ -18,9 +18,9 @@ class EquipmentBillResource extends JsonResource
         return [
           'id'=>$this->id,
           'EmployeeID'=>$this->EmployeeID,
-          'FirstName'=>$this->employee->user->FirstName,
+          'FirstName'=>$this->employee?->user->FirstName,
           'EquipmentID'=>$this->EquipmentID,
-          'Equipment_Type_Name'=>$this->equipment->equipmentType->Equipment_Type_Name,
+          'Equipment_Type_Name'=>$this->equipment?->equipmentType->Equipment_Type_Name,
           'BillDate'=>$this->BillDate,
           'Quantity'=>$this->Quantity,
           'Price'=>$this->Price,

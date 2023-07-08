@@ -17,7 +17,7 @@ class PatientTestResource extends JsonResource
         return [
           'FirstName'=>$this->FirstName,
           'LastName'=>$this->LastName,
-          'AnalysisResult'=>PatientAnalysisResource::collection($this->Patient->patientAnalysi),
+          'AnalysisResult'=>PatientAnalysisResource::collection($this->Patient?->patientAnalysi),
         ];
     }
 }

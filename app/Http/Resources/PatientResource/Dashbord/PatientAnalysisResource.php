@@ -15,7 +15,7 @@ class PatientAnalysisResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'analysis_name'=>$this->analysi->AnalysisName,
+          'analysis_name'=>$this->analysi?->AnalysisName,
           'analysis_date'=>$this->AnalysisDate,
           'analysis_ratio'=>$this->AnalysisRatio,
           'analysis_result'=>$this->AnalysisResult,
