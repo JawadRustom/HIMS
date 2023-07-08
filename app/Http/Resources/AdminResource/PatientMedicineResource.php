@@ -17,7 +17,7 @@ class PatientMedicineResource extends JsonResource
         return [
           'id'=>$this->id,
           'MedicineID'=>$this->MedicineID,
-          'MedicineName'=>$this->medicine->MedicineName,
+          'MedicineName'=>$this->medicine?->MedicineName,
           'DiagnosedID'=>$this->DiagnosedID,
           'MedicineCaliber'=>$this->MedicineCaliber,
           'DosagePerDay'=>$this->DosagePerDay,

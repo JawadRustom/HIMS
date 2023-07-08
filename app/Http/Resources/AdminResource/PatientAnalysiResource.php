@@ -17,9 +17,9 @@ class PatientAnalysiResource extends JsonResource
         return [
           'id'=>$this->id,
           'PatientID'=>$this->PatientID,
-          'FirstName'=>$this->patient->user->FirstName,
+          'FirstName'=>$this->patient?->user->FirstName,
           'AnalysisID'=>$this->AnalysisID,
-          'AnalysisName'=>$this->analysi->AnalysisName,
+          'AnalysisName'=>$this->analysi?->AnalysisName,
           'AnalysisDate'=>$this->AnalysisDate,
           'AnalysisRatio'=>$this->AnalysisRatio,
           'AnalysisResult'=>$this->AnalysisResult,

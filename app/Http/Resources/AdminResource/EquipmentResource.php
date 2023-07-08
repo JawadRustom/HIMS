@@ -17,7 +17,7 @@ class EquipmentResource extends JsonResource
         return [
           'id'=>$this->EquipmentTypeID,
           'EquipmentTypeID'=>$this->EquipmentTypeID,
-          'Equipment_Type_Name'=>$this->equipmentType->Equipment_Type_Name,
+          'Equipment_Type_Name'=>$this->equipmentType?->Equipment_Type_Name,
           'Details'=>$this->Details,
           'CompanyName'=>$this->CompanyName,
         ];

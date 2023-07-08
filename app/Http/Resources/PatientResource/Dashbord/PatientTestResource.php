@@ -15,9 +15,9 @@ class PatientTestResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'FirstName'=>$this->FirstName??null,
-          'LastName'=>$this->LastName??null,
-          'AnalysisResult'=>PatientAnalysisResource::collection($this->Patient->patientAnalysi)??null,
+          'FirstName'=>$this->FirstName,
+          'LastName'=>$this->LastName,
+          'AnalysisResult'=>PatientAnalysisResource::collection($this->Patient?->patientAnalysi),
         ];
     }
 }

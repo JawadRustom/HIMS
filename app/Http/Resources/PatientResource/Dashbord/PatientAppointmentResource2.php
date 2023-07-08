@@ -17,7 +17,7 @@ class PatientAppointmentResource2 extends JsonResource
         return [
           'FirstName'=>$this->FirstName,
           'LastName'=>$this->LastName,
-          'patient_appointment'=>PatientAppointmentResource::collection($this->Patient->patientAppointment),
+          'patient_appointment'=>PatientAppointmentResource::collection($this->Patient?->patientAppointment),
         ];
     }
 }
