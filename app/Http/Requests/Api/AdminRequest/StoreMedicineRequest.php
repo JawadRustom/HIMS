@@ -22,6 +22,9 @@ class StoreMedicineRequest extends FormRequest
     public function rules(): array
     {
       return [
+        'MedicineName'=>['required'],
+        'MedicineQuantity'=>['required','numeric','min:1'],
+        'MedicinePrice'=>['required','numeric','min:1'],
       ];
     }
     }
