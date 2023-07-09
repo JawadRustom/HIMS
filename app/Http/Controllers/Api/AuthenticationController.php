@@ -169,6 +169,8 @@ class AuthenticationController extends Controller
 
     $request->session()->regenerateToken();
 
+    auth()->user()->currentAccessToken()->delete();
+
     return response()->noContent();
     }
 
