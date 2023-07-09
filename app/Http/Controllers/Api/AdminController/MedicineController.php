@@ -52,9 +52,9 @@
        }
        * 
        */
-      public function show(Request $request, Medicine $medicine)
+      public function show(Request $request, Medicine $Medicine)
       {
-          return new MedicineResource($medicine);
+          return new MedicineResource($Medicine);
       }
 
       /**
@@ -94,11 +94,11 @@
    }
        * 
        */
-      public function update(UpdateMedicineRequest $request, Medicine $medicine)
+      public function update(UpdateMedicineRequest $request, Medicine $Medicine)
       {
-          $medicine->update($request->validated());
-          $medicine->refresh();
-          return new MedicineResource($medicine);
+          $Medicine->update($request->validated());
+          $Medicine->refresh();
+          return new MedicineResource($Medicine);
       }
       /**
        * Delete Medicine
@@ -114,9 +114,9 @@
        }
        * 
        */
-      public function destroy(Medicine $medicine)
+      public function destroy(Medicine $Medicine)
       {
-          $medicine->delete();
+          $Medicine->delete();
 
           return response()->noContent();
       }

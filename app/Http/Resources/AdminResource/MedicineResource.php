@@ -15,6 +15,10 @@ class MedicineResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+          'id'=>$this->id,
+          'MedicineName'=>$this->MedicineName,
+          'MedicineQuantity'=>$this->MedicineQuantity,
+          'MedicinePrice'=>$this->MedicinePrice,
         ];
     }
 }
