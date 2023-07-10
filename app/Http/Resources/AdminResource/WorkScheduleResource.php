@@ -17,7 +17,7 @@ class WorkScheduleResource extends JsonResource
         return [
           'id'=>$this->id,
           'EmployeeID'=>$this->EmployeeID,
-          'FirstName'=>$this->employee->user?->FirstName,
+          'FirstName'=>$this->employee?->user?->FirstName,
           'RoomID'=>$this->RoomID,
           'RoomType'=>$this->room?->RoomType,
           'FromHour'=>$this->FromHour,

@@ -17,11 +17,11 @@ class PatientAppointmentResource extends JsonResource
         return [
           'id'=>$this->id,
           'PatientID'=>$this->PatientID,
-          'patientFirstName'=>$this->patient->user?->FirstName,
+          'patientFirstName'=>$this->patient?->user?->FirstName,
           'ClinicID'=>$this->ClinicID,
           'ClinicsType'=>$this->clinic?->ClinicsType,
           'doctor_id'=>$this->doctor_id,
-          'employeeFirstName'=>$this->employee->user?->FirstName,
+          'employeeFirstName'=>$this->employee?->user?->FirstName,
           'AppointmentDate'=>$this->AppointmentDate,
         ];
     }
