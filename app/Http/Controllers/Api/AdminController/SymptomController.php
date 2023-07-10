@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Symptom::paginate($request->perPage ?? 15);
+          $data = Symptom::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return SymptomResource::collection($data);
       }

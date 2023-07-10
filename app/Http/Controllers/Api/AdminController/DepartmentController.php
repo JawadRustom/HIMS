@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Department::paginate($request->perPage ?? 15);
+          $data = Department::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return DepartmentResource::collection($data);
       }
@@ -74,6 +74,7 @@
       public function store(StoreDepartmentRequest $request)
       {
           $data = Department::create($request->validated());
+          if($request->file('filename'))
           $data->photo()->create(['filename' => $request->file('filename')?->store('pic')]);
 
           return new DepartmentResource($data);
@@ -98,6 +99,7 @@
       public function update(UpdateDepartmentRequest $request, Department $Department)
       {
           $Department->update($request->validated());
+          if($request->file('filename'))
           $Department->photo()->update(['filename' => $request->file('filename')?->store('pic')]);
           $Department->refresh();
           return new DepartmentResource($Department);

@@ -34,8 +34,8 @@ class UpdatePatientRequest extends FormRequest
       //     }
       // },],
         'BirthDate'=>['required','before:06/17/2020'],
-        'PatientLength'=>['required','numeric','min:30','max:600'],
-        'PatientWeight'=>['required','numeric','min:100','max:220'],
+        'PatientLength'=>['required','numeric','min:15','max:250'],
+        'PatientWeight'=>['required','numeric','min:7','max:600'],
       ];
     }
     }

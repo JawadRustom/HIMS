@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Api\AdminRequest;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateUserRequest extends FormRequest
 {      
@@ -26,8 +27,8 @@ class UpdateUserRequest extends FormRequest
         'NickName' =>['required'],
         'FirstName'=>['required'],
         'LastName'=>['required'],
-        'email'=>['required', 'email','unique:users,email'],
-        'password'=>['required','string','min:8','max:16'],
+        'email'=>['required', 'email',Rule::unique('users')->ignore(auth()->user())],
+        'password'=>['required','string','min:8'],
         'PhoneNumber'=>['required','size:9'],
         'Country'=>['nullable'],
         'City'=>['nullable'],

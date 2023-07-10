@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Diagnosed::paginate($request->perPage ?? 15);
+          $data = Diagnosed::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return DiagnosedResource::collection($data);
       }
