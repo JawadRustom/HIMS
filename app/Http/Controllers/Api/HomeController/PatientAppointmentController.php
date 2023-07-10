@@ -245,11 +245,11 @@ class PatientAppointmentController extends Controller
    */
   public function doctorWorkSchedule(Employee $id)
   {
-    return DoctorWorkScheduleResource::orderBy('id', 'desc')->collection($id->workSchedule);
+    return DoctorWorkScheduleResource::collection($id->workSchedule);
   }
     /**
    * See all clinic 
-   * @response 200 scenario="Success Process"{
+   * @response 200 scenario="Success Process"{x
     "data": [
         {
             "Doctor_ID": 1,
@@ -430,6 +430,6 @@ class PatientAppointmentController extends Controller
    */
   public function clinic(Request $request)
   {
-    return ClinicResource::orderBy('id', 'desc')->collection(Clinic::All());
+    return ClinicResource::collection(Clinic::All());
   }
 }

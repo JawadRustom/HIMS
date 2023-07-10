@@ -19,7 +19,7 @@ class DepartmentResource extends JsonResource
           'DepartmentName'=>$this->DepartmentName,
           'Description'=>$this->Description,
           'ManagerID'=>$this->ManagerID,
-          'FirstName'=>$this->managerId?->user->FirstName,
+          'FirstName'=>$this->managerId->user?->FirstName,
           'Image'=>$this->photo?->filename,
         ];
     }
