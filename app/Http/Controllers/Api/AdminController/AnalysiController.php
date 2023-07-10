@@ -116,7 +116,7 @@
        * */
       public function index(Request $request)
       {
-          $data = Analysi::paginate($request->perPage ?? 15);
+          $data = Analysi::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return AnalysiResource::collection($data);
       }

@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Medicine::paginate($request->perPage ?? 15);
+          $data = Medicine::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return MedicineResource::collection($data);
       }

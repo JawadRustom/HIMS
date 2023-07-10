@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = EquipmentType::paginate($request->perPage ?? 15);
+          $data = EquipmentType::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return EquipmentTypeResource::collection($data);
       }

@@ -245,7 +245,7 @@ class PatientAppointmentController extends Controller
    */
   public function doctorWorkSchedule(Employee $id)
   {
-    return DoctorWorkScheduleResource::collection($id->workSchedule);
+    return DoctorWorkScheduleResource::orderBy('id', 'desc')->collection($id->workSchedule);
   }
     /**
    * See all clinic 
@@ -430,6 +430,6 @@ class PatientAppointmentController extends Controller
    */
   public function clinic(Request $request)
   {
-    return ClinicResource::collection(Clinic::All());
+    return ClinicResource::orderBy('id', 'desc')->collection(Clinic::All());
   }
 }

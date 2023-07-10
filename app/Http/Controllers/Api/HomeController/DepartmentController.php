@@ -139,7 +139,7 @@ class DepartmentController extends Controller
    */
   public function index(Request $request)
   {
-    return DepartmentResource::collection(Department::paginate($request->perPage ?? 15));
+    return DepartmentResource::orderBy('id', 'desc')->collection(Department::paginate($request->perPage ?? 15));
   }
 
   /**

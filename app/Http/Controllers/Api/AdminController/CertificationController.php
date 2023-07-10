@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Certification::paginate($request->perPage ?? 15);
+          $data = Certification::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return CertificationResource::collection($data);
       }

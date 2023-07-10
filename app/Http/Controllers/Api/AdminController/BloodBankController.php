@@ -99,7 +99,7 @@
        * */
       public function index(Request $request)
       {
-          $data = BloodBank::paginate($request->perPage ?? 15);
+          $data = BloodBank::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return BloodBankResource::collection($data);
       }

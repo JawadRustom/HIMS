@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = EquipmentBill::paginate($request->perPage ?? 15);
+          $data = EquipmentBill::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return EquipmentBillResource::collection($data);
       }

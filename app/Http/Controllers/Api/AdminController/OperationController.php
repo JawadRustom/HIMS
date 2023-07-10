@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Operation::paginate($request->perPage ?? 15);
+          $data = Operation::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return OperationResource::collection($data);
       }

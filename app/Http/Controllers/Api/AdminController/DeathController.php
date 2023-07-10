@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Death::paginate($request->perPage ?? 15);
+          $data = Death::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return DeathResource::collection($data);
       }

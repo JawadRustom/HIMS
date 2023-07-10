@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = WorkSchedule::paginate($request->perPage ?? 15);
+          $data = WorkSchedule::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return WorkScheduleResource::collection($data);
       }

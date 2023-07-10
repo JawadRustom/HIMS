@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = RoomContent::paginate($request->perPage ?? 15);
+          $data = RoomContent::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return RoomContentResource::collection($data);
       }

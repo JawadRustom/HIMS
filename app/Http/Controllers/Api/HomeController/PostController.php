@@ -91,7 +91,7 @@ class PostController extends Controller
    */
   public function index(Request $request)
   {
-    return PostResource::collection(Post::Where('PostType', $request->postType)->paginate($request->perPage ?? 15));
+    return PostResource::orderBy('id', 'desc')->collection(Post::Where('PostType', $request->postType)->paginate($request->perPage ?? 15));
   }
 
   /**

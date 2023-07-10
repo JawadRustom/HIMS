@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = EmployeeType::paginate($request->perPage ?? 15);
+          $data = EmployeeType::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return EmployeeTypeResource::collection($data);
       }

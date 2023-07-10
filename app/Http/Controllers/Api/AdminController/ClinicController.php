@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = Clinic::paginate($request->perPage ?? 15);
+          $data = Clinic::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return ClinicResource::collection($data);
       }

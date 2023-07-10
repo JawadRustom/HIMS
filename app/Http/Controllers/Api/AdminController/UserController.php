@@ -32,7 +32,7 @@
        */
       public function index(Request $request)
       {
-          $data = User::paginate($request->perPage ?? 15);
+          $data = User::orderBy('id', 'desc')->paginate($request->perPage ?? 15);
 
           return UserResource::collection($data);
       }
