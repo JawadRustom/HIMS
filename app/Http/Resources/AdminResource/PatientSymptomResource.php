@@ -17,9 +17,9 @@ class PatientSymptomResource extends JsonResource
         return [
           'id'=>$this->id,
           'PatientID'=>$this->PatientID,
-          'FirstName'=>$this->patient->user?->FirstName,
+          'FirstName'=>$this->patient?->user?->FirstName,
           'SymptomID'=>$this->SymptomID,
-          'SymptomsName'=>$this->symptom->SymptomsName,
+          'SymptomsName'=>$this->symptom?->SymptomsName,
           'SymptomDate'=>$this->SymptomDate,
           'Description'=>$this->Description,
         ];

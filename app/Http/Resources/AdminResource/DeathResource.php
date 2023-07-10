@@ -17,7 +17,7 @@ class DeathResource extends JsonResource
         return [
           'id'=>$this->id,
           'PatientID'=>$this->PatientID,
-          'PatientID'=>$this->patient->user?->FirstName,
+          'PatientID'=>$this->patient?->user?->FirstName,
           'DeathDate'=>$this->DeathDate,
         ];
     }
