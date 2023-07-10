@@ -19,7 +19,7 @@ class MedicineBillResource extends JsonResource
           'MedicineID'=>$this->MedicineID,
           'MedicineName'=>$this->medicine?->MedicineName,
           'EmployeeID'=>$this->EmployeeID,
-          'FirstName'=>$this->employee?->user->FirstName,
+          'FirstName'=>$this->employee->user?->FirstName,
           'BillDate'=>$this->BillDate,
           'Quantity'=>$this->Quantity,
           'BuyPrice'=>$this->BuyPrice,

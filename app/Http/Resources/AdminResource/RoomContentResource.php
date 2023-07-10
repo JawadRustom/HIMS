@@ -17,7 +17,7 @@ class RoomContentResource extends JsonResource
         return [
           'id'=>$this->id,
           'EquipmentID'=>$this->EquipmentID,
-          'Equipment_Type_Name'=>$this->equipment?->EquipmentType->Equipment_Type_Name,
+          'Equipment_Type_Name'=>$this->equipment->EquipmentType?->Equipment_Type_Name,
           'RoomID'=>$this->RoomID,
           'RoomType'=>$this->room?->RoomType,
         ];

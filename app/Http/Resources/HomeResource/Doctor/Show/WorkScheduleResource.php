@@ -16,10 +16,10 @@ class WorkScheduleResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-          'from_hour'=>$this->FromHour??null,
+          'from_hour'=>$this->FromHour,
           //'from_hour'=>Carbon::createFromFormat('m/d/Y/h', $this->FromHour)->format('Y'),
-          'to_hour'=>$this->ToHour??null,
-          'day_name'=>$this->WorkDayName??null,
+          'to_hour'=>$this->ToHour,
+          'day_name'=>$this->WorkDayName,
         ];
     }
 }
